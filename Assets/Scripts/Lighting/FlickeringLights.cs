@@ -11,10 +11,12 @@ public class FlickeringLights : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //gets the light component
         light = GetComponent<Light>();
     }
 
-    // Update is called once per frame
+
+    //randomly turns lights on or off
     void FixedUpdate()
     {
 
