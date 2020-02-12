@@ -13,44 +13,38 @@ public class Detect : MonoBehaviour
 
     void Update()
     {
+     
+        //raycast hiting object
         RaycastHit objectHit;
 
+        //gets the target position to move to
         Vector3 targetDir = player.position - transform.position;
+        //gets the angle between the player and this transform
         float angle = Vector3.Angle(targetDir, transform.forward);
 
+        //if the angle is less than 45 and the player is not more than 10 units away
         if (angle < 45 && targetDir.x < 10 && targetDir.z < 10)
         {
+            //look at the player
             transform.LookAt(player.transform);
         }
 
+        //get the forward vector3
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        //draw a ray from the enemy
         Debug.DrawRay(transform.position, fwd * 10, Color.green);
+        //if it hits something then proceed
         if (Physics.Raycast(transform.position, fwd, out objectHit, 10.0f))
         {
-            //do something if hit object ie
+            //if it hit the player then move towards the player
             if (objectHit.transform.tag == "Player")
             {
+                //what to do when it sees the player
                 SeenPlayer();
             }
         }
 
-        ////draws a line from the front of the enemy
-        //Vector3 forward = transform.TransformDirection(Vector3.forward) * hit.distance;
-        //Debug.DrawRay(transform.position, forward, Color.green);
-
-        //Vector3 targetDir = player.position - transform.position;
-        //float angle = Vector3.Angle(targetDir, transform.forward);
-
-        //if (angle < 60.0f && hit.distance < 2.5f)
-        //{
-        //    SeenPlayer();
-        //}
-        //else {
-        //    float step = 1 * Time.deltaTime; // calculate distance to move
-        //    transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, step);
-        //}
     }
-
 
     //what to do when the ai has seen the player
     void SeenPlayer() {
@@ -62,6 +56,7 @@ public class Detect : MonoBehaviour
     }
 
     //what to do when the ai has heard the player
+    //TODO:
     void HeardPlayer() { 
     
     
