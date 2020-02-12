@@ -8,6 +8,7 @@ public class PlayerInteract : MonoBehaviour
     //camera reference
     Camera cam;
 
+    //the amount of levers that the player has interacted with
     [SerializeField] int amountOfLeversPulled;
 
     void Start()
