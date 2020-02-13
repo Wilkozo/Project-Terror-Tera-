@@ -5,8 +5,7 @@ using UnityEngine;
 
 //used to detect audio and visual sources
 public class Detect : MonoBehaviour
-{
-
+{ 
 
     [SerializeField] BasicWander wander;
     //used to hold the player
@@ -14,8 +13,7 @@ public class Detect : MonoBehaviour
 
     //how fast the ai will travel
     public float speed;
-
-
+    
     void Update()
     {
      
@@ -48,6 +46,7 @@ public class Detect : MonoBehaviour
                 SeenPlayer();
             }
             else {
+                
                 wander.playerNotSeen = true;
             }
         }
