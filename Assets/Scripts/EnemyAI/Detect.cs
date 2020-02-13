@@ -7,8 +7,13 @@ using UnityEngine;
 public class Detect : MonoBehaviour
 {
 
+
+    [SerializeField] BasicWander wander;
     //used to hold the player
     public Transform player;
+
+    //how fast the ai will travel
+    public float speed;
 
 
     void Update()
@@ -42,14 +47,18 @@ public class Detect : MonoBehaviour
                 //what to do when it sees the player
                 SeenPlayer();
             }
+            else {
+                wander.playerNotSeen = true;
+            }
         }
 
     }
 
     //what to do when the ai has seen the player
     void SeenPlayer() {
-      
-        float step = 1 * Time.deltaTime; // calculate distance to move
+
+        wander.playerNotSeen = false;
+        float step = speed * Time.deltaTime; // calculate distance to move
         transform.LookAt(player.position);
         transform.position = Vector3.MoveTowards(transform.position, player.position, step);
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEngine.AI;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,42 +8,45 @@ using UnityEngine;
 public class BasicWander : MonoBehaviour
 {
 
-    Vector3 rand;
+    [SerializeField] public bool playerNotSeen;
+    public Transform[] points;
+    private int destPoint = 0;
+    private NavMeshAgent agent;
 
-    public float zPos1;
-    public float zPos2;
-    public float xPos1;
-    public float xPos2;
 
-    public float speed = 5;
-    bool goToWaypoint = true;
+    void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+
+        // Disabling auto-braking allows for continuous movement
+        // between points (ie, the agent doesn't slow down as it
+        // approaches a destination point).
+        agent.autoBraking = false;
+
+        GotoNextPoint();
+    }
+
+
+    void GotoNextPoint()
+    {
+        // Returns if no points have been set up
+        if (points.Length == 0)
+            return;
+
+        // Set the agent to go to the currently selected destination.
+        agent.destination = points[destPoint].position;
+
+        // Choose the next point in the array as the destination,
+        // cycling to the start if necessary.
+        destPoint = (destPoint + 1) % points.Length;
+    }
+
 
     void Update()
     {
-        if (goToWaypoint == true) {
-            moveBetweenWaypoints();
-        }
-    }
-
-    void moveBetweenWaypoints() {
-
-        //should stop it from looping through the random position setting
-        goToWaypoint = false;
-
-        //get a random value in the form of a vec3
-        rand = new Vector3(Random.Range(xPos1, xPos2), 0, Random.Range(zPos1, zPos2));
-
-        //run this loop while the position has not been reached
-        while (goToWaypoint != true)
-        {
-            //TODO:: Setup an interrupt state
-            float step = speed * Time.deltaTime; // calculate distance to move
-            transform.position = Vector3.MoveTowards(transform.position, rand, step);
-
-
-            if (this.transform.position.x >= rand.x && this.transform.position.z >= rand.z) {
-                goToWaypoint = true;
-            }
-        }
+        // Choose the next destination point when the agent gets
+        // close to the current one.
+        if (!agent.pathPending && agent.remainingDistance < 0.5f && playerNotSeen)
+            GotoNextPoint();
     }
 }
