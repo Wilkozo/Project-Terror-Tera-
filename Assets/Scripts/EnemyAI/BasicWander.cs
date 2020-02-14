@@ -21,7 +21,7 @@ public class BasicWander : MonoBehaviour
         // Disabling auto-braking allows for continuous movement
         // between points (ie, the agent doesn't slow down as it
         // approaches a destination point).
-        agent.autoBraking = false;
+        agent.autoBraking = true;
 
         GotoNextPoint();
     }
@@ -33,8 +33,11 @@ public class BasicWander : MonoBehaviour
         if (points.Length == 0)
             return;
 
+        int rand = Random.Range(0, 3);
+
         // Set the agent to go to the currently selected destination.
-        agent.destination = points[destPoint].position;
+        agent.destination = points[rand].position;
+      //  agent.destination = points[destPoint].position;
 
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
