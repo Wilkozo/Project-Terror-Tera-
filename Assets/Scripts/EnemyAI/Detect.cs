@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEngine.AI;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,13 +8,30 @@ using UnityEngine;
 public class Detect : MonoBehaviour
 { 
 
+    //getting the wander script
     [SerializeField] BasicWander wander;
-    //used to hold the player
-    public Transform player;
+
+    public GameObject player;
+
+    private NavMeshAgent agent;
 
     //how fast the ai will travel
     public float speed;
-    
+
+    //how far the ai can see
+    public float viewLength;
+
+    private void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (!player)
+        {
+            Debug.Log("Make sure your player is tagged!!");
+        }
+    }
+
     void Update()
     {
      
@@ -21,12 +39,12 @@ public class Detect : MonoBehaviour
         RaycastHit objectHit;
 
         //gets the target position to move to
-        Vector3 targetDir = player.position - transform.position;
+        Vector3 targetDir = player.transform.position - transform.position;
         //gets the angle between the player and this transform
         float angle = Vector3.Angle(targetDir, transform.forward);
 
         //if the angle is less than 45 and the player is not more than 10 units away
-        if (angle < 45 && targetDir.x < 10 && targetDir.z < 10)
+        if (angle < 60)
         {
             //look at the player
             transform.LookAt(player.transform);
@@ -35,9 +53,9 @@ public class Detect : MonoBehaviour
         //get the forward vector3
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         //draw a ray from the enemy
-        Debug.DrawRay(transform.position, fwd * 10, Color.green);
+        Debug.DrawRay(transform.position, fwd * viewLength, Color.green);
         //if it hits something then proceed
-        if (Physics.Raycast(transform.position, fwd, out objectHit, 10.0f))
+        if (Physics.Raycast(transform.position, fwd, out objectHit, viewLength))
         {
             //if it hit the player then move towards the player
             if (objectHit.transform.tag == "Player")
@@ -46,7 +64,7 @@ public class Detect : MonoBehaviour
                 SeenPlayer();
             }
             else {
-                
+                //makes it so it has not yet seen the player
                 wander.playerNotSeen = true;
             }
         }
@@ -56,10 +74,20 @@ public class Detect : MonoBehaviour
     //what to do when the ai has seen the player
     void SeenPlayer() {
 
+        //makes it so it has seen the player
         wander.playerNotSeen = false;
-        float step = speed * Time.deltaTime; // calculate distance to move
-        transform.LookAt(player.position);
-        transform.position = Vector3.MoveTowards(transform.position, player.position, step);
+        // calculate distance to move
+        //float step = speed * Time.deltaTime;
+        
+        
+        //look at the player
+        transform.LookAt(player.transform.position);
+
+        //move towards the player
+        agent.destination = player.transform.position;
+
+        //move towards the players poisiton at the step speed
+       //transform.position = Vector3.MoveTowards(transform.position, player.position, step);
 
     }
 
@@ -67,6 +95,7 @@ public class Detect : MonoBehaviour
     //TODO:
     void HeardPlayer() { 
     
+
     
     }
 

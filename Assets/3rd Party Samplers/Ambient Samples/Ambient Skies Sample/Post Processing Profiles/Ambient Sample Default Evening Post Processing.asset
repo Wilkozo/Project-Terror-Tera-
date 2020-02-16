@@ -68,7 +68,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1.7
+    value: 0.15
   threshold:
     overrideState: 1
     value: 0.9
@@ -85,8 +85,8 @@ MonoBehaviour:
     overrideState: 1
     value: -0.287
   color:
-    overrideState: 0
-    value: {r: 1, g: 1, b: 1, a: 1}
+    overrideState: 1
+    value: {r: 1.4980392, g: 1.4980392, b: 1.4980392, a: 1}
   fastMode:
     overrideState: 0
     value: 0
@@ -1431,8 +1431,8 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   color:
-    overrideState: 0
-    value: {r: 0, g: 0, b: 0, a: 1}
+    overrideState: 1
+    value: {r: 0.627451, g: 0.627451, b: 0.627451, a: 1}
   ambientOnly:
     overrideState: 0
     value: 1
@@ -1540,7 +1540,7 @@ MonoBehaviour:
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 145
+    value: 115
   sampleCount:
     overrideState: 1
     value: 13
@@ -1564,20 +1564,20 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   color:
-    overrideState: 0
+    overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
   center:
     overrideState: 0
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.2
+    value: 0.365
   smoothness:
     overrideState: 1
-    value: 0.8
+    value: 0.45
   roundness:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 0.85
   rounded:
     overrideState: 0
     value: 0

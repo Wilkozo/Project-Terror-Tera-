@@ -9,18 +9,15 @@ public class BasicWander : MonoBehaviour
 {
 
     [SerializeField] public bool playerNotSeen;
+    [SerializeField] PlayerInteract player;
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
-
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
 
-        // Disabling auto-braking allows for continuous movement
-        // between points (ie, the agent doesn't slow down as it
-        // approaches a destination point).
         agent.autoBraking = true;
 
         GotoNextPoint();
@@ -33,11 +30,10 @@ public class BasicWander : MonoBehaviour
         if (points.Length == 0)
             return;
 
-        int rand = Random.Range(0, 3);
+        int rand = Random.Range(0, points.Length);
 
         // Set the agent to go to the currently selected destination.
         agent.destination = points[rand].position;
-      //  agent.destination = points[destPoint].position;
 
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
@@ -51,5 +47,15 @@ public class BasicWander : MonoBehaviour
         // close to the current one.
         if (!agent.pathPending && agent.remainingDistance < 0.5f && playerNotSeen)
             GotoNextPoint();
+    }
+
+
+    //DELETE LATER
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player") {
+            Time.timeScale = 0;
+            player.switchesText.text = "GAME OVER!!!";
+        }
     }
 }

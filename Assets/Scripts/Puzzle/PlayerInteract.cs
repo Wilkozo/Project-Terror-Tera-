@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    public Text switchesText;
 
     //camera reference
     Camera cam;
@@ -13,21 +15,34 @@ public class PlayerInteract : MonoBehaviour
 
     void Start()
     {
+
+        switchesText.text = "Switches Pushed: 0 : 4";
         //get the camera
         cam = GetComponent<Camera>();
+
     }
 
 
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.R)) {
+            Time.timeScale = 1;
+            Application.LoadLevel(Application.loadedLevel);  
+        }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Application.Quit();
+        }
+
         //check to see if the player pushes the left mouse 
         if (Input.GetMouseButtonDown(0)) {
             //call check for interact
             checkForInteract();
         }
 
-        if (amountOfLeversPulled >= 4) { 
-            //TODO: put through an event that leads to the end of the game
+        if (amountOfLeversPulled >= 4) {
+            switchesText.text = "YOU WIN!!!";
+            Time.timeScale = 0;
         }
     }
 
@@ -45,16 +60,21 @@ public class PlayerInteract : MonoBehaviour
         {
             print("I'm looking at " + hit.transform.name);
             //if the object that is hit is an interactive then call the correct interactive
-            if (hit.transform.tag == "Interactive") {
+            if (hit.transform.tag == "Lever") {
                 amountOfLeversPulled++;
                 //destroy the lever that has been pulled
                 Destroy(hit.transform.gameObject);
+
+
+
+                //DELTE LATER
+                switchesText.text = "Switches Pushed: " + amountOfLeversPulled.ToString() + " : 4 ";
                 //just some debug stuff DELETE LATER
                 Debug.Log("Pulled the lever Kronk");
             }
         }
 
-        //if it doesn't then don't worry
+        //if it doesn't then don't worry, the player is looking at nothing
         else
         {
             print("I'm looking at nothing!");
