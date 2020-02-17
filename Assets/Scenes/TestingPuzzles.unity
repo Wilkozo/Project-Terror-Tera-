@@ -838,6 +838,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4963154510431449152}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &481649491 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4963154509638337362, guid: a77aa3c565bd29b44a1cb232394a0bb6,
+    type: 3}
+  m_PrefabInstance: {fileID: 4963154510431449152}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481649490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c2e8bf9204af44b92e27e9ad6f39bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &481649500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5670,6 +5682,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4143180536214189993, guid: a2c0a23050760354faa1ffd1000a455c,
+        type: 3}
+      propertyPath: detect
+      value: 
+      objectReference: {fileID: 481649491}
     - target: {fileID: 4143180536217279401, guid: a2c0a23050760354faa1ffd1000a455c,
         type: 3}
       propertyPath: m_Enabled
@@ -5762,6 +5779,11 @@ PrefabInstance:
     - target: {fileID: 4963154509638337362, guid: a77aa3c565bd29b44a1cb232394a0bb6,
         type: 3}
       propertyPath: viewLength
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963154509638337362, guid: a77aa3c565bd29b44a1cb232394a0bb6,
+        type: 3}
+      propertyPath: timeToReset
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4963154509638337366, guid: a77aa3c565bd29b44a1cb232394a0bb6,

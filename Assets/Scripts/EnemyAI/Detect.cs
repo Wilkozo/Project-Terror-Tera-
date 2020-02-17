@@ -21,11 +21,20 @@ public class Detect : MonoBehaviour
     //how far the ai can see
     public float viewLength;
 
+    //ai hearing a sound 
+    public bool heardSomethingFollow;
+    public Transform heardSomethingFollowPosition;
+    public float timerHearing;
+    public float timeToReset;
+
     private void Start()
     {
+        //get the navemesh agent component of the ai
         agent = GetComponent<NavMeshAgent>();
 
+        //find the player
         player = GameObject.FindGameObjectWithTag("Player");
+        //if the player tag is not there
         if (!player)
         {
             Debug.Log("Make sure your player is tagged!!");
@@ -34,7 +43,6 @@ public class Detect : MonoBehaviour
 
     void Update()
     {
-     
         //raycast hiting object
         RaycastHit objectHit;
 
@@ -48,6 +56,15 @@ public class Detect : MonoBehaviour
         {
             //look at the player
             transform.LookAt(player.transform);
+        }
+
+        //if the ai has heard something
+        if (heardSomethingFollow) {
+            agent.destination = heardSomethingFollowPosition.position;
+            timerHearing += Time.deltaTime;
+        }
+        if (timerHearing >= timeToReset) {
+            heardSomethingFollow = false;
         }
 
         //get the forward vector3
@@ -69,6 +86,7 @@ public class Detect : MonoBehaviour
             }
         }
 
+
     }
 
     //what to do when the ai has seen the player
@@ -76,27 +94,18 @@ public class Detect : MonoBehaviour
 
         //makes it so it has seen the player
         wander.playerNotSeen = false;
-        // calculate distance to move
-        //float step = speed * Time.deltaTime;
-        
-        
+
         //look at the player
         transform.LookAt(player.transform.position);
 
         //move towards the player
         agent.destination = player.transform.position;
 
-        //move towards the players poisiton at the step speed
-       //transform.position = Vector3.MoveTowards(transform.position, player.position, step);
-
     }
 
-    //what to do when the ai has heard the player
-    //TODO:
-    void HeardPlayer() { 
-    
+    //what to do when the ai has heard something
+    public void HeardSomething() {
 
-    
     }
 
 

@@ -47,7 +47,9 @@ public class PlayerInteract : MonoBehaviour
     }
 
     //used to check to see if the player can pickup an item or activate something else
-    void checkForInteract() {
+
+    //TODO: make this return the name of the object that was hit to a script if it asks
+    public string checkForInteract() {
 
         //sends a raycast from the camera
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
@@ -79,6 +81,8 @@ public class PlayerInteract : MonoBehaviour
         {
             print("I'm looking at nothing!");
         }
+
+        return hit.transform.name;
     }
 
 }
