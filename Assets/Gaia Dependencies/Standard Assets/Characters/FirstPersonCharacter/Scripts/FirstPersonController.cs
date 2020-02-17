@@ -85,12 +85,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
         }
 
-
         private void PlayLandingSound()
         {
             m_AudioSource.clip = m_LandSound;
             m_AudioSource.Play();
             m_NextStep = m_StepCycle + .5f;
+            audioSender(20.0f);
+
         }
 
 
@@ -140,6 +141,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             m_AudioSource.clip = m_JumpSound;
             m_AudioSource.Play();
+           
         }
 
 
@@ -176,8 +178,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // move picked sound to index 0 so it's not picked next time
             m_FootstepSounds[n] = m_FootstepSounds[0];
             m_FootstepSounds[0] = m_AudioSource.clip;
+
+            audioSender(15.0f);
+
         }
 
+
+        void audioSender(float radius) {
+
+            Collider[] hits = Physics.OverlapSphere(transform.position, radius);
+            int i = 0;
+
+            while (i < hits.Length)
+            {
+                hits[i].SendMessage("HeardSomethingPlayer");
+                i++;
+            }
+
+        }
 
         private void UpdateCameraPosition(float speed)
         {
