@@ -108,7 +108,7 @@ public class Detect : MonoBehaviour
     //what to do when the ai has heard something
     public void HeardSomethingPlayer()
     {
-        if (!heardSomethingFollow)
+        if (!heardSomethingFollow && wander.playerNotSeen)
         {
             heardSomethingFollow = true;
             Transform temp = player.transform;
@@ -120,7 +120,7 @@ public class Detect : MonoBehaviour
 
     public void HeardSomethingRock() {
 
-        if (!heardSomethingFollow)
+        if (!heardSomethingFollow && wander.playerNotSeen)
         {
             heardSomethingFollow = true;
             GameObject temp = GameObject.FindGameObjectWithTag("Rock");
