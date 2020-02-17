@@ -52,11 +52,11 @@ public class Detect : MonoBehaviour
         float angle = Vector3.Angle(targetDir, transform.forward);
 
         //if the angle is less than 45 and the player is not more than 10 units away
-        if (angle < 45)
-        {
-            //look at the player
-            transform.LookAt(player.transform);
-        }
+        //if (angle < 45)
+        //{
+        //    //look at the player
+        //    transform.LookAt(player.transform);
+        //}
 
         //if the ai has heard something
         if (heardSomethingFollow) {
@@ -111,9 +111,10 @@ public class Detect : MonoBehaviour
         if (!heardSomethingFollow && wander.playerNotSeen)
         {
             heardSomethingFollow = true;
+          //sets the previous position to temp
             Transform temp = player.transform;
             transform.LookAt(temp);
-            //move towards the player
+            //move towards the temp position
             agent.destination = temp.position;
         }
     }
@@ -123,6 +124,7 @@ public class Detect : MonoBehaviour
         if (!heardSomethingFollow && wander.playerNotSeen)
         {
             heardSomethingFollow = true;
+            //find the rock as there can only be one in the scene at a time
             GameObject temp = GameObject.FindGameObjectWithTag("Rock");
             transform.LookAt(temp.transform);
             //move towards the Rock
