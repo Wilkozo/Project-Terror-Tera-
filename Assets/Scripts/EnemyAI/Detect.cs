@@ -27,6 +27,10 @@ public class Detect : MonoBehaviour
     public float timerHearing;
     public float timeToReset;
 
+    public float radiusSeenPlayer;
+
+    public bool lookAt;
+
     private void Start()
     {
         //get the navemesh agent component of the ai
@@ -51,16 +55,42 @@ public class Detect : MonoBehaviour
         //gets the angle between the player and this transform
         float angle = Vector3.Angle(targetDir, transform.forward);
 
-        //if the angle is less than 45 and the player is not more than 10 units away
-        //if (angle < 45)
-        //{
-        //    //look at the player
-        //    transform.LookAt(player.transform);
-        //}
+
+        if (wander.playerNotSeen)
+        {
+            radiusSeenPlayer = 20.0f;
+        }
+        else {
+            transform.LookAt(player.transform);
+            radiusSeenPlayer = 45.0f;
+        }
+
+        //makes it so the raptor can smell the player and then look at them
+        Collider[] hits = Physics.OverlapSphere(transform.position, radiusSeenPlayer);
+        int i = 0;
+
+        while (i < hits.Length)
+        {
+            if (hits[i].name == "Player") {
+
+
+                if (angle < 45.0f)
+                {
+                    lookAt = true;
+                }
+                else {
+                    lookAt = false;
+                }
+            Debug.Log("I should be dead");
+                transform.LookAt(player.transform);
+                HeardSomethingPlayer();
+                break;
+            }
+            i++;
+        }
 
         //if the ai has heard something
         if (heardSomethingFollow) {
-            //agent.destination = heardSomethingFollowPosition.position;
             timerHearing += 1 + Time.deltaTime;
         }
         if (timerHearing >= timeToReset) {
@@ -69,12 +99,78 @@ public class Detect : MonoBehaviour
             wander.playerNotSeen = true;
         }
 
+        #region raycasting to detect player
+
         //get the forward vector3
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         //draw a ray from the enemy
-        Debug.DrawRay(transform.position, fwd * viewLength, Color.green);
+        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y - 0.75f, transform.position.z), fwd * viewLength, Color.green);
+        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y, transform.position.z), fwd * viewLength, Color.green);
+        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 0.75f, transform.position.z), fwd * viewLength, Color.green);
+        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 1.25f, transform.position.z), fwd * viewLength, Color.green);
+        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 1.75f, transform.position.z), fwd * viewLength, Color.green);
+
         //if it hits something then proceed
-        if (Physics.Raycast(transform.position, fwd, out objectHit, viewLength))
+
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 1.25f, transform.position.z), fwd, out objectHit, viewLength))
+        {
+            //if it hit the player then move towards the player
+            if (objectHit.transform.tag == "Player")
+            {
+                //what to do when it sees the player
+                SeenPlayer();
+            }
+            else
+            {
+                //makes it so it has not yet seen the player
+                wander.playerNotSeen = true;
+            }
+        }
+
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 1.75f, transform.position.z), fwd, out objectHit, viewLength))
+        {
+            //if it hit the player then move towards the player
+            if (objectHit.transform.tag == "Player")
+            {
+                //what to do when it sees the player
+                SeenPlayer();
+            }
+            else
+            {
+                //makes it so it has not yet seen the player
+                wander.playerNotSeen = true;
+            }
+        }
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 2.25f, transform.position.z), fwd, out objectHit, viewLength))
+        {
+            //if it hit the player then move towards the player
+            if (objectHit.transform.tag == "Player")
+            {
+                //what to do when it sees the player
+                SeenPlayer();
+            }
+            else
+            {
+                //makes it so it has not yet seen the player
+                wander.playerNotSeen = true;
+            }
+        }
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 2.75f, transform.position.z), fwd, out objectHit, viewLength))
+        {
+            //if it hit the player then move towards the player
+            if (objectHit.transform.tag == "Player")
+            {
+                //what to do when it sees the player
+                SeenPlayer();
+            }
+            else
+            {
+                //makes it so it has not yet seen the player
+                wander.playerNotSeen = true;
+            }
+        }
+
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 0.75f, transform.position.z), fwd, out objectHit, viewLength))
         {
             //if it hit the player then move towards the player
             if (objectHit.transform.tag == "Player")
@@ -87,7 +183,68 @@ public class Detect : MonoBehaviour
                 wander.playerNotSeen = true;
             }
         }
+
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y, transform.position.z), fwd, out objectHit, viewLength))
+        {
+            //if it hit the player then move towards the player
+            if (objectHit.transform.tag == "Player")
+            {
+                //what to do when it sees the player
+                SeenPlayer();
+            }
+            else
+            {
+                //makes it so it has not yet seen the player
+                wander.playerNotSeen = true;
+            }
+        }
+
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.75f, transform.position.z), fwd, out objectHit, viewLength))
+        {
+            //if it hit the player then move towards the player
+            if (objectHit.transform.tag == "Player")
+            {
+                //what to do when it sees the player
+                SeenPlayer();
+            }
+            else
+            {
+                //makes it so it has not yet seen the player
+                wander.playerNotSeen = true;
+            }
+        }
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1.25f, transform.position.z), fwd, out objectHit, viewLength))
+        {
+            //if it hit the player then move towards the player
+            if (objectHit.transform.tag == "Player")
+            {
+                //what to do when it sees the player
+                SeenPlayer();
+            }
+            else
+            {
+                //makes it so it has not yet seen the player
+                wander.playerNotSeen = true;
+            }
+        }
+
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1.75f, transform.position.z), fwd, out objectHit, viewLength))
+        {
+            //if it hit the player then move towards the player
+            if (objectHit.transform.tag == "Player")
+            {
+                //what to do when it sees the player
+                SeenPlayer();
+            }
+            else
+            {
+                //makes it so it has not yet seen the player
+                wander.playerNotSeen = true;
+            }
+        }
     }
+
+    #endregion
 
     //what to do when the ai has seen the player
     void SeenPlayer() {
