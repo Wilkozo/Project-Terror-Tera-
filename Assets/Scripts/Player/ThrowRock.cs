@@ -11,13 +11,17 @@ public class ThrowRock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //user pushes e
         if (Input.GetKeyDown(KeyCode.E))
         {
+            //finds all of the rocks
             GameObject[] temp = GameObject.FindGameObjectsWithTag("Rock");
+            //if there are less than one rock
             if (temp.Length < 1)
             {
-                Rigidbody bulletClone = (Rigidbody)Instantiate(rock, transform.position, transform.rotation);
-                bulletClone.velocity = transform.forward * rockSpeed;
+                //create a rock and give it some velocity
+                Rigidbody rockClone = (Rigidbody)Instantiate(rock, transform.position, transform.rotation);
+                rockClone.velocity = transform.forward * rockSpeed;
             }
         }
     }

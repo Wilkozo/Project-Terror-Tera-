@@ -87,8 +87,6 @@ public class Detect : MonoBehaviour
                 wander.playerNotSeen = true;
             }
         }
-
-
     }
 
     //what to do when the ai has seen the player
@@ -131,6 +129,4 @@ public class Detect : MonoBehaviour
             agent.destination = temp.transform.position;
         }
     }
-
-
 }
