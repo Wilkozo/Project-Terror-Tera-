@@ -476,6 +476,7 @@ Transform:
   m_Children:
   - {fileID: 1716755639}
   - {fileID: 1900058810}
+  - {fileID: 4143180537309608438}
   m_Father: {fileID: 4143180536223899241}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -550,7 +551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42525ec91948a1149a1f4abeb43094b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchesText: {fileID: 0}
   amountOfLeversPulled: 0
 --- !u!114 &1444289631
 MonoBehaviour:
@@ -596,8 +596,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 4143180537309608438}
+  m_Children: []
   m_Father: {fileID: 4143180536223899241}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -691,11 +690,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4143180537309608437}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 0.0046939044, y: 0.0046939044, z: 0.0046939044}
   m_Children: []
-  m_Father: {fileID: 4143180536586867226}
-  m_RootOrder: 0
+  m_Father: {fileID: 4143180536223899243}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4143180537309608439
 SpriteRenderer:
