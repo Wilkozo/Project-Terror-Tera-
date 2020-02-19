@@ -180,7 +180,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[0] = m_AudioSource.clip;
 
             //send out a overlapSphere
-            audioSender(15.0f);
+            audioSender(20.0f);
 
         }
 
