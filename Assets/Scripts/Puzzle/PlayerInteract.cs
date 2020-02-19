@@ -26,6 +26,7 @@ public class PlayerInteract : MonoBehaviour
     void Update()
     {
 
+        //TEMP STUFF DELETE LATER
         if (Input.GetKeyDown(KeyCode.R)) {
             Time.timeScale = 1;
             Application.LoadLevel(Application.loadedLevel);  
@@ -33,6 +34,7 @@ public class PlayerInteract : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Application.Quit();
         }
+        //END OF TEMP STUFF
 
         //check to see if the player pushes the left mouse 
         if (Input.GetMouseButtonDown(0)) {
@@ -82,6 +84,7 @@ public class PlayerInteract : MonoBehaviour
             print("I'm looking at nothing!");
         }
 
+        //used for puzzles that involve pushing buttons with specific names
         return hit.transform.name;
     }
 

@@ -58,11 +58,11 @@ public class Detect : MonoBehaviour
 
         if (wander.playerNotSeen)
         {
-            radiusSeenPlayer = 20.0f;
+            radiusSeenPlayer = 10.0f;
         }
         else {
             transform.LookAt(player.transform);
-            radiusSeenPlayer = 45.0f;
+            radiusSeenPlayer = 55.0f;
         }
 
         //makes it so the raptor can smell the player and then look at them
