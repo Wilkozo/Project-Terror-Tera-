@@ -55,7 +55,7 @@ public class BasicWander : MonoBehaviour
     {
         if (other.tag == "Player") {
             Time.timeScale = 0;
-            player.switchesText.text = "GAME OVER!!!";
+            //player.switchesText.text = "GAME OVER!!!";
         }
     }
 }

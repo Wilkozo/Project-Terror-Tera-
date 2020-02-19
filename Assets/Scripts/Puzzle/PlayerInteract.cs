@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    public Text switchesText;
+    //public Text switchesText;
 
     //camera reference
     Camera cam;
@@ -16,7 +16,7 @@ public class PlayerInteract : MonoBehaviour
     void Start()
     {
 
-        switchesText.text = "Switches Pushed: 0 : 4";
+        //switchesText.text = "Switches Pushed: 0 : 4";
         //get the camera
         cam = GetComponent<Camera>();
 
@@ -42,10 +42,10 @@ public class PlayerInteract : MonoBehaviour
             checkForInteract();
         }
 
-        if (amountOfLeversPulled >= 4) {
-            switchesText.text = "YOU WIN!!!";
-            Time.timeScale = 0;
-        }
+        //if (amountOfLeversPulled >= 4) {
+        //    switchesText.text = "YOU WIN!!!";
+        //    Time.timeScale = 0;
+        //}
     }
 
     //used to check to see if the player can pickup an item or activate something else
@@ -70,7 +70,7 @@ public class PlayerInteract : MonoBehaviour
                 Destroy(hit.transform.gameObject);
 
                 //DELTE LATER
-                switchesText.text = "Switches Pushed: " + amountOfLeversPulled.ToString() + " : 4 ";
+                //switchesText.text = "Switches Pushed: " + amountOfLeversPulled.ToString() + " : 4 ";
                 //just some debug stuff DELETE LATER
                 Debug.Log("Pulled the lever Kronk");
             }
