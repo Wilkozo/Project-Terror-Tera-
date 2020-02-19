@@ -69,12 +69,14 @@ public class PlayerInteract : MonoBehaviour
                 //destroy the lever that has been pulled
                 Destroy(hit.transform.gameObject);
 
-
-
                 //DELTE LATER
                 switchesText.text = "Switches Pushed: " + amountOfLeversPulled.ToString() + " : 4 ";
                 //just some debug stuff DELETE LATER
                 Debug.Log("Pulled the lever Kronk");
+            }
+            if (hit.transform.tag == "Document") {
+                //sends a message to run a function from another script
+                hit.transform.SendMessage("ReadMessage");
             }
         }
 
