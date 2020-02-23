@@ -166,6 +166,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayFootStepAudio()
         {
+            audioSender(35.0f);
             if (!m_CharacterController.isGrounded)
             {
                 return;
@@ -180,7 +181,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[0] = m_AudioSource.clip;
 
             //send out a overlapSphere
-            audioSender(20.0f);
+     
 
         }
 

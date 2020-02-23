@@ -23,6 +23,7 @@ public class Detect : MonoBehaviour
 
     //ai hearing a sound 
     public bool heardSomethingFollow;
+    public bool playerHeard;
     public Transform heardSomethingFollowPosition;
     public float timerHearing;
     public float timeToReset;
@@ -92,11 +93,25 @@ public class Detect : MonoBehaviour
         //if the ai has heard something
         if (heardSomethingFollow) {
             timerHearing += 1 + Time.deltaTime;
+            if (playerHeard)
+            {
+                Transform temp = player.transform;
+                transform.LookAt(temp);
+                //move towards the temp position
+                agent.destination = temp.position;
+            }
+            else
+            {
+                GameObject temp = GameObject.FindGameObjectWithTag("Rock");
+                transform.LookAt(temp.transform);
+                agent.destination = temp.transform.position;
+            }
         }
         if (timerHearing >= timeToReset) {
             timerHearing = 0;
             heardSomethingFollow = false;
-            wander.playerNotSeen = true;
+            playerHeard = false;
+            //wander.playerNotSeen = true;
         }
 
         #region raycasting to detect player
@@ -266,11 +281,12 @@ public class Detect : MonoBehaviour
         if (!heardSomethingFollow && wander.playerNotSeen)
         {
             heardSomethingFollow = true;
-          //sets the previous position to temp
-            Transform temp = player.transform;
-            transform.LookAt(temp);
-            //move towards the temp position
-            agent.destination = temp.position;
+            playerHeard = true;
+          ////sets the previous position to temp
+          //  Transform temp = player.transform;
+          //  transform.LookAt(temp);
+          //  //move towards the temp position
+          //  agent.destination = temp.position;
         }
     }
 
@@ -279,11 +295,11 @@ public class Detect : MonoBehaviour
         if (!heardSomethingFollow && wander.playerNotSeen)
         {
             heardSomethingFollow = true;
-            //find the rock as there can only be one in the scene at a time
-            GameObject temp = GameObject.FindGameObjectWithTag("Rock");
-            transform.LookAt(temp.transform);
-            //move towards the Rock
-            agent.destination = temp.transform.position;
+            ////find the rock as there can only be one in the scene at a time
+            //GameObject temp = GameObject.FindGameObjectWithTag("Rock");
+            //transform.LookAt(temp.transform);
+            ////move towards the Rock
+            //agent.destination = temp.transform.position;
         }
     }
 }
