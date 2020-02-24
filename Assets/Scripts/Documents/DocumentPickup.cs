@@ -11,8 +11,11 @@ public class DocumentPickup : MonoBehaviour
 
     private void Start()
     {
-        documentText.enabled = false;
-        documentImage.enabled = false;
+        if (documentText.name != "IntroText")
+        {
+            documentText.enabled = false;
+        }
+       // documentImage.enabled = false;
     }
 
     //when the player interacts with the document places
@@ -30,9 +33,10 @@ public class DocumentPickup : MonoBehaviour
     private void Update()
     {
         //when the player presses Q the document will disable
-        if (Input.GetKeyDown(KeyCode.Q)) {
+        if (Input.GetKeyDown(KeyCode.Q) && documentText.enabled) {
             documentText.enabled = false;
             documentImage.enabled = false;
+            Destroy(this.gameObject);
         }
     }
 }

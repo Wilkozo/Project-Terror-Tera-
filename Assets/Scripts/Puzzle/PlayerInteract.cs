@@ -10,11 +10,23 @@ public class PlayerInteract : MonoBehaviour
     //camera reference
     Camera cam;
 
+    //get a reference to the map
+    public GameObject map;
+    public bool mapEnabled = false;
+
+    bool mapAquired;
+
     //the amount of levers that the player has interacted with
     [SerializeField] int amountOfLeversPulled;
 
     void Start()
     {
+
+
+        //find the map
+        map = GameObject.FindGameObjectWithTag("Map");
+        //set the map to false
+        map.SetActive(false);
 
         //switchesText.text = "Switches Pushed: 0 : 4";
         //get the camera
@@ -25,6 +37,14 @@ public class PlayerInteract : MonoBehaviour
 
     void Update()
     {
+
+        //enable/disable map
+        if (Input.GetKeyDown(KeyCode.M) && mapAquired)
+        {
+            Debug.Log(mapEnabled);
+            map.SetActive(!mapEnabled);
+            mapEnabled = !mapEnabled;
+        }
 
         //TEMP STUFF DELETE LATER
         if (Input.GetKeyDown(KeyCode.R)) {
@@ -41,11 +61,6 @@ public class PlayerInteract : MonoBehaviour
             //call check for interact
             checkForInteract();
         }
-
-        //if (amountOfLeversPulled >= 4) {
-        //    switchesText.text = "YOU WIN!!!";
-        //    Time.timeScale = 0;
-        //}
     }
 
     //used to check to see if the player can pickup an item or activate something else
@@ -77,6 +92,12 @@ public class PlayerInteract : MonoBehaviour
             if (hit.transform.tag == "Document") {
                 //sends a message to run a function from another script
                 hit.transform.SendMessage("ReadMessage");
+            }
+
+            if (hit.transform.name == "Map") {
+                mapAquired = true;
+                Destroy(GameObject.Find("Map"));
+                
             }
         }
 
