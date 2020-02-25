@@ -32,6 +32,10 @@ public class Detect : MonoBehaviour
 
     public bool lookAt;
 
+    public AudioClip roar;
+    public AudioSource roarSource;
+    public float range;
+
     private void Start()
     {
         //get the navemesh agent component of the ai
@@ -46,8 +50,20 @@ public class Detect : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        range = Random.Range(-1000, 1005);
+
+        if (range > 1000)
+        {
+            roarSource.PlayOneShot(roar);
+        }
+
+    }
+
     void Update()
     {
+       
         //raycast hiting object
         RaycastHit objectHit;
 

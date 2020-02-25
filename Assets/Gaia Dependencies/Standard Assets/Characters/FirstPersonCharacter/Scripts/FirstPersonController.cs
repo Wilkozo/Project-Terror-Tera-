@@ -43,6 +43,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        public bool crouch;
 
         // Use this for initialization
         private void Start()
@@ -63,6 +64,20 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+
+            if (crouch)
+            {
+                m_WalkSpeed = 2.5f;
+                m_RunSpeed = 2.5f;
+                m_CharacterController.height = 0.3f;
+
+            }
+            else
+            {
+                m_WalkSpeed = 5;
+                m_RunSpeed = 10;
+                m_CharacterController.height = 1.8f;
+            }
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -239,6 +254,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
+
+            if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl)) {
+                crouch = true;
+            }
+            else{
+                crouch = false;
+            }
 
             // normalize input if it exceeds 1 in combined length:
             if (m_Input.sqrMagnitude > 1)
