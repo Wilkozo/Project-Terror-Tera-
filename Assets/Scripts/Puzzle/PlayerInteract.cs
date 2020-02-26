@@ -99,6 +99,10 @@ public class PlayerInteract : MonoBehaviour
                 Destroy(GameObject.Find("Map"));
                 
             }
+            if (hit.transform.name == "PowerOn")
+            {
+                GameObject.FindGameObjectWithTag("Power").SendMessage("onPowerUp");
+            }
 
             //if the player hits the gate button
             if (hit.transform.name == "ButtonToLowerGate") {
