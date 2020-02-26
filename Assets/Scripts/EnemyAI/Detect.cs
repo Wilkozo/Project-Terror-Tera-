@@ -36,6 +36,8 @@ public class Detect : MonoBehaviour
     public AudioSource roarSource;
     public float range;
 
+    public bool seenPlayer = false;
+
     private void Start()
     {
         //get the navemesh agent component of the ai
@@ -63,7 +65,23 @@ public class Detect : MonoBehaviour
 
     void Update()
     {
-       
+
+
+
+        if (seenPlayer)
+        {
+
+            //makes it so it has seen the player
+            wander.playerNotSeen = false;
+
+            //look at the player
+            transform.LookAt(player.transform.position);
+
+            //move towards the player
+            agent.destination = player.transform.position;
+        }
+
+
         //raycast hiting object
         RaycastHit objectHit;
 
@@ -75,11 +93,11 @@ public class Detect : MonoBehaviour
 
         if (wander.playerNotSeen)
         {
-            radiusSeenPlayer = 5.0f;
+            radiusSeenPlayer = 15.0f;
         }
         else {
             transform.LookAt(player.transform);
-            radiusSeenPlayer = 75.0f;
+            radiusSeenPlayer = 150.0f;
         }
 
         //makes it so the raptor can smell the player and then look at them
@@ -100,7 +118,7 @@ public class Detect : MonoBehaviour
                 }
             Debug.Log("I should be dead");
                 transform.LookAt(player.transform);
-                HeardSomethingPlayer();
+                seenPlayer = true;
                 break;
             }
             i++;
@@ -132,6 +150,11 @@ public class Detect : MonoBehaviour
 
         #region raycasting to detect player
 
+
+        if (wander.playerNotSeen == false) {
+            seenPlayer = false;
+        }
+
         //get the forward vector3
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         //draw a ray from the enemy
@@ -149,7 +172,7 @@ public class Detect : MonoBehaviour
             if (objectHit.transform.tag == "Player")
             {
                 //what to do when it sees the player
-                SeenPlayer();
+                seenPlayer = true;
             }
             else
             {
@@ -164,7 +187,7 @@ public class Detect : MonoBehaviour
             if (objectHit.transform.tag == "Player")
             {
                 //what to do when it sees the player
-                SeenPlayer();
+                seenPlayer = true;
             }
             else
             {
@@ -178,7 +201,7 @@ public class Detect : MonoBehaviour
             if (objectHit.transform.tag == "Player")
             {
                 //what to do when it sees the player
-                SeenPlayer();
+                seenPlayer = true;
             }
             else
             {
@@ -192,7 +215,7 @@ public class Detect : MonoBehaviour
             if (objectHit.transform.tag == "Player")
             {
                 //what to do when it sees the player
-                SeenPlayer();
+                seenPlayer = true;
             }
             else
             {
@@ -207,7 +230,7 @@ public class Detect : MonoBehaviour
             if (objectHit.transform.tag == "Player")
             {
                 //what to do when it sees the player
-                SeenPlayer();
+                seenPlayer = true;
             }
             else {
                 //makes it so it has not yet seen the player
@@ -221,7 +244,7 @@ public class Detect : MonoBehaviour
             if (objectHit.transform.tag == "Player")
             {
                 //what to do when it sees the player
-                SeenPlayer();
+                seenPlayer = true;
             }
             else
             {
@@ -236,7 +259,7 @@ public class Detect : MonoBehaviour
             if (objectHit.transform.tag == "Player")
             {
                 //what to do when it sees the player
-                SeenPlayer();
+                seenPlayer = true;
             }
             else
             {
@@ -250,7 +273,7 @@ public class Detect : MonoBehaviour
             if (objectHit.transform.tag == "Player")
             {
                 //what to do when it sees the player
-                SeenPlayer();
+                seenPlayer = true;
             }
             else
             {
@@ -265,7 +288,7 @@ public class Detect : MonoBehaviour
             if (objectHit.transform.tag == "Player")
             {
                 //what to do when it sees the player
-                SeenPlayer();
+                seenPlayer = true;
             }
             else
             {
@@ -277,19 +300,19 @@ public class Detect : MonoBehaviour
 
     #endregion
 
-    //what to do when the ai has seen the player
-    void SeenPlayer() {
+    ////what to do when the ai has seen the player
+    //void SeenPlayer() {
 
-        //makes it so it has seen the player
-        wander.playerNotSeen = false;
+    //    //makes it so it has seen the player
+    //    wander.playerNotSeen = false;
 
-        //look at the player
-        transform.LookAt(player.transform.position);
+    //    //look at the player
+    //    transform.LookAt(player.transform.position);
 
-        //move towards the player
-        agent.destination = player.transform.position;
+    //    //move towards the player
+    //    agent.destination = player.transform.position;
 
-    }
+    //}
 
     //what to do when the ai has heard something
     public void HeardSomethingPlayer()
