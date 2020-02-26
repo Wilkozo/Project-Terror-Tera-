@@ -50,12 +50,11 @@ public class BasicWander : MonoBehaviour
     }
 
 
-    //DELETE LATER
+   //when an enemy collides with the player load the game over scene.
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player") {
-            Time.timeScale = 0;
-            //player.switchesText.text = "GAME OVER!!!";
+            Application.LoadLevel("GameOver");
         }
     }
 }
