@@ -99,6 +99,15 @@ public class PlayerInteract : MonoBehaviour
                 Destroy(GameObject.Find("Map"));
                 
             }
+
+            //if the player hits the gate button
+            if (hit.transform.name == "ButtonToLowerGate") {
+                // if the player has the map then they can open the main gate
+                if (mapAquired)
+                {
+                    Destroy(GameObject.Find("Gate1"));
+                }
+            }
         }
 
         //if it doesn't then don't worry, the player is looking at nothing
