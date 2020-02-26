@@ -1,22 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public Text totalDocuments;
+    public Text digZones;
+    public int digCount;
+    public int documentCount;
 
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-  
+    public void documentsPickedUp() {
+        documentCount++;
+        totalDocuments.text = "Documents: " + documentCount.ToString() + " / 5";
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-
-      
+        if(other.tag == "DigZone"){
+            digCount++;
+            Destroy(other.GetComponent<SphereCollider>());
+            digZones.text = "Dig Zones: " + digCount.ToString() + " / 7";
+        }
     }
+
 }

@@ -24,6 +24,7 @@ public class DocumentPickup : MonoBehaviour
         //set the ui stuff to be true
         documentText.enabled = true;
         documentImage.enabled = true;
+        GameObject.FindGameObjectWithTag("Player").SendMessage("documentsPickedUp");
 
         //Time.timeScale = 0;
         Debug.Log("Hit the document");
