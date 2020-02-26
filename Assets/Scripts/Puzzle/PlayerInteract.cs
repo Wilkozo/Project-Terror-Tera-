@@ -16,12 +16,17 @@ public class PlayerInteract : MonoBehaviour
 
     bool mapAquired;
 
+    public GameObject boat;
+
+    [SerializeField] PlayerManager playerManager;
+    [SerializeField] PowerOn power;
+
     //the amount of levers that the player has interacted with
     [SerializeField] int amountOfLeversPulled;
 
     void Start()
     {
-
+        boat.SetActive(false);
 
         //find the map
         map = GameObject.FindGameObjectWithTag("Map");
@@ -111,6 +116,9 @@ public class PlayerInteract : MonoBehaviour
                 {
                     Destroy(GameObject.Find("Gate1"));
                 }
+            }
+            if (hit.transform.name == "Radio" && playerManager.digCount >= 6 && power.poweredOn) {
+                boat.SetActive(true);
             }
         }
 
