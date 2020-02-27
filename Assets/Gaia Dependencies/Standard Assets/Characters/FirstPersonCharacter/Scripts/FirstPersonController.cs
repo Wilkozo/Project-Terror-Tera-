@@ -303,7 +303,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag == "Boat") {
-                Application.LoadLevel("WinGame");
+                Application.LoadLevel("WinScreen");
             }
         }
     }
