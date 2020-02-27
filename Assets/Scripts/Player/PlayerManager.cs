@@ -15,13 +15,15 @@ public class PlayerManager : MonoBehaviour
         totalDocuments.text = "Documents: " + documentCount.ToString() + " / 5";
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P)) {
-            digCount +=1;
-            digZones.text = "Dig Zones: " + digCount.ToString() + " / 7";
-        }
-    }
+
+    //TO CHEAT
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.P)) {
+    //        digCount +=1;
+    //        digZones.text = "Dig Zones: " + digCount.ToString() + " / 7";
+    //    }
+    //}
 
     private void OnTriggerEnter(Collider other)
     {

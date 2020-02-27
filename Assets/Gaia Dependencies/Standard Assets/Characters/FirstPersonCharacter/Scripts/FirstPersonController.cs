@@ -74,7 +74,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-                m_WalkSpeed = 50;
+                m_WalkSpeed = 5;
                 m_RunSpeed = 10;
                 m_CharacterController.height = 1.8f;
             }

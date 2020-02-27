@@ -51,11 +51,12 @@ public class PlayerInteract : MonoBehaviour
             mapEnabled = !mapEnabled;
         }
 
-        //TEMP STUFF DELETE LATER
-        if (Input.GetKeyDown(KeyCode.R)) {
-            Time.timeScale = 1;
-            Application.LoadLevel(Application.loadedLevel);  
-        }
+        ////TEMP STUFF DELETE LATER
+        //if (Input.GetKeyDown(KeyCode.R)) {
+        //    Time.timeScale = 1;
+        //    Application.LoadLevel(Application.loadedLevel);  
+        //}
+
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Application.Quit();
         }
