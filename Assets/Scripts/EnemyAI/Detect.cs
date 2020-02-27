@@ -52,9 +52,9 @@ public class Detect : MonoBehaviour
 
     private void FixedUpdate()
     {
-        range = Random.Range(-1000, 1005);
+        range = Random.Range(0, 10005);
 
-        if (range > 1000)
+        if (range > 10000)
         {
             roarSource.PlayOneShot(roar);
         }
