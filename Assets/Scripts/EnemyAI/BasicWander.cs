@@ -19,7 +19,7 @@ public class BasicWander : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
-        agent.autoBraking = false;
+        agent.autoBraking = true;
 
         GotoNextPoint();
     }
