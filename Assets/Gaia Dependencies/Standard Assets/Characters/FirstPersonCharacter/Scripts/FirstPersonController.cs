@@ -28,7 +28,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound = null;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound = null;           // the sound played when character touches back on ground.
 
-        [SerializeField] public Detect detect;
+        //[SerializeField] public Detect detect;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -74,7 +74,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-                m_WalkSpeed = 5;
+                m_WalkSpeed = 50;
                 m_RunSpeed = 10;
                 m_CharacterController.height = 1.8f;
             }
