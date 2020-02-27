@@ -110,7 +110,7 @@ public class Detect : MonoBehaviour
                 //move towards the player
                 agent.destination = player.transform.position;
 
-
+                FindObjectOfType<AudioManager>().Play("Detect");
                 SeenPlayer();
             }
             i++;
