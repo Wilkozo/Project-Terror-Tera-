@@ -7,17 +7,21 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
+        FindObjectOfType<AudioManager>().Play("Button");
+
         // Gets The Next Scene for the Play Mode
         SceneManager.LoadScene(1);
     }
 
     public void ReturnToMainMenu()
     {
+        FindObjectOfType<AudioManager>().Play("Button");
         SceneManager.LoadScene(0);
     }
 
     public void EndGame()
     {
+        FindObjectOfType<AudioManager>().Play("Button");
         Application.Quit();
     }
 }

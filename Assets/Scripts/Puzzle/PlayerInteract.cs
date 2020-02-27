@@ -119,6 +119,7 @@ public class PlayerInteract : MonoBehaviour
                 }
             }
             if (hit.transform.name == "Radio" && playerManager.digCount >= 6 && power.poweredOn) {
+                FindObjectOfType<AudioManager>().Play("");
                 boat.SetActive(true);
             }
         }

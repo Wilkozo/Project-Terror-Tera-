@@ -7,7 +7,7 @@ using UnityEngine;
 //used to detect audio and visual sources
 public class Detect : MonoBehaviour
 { 
-
+    public bool Played = false;
     //getting the wander script
     [SerializeField] BasicWander wander;
 
@@ -110,7 +110,7 @@ public class Detect : MonoBehaviour
                 //move towards the player
                 agent.destination = player.transform.position;
 
-                FindObjectOfType<AudioManager>().Play("Detect");
+               
                 SeenPlayer();
             }
             i++;
@@ -289,6 +289,12 @@ public class Detect : MonoBehaviour
 
     //what to do when the ai has seen the player
     void SeenPlayer() {
+        if (Played == false)
+        {
+            
+            FindObjectOfType<AudioManager>().Play("Detected");
+            Played = true;
+        }
 
         //makes it so it has seen the player
         wander.playerNotSeen = false;

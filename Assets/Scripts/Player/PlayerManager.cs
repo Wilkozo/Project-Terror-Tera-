@@ -30,6 +30,7 @@ public class PlayerManager : MonoBehaviour
     {
         if(other.tag == "DigZone"){
             digCount++;
+            FindObjectOfType<AudioManager>().Play("DigSite");
             Destroy(other.GetComponent<SphereCollider>());
             Destroy(other.GetComponent<Aura2API.AuraLight>());
             digZones.text = "Dig Zones: " + digCount.ToString() + " / 7";
