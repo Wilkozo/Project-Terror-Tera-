@@ -19,6 +19,9 @@ public class PowerOn : MonoBehaviour
     }
 
     public void onPowerUp() {
+
+        FindObjectOfType<AudioManager>().Play("Poweron");
+
         foreach (GameObject tempLight in lights) {
             Debug.Log("Got here");
             tempLight.SetActive(true);
