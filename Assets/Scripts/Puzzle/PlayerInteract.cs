@@ -5,18 +5,35 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    public Text switchesText;
+    //public Text switchesText;
 
     //camera reference
     Camera cam;
+
+    //get a reference to the map
+    public GameObject map;
+    public bool mapEnabled = false;
+
+    bool mapAquired;
+
+    public GameObject boat;
+
+    [SerializeField] PlayerManager playerManager;
+    [SerializeField] PowerOn power;
 
     //the amount of levers that the player has interacted with
     [SerializeField] int amountOfLeversPulled;
 
     void Start()
     {
+        boat.SetActive(false);
 
-        switchesText.text = "Switches Pushed: 0 : 4";
+        //find the map
+        map = GameObject.FindGameObjectWithTag("Map");
+        //set the map to false
+        map.SetActive(false);
+
+        //switchesText.text = "Switches Pushed: 0 : 4";
         //get the camera
         cam = GetComponent<Camera>();
 
@@ -26,23 +43,29 @@ public class PlayerInteract : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.R)) {
-            Time.timeScale = 1;
-            Application.LoadLevel(Application.loadedLevel);  
+        //enable/disable map
+        if (Input.GetKeyDown(KeyCode.M) && mapAquired)
+        {
+            Debug.Log(mapEnabled);
+            map.SetActive(!mapEnabled);
+            mapEnabled = !mapEnabled;
         }
+
+        ////TEMP STUFF DELETE LATER
+        //if (Input.GetKeyDown(KeyCode.R)) {
+        //    Time.timeScale = 1;
+        //    Application.LoadLevel(Application.loadedLevel);  
+        //}
+
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Application.Quit();
         }
+        //END OF TEMP STUFF
 
         //check to see if the player pushes the left mouse 
         if (Input.GetMouseButtonDown(0)) {
             //call check for interact
             checkForInteract();
-        }
-
-        if (amountOfLeversPulled >= 4) {
-            switchesText.text = "YOU WIN!!!";
-            Time.timeScale = 0;
         }
     }
 
@@ -67,12 +90,37 @@ public class PlayerInteract : MonoBehaviour
                 //destroy the lever that has been pulled
                 Destroy(hit.transform.gameObject);
 
-
-
                 //DELTE LATER
-                switchesText.text = "Switches Pushed: " + amountOfLeversPulled.ToString() + " : 4 ";
+                //switchesText.text = "Switches Pushed: " + amountOfLeversPulled.ToString() + " : 4 ";
                 //just some debug stuff DELETE LATER
                 Debug.Log("Pulled the lever Kronk");
+            }
+            if (hit.transform.tag == "Document") {
+                //sends a message to run a function from another script
+                hit.transform.SendMessage("ReadMessage");
+            }
+
+            if (hit.transform.name == "Map") {
+                mapAquired = true;
+                Destroy(GameObject.Find("Map"));
+                
+            }
+            if (hit.transform.name == "PowerOn")
+            {
+                GameObject.FindGameObjectWithTag("Power").SendMessage("onPowerUp");
+            }
+
+            //if the player hits the gate button
+            if (hit.transform.name == "ButtonToLowerGate") {
+                // if the player has the map then they can open the main gate
+                if (mapAquired)
+                {
+                    Destroy(GameObject.Find("Gate1"));
+                }
+            }
+            if (hit.transform.name == "Radio" && playerManager.digCount >= 6 && power.poweredOn) {
+                FindObjectOfType<AudioManager>().Play("");
+                boat.SetActive(true);
             }
         }
 
@@ -82,6 +130,7 @@ public class PlayerInteract : MonoBehaviour
             print("I'm looking at nothing!");
         }
 
+        //used for puzzles that involve pushing buttons with specific names
         return hit.transform.name;
     }
 

@@ -13,6 +13,7 @@ public class BasicWander : MonoBehaviour
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
+    public float timer;
 
     void Start()
     {
@@ -45,17 +46,17 @@ public class BasicWander : MonoBehaviour
     {
         // Choose the next destination point when the agent gets
         // close to the current one.
+
         if (!agent.pathPending && agent.remainingDistance < 0.5f && playerNotSeen)
             GotoNextPoint();
     }
 
 
-    //DELETE LATER
+   //when an enemy collides with the player load the game over scene.
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player") {
-            Time.timeScale = 0;
-            player.switchesText.text = "GAME OVER!!!";
+            Application.LoadLevel("GameOver");
         }
     }
 }

@@ -4,7 +4,7 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 2
+  m_CurrentQuality: 5
   m_QualitySettings:
   - serializedVersion: 2
     name: Very Low
@@ -13,7 +13,7 @@ QualitySettings:
     shadowResolution: 0
     shadowProjection: 1
     shadowCascades: 1
-    shadowDistance: 15
+    shadowDistance: 150
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
@@ -27,7 +27,7 @@ QualitySettings:
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
     vSyncCount: 0
-    lodBias: 0.3
+    lodBias: 5
     maximumLODLevel: 0
     streamingMipmapsActive: 0
     streamingMipmapsAddAllCameras: 1
@@ -49,7 +49,7 @@ QualitySettings:
     shadowResolution: 0
     shadowProjection: 1
     shadowCascades: 1
-    shadowDistance: 20
+    shadowDistance: 200
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
@@ -63,7 +63,7 @@ QualitySettings:
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
     vSyncCount: 0
-    lodBias: 0.4
+    lodBias: 5
     maximumLODLevel: 0
     streamingMipmapsActive: 0
     streamingMipmapsAddAllCameras: 1
@@ -85,7 +85,7 @@ QualitySettings:
     shadowResolution: 0
     shadowProjection: 1
     shadowCascades: 1
-    shadowDistance: 20
+    shadowDistance: 250
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
@@ -99,7 +99,7 @@ QualitySettings:
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
     vSyncCount: 1
-    lodBias: 0.7
+    lodBias: 5
     maximumLODLevel: 0
     streamingMipmapsActive: 0
     streamingMipmapsAddAllCameras: 1
@@ -121,7 +121,7 @@ QualitySettings:
     shadowResolution: 1
     shadowProjection: 1
     shadowCascades: 2
-    shadowDistance: 40
+    shadowDistance: 300
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
@@ -135,7 +135,7 @@ QualitySettings:
     realtimeReflectionProbes: 1
     billboardsFaceCameraPosition: 1
     vSyncCount: 1
-    lodBias: 1
+    lodBias: 5
     maximumLODLevel: 0
     streamingMipmapsActive: 0
     streamingMipmapsAddAllCameras: 1
@@ -157,7 +157,7 @@ QualitySettings:
     shadowResolution: 2
     shadowProjection: 1
     shadowCascades: 2
-    shadowDistance: 70
+    shadowDistance: 350
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
@@ -171,7 +171,7 @@ QualitySettings:
     realtimeReflectionProbes: 1
     billboardsFaceCameraPosition: 1
     vSyncCount: 1
-    lodBias: 1.5
+    lodBias: 5
     maximumLODLevel: 0
     streamingMipmapsActive: 0
     streamingMipmapsAddAllCameras: 1
@@ -193,7 +193,7 @@ QualitySettings:
     shadowResolution: 2
     shadowProjection: 1
     shadowCascades: 4
-    shadowDistance: 150
+    shadowDistance: 400
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.499608, y: 0.8517655, z: 0.9513731}
@@ -206,8 +206,8 @@ QualitySettings:
     softVegetation: 1
     realtimeReflectionProbes: 1
     billboardsFaceCameraPosition: 1
-    vSyncCount: 1
-    lodBias: 2
+    vSyncCount: 2
+    lodBias: 5
     maximumLODLevel: 0
     streamingMipmapsActive: 0
     streamingMipmapsAddAllCameras: 1

@@ -28,7 +28,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound = null;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound = null;           // the sound played when character touches back on ground.
 
-        [SerializeField] public Detect detect;
+        //[SerializeField] public Detect detect;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -43,6 +43,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        public bool crouch;
 
         // Use this for initialization
         private void Start()
@@ -63,6 +64,20 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+
+            if (crouch)
+            {
+                m_WalkSpeed = 2.5f;
+                m_RunSpeed = 2.5f;
+                m_CharacterController.height = 0.3f;
+
+            }
+            else
+            {
+                m_WalkSpeed = 5;
+                m_RunSpeed = 10;
+                m_CharacterController.height = 1.8f;
+            }
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -166,6 +181,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayFootStepAudio()
         {
+            audioSender(35.0f);
             if (!m_CharacterController.isGrounded)
             {
                 return;
@@ -179,7 +195,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[n] = m_FootstepSounds[0];
             m_FootstepSounds[0] = m_AudioSource.clip;
 
-            audioSender(15.0f);
+            //send out a overlapSphere
+     
 
         }
 
@@ -238,6 +255,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
 
+            if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl)) {
+                crouch = true;
+            }
+            else{
+                crouch = false;
+            }
+
             // normalize input if it exceeds 1 in combined length:
             if (m_Input.sqrMagnitude > 1)
             {
@@ -274,6 +298,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity * 0.1f, hit.point, ForceMode.Impulse);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "Boat") {
+                Application.LoadLevel("WinScreen");
+            }
         }
     }
 }
