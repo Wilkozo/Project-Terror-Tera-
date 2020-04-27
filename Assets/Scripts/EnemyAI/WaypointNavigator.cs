@@ -6,10 +6,10 @@ using UnityEngine;
 public class WaypointNavigator : MonoBehaviour
 {
 
+    [SerializeField] public bool playerNotSeen = true;
+
     public NavMeshAgent controller;
     public Waypoint currentWaypoint;
-
-    public bool missionComplete;
 
     private void Awake()
     {
@@ -19,25 +19,14 @@ public class WaypointNavigator : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    { }
+    void Start(){
 
-    //used to enable navmesh agent
-    public void enableNavAgent()
-    {
-        controller.enabled = true;
     }
-    //checks to see if the mission is complete
-    public bool checkMissionComplete()
-    {
-        return missionComplete;
-    }
-
 
     // Update is called once per frame
     void Update()
     {
-        if (controller.enabled)
+        if (playerNotSeen)
         {
             if (controller.remainingDistance < 0.5f)
             {
@@ -59,8 +48,6 @@ public class WaypointNavigator : MonoBehaviour
                 {
                     //set it so the navmesh agent does not move
                     controller.velocity = Vector3.zero;
-                    //if the car is for a tailing mission set it so the mission is complete
-                    missionComplete = true;
                 }
                 controller.destination = currentWaypoint.GetPosition();
             }

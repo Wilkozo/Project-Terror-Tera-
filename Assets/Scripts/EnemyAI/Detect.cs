@@ -8,24 +8,29 @@ using UnityEngine;
 public class Detect : MonoBehaviour
 {
 
-    public GameObject player;
+    [SerializeField] WaypointNavigator navigator;
 
+    //player and AI components
+    public GameObject player;
     public NavMeshAgent agent;
 
+    //raycast view length
     public float viewLength;
 
+    //hearing sounds
     public bool heardSound;
     public bool playerHeard;
     public Transform moveToSound;
     public float timeToReset;
     public float timerHearing;
     public float radiusSeenPlayer;
+    public bool lookAt;
 
+    //audio variables
     public AudioClip roar;
     public AudioSource roarSource;
     public float range;
 
-    public bool lookAt;
 
     //what to do when the scene loads
     private void Start()
@@ -36,10 +41,11 @@ public class Detect : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
+
     private void Update()
     {
-        //raycast hit
-        RaycastHit rayHit;
+
+        RaycastHit objectHit;
 
         //get the players position - this position
         Vector3 targetDir = player.transform.position - this.transform.position;
@@ -51,10 +57,17 @@ public class Detect : MonoBehaviour
         //else
         //set the radius to 175 if the player has been seen
 
-        Collider[] hits = Physics.OverlapSphere(transform.position, 50.0f);
+        //if the player has been seen then follow the player
+        if (!navigator.playerNotSeen) {
+            agent.destination = player.transform.position;
+        }
+
+        Collider[] hits = Physics.OverlapSphere(transform.position, 25.0f);
         int i = 0;
-        while (i < hits.Length) {
-            if (hits[i].name == "Player") {
+        while (i < hits.Length)
+        {
+            if (hits[i].name == "Player")
+            {
 
                 if (angle < 45.0f)
                 {
@@ -67,21 +80,23 @@ public class Detect : MonoBehaviour
                 Debug.Log("I should be dead");
                 transform.LookAt(player.transform);
                 //makes it so it has seen the player
-               // wander.playerNotSeen = false;
+                navigator.playerNotSeen = false;
 
                 //look at the player
                 transform.LookAt(player.transform.position);
 
                 //move towards the player
                 agent.destination = player.transform.position;
-
-
+                //what to do when the player has been seen
                 SeenPlayer();
             }
+            //increase the iterator
             i++;
         }
-        if (heardSound) {
+        if (heardSound)
+        {
             timerHearing += 1 + Time.deltaTime;
+
             if (playerHeard)
             {
                 //go to where the player was
@@ -89,219 +104,80 @@ public class Detect : MonoBehaviour
                 transform.LookAt(temp);
                 agent.destination = temp.position;
             }
-            else {
+            else
+            {
                 //go to the rock sound
                 GameObject temp = GameObject.FindGameObjectWithTag("Rock");
                 transform.LookAt(temp.transform);
                 agent.destination = temp.transform.position;
             }
         }
-        if (timerHearing >= timeToReset) {
+        if (timerHearing >= timeToReset)
+        {
             //if the time to investigate is full then return to path follow
             timerHearing = 0;
             heardSound = false;
         }
 
+
+
+        //get the forward vector3
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y - 0.75f, transform.position.z), fwd * viewLength, Color.green);
+        //raycast to see the player
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 1.25f, transform.position.z), fwd, out objectHit, viewLength))
+        {
+            //if it hit the player then move towards the player
+            if (objectHit.transform.tag == "Player")
+            {
+                //what to do when it sees the player
+                SeenPlayer();
+            }
+            else
+            {
+                //makes it so it has not yet seen the player
+                navigator.playerNotSeen = true;
+            }
+        }
     }
 
+    //what to do when the player has been seen by the enemy
     void SeenPlayer() {
 
+        //makes it so it has seen the player
+        navigator.playerNotSeen = false;
 
+        //look at the player
+        transform.LookAt(player.transform.position);
+
+        //move towards the player
+        agent.destination = player.transform.position;
     }
-            
+
+    public void HeardSomethingPlayer() {
+
+        if (!heardSound && navigator.playerNotSeen)
+        {
+            heardSound = true;
+            playerHeard = true;
+            //sets the previous position to temp
+            Transform temp = player.transform;
+            transform.LookAt(temp);
+            //move towards the temp position
+            agent.destination = temp.position;
+        }
     }
+    public void HeardSomethingRock()
+    {
 
-    //        #region raycasting to detect player
-
-    //        //get the forward vector3
-    //        Vector3 fwd = transform.TransformDirection(Vector3.forward);
-    //        //draw a ray from the enemy
-    //        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y - 0.75f, transform.position.z), fwd * viewLength, Color.green);
-    //        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y, transform.position.z), fwd * viewLength, Color.green);
-    //        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 0.75f, transform.position.z), fwd * viewLength, Color.green);
-    //        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 1.25f, transform.position.z), fwd * viewLength, Color.green);
-    //        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 1.75f, transform.position.z), fwd * viewLength, Color.green);
-
-    //        //if it hits something then proceed
-
-    //        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 1.25f, transform.position.z), fwd, out objectHit, viewLength))
-    //        {
-    //            //if it hit the player then move towards the player
-    //            if (objectHit.transform.tag == "Player")
-    //            {
-    //                //what to do when it sees the player
-    //                SeenPlayer();
-    //            }
-    //            else
-    //            {
-    //                //makes it so it has not yet seen the player
-    //                wander.playerNotSeen = true;
-    //            }
-    //        }
-
-    //        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 1.75f, transform.position.z), fwd, out objectHit, viewLength))
-    //        {
-    //            //if it hit the player then move towards the player
-    //            if (objectHit.transform.tag == "Player")
-    //            {
-    //                //what to do when it sees the player
-    //                SeenPlayer();
-    //            }
-    //            else
-    //            {
-    //                //makes it so it has not yet seen the player
-    //                wander.playerNotSeen = true;
-    //            }
-    //        }
-    //        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 2.25f, transform.position.z), fwd, out objectHit, viewLength))
-    //        {
-    //            //if it hit the player then move towards the player
-    //            if (objectHit.transform.tag == "Player")
-    //            {
-    //                //what to do when it sees the player
-    //                SeenPlayer();
-    //            }
-    //            else
-    //            {
-    //                //makes it so it has not yet seen the player
-    //                wander.playerNotSeen = true;
-    //            }
-    //        }
-    //        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 2.75f, transform.position.z), fwd, out objectHit, viewLength))
-    //        {
-    //            //if it hit the player then move towards the player
-    //            if (objectHit.transform.tag == "Player")
-    //            {
-    //                //what to do when it sees the player
-    //                SeenPlayer();
-    //            }
-    //            else
-    //            {
-    //                //makes it so it has not yet seen the player
-    //                wander.playerNotSeen = true;
-    //            }
-    //        }
-
-    //        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 0.75f, transform.position.z), fwd, out objectHit, viewLength))
-    //        {
-    //            //if it hit the player then move towards the player
-    //            if (objectHit.transform.tag == "Player")
-    //            {
-    //                //what to do when it sees the player
-    //                SeenPlayer();
-    //            }
-    //            else {
-    //                //makes it so it has not yet seen the player
-    //                wander.playerNotSeen = true;
-    //            }
-    //        }
-
-    //        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y, transform.position.z), fwd, out objectHit, viewLength))
-    //        {
-    //            //if it hit the player then move towards the player
-    //            if (objectHit.transform.tag == "Player")
-    //            {
-    //                //what to do when it sees the player
-    //                SeenPlayer();
-    //            }
-    //            else
-    //            {
-    //                //makes it so it has not yet seen the player
-    //                wander.playerNotSeen = true;
-    //            }
-    //        }
-
-    //        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.75f, transform.position.z), fwd, out objectHit, viewLength))
-    //        {
-    //            //if it hit the player then move towards the player
-    //            if (objectHit.transform.tag == "Player")
-    //            {
-    //                //what to do when it sees the player
-    //                SeenPlayer();
-    //            }
-    //            else
-    //            {
-    //                //makes it so it has not yet seen the player
-    //                wander.playerNotSeen = true;
-    //            }
-    //        }
-    //        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1.25f, transform.position.z), fwd, out objectHit, viewLength))
-    //        {
-    //            //if it hit the player then move towards the player
-    //            if (objectHit.transform.tag == "Player")
-    //            {
-    //                //what to do when it sees the player
-    //                SeenPlayer();
-    //            }
-    //            else
-    //            {
-    //                //makes it so it has not yet seen the player
-    //                wander.playerNotSeen = true;
-    //            }
-    //        }
-
-    //        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1.75f, transform.position.z), fwd, out objectHit, viewLength))
-    //        {
-    //            //if it hit the player then move towards the player
-    //            if (objectHit.transform.tag == "Player")
-    //            {
-    //                //what to do when it sees the player
-    //                SeenPlayer();
-    //            }
-    //            else
-    //            {
-    //                //makes it so it has not yet seen the player
-    //                wander.playerNotSeen = true;
-    //            }
-    //        }
-    //    }
-
-    //    #endregion
-
-    //    //what to do when the ai has seen the player
-    //    void SeenPlayer() {
-    //        if (Played == false)
-    //        {
-
-    //            FindObjectOfType<AudioManager>().Play("Detected");
-    //            Played = true;
-    //        }
-
-    //        //makes it so it has seen the player
-    //        wander.playerNotSeen = false;
-
-    //        //look at the player
-    //        transform.LookAt(player.transform.position);
-
-    //        //move towards the player
-    //        agent.destination = player.transform.position;
-
-    //    }
-
-    //    //what to do when the ai has heard something
-    //    public void HeardSomethingPlayer()
-    //    {
-    //        if (!heardSomethingFollow && wander.playerNotSeen)
-    //        {
-    //            heardSomethingFollow = true;
-    //            playerHeard = true;
-    //          ////sets the previous position to temp
-    //          //  Transform temp = player.transform;
-    //          //  transform.LookAt(temp);
-    //          //  //move towards the temp position
-    //          //  agent.destination = temp.position;
-    //        }
-    //    }
-
-    //    public void HeardSomethingRock() {
-
-    //        if (!heardSomethingFollow && wander.playerNotSeen)
-    //        {
-    //            heardSomethingFollow = true;
-    //            ////find the rock as there can only be one in the scene at a time
-    //            //GameObject temp = GameObject.FindGameObjectWithTag("Rock");
-    //            //transform.LookAt(temp.transform);
-    //            ////move towards the Rock
-    //            //agent.destination = temp.transform.position;
-    //        }
-    //    }
+        if (!heardSound && navigator.playerNotSeen)
+        {
+            heardSound = true;
+            //find the rock as there can only be one in the scene at a time
+            GameObject temp = GameObject.FindGameObjectWithTag("Rock");
+            transform.LookAt(temp.transform);
+            //move towards the Rock
+            agent.destination = temp.transform.position;
+        }
+    }
+}

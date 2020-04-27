@@ -181,7 +181,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayFootStepAudio()
         {
-            audioSender(35.0f);
+            audioSender(10.0f);
             if (!m_CharacterController.isGrounded)
             {
                 return;
@@ -208,7 +208,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             while (i < hits.Length)
             {
-                hits[i].SendMessage("HeardSomethingPlayer");
+                hits[i].SendMessage("HeardSomethingPlayer", SendMessageOptions.DontRequireReceiver);
                 i++;
             }
 
