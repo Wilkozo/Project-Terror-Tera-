@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ctsMajorVersion: 1
   m_ctsMinorVersion: 6
-  m_persistMaterials: 0
+  m_ctsPatchVersion: 5
+  m_useMaterialControlBlock: 0
   m_showGlobalSettings: 1
   m_showSnowSettings: 0
   m_showTextureSettings: 0
@@ -21,8 +23,9 @@ MonoBehaviour:
   m_showDetailSettings: 0
   m_showColorMapSettings: 0
   m_showOptimisationSettings: 0
-  m_ctsDirectory: Assets/CTS/
+  m_ctsDirectory: Assets\Procedural Worlds\CTS/
   m_shaderType: 1
+  m_currentRenderPipelineType: 0
   m_globalUvMixPower: 2
   m_globalUvMixStartDistance: 400
   m_globalNormalPower: 0.2
@@ -39,7 +42,11 @@ MonoBehaviour:
   m_globalAOType: 1
   m_globalAOPower: 1
   m_globalBasemapDistance: 1000
-  m_globalOptimiseAtRuntime: 1
+  m_globalStripTexturesAtRuntime: 0
+  m_drawInstanced: 1
+  m_renderQueue: -1
+  ignoreInstancedWarningPopUp: 0
+  m_terrainLayerPath: 
   m_colorMapClosePower: 0
   m_colorMapFarPower: 0
   m_colorMapOpacity: 1
@@ -63,11 +70,7 @@ MonoBehaviour:
   m_snowBrightness: 0.8
   m_snowBlendNormal: 0.826
   m_snowSmoothness: 1
-  m_snowTint:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  m_snowTint: {r: 1, g: 1, b: 1, a: 1}
   m_snowSpecular: 1
   m_snowHeightmapBlendClose: 1
   m_snowHeightmapBlendFar: 1
@@ -78,6 +81,7 @@ MonoBehaviour:
   m_snowTesselationDepth: 0
   m_snowAOStrength: 1
   m_snowAverage: {x: 0.5775805, y: 0.56471163, z: 0.6104956, w: 0.17254902}
+  terrainLayerAssetRebuild: 0
   m_albedoFormat: 4
   m_albedoAniso: 8
   m_albedoFilterMode: 1
@@ -97,8 +101,6 @@ MonoBehaviour:
   m_snowAlbedoTexture: {fileID: 2800000, guid: e3d23591e079b694dbef7559cff1c714, type: 3}
   m_snowNormalTextureIdx: 4
   m_snowNormalTexture: {fileID: 2800000, guid: f60384dc9bf570a4990afa5ced417875, type: 3}
-  m_snowNoiseTextureIdx: 6
-  m_snowNoiseTexture: {fileID: 2800000, guid: 29effafbe0176af44a2be596b3d4ac0e, type: 3}
   m_snowHeightTextureIdx: 5
   m_snowHeightTexture: {fileID: 2800000, guid: 3c71b7b7f14f6cc4496ae84fa7177113, type: 3}
   m_snowAOTextureIdx: 5
@@ -122,15 +124,9 @@ MonoBehaviour:
     m_snowReductionPower: 0
     m_geologicalPower: 1
     m_triplanar: 0
-    m_tint:
-      r: 1
-      g: 1
-      b: 1
-      a: 1
+    m_tint: {r: 1, g: 1, b: 1, a: 1}
     m_tintBrightness: 1
     m_smoothness: 1
-    m_substanceRegenOnBake: 0
-    m_substance: {fileID: 0}
     m_albedoIdx: 0
     m_albedoTilingClose: 5
     m_albedoTilingFar: 3
@@ -163,15 +159,9 @@ MonoBehaviour:
     m_snowReductionPower: 0
     m_geologicalPower: 1
     m_triplanar: 0
-    m_tint:
-      r: 0.65882355
-      g: 0.6666667
-      b: 0.6627451
-      a: 1
+    m_tint: {r: 0.65882355, g: 0.6666667, b: 0.6627451, a: 1}
     m_tintBrightness: 1
     m_smoothness: 1
-    m_substanceRegenOnBake: 0
-    m_substance: {fileID: 0}
     m_albedoIdx: 1
     m_albedoTilingClose: 7
     m_albedoTilingFar: 3
@@ -204,15 +194,9 @@ MonoBehaviour:
     m_snowReductionPower: 0
     m_geologicalPower: 1
     m_triplanar: 0
-    m_tint:
-      r: 1
-      g: 1
-      b: 1
-      a: 1
+    m_tint: {r: 1, g: 1, b: 1, a: 1}
     m_tintBrightness: 1
     m_smoothness: 1
-    m_substanceRegenOnBake: 0
-    m_substance: {fileID: 0}
     m_albedoIdx: 2
     m_albedoTilingClose: 5
     m_albedoTilingFar: 3
@@ -245,15 +229,9 @@ MonoBehaviour:
     m_snowReductionPower: 0
     m_geologicalPower: 1
     m_triplanar: 1
-    m_tint:
-      r: 0.70980394
-      g: 0.7176471
-      b: 0.7137255
-      a: 1
+    m_tint: {r: 0.70980394, g: 0.7176471, b: 0.7137255, a: 1}
     m_tintBrightness: 1.79
     m_smoothness: 1
-    m_substanceRegenOnBake: 0
-    m_substance: {fileID: 0}
     m_albedoIdx: 3
     m_albedoTilingClose: 20
     m_albedoTilingFar: 3
@@ -295,3 +273,8 @@ MonoBehaviour:
   m_normalsTextureArray: {fileID: 18700000, guid: 6d06e87d552254240983eb17beae20ea,
     type: 2}
   m_needsNormalsArrayUpdate: 0
+  cachedTerrainLayers:
+  - {fileID: 8574412962073106934, guid: 5ab6eb97b62326149b5d78793593b151, type: 2}
+  - {fileID: 8574412962073106934, guid: d7c976870b7c822478f42da77a6fbf36, type: 2}
+  - {fileID: 8574412962073106934, guid: 2d524026d6667a54ebb5b423f3cbc9ec, type: 2}
+  - {fileID: 8574412962073106934, guid: 833dd6f539dc6434395cf5415df9c3c7, type: 2}
