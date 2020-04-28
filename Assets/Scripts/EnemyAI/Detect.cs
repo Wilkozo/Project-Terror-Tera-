@@ -8,6 +8,7 @@ using UnityEngine;
 public class Detect : MonoBehaviour
 {
 
+    [Header("Player Detection")]
     [SerializeField] WaypointNavigator navigator;
 
     //player and AI components
@@ -17,7 +18,7 @@ public class Detect : MonoBehaviour
     //raycast view length
     public float viewLength;
 
-    //hearing sounds
+    [Header("Audio Detection")]
     public bool heardSound;
     public bool playerHeard;
     public Transform moveToSound;
@@ -26,7 +27,7 @@ public class Detect : MonoBehaviour
     public float radiusSeenPlayer;
     public bool lookAt;
 
-    //audio variables
+    [Header("Audio Clips")]
     public AudioClip roar;
     public AudioSource roarSource;
     public float range;
