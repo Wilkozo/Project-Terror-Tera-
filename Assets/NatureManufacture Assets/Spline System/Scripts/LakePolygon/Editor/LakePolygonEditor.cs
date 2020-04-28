@@ -481,8 +481,8 @@ public class LakePolygonEditor : Editor
         // Debug.DrawLine(new Vector3(maxX, 0, maxZ), new Vector3(maxX, 0, maxZ) + Vector3.up * 100, Color.blue, 3);
 
 
-        float terrainTowidth = (1 / sizeX * (terrainData.heightmapWidth - 1));
-        float terrainToheight = (1 / sizeZ * (terrainData.heightmapHeight - 1));
+        float terrainTowidth = (1 / sizeX * (terrainData.heightmapResolution - 1));
+        float terrainToheight = (1 / sizeZ * (terrainData.heightmapResolution - 1));
         minX -= terrain.transform.position.x + lakePolygon.distSmooth;
         maxX -= terrain.transform.position.x - lakePolygon.distSmooth;
 
@@ -496,10 +496,10 @@ public class LakePolygonEditor : Editor
         minZ = minZ * terrainTowidth;
         maxZ = maxZ * terrainTowidth;
 
-        minX = (int)Mathf.Clamp(minX, 0, (terrainData.heightmapWidth));
-        maxX = (int)Mathf.Clamp(maxX, 0, (terrainData.heightmapWidth));
-        minZ = (int)Mathf.Clamp(minZ, 0, (terrainData.heightmapHeight));
-        maxZ = (int)Mathf.Clamp(maxZ, 0, (terrainData.heightmapHeight));
+        minX = (int)Mathf.Clamp(minX, 0, (terrainData.heightmapResolution));
+        maxX = (int)Mathf.Clamp(maxX, 0, (terrainData.heightmapResolution));
+        minZ = (int)Mathf.Clamp(minZ, 0, (terrainData.heightmapResolution));
+        maxZ = (int)Mathf.Clamp(maxZ, 0, (terrainData.heightmapResolution));
 
         float[,] heightmapData = terrainData.GetHeights((int)minX, (int)minZ, (int)(maxX - minX), (int)(maxZ - minZ));
 

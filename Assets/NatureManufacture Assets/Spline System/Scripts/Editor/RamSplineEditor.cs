@@ -1026,8 +1026,8 @@ public class RamSplineEditor : Editor
             float sizeX = terrain.terrainData.size.x;
             float sizeY = terrain.terrainData.size.y;
             float sizeZ = terrain.terrainData.size.z;
-            float terrainTowidth = (1 / (float)sizeX * (terrainData.heightmapWidth - 1));
-            float terrainToheight = (1 / (float)sizeZ * (terrainData.heightmapHeight - 1));
+            float terrainTowidth = (1 / (float)sizeX * (terrainData.heightmapResolution - 1));
+            float terrainToheight = (1 / (float)sizeZ * (terrainData.heightmapResolution - 1));
             Undo.RegisterCompleteObjectUndo(terrainData, "River curve");
 
             float minX;
@@ -1121,10 +1121,10 @@ public class RamSplineEditor : Editor
                 minZ = minZ * terrainTowidth;
                 maxZ = maxZ * terrainTowidth;
 
-                maxX = Mathf.Ceil(Mathf.Clamp(maxX + 1, 0, (terrainData.heightmapWidth)));
-                minZ = Mathf.Floor(Mathf.Clamp(minZ, 0, (terrainData.heightmapHeight)));
-                maxZ = Mathf.Ceil(Mathf.Clamp(maxZ + 1, 0, (terrainData.heightmapHeight)));
-                minX = Mathf.Floor(Mathf.Clamp(minX, 0, (terrainData.heightmapWidth)));
+                maxX = Mathf.Ceil(Mathf.Clamp(maxX + 1, 0, (terrainData.heightmapResolution)));
+                minZ = Mathf.Floor(Mathf.Clamp(minZ, 0, (terrainData.heightmapResolution)));
+                maxZ = Mathf.Ceil(Mathf.Clamp(maxZ + 1, 0, (terrainData.heightmapResolution)));
+                minX = Mathf.Floor(Mathf.Clamp(minX, 0, (terrainData.heightmapResolution)));
 
                 float[,] heightmapData = terrainData.GetHeights((int)minX, (int)minZ, (int)(maxX - minX), (int)(maxZ - minZ));
 
