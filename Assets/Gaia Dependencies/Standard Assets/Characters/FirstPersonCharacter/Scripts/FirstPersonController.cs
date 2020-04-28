@@ -184,13 +184,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             //sets the sphere overlap for the dinos to detect
             if (crouch) {
-                audioSender(0.5f);
+                audioSender(1.0f);
             }
             if (m_IsWalking) {
-                audioSender(5.0f);
+                audioSender(10.0f);
             }
             if (run) {
-                audioSender(10.0f);
+                audioSender(25.0f);
             }
             if (!m_CharacterController.isGrounded)
             {
