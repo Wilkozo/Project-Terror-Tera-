@@ -93,16 +93,16 @@ public class Detect : MonoBehaviour
             //increase the iterator
             i++;
         }
-        if (heardSound)
+        if (heardSound || playerHeard)
         {
-            timerHearing += 1 + Time.deltaTime;
+            timerHearing += Time.deltaTime;
 
             if (playerHeard)
             {
-                //go to where the player was
-                Transform temp = player.transform;
-                transform.LookAt(temp);
-                agent.destination = temp.position;
+                ////go to where the player was
+                //Transform temp = player.transform;
+                //transform.LookAt(temp);
+                //agent.destination = temp.position;
             }
             else
             {
@@ -111,19 +111,26 @@ public class Detect : MonoBehaviour
                 transform.LookAt(temp.transform);
                 agent.destination = temp.transform.position;
             }
+            heardSound = false;
         }
         if (timerHearing >= timeToReset)
         {
             //if the time to investigate is full then return to path follow
             timerHearing = 0;
             heardSound = false;
+            playerHeard = false;
+
+            if (navigator.playerNotSeen)
+            {
+                navigator.waypointToGoTo();
+            }
         }
 
 
 
         //get the forward vector3
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y - 0.75f, transform.position.z), fwd * viewLength, Color.green);
+        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y - 1.25f, transform.position.z), fwd * viewLength, Color.red);
         //raycast to see the player
         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 1.25f, transform.position.z), fwd, out objectHit, viewLength))
         {
@@ -132,11 +139,6 @@ public class Detect : MonoBehaviour
             {
                 //what to do when it sees the player
                 SeenPlayer();
-            }
-            else
-            {
-                //makes it so it has not yet seen the player
-                navigator.playerNotSeen = true;
             }
         }
     }

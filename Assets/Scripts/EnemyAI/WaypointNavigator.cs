@@ -23,6 +23,10 @@ public class WaypointNavigator : MonoBehaviour
 
     }
 
+    public void waypointToGoTo() {
+        controller.destination = currentWaypoint.GetPosition();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -50,6 +54,7 @@ public class WaypointNavigator : MonoBehaviour
                     controller.velocity = Vector3.zero;
                 }
                 controller.destination = currentWaypoint.GetPosition();
+                playerNotSeen = true;
             }
         }
     }

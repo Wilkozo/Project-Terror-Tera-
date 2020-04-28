@@ -34,7 +34,7 @@ public class Rock : MonoBehaviour
             while (i < hits.Length)
             {
                 //send a message to anything that it hits, gets the ai to move to the rock collision point
-                hits[i].SendMessage("HeardSomethingRock");
+                hits[i].SendMessage("HeardSomethingRock", SendMessageOptions.DontRequireReceiver);
                 //increment the value of i
                 i++;
             }

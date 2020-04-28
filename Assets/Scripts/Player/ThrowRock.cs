@@ -25,4 +25,9 @@ public class ThrowRock : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
 }

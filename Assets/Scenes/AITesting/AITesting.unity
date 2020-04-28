@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 5
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 1.6666666
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 631427071}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
@@ -1110,6 +1110,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 32587992, guid: a2c0a23050760354faa1ffd1000a455c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 106061495, guid: a2c0a23050760354faa1ffd1000a455c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 717175770, guid: a2c0a23050760354faa1ffd1000a455c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127190730, guid: a2c0a23050760354faa1ffd1000a455c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1436690806, guid: a2c0a23050760354faa1ffd1000a455c, type: 3}
       propertyPath: rock
       value: 
@@ -1122,7 +1138,7 @@ PrefabInstance:
     - target: {fileID: 4143180536223899241, guid: a2c0a23050760354faa1ffd1000a455c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.82
+      value: 31.5
       objectReference: {fileID: 0}
     - target: {fileID: 4143180536223899241, guid: a2c0a23050760354faa1ffd1000a455c,
         type: 3}
@@ -1132,7 +1148,7 @@ PrefabInstance:
     - target: {fileID: 4143180536223899241, guid: a2c0a23050760354faa1ffd1000a455c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.06
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4143180536223899241, guid: a2c0a23050760354faa1ffd1000a455c,
         type: 3}
@@ -1182,7 +1198,22 @@ PrefabInstance:
     - target: {fileID: 4143180536586867222, guid: a2c0a23050760354faa1ffd1000a455c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143180536602232137, guid: a2c0a23050760354faa1ffd1000a455c,
+        type: 3}
+      propertyPath: playerManager
+      value: 
+      objectReference: {fileID: 1488616591}
+    - target: {fileID: 4143180536602232137, guid: a2c0a23050760354faa1ffd1000a455c,
+        type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 1520411337}
+    - target: {fileID: 4143180536602232137, guid: a2c0a23050760354faa1ffd1000a455c,
+        type: 3}
+      propertyPath: mapEnabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2c0a23050760354faa1ffd1000a455c, type: 3}
@@ -1427,6 +1458,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1146958318}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1488616591 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 713416707, guid: a2c0a23050760354faa1ffd1000a455c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1146958318}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488616590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df5679a0760d63a4988d8b07f2a003ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1512823052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,6 +1518,12 @@ Transform:
   m_Father: {fileID: 1152419115}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1520411337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1777470409, guid: a2c0a23050760354faa1ffd1000a455c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1146958318}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1538752369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,13 +1802,13 @@ MonoBehaviour:
   navigator: {fileID: 1623358700}
   player: {fileID: 1488616590}
   agent: {fileID: 1623358702}
-  viewLength: 5
+  viewLength: 15
   heardSound: 0
   playerHeard: 0
   moveToSound: {fileID: 0}
-  timeToReset: 0
+  timeToReset: 20
   timerHearing: 0
-  radiusSeenPlayer: 0
+  radiusSeenPlayer: 150
   lookAt: 0
   roar: {fileID: 0}
   roarSource: {fileID: 0}

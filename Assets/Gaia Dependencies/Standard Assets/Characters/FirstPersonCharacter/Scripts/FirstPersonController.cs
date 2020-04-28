@@ -44,6 +44,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
         public bool crouch;
+        public bool run;
 
         // Use this for initialization
         private void Start()
@@ -181,7 +182,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayFootStepAudio()
         {
-            audioSender(10.0f);
+            //sets the sphere overlap for the dinos to detect
+            if (crouch) {
+                audioSender(0.5f);
+            }
+            if (m_IsWalking) {
+                audioSender(5.0f);
+            }
+            if (run) {
+                audioSender(10.0f);
+            }
             if (!m_CharacterController.isGrounded)
             {
                 return;
@@ -194,8 +204,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // move picked sound to index 0 so it's not picked next time
             m_FootstepSounds[n] = m_FootstepSounds[0];
             m_FootstepSounds[0] = m_AudioSource.clip;
-
-            //send out a overlapSphere
      
 
         }
@@ -212,6 +220,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 i++;
             }
 
+        }
+
+        void OnDrawGizmosSelected()
+        {
+            // Draw a yellow sphere at the transform's position
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawSphere(transform.position, 10.0f);
         }
 
         private void UpdateCameraPosition(float speed)
@@ -254,6 +269,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                run = true;
+            }
+            else {
+                run = false;
+            }
 
             if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl)) {
                 crouch = true;
@@ -298,13 +320,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity * 0.1f, hit.point, ForceMode.Impulse);
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.tag == "Boat") {
-                Application.LoadLevel("WinScreen");
-            }
         }
     }
 }
