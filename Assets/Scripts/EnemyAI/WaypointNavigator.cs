@@ -3,37 +3,44 @@ using System.Collections.Generic;
 using UnityEngine.AI;
 using UnityEngine;
 
+//how the ai navigates through the waypoint system
 public class WaypointNavigator : MonoBehaviour
 {
 
     [SerializeField] public bool playerNotSeen = true;
 
+    //get references to the NavMeshAgent
+    //and the Waypoints
     public NavMeshAgent controller;
     public Waypoint currentWaypoint;
 
+    //on awake
     private void Awake()
     {
+        //set it so the ai slows down before reaching a waypoint
         controller.autoBraking = true;
+        //get the component for the navmesh
         controller = GetComponent<NavMeshAgent>();
+        //set the initial waypoint to move to
         controller.destination = currentWaypoint.GetPosition();
     }
 
-    // Start is called before the first frame update
-    void Start(){
-
-    }
-
+    //used for other calls to make sure that the AI can still use the waypoints
     public void waypointToGoTo() {
+        //set the destination to the current waypoints position
         controller.destination = currentWaypoint.GetPosition();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //if the player has not been seen yet
         if (playerNotSeen)
         {
+            //if the distance to the waypoint is less than 0.5
             if (controller.remainingDistance < 0.5f)
             {
+                //set shouldbranch to false
                 bool shouldBranch = false;
                 if (currentWaypoint.branches != null && currentWaypoint.branches.Count > 0)
                 {
