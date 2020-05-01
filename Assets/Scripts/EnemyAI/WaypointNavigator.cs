@@ -42,16 +42,22 @@ public class WaypointNavigator : MonoBehaviour
             {
                 //set shouldbranch to false
                 bool shouldBranch = false;
+                //if there are some branches and the branches in the current waypoint are greater than 1 
                 if (currentWaypoint.branches != null && currentWaypoint.branches.Count > 0)
                 {
+                    //sets should branch based on the branch ratio
                     shouldBranch = Random.Range(0f, 1f) <= currentWaypoint.branchRatio ? true : false;
                 }
+                //if the ai should branch
                 if (shouldBranch)
                 {
+                    //set the current waypoint to one of the branches in the current waypoint
                     currentWaypoint = currentWaypoint.branches[Random.Range(0, currentWaypoint.branches.Count - 1)];
                 }
+                //if it should not branch
                 else
                 {
+                    //set the current waypoint to the next waypoint in the list
                     currentWaypoint = currentWaypoint.nextWaypoint;
                 }
                 //if there is no waypoints remaining
@@ -60,7 +66,9 @@ public class WaypointNavigator : MonoBehaviour
                     //set it so the navmesh agent does not move
                     controller.velocity = Vector3.zero;
                 }
+                //set the destination to the current waypoints posiiton
                 controller.destination = currentWaypoint.GetPosition();
+                //make it so the player has not been seen
                 playerNotSeen = true;
             }
         }

@@ -81,7 +81,7 @@ public class Detect : MonoBehaviour
                 Debug.Log("I should be dead");
                 transform.LookAt(player.transform);
                 //makes it so it has seen the player
-                navigator.playerNotSeen = false;
+               // navigator.playerNotSeen = false;
 
                 //look at the player
                 transform.LookAt(player.transform.position);
