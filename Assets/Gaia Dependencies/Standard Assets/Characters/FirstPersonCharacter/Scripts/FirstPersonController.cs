@@ -44,6 +44,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
         public bool crouch;
+        public bool run;
 
         // Use this for initialization
         private void Start()
@@ -156,7 +157,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             m_AudioSource.clip = m_JumpSound;
             m_AudioSource.Play();
-           
+
         }
 
 
@@ -181,7 +182,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayFootStepAudio()
         {
-            audioSender(35.0f);
+            //sets the sphere overlap for the dinos to detect
+            if (crouch)
+            {
+                audioSender(1.0f);
+            }
+            if (m_IsWalking)
+            {
+                audioSender(10.0f);
+            }
+            if (run)
+            {
+                audioSender(25.0f);
+            }
             if (!m_CharacterController.isGrounded)
             {
                 return;
@@ -195,23 +208,29 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[n] = m_FootstepSounds[0];
             m_FootstepSounds[0] = m_AudioSource.clip;
 
-            //send out a overlapSphere
-     
 
         }
 
 
-        void audioSender(float radius) {
+        void audioSender(float radius)
+        {
 
             Collider[] hits = Physics.OverlapSphere(transform.position, radius);
             int i = 0;
 
             while (i < hits.Length)
             {
-                hits[i].SendMessage("HeardSomethingPlayer");
+                hits[i].SendMessage("HeardSomethingPlayer", SendMessageOptions.DontRequireReceiver);
                 i++;
             }
 
+        }
+
+        void OnDrawGizmosSelected()
+        {
+            // Draw a yellow sphere at the transform's position
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawSphere(transform.position, 10.0f);
         }
 
         private void UpdateCameraPosition(float speed)
@@ -254,11 +273,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                run = true;
+            }
+            else
+            {
+                run = false;
+            }
 
-            if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl)) {
+            if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl))
+            {
                 crouch = true;
             }
-            else{
+            else
+            {
                 crouch = false;
             }
 
@@ -298,13 +327,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity * 0.1f, hit.point, ForceMode.Impulse);
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.tag == "Boat") {
-                Application.LoadLevel("WinScreen");
-            }
         }
     }
 }
