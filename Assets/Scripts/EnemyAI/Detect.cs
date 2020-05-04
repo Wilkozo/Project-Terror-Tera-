@@ -33,6 +33,12 @@ public class Detect : MonoBehaviour
     public float range;
 
 
+    [Header("Has the AI been hit with a weapon")]
+    public bool hitWithShotgun = false;
+    public float weaponSlowTimer;
+    public float maxWeaponSlowTimer;
+
+
     //what to do when the scene loads
     private void Start()
     {
@@ -45,6 +51,15 @@ public class Detect : MonoBehaviour
 
     private void Update()
     {
+
+        //what happens if the ai is hit with the shotgun
+        if (hitWithShotgun) {
+            weaponSlowTimer += Time.deltaTime;
+            if (weaponSlowTimer >= maxWeaponSlowTimer) {
+                hitWithShotgun = false;
+                agent.enabled = true;
+            }
+        }
 
         RaycastHit objectHit;
 
@@ -142,6 +157,14 @@ public class Detect : MonoBehaviour
                 //what to do when it sees the player
                 SeenPlayer();
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Bullet") {
+            agent.enabled = false;
+            hitWithShotgun = true;
         }
     }
 
