@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_lava_wall_02_V2
+  m_Shader: {fileID: 4800000, guid: 3ef0cb5a2319771478ac44698ebb6ef9, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BottomAlbedo_Sm:
+        m_Texture: {fileID: 2800000, guid: 1f8fb444e9dbbac4a8e07e4759b03b29, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BottomMetalicRAmbientOcclusionGEmissionA:
+        m_Texture: {fileID: 2800000, guid: f5ce8cccb75b46743be9fe47d1a2f8ee, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BottomNormal:
+        m_Texture: {fileID: 2800000, guid: 3912ede4011618848b4cdb4d2d1a2890, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 061f5eb9c7b645346a4c33c53d0f5a21, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LavaNoiseR:
+        m_Texture: {fileID: 2800000, guid: cdec882b86a6f9b46b4c79d6a9891f1c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShapeAmbientOcclusionG:
+        m_Texture: {fileID: 2800000, guid: 09c15eaea2366154f9ef6fda649cbfaf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopAlbedo_Sm:
+        m_Texture: {fileID: 2800000, guid: 30b059a27cd405141985da2218499a25, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopMetalicRAmbientOcclusionGEmissionA:
+        m_Texture: {fileID: 2800000, guid: c78ffaf6ba798a141a485b7f8f232d21, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopNormal:
+        m_Texture: {fileID: 2800000, guid: da9621dfe177b2d49bd6c427c7a82d02, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BottomAmbientOcclusionPower: 1
+    - _BottomLavaEmissionMaskIntensivity: 8.1
+    - _BottomLavaEmissionMaskTreshold: 3.2
+    - _BottomMetalicPower: 1
+    - _BottomNormalCoverScale: 5
+    - _BottomNormalScale: 1
+    - _BottomSmoothnessPower: 0.916
+    - _BottomTiling: 6
+    - _BottomTriplanarFalloff: 8
+    - _BumpScale: 1
+    - _CoverBottomNormalScale: 10
+    - _CoverHardness: 2.32
+    - _CoverMaxAngle: 39.8
+    - _CoverShapeNormalScale: 10
+    - _Cover_Amount: 2
+    - _Cover_Min_Height: -1000
+    - _Cover_Min_Height_Blending: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _LavaNoisePower: 1.61
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _RimLightPower: 4
+    - _ShapeAmbientOcclusionPower: 1
+    - _ShapeNormalScale: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TopAmbientOcclusionPower: 1
+    - _TopLavaEmissionMaskIntensivity: 1.8
+    - _TopLavaEmissionMaskTreshold: 5.4
+    - _TopMetalicPower: 1
+    - _TopNormalScale: 1
+    - _TopSmoothnessPower: 1
+    - _TopTiling: 8
+    - _TopTriplanarFalloff: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    - __dirty: 0
+    m_Colors:
+    - _BottomColor: {r: 0.7941176, g: 0.7941176, b: 0.7941176, a: 1}
+    - _Color: {r: 0.588, g: 0.588, b: 0.588, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LavaEmissionColor: {r: 1, g: 0.18620342, b: 0, a: 0}
+    - _LavaNoiseSpeed: {r: -0.1, g: -0.2, b: 0, a: 0}
+    - _RimColor: {r: 1, g: 0, b: 0, a: 0}
+    - _TopColor: {r: 0.7867647, g: 0.76362467, b: 0.76362467, a: 1}
