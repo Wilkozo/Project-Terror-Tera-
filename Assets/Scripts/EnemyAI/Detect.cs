@@ -53,11 +53,13 @@ public class Detect : MonoBehaviour
     {
 
         //what happens if the ai is hit with the shotgun
-        if (hitWithShotgun) {
+        if (hitWithShotgun)
+        {
             weaponSlowTimer += Time.deltaTime;
-            if (weaponSlowTimer >= maxWeaponSlowTimer) {
+            if (weaponSlowTimer >= maxWeaponSlowTimer)
+            {
                 hitWithShotgun = false;
-                agent.enabled = true;
+                agent.speed = 3.5f;
             }
         }
 
@@ -163,8 +165,10 @@ public class Detect : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Bullet") {
-            agent.enabled = false;
+            agent.speed = 0;
+            agent.velocity = Vector3.zero;
             hitWithShotgun = true;
+            
         }
     }
 
