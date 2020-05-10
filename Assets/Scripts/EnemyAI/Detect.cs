@@ -38,10 +38,14 @@ public class Detect : MonoBehaviour
     public float weaponSlowTimer;
     public float maxWeaponSlowTimer;
 
+    public Animator animator;
+
 
     //what to do when the scene loads
     private void Start()
     {
+
+        animator = this.GetComponentInChildren<Animator>();
         //find the navmesh agent component
         agent = this.GetComponent<NavMeshAgent>();
         //find the player
@@ -58,8 +62,10 @@ public class Detect : MonoBehaviour
             weaponSlowTimer += Time.deltaTime;
             if (weaponSlowTimer >= maxWeaponSlowTimer)
             {
+                weaponSlowTimer = 0;
                 hitWithShotgun = false;
                 agent.speed = 3.5f;
+                animator.SetBool("Hit", false);
             }
         }
 
@@ -165,6 +171,7 @@ public class Detect : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Bullet") {
+            animator.SetBool("Hit", true);
             agent.speed = 0;
             agent.velocity = Vector3.zero;
             hitWithShotgun = true;
