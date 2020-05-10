@@ -189,11 +189,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if (m_IsWalking)
             {
-                audioSender(10.0f);
+                audioSender(15.0f);
             }
             if (run)
             {
-                audioSender(25.0f);
+                audioSender(30.0f);
             }
             if (!m_CharacterController.isGrounded)
             {

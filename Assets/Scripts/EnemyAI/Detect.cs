@@ -10,6 +10,8 @@ public class Detect : MonoBehaviour
 
     [Header("Player Detection")]
     [SerializeField] WaypointNavigator navigator;
+    public Transform target;
+    public float distance;
 
     //player and AI components
     public GameObject player;
@@ -69,65 +71,35 @@ public class Detect : MonoBehaviour
             }
         }
 
-        RaycastHit objectHit;
-
-        //get the players position - this position
-        Vector3 targetDir = player.transform.position - this.transform.position;
-        //get angle between playe and this transform
-        float angle = Vector3.Angle(targetDir, this.transform.forward);
-
-        //if the player has not been seen set the radius to 45
-
-        //else
-        //set the radius to 175 if the player has been seen
-
-        //if the player has been seen then follow the player
         if (!navigator.playerNotSeen)
         {
             agent.destination = player.transform.position;
         }
 
-        Collider[] hits = Physics.OverlapSphere(transform.position, 25.0f);
-        int i = 0;
-        while (i < hits.Length)
+
+        //detection
+        NavMeshHit hit;
+        distance = Vector3.Distance(target.position, this.transform.position);
+        if (distance <= 10)
         {
-            if (hits[i].name == "Player")
+            if (!agent.Raycast(target.position, out hit))
             {
-
-                if (angle < 45.0f)
-                {
-                    lookAt = true;
-                }
-                else
-                {
-                    lookAt = false;
-                }
-                Debug.Log("I should be dead");
-                transform.LookAt(player.transform);
-                //makes it so it has seen the player
-                // navigator.playerNotSeen = false;
-
-                //look at the player
-                transform.LookAt(player.transform.position);
-
-                //move towards the player
-                agent.destination = player.transform.position;
-                //what to do when the player has been seen
                 SeenPlayer();
             }
-            //increase the iterator
-            i++;
+
         }
+        else {
+            navigator.playerNotSeen = true;
+        }
+
+
+
         if (heardSound || playerHeard)
         {
             timerHearing += Time.deltaTime;
 
             if (playerHeard)
             {
-                ////go to where the player was
-                //Transform temp = player.transform;
-                //transform.LookAt(temp);
-                //agent.destination = temp.position;
             }
             else
             {
@@ -148,22 +120,6 @@ public class Detect : MonoBehaviour
             if (navigator.playerNotSeen)
             {
                 navigator.waypointToGoTo();
-            }
-        }
-
-
-
-        //get the forward vector3
-        Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y - 1.25f, transform.position.z), fwd * viewLength, Color.red);
-        //raycast to see the player
-        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y - 1.25f, transform.position.z), fwd, out objectHit, viewLength))
-        {
-            //if it hit the player then move towards the player
-            if (objectHit.transform.tag == "Player")
-            {
-                //what to do when it sees the player
-                SeenPlayer();
             }
         }
     }
