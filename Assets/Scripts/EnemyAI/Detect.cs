@@ -42,6 +42,8 @@ public class Detect : MonoBehaviour
 
     public Animator animator;
 
+    bool blocked = false;
+
 
     //what to do when the scene loads
     private void Start()
@@ -66,7 +68,7 @@ public class Detect : MonoBehaviour
             {
                 weaponSlowTimer = 0;
                 hitWithShotgun = false;
-                agent.speed = 3.5f;
+                agent.speed = 15.0f;
                 animator.SetBool("Hit", false);
             }
         }
@@ -76,19 +78,25 @@ public class Detect : MonoBehaviour
             agent.destination = player.transform.position;
         }
 
-
         //detection
         NavMeshHit hit;
-        distance = Vector3.Distance(target.position, this.transform.position);
-        if (distance <= 10)
-        {
-            if (!agent.Raycast(target.position, out hit))
-            {
-                SeenPlayer();
-            }
 
+        blocked = NavMesh.Raycast(transform.position, target.position, out hit, NavMesh.AllAreas);
+        Debug.DrawLine(transform.position, target.position, blocked ? Color.red : Color.green);
+
+        if (blocked)
+        {
+            Debug.DrawRay(hit.position, Vector3.up, Color.red);
         }
-        else {
+        else if(!blocked) {
+            distance = Vector3.Distance(target.position, this.transform.position);
+            if (distance <= 10)
+            {
+                    SeenPlayer();
+            }
+        }
+        else if (!heardSound || !playerHeard)
+        {
             navigator.playerNotSeen = true;
         }
 
