@@ -481,6 +481,99 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   documentText: {fileID: 1127190732}
   documentImage: {fileID: 32587994}
+--- !u!1 &1630541804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1630541805}
+  - component: {fileID: 1630541808}
+  - component: {fileID: 1630541807}
+  - component: {fileID: 1630541806}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1630541805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630541804}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.48853, y: 0.46299, z: 1.0549904}
+  m_Children: []
+  m_Father: {fileID: 1900058810}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1630541808
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630541804}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1630541807
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630541804}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &1630541806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630541804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1777470409
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,8 +659,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1900058810}
   - component: {fileID: 1900058811}
+  - component: {fileID: 2071320216}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GunHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -581,9 +675,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900058809}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.54799986, y: -0.692, z: 0.54100037}
+  m_LocalPosition: {x: 0.67, y: -0.62, z: 1.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1630541805}
   m_Father: {fileID: 4143180536223899243}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -601,6 +696,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockSpeed: 25
   rock: {fileID: 850329987389009873, guid: 016ec766586fa5e4e882dbc09e1f2dd8, type: 3}
+--- !u!114 &2071320216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900058809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b143ef6c83281a1488d6ba111115c2b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gotShotgun: 1
+  gotTranqGun: 0
+  slugSpeed: 30
+  slugRound: {fileID: 850329987389009873, guid: ac1dd662e066b6144a5618eb16d36ade,
+    type: 3}
+  shotgunAmmo: 5000
+  tranqAmmo: 0
+  currentWeapon: 1
 --- !u!1 &4143180536224383561
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,8 +894,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 134a6e9502ab1204ca7abb7258e68b59, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
-  detect: {fileID: 0}
   crouch: 0
+  run: 0
 --- !u!54 &4143180536218935593
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -900,13 +1015,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4143180536224383561}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66e41049a2892154dbe3f0553bec6003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rockSpeed: 10
-  rock: {fileID: 0}
+  rock: {fileID: 850329987389009873, guid: 016ec766586fa5e4e882dbc09e1f2dd8, type: 3}
 --- !u!114 &713416707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,6 +1035,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalDocuments: {fileID: 400530924}
+  digZones: {fileID: 0}
+  digCount: 0
   documentCount: 0
 --- !u!1 &4143180536224383563
 GameObject:
@@ -1033,6 +1150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 0}
   mapEnabled: 0
+  boat: {fileID: 0}
+  playerManager: {fileID: 0}
+  power: {fileID: 0}
   amountOfLeversPulled: 0
 --- !u!114 &1444289631
 MonoBehaviour:
@@ -1163,7 +1283,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4143180536586867226
 RectTransform:
   m_ObjectHideFlags: 0

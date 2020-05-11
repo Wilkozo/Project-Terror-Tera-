@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour
 {
@@ -15,9 +16,19 @@ public class Gun : MonoBehaviour
     public int shotgunAmmo;
     public int tranqAmmo;
 
+    public Image shotgunRoundsImage;
+
     //shotgun = 1
     //tranqgun = 2
     public int currentWeapon;
+
+    private void Start()
+    {
+        shotgunRoundsImage.fillAmount = 0;
+        for (int i = 0; i < shotgunAmmo; i++) {
+            shotgunRoundsImage.fillAmount += 0.056666f;
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -36,8 +47,10 @@ public class Gun : MonoBehaviour
                 }
                 //reduce shotgun ammo by one
                 shotgunAmmo -= 1;
+                shotgunRoundsImage.fillAmount -= 0.056666666f;
             }
         }
+
 
     }
 }
