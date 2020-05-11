@@ -81,26 +81,34 @@ public class Detect : MonoBehaviour
         //detection
         NavMeshHit hit;
 
+        //using a navmesh raycast to detect where the player is
         blocked = NavMesh.Raycast(transform.position, target.position, out hit, NavMesh.AllAreas);
+        //draw a line
         Debug.DrawLine(transform.position, target.position, blocked ? Color.red : Color.green);
 
+        //if the way is blocked
         if (blocked)
         {
+            //draw a ray
             Debug.DrawRay(hit.position, Vector3.up, Color.red);
         }
+        //if it isn't blocked
         else if(!blocked) {
+            //get distance between player and enemy
             distance = Vector3.Distance(target.position, this.transform.position);
+            //if the distance is less than 10
             if (distance <= 10)
             {
+                //get it so the ai has seen the player
                     SeenPlayer();
             }
         }
+        //otherwise if the ai has not heard a sound
         else if (!heardSound || !playerHeard)
         {
+            //make it so the player has not been seen
             navigator.playerNotSeen = true;
         }
-
-
 
         if (heardSound || playerHeard)
         {
