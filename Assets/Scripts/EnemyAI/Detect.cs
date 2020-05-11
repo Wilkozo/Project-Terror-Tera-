@@ -12,6 +12,7 @@ public class Detect : MonoBehaviour
     [SerializeField] WaypointNavigator navigator;
     public Transform target;
     public float distance;
+    [SerializeField] playerHealth healthPlayer;
 
     //player and AI components
     public GameObject player;
@@ -48,12 +49,13 @@ public class Detect : MonoBehaviour
     //what to do when the scene loads
     private void Start()
     {
-
+    
         animator = this.GetComponentInChildren<Animator>();
         //find the navmesh agent component
         agent = this.GetComponent<NavMeshAgent>();
         //find the player
         player = GameObject.FindGameObjectWithTag("Player");
+        healthPlayer = player.GetComponent<playerHealth>();
     }
 
 
@@ -80,7 +82,7 @@ public class Detect : MonoBehaviour
 
         //detection
         NavMeshHit hit;
-
+        distance = Vector3.Distance(target.position, this.transform.position);
         //using a navmesh raycast to detect where the player is
         blocked = NavMesh.Raycast(transform.position, target.position, out hit, NavMesh.AllAreas);
         //draw a line
@@ -95,9 +97,9 @@ public class Detect : MonoBehaviour
         //if it isn't blocked
         else if(!blocked) {
             //get distance between player and enemy
-            distance = Vector3.Distance(target.position, this.transform.position);
+           
             //if the distance is less than 10
-            if (distance <= 10)
+            if (distance <= 15)
             {
                 //get it so the ai has seen the player
                     SeenPlayer();
@@ -108,6 +110,18 @@ public class Detect : MonoBehaviour
         {
             //make it so the player has not been seen
             navigator.playerNotSeen = true;
+        }
+        if (distance >= 40) {
+            //make it so the player has not been seen
+            navigator.playerNotSeen = true;
+        }
+
+        if (distance <= 10)
+        {
+            healthPlayer.LoseHealth();
+        }
+        else {
+            healthPlayer.dontLoseHealth();
         }
 
         if (heardSound || playerHeard)

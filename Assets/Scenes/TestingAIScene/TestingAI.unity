@@ -156,6 +156,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &42608227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59306422a2ca4454aabce3daa79c3334, type: 3}
+  m_Name: New Aura Base Settings
+  m_EditorClassIdentifier: 
+  useDensity: 1
+  density: 0.25
+  useScattering: 1
+  scattering: 0.5
+  useAmbientLighting: 1
+  ambientLightingStrength: 1
+  useColor: 0
+  color: {r: 0, g: 0.5, b: 0.5, a: 0.5}
+  colorStrength: 1
+  useTint: 0
+  tint: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  tintStrength: 1
+  useExtinction: 0
+  extinction: 0.75
 --- !u!1 &54698755
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,19 +239,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 32587992, guid: a2c0a23050760354faa1ffd1000a455c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 106061495, guid: a2c0a23050760354faa1ffd1000a455c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 717175770, guid: a2c0a23050760354faa1ffd1000a455c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1127190730, guid: a2c0a23050760354faa1ffd1000a455c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1444289631, guid: a2c0a23050760354faa1ffd1000a455c, type: 3}
       propertyPath: frustumSettings.qualitySettings
@@ -237,7 +263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1777470409, guid: a2c0a23050760354faa1ffd1000a455c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2071320216, guid: a2c0a23050760354faa1ffd1000a455c, type: 3}
       propertyPath: shotgunRoundsImage
@@ -319,7 +345,7 @@ PrefabInstance:
     - target: {fileID: 4143180536586867222, guid: a2c0a23050760354faa1ffd1000a455c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4143180536602232137, guid: a2c0a23050760354faa1ffd1000a455c,
         type: 3}
@@ -914,7 +940,7 @@ MonoBehaviour:
   m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &714226930
@@ -955,6 +981,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 176747984}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &777886148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777886140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecb311542edc9294382d2b8a28d9f36d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthImage: {fileID: 714226929}
+  bloodOverlay: {fileID: 1673777379}
+  health: 100
+  loseHealth: 0
 --- !u!1 &839302346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,7 +2076,7 @@ GameObject:
   - component: {fileID: 1673777380}
   - component: {fileID: 1673777379}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BloodOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
