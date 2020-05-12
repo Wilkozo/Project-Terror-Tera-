@@ -31,8 +31,8 @@ public class Detect : MonoBehaviour
     public bool lookAt;
 
     [Header("Audio Clips")]
-    public AudioClip roar;
     public AudioSource roarSource;
+    public AudioClip hitRoar;
     public float range;
 
 
@@ -65,9 +65,14 @@ public class Detect : MonoBehaviour
         //what happens if the ai is hit with the shotgun
         if (hitWithShotgun)
         {
+            if (!roarSource.isPlaying)
+            {
+                roarSource.PlayOneShot(hitRoar);
+            }
             weaponSlowTimer += Time.deltaTime;
             if (weaponSlowTimer >= maxWeaponSlowTimer)
             {
+               
                 weaponSlowTimer = 0;
                 hitWithShotgun = false;
                 agent.speed = 15.0f;
