@@ -11,7 +11,14 @@ public class playerHealth : MonoBehaviour
     public Image bloodOverlay;
     public float health = 100;
 
+    public CanvasGroup canGroup;
+
     public bool loseHealth;
+
+    private void Start()
+    {
+        canGroup.alpha = 0;
+    }
 
     private void Update()
     {
@@ -24,16 +31,23 @@ public class playerHealth : MonoBehaviour
         {
             playerHealthImage.fillAmount -= 0.1f * Time.deltaTime;
             //increase the opacity of the blood overlay
-            var tempColor = bloodOverlay.color;
-            tempColor.a += 0.1f;
-            bloodOverlay.color = tempColor;
+            canGroup.alpha += 0.15f *Time.deltaTime;
+
+            //bloodOverlay.
+            //bloodOverlay.fillAmount += 0.1f * Time.deltaTime;
+
+            //var tempColor = bloodOverlay.color;
+            //tempColor.a += 0.1f;
+            //bloodOverlay.color = tempColor;
         }
         else {
             playerHealthImage.fillAmount += 0.01f * Time.deltaTime;
+            canGroup.alpha -= 0.01f * Time.deltaTime;
+            //bloodOverlay.CrossFadeAlpha(0.1f, 2.0f, true);
             //bloodOverlay.fillAmount -= 0.1f * Time.deltaTime;
-            var tempColor = bloodOverlay.color;
-            tempColor.a -= 0.1f;
-            bloodOverlay.color = tempColor;
+            //var tempColor = bloodOverlay.color;
+            //tempColor.a -= 0.1f;
+            //bloodOverlay.color = tempColor;
         }
 
     }

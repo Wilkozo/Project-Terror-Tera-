@@ -34,20 +34,31 @@ public class Gun : MonoBehaviour
         }
     }
 
+    public void pickup(string ammoType) {
+        if (ammoType == "Shotgun") {
+            shotgunAmmo += 1;
+            shotgunRoundsImage.fillAmount += 0.056666f;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         delay += Time.deltaTime;
         //what to do if the player has the shotgun equipped
-        if (gotShotgun && currentWeapon == 1) {
+        if (gotShotgun && currentWeapon == 1)
+        {
             //TODO: display the shotgun
 
             //if the player pushes the left mouse button and has ammo
-            if (Input.GetMouseButtonDown(0) && shotgunAmmo > 0 && delay >= 1) {
+            if (Input.GetMouseButtonDown(0) && shotgunAmmo > 0 && delay >= 1)
+            {
                 //be lazy and instantiate bullet prefabs
                 for (int i = 0; i < 5; i++)
                 {
                     source.PlayOneShot(clip);
+                    //alert the dinosaur
+                    audioSenderGun(40.0f);
                     Rigidbody slugRoundClone = (Rigidbody)Instantiate(slugRound, transform.position, transform.rotation);
                     slugRoundClone.velocity = transform.forward * slugSpeed;
                     delay = 0;
@@ -57,7 +68,26 @@ public class Gun : MonoBehaviour
                 shotgunRoundsImage.fillAmount -= 0.056666666f;
             }
         }
+        else if (gotTranqGun && currentWeapon == 2)
+        {
+            //what to do when the player has the tranq gun
+        }
+        else {
+            //don't display a weapon
+        }
 
 
+    }
+
+    void audioSenderGun(float radius) {
+
+        Collider[] hits = Physics.OverlapSphere(transform.position, radius);
+        int i = 0;
+
+        while (i < hits.Length)
+        {
+            hits[i].SendMessage("HeardSomethingPlayer", SendMessageOptions.DontRequireReceiver);
+            i++;
+        }
     }
 }
