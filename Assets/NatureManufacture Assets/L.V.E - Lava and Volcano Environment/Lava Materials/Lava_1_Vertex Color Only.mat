@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Lava_1_Vertex Color Only
   m_Shader: {fileID: 4800000, guid: d5aff4267d23a1344aaf15b1633043dc, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -194,13 +194,13 @@ Material:
     - _CascadeWaterTessScale: 0.06
     - _CascadesNoisePower: 0
     - _ChromaticAberration: 0.1
-    - _ColdLavaAO: 1
+    - _ColdLavaAO: 0.921
     - _ColdLavaAlbedoColorMultiply: 1
     - _ColdLavaEmissionMaskIntensivity: 1.4
     - _ColdLavaEmissionMaskPower: 42.98
     - _ColdLavaEmissionMaskTreshold: 12.09
     - _ColdLavaHeightBlendStrenghtVertexColor: 10
-    - _ColdLavaMetalic: 1
+    - _ColdLavaMetalic: 0.521
     - _ColdLavaNoisePower: 2.63
     - _ColdLavaNormalScale: 1
     - _ColdLavaSmoothness: 1
@@ -232,14 +232,14 @@ Material:
     - _GlobalLavaEmissionManager: 1
     - _HotLavaAO: 1
     - _HotLavaAlbedoColorMultiply: 1
-    - _HotLavaAngle: 20.6
-    - _HotLavaAngleFalloff: 2
+    - _HotLavaAngle: 50
+    - _HotLavaAngleFalloff: 18.4
     - _HotLavaEmissionMaskIntensivity: 2
     - _HotLavaEmissionMaskPower: 2.72
     - _HotLavaEmissionMaskTreshold: 9.52
     - _HotLavaHeightBlendStrenght: 20
     - _HotLavaHeightBlendStrenghtVertexColor: 10
-    - _HotLavaHeightBlendTreshold: 3.09
+    - _HotLavaHeightBlendTreshold: 5.63
     - _HotLavaMetallic: 1
     - _HotLavaNoisePower: 2.71
     - _HotLavaNormalScale: 1
@@ -253,16 +253,16 @@ Material:
     - _MaskClipValue: 0.5
     - _MediumLavaAO: 1
     - _MediumLavaAlbedoColorMultiply: 1
-    - _MediumLavaAngle: 5.7
-    - _MediumLavaAngleFalloff: 1.5
-    - _MediumLavaEmissionMaskIntesivity: 3.3
+    - _MediumLavaAngle: 11.3
+    - _MediumLavaAngleFalloff: 5
+    - _MediumLavaEmissionMaskIntesivity: 23.7
     - _MediumLavaEmissionMaskPower: 0
     - _MediumLavaEmissionMaskTreshold: 6.65
     - _MediumLavaHeightBlend: 8.74
     - _MediumLavaHeightBlendStrenght: 10
     - _MediumLavaHeightBlendStrenghtVertexColor: 10
     - _MediumLavaHeightBlendTreshold: 3.76
-    - _MediumLavaMetallic: 1
+    - _MediumLavaMetallic: 0.831
     - _MediumLavaNoisePower: 4.03
     - _MediumLavaNormalScale: 1
     - _MediumLavaSmoothness: 1
@@ -271,7 +271,7 @@ Material:
     - _Occlusion: 0.48
     - _Reflection: 0.66
     - _ReflectionPower: 0.083
-    - _RimLightPower: 4
+    - _RimLightPower: 1.88
     - _ShalowDepth: 0.7
     - _ShalowFalloff: -1.2
     - _SlowCascadeAngle: 0.001
@@ -295,16 +295,16 @@ Material:
     - _TessMax: 11
     - _TessMaxDisp: 0
     - _TessMin: 0
-    - _TessPhongStrength: 1
+    - _TessPhongStrength: 0.929
     - _TessValue: 26.51
     - _ToggleSwitch1: 0
     - _UVDirectionV1U0: 1
     - _UVVDirection1UDirection0: 0.41
     - _Udirection: 0
-    - _VCColdLavaHeightBlendStrenght: 10
+    - _VCColdLavaHeightBlendStrenght: 6.6
     - _VCFrozenLavaHeightBlendStrenght: 10
-    - _VCHotLavaHeightBlendStrenght: 10
-    - _VCMediumLavaHeightBlendStrenght: 10
+    - _VCHotLavaHeightBlendStrenght: 6.18
+    - _VCMediumLavaHeightBlendStrenght: 7.95
     - _Vdirection: 0
     - _WaterDeepTranslucencyPower: 0.1
     - _WaterDepth: 0.143
