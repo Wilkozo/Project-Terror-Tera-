@@ -116,7 +116,7 @@ public class Detect : MonoBehaviour
             //make it so the player has not been seen
             navigator.playerNotSeen = true;
         }
-        if (distance >= 40) {
+        if (distance >= 20) {
             //make it so the player has not been seen
             navigator.playerNotSeen = true;
         }
