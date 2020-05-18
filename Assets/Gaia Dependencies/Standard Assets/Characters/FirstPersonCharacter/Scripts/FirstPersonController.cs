@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
+using UnityEngine.UI;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
@@ -46,6 +47,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public bool crouch;
         public bool run;
 
+        public float staminaAmount = 15;
+        public Image staminaBar;
+        public float enoughStamina = 5;
+
         // Use this for initialization
         private void Start()
         {
@@ -66,6 +71,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
 
+         
             if (crouch)
             {
                 m_WalkSpeed = 2.5f;
@@ -226,13 +232,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         }
 
-        void OnDrawGizmosSelected()
-        {
-            // Draw a yellow sphere at the transform's position
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawSphere(transform.position, 10.0f);
-        }
-
         private void UpdateCameraPosition(float speed)
         {
             Vector3 newCameraPosition;
@@ -268,17 +267,34 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #if !MOBILE_INPUT
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
-            m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+            //m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
 #endif
+
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
-            if (Input.GetKey(KeyCode.LeftShift))
+
+
+            if (Input.GetKey(KeyCode.LeftShift) && staminaAmount > enoughStamina)
             {
+                m_IsWalking = false;
                 run = true;
+                staminaAmount -= 1.0f * Time.deltaTime;
+                staminaBar.fillAmount -= 0.1f * Time.deltaTime;
+                if (staminaAmount <= enoughStamina) {
+                    staminaAmount = 0;
+                }
             }
             else
             {
+                if (staminaAmount <= 15){
+                    staminaAmount += 0.1f * Time.deltaTime;
+                    if (staminaAmount >= enoughStamina)
+                    {
+                        staminaBar.fillAmount += 0.01f * Time.deltaTime;
+                    }
+                }
+                m_IsWalking = true;
                 run = false;
             }
 

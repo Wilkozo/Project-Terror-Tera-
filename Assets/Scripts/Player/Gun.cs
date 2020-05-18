@@ -22,12 +22,17 @@ public class Gun : MonoBehaviour
 
     public Image shotgunRoundsImage;
 
+    public Image staminaBar;
+    public float staminaAmount = 10;
+
     //shotgun = 1
     //tranqgun = 2
     public int currentWeapon;
 
     private void Start()
     {
+        staminaBar.fillAmount = 1;
+
         shotgunRoundsImage.fillAmount = 0;
         for (int i = 0; i < shotgunAmmo; i++) {
             shotgunRoundsImage.fillAmount += 0.056666f;
@@ -44,6 +49,8 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         delay += Time.deltaTime;
         //what to do if the player has the shotgun equipped
         if (gotShotgun && currentWeapon == 1)
