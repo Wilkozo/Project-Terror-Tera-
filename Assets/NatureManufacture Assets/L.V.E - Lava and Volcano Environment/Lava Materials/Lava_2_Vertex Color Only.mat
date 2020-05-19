@@ -41,8 +41,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ColdLavaAlbedo_SM:
         m_Texture: {fileID: 2800000, guid: 649e188a9cb8e1546b9a177d0367b24a, type: 3}
-        m_Scale: {x: 1, y: 0.5}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 2, y: 0}
     - _ColdLavaMT_AO_EM_H:
         m_Texture: {fileID: 2800000, guid: 6cb32ea8be35c9b498e126fb1200cff3, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -53,7 +53,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ColdLavaNormal:
         m_Texture: {fileID: 2800000, guid: d79e54283facf034bb0598bb506cd98e, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 10, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DummyTex:
         m_Texture: {fileID: 0}
