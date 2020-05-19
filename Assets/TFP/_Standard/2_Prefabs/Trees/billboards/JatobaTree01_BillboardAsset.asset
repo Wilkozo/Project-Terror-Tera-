@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!226 &22600000
+BillboardAsset:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: JatobaTree01_BillboardAsset
+  serializedVersion: 2
+  width: 24.492184
+  bottom: -0.7549553
+  height: 24.492184
+  imageTexCoords:
+  - {x: 0, y: 0, z: 0.25, w: 0.5}
+  vertices:
+  - {x: 0.459, y: 0}
+  - {x: 0, y: 0.304}
+  - {x: 0.01, y: 0.624}
+  - {x: 0.541, y: 0}
+  - {x: 1, y: 0.304}
+  - {x: 0.99, y: 0.624}
+  indices: 000003000400000004000100010004000500010005000200
+  material: {fileID: 2100000, guid: c5650474833f7a34db442a9258d83727, type: 2}

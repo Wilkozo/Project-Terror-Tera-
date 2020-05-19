@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!226 &22600000
+BillboardAsset:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PalmCover01_BillboardAsset
+  serializedVersion: 2
+  width: 6.050304
+  bottom: -0.1910572
+  height: 6.050304
+  imageTexCoords:
+  - {x: 0, y: 0, z: 0.25, w: 0.5}
+  vertices:
+  - {x: 0.46, y: 0}
+  - {x: 0, y: 0.084}
+  - {x: 0, y: 0.206}
+  - {x: 0.53999996, y: 0}
+  - {x: 1, y: 0.084}
+  - {x: 1, y: 0.206}
+  indices: 000003000400000004000100010004000500010005000200
+  material: {fileID: 2100000, guid: 10ace4acf49280b4791da902d1e6c68c, type: 2}

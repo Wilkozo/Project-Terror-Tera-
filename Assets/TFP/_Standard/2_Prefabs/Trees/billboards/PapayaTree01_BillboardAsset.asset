@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!226 &22600000
+BillboardAsset:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PapayaTree01_BillboardAsset
+  serializedVersion: 2
+  width: 2.726128
+  bottom: -0.15636826
+  height: 2.726128
+  imageTexCoords:
+  - {x: 0, y: 0, z: 0.25, w: 0.5}
+  vertices:
+  - {x: 0.429, y: 0}
+  - {x: 0.012, y: 0.542}
+  - {x: 0.04, y: 0.9}
+  - {x: 0.571, y: 0}
+  - {x: 0.988, y: 0.542}
+  - {x: 0.96, y: 0.9}
+  indices: 000003000400000004000100010004000500010005000200
+  material: {fileID: 2100000, guid: 1cd8c7f09cdf7304a9c1b27940e42f32, type: 2}

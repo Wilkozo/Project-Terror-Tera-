@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
+using UnityEngine.UI;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
@@ -44,6 +45,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
         public bool crouch;
+        public bool run;
+
+        public float staminaAmount = 15;
+        public Image staminaBar;
+        public float enoughStamina = 5;
 
         // Use this for initialization
         private void Start()
@@ -65,6 +71,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
 
+         
             if (crouch)
             {
                 m_WalkSpeed = 2.5f;
@@ -156,7 +163,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             m_AudioSource.clip = m_JumpSound;
             m_AudioSource.Play();
-           
+
         }
 
 
@@ -181,7 +188,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayFootStepAudio()
         {
-            audioSender(35.0f);
+            //sets the sphere overlap for the dinos to detect
+            if (crouch)
+            {
+                audioSender(1.0f);
+            }
+            if (m_IsWalking)
+            {
+                audioSender(15.0f);
+            }
+            if (run)
+            {
+                audioSender(30.0f);
+            }
             if (!m_CharacterController.isGrounded)
             {
                 return;
@@ -195,20 +214,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[n] = m_FootstepSounds[0];
             m_FootstepSounds[0] = m_AudioSource.clip;
 
-            //send out a overlapSphere
-     
 
         }
 
 
-        void audioSender(float radius) {
+        void audioSender(float radius)
+        {
 
             Collider[] hits = Physics.OverlapSphere(transform.position, radius);
             int i = 0;
 
             while (i < hits.Length)
             {
-                hits[i].SendMessage("HeardSomethingPlayer");
+                hits[i].SendMessage("HeardSomethingPlayer", SendMessageOptions.DontRequireReceiver);
                 i++;
             }
 
@@ -249,16 +267,43 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #if !MOBILE_INPUT
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
-            m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+            //m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
 #endif
+
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
 
-            if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl)) {
+
+            if (Input.GetKey(KeyCode.LeftShift) && staminaAmount > enoughStamina)
+            {
+                m_IsWalking = false;
+                run = true;
+                staminaAmount -= 1.0f * Time.deltaTime;
+                staminaBar.fillAmount -= 0.1f * Time.deltaTime;
+                if (staminaAmount <= enoughStamina) {
+                    staminaAmount = 0;
+                }
+            }
+            else
+            {
+                if (staminaAmount <= 15){
+                    staminaAmount += 0.1f * Time.deltaTime;
+                    if (staminaAmount >= enoughStamina)
+                    {
+                        staminaBar.fillAmount += 0.01f * Time.deltaTime;
+                    }
+                }
+                m_IsWalking = true;
+                run = false;
+            }
+
+            if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl))
+            {
                 crouch = true;
             }
-            else{
+            else
+            {
                 crouch = false;
             }
 
@@ -298,13 +343,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity * 0.1f, hit.point, ForceMode.Impulse);
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.tag == "Boat") {
-                Application.LoadLevel("WinScreen");
-            }
         }
     }
 }

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PalmCover02_BillboardMaterial
+  m_Shader: {fileID: 4800000, guid: 07bb3df55d2fc2b4a944c156c8728e38, type: 3}
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpTex:
+        m_Texture: {fileID: 2800000, guid: d560d2888b9dbe0438106b9b830eee76, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 442ccd9dd7105244fa6f89c83968e6a6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaLeak: 0.6
+    - _Cutoff: 0.45
+    - _TranslucencyStrength: 0.4
+    - _TreeHeightLimit: 1
+    - _TreeScale: 1
+    - _TreeWidth: 1
+    - _UseWind: 1
+    - _ViewDependency: 0.2
+    - _WindStrength: 0.5
+    m_Colors:
+    - _HueVariation: {r: 0.9, g: 0.5, b: 0, a: 0.1}
+    - _SpecColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
