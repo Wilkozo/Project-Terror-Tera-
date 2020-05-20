@@ -51,13 +51,27 @@ public class Gun : MonoBehaviour
         tranqRoundsImage.enabled = false;
     }
 
-    public void pickup(string ammoType)
+    public bool pickup(string ammoType)
     {
         if (ammoType == "Shotgun")
         {
-            shotgunAmmo += 1;
-            shotgunRoundsImage.fillAmount += 0.056666f;
+            if (shotgunAmmo < 18)
+            {
+                shotgunAmmo += 1;
+                shotgunRoundsImage.fillAmount += 0.056666f;
+                return true;
+            }
         }
+        if (ammoType == "Tranq")
+        {
+            if (tranqAmmo < 8)
+            {
+                tranqAmmo += 1;
+                tranqRoundsImage.fillAmount += 0.125f;
+                return true;
+            }
+        }
+        return false;
     }
 
     // Update is called once per frame

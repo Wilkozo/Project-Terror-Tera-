@@ -15,11 +15,16 @@ public class pickupAmmo : MonoBehaviour
     {
         if (other.tag == "Player") {
             if (shotgunAmmoPickup) {
-                gun.pickup("Shotgun");
-                Destroy(this.gameObject);
+                if (gun.pickup("Shotgun")) {
+                    //if the player can pick up the ammo then destroy it 
+                    Destroy(this.gameObject);
+                }
             }
             if (tranqAmmoPickup) {
-                gun.pickup("Tranq");
+                if (gun.pickup("Tranq")) {
+                    //if the player can pickup the ammo then destroy it
+                    Destroy(this.gameObject);
+                }
             }
         }
     }
