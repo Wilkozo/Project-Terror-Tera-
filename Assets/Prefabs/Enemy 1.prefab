@@ -108,6 +108,7 @@ MonoBehaviour:
   navigator: {fileID: 811136178}
   target: {fileID: 0}
   distance: 0
+  healthPlayer: {fileID: 0}
   player: {fileID: 0}
   agent: {fileID: 4963154511409583181}
   viewLength: 30
@@ -118,12 +119,12 @@ MonoBehaviour:
   timerHearing: 0
   radiusSeenPlayer: 0
   lookAt: 0
-  roar: {fileID: 0}
   roarSource: {fileID: 0}
+  hitRoar: {fileID: 8300000, guid: 5869e9c09dfa9da4baed21250f0f38a6, type: 3}
   range: 0
   hitWithShotgun: 0
   weaponSlowTimer: 0
-  maxWeaponSlowTimer: 5
+  maxWeaponSlowTimer: 4
   animator: {fileID: 0}
 --- !u!54 &4963154511409583188
 Rigidbody:
