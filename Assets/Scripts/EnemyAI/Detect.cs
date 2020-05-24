@@ -13,6 +13,7 @@ public class Detect : MonoBehaviour
     public Transform target;
     public float distance;
     [SerializeField] playerHealth healthPlayer;
+    public float maxDistance;
 
     //player and AI components
     public GameObject player;
@@ -103,8 +104,8 @@ public class Detect : MonoBehaviour
         else if(!blocked) {
             //get distance between player and enemy
            
-            //if the distance is less than 10
-            if (distance <= 15)
+            //if the distance is less than the max
+            if (distance <= maxDistance)
             {
                 //get it so the ai has seen the player
                     SeenPlayer();
