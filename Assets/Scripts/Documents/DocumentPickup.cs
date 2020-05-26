@@ -15,7 +15,6 @@ public class DocumentPickup : MonoBehaviour
         {
             documentText.enabled = false;
         }
-       // documentImage.enabled = false;
     }
 
     //when the player interacts with the document places
@@ -25,7 +24,6 @@ public class DocumentPickup : MonoBehaviour
         documentText.enabled = true;
         documentImage.enabled = true;
         GameObject.FindGameObjectWithTag("Player").SendMessage("documentsPickedUp");
-
         //Time.timeScale = 0;
         Debug.Log("Hit the document");
 
@@ -33,8 +31,8 @@ public class DocumentPickup : MonoBehaviour
 
     private void Update()
     {
-        //when the player presses Q the document will disable
-        if (Input.GetKeyDown(KeyCode.Q) && documentText.enabled) {
+        //when the player presses Tab the document will disable
+        if (Input.GetKeyDown(KeyCode.Tab) && documentText.enabled) {
             documentText.enabled = false;
             documentImage.enabled = false;
             Destroy(this.gameObject);

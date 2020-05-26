@@ -51,14 +51,14 @@ public class Gun : MonoBehaviour
         tranqRoundsImage.enabled = false;
     }
 
-    public bool pickup(string ammoType)
+    public bool pickup(string ammoType, int amountToFill)
     {
         if (ammoType == "Shotgun")
         {
             if (shotgunAmmo < 18)
             {
-                shotgunAmmo += 1;
-                shotgunRoundsImage.fillAmount += 0.056666f;
+                shotgunAmmo += amountToFill;
+                shotgunRoundsImage.fillAmount += 0.056666f * amountToFill;
                 return true;
             }
         }
@@ -66,8 +66,8 @@ public class Gun : MonoBehaviour
         {
             if (tranqAmmo < 8)
             {
-                tranqAmmo += 1;
-                tranqRoundsImage.fillAmount += 0.125f;
+                tranqAmmo += amountToFill;
+                tranqRoundsImage.fillAmount += 0.125f * amountToFill;
                 return true;
             }
         }
