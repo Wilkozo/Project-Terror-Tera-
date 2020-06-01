@@ -14,9 +14,13 @@ public class AudioManager : MonoBehaviour
     int StreetBusy = 0; // 
     public Sound[] Sounds;
     public static AudioManager instance;
+    private AudioSource CurrentTrack;
+    private AudioSource source;
 
     private void Start()
     {
+        source = GetComponent<AudioSource>();
+        // Play Music
             float RandNum = UnityEngine.Random.Range(0, 100);
             if (RandNum <= 74)
             {
@@ -29,7 +33,8 @@ public class AudioManager : MonoBehaviour
             }
         
     }
-    // Use this for initialization
+
+    // Used for initialization
     void Awake()
     {
         
@@ -68,7 +73,19 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound / SFX" + name + " Missing!");
             return;
         }
+        //i.source.volume = 0;
         i.source.Play();
+        //for (int j = 0; j < 100; j++)
+        //{
+         //   i.source.volume += (float)0.01;
+
+        //}
+
+
+        //if (i.source.volume != 1)
+        //{
+            
+        //}
     }
 
     public void Stop(string name)
@@ -77,7 +94,14 @@ public class AudioManager : MonoBehaviour
         Debug.Log("Tracking lost, stopping audio");
         if (i.source.isPlaying)
         {
-            i.source.Stop();
+            for (int j = 0; j < 1000; j++)
+            {
+                i.source.volume -= (float)0.1;
+                if (i.source.volume == 0)
+                {
+                    i.source.Stop();
+                }
+            }
         }
 
         // rest of your code here

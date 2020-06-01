@@ -19,7 +19,7 @@ public class PowerOn : MonoBehaviour
     }
 
     public void onPowerUp() {
-
+        FindObjectOfType<AudioManager>().Stop("BGM01");
         FindObjectOfType<AudioManager>().Play("Poweron");
 
         foreach (GameObject tempLight in lights) {
