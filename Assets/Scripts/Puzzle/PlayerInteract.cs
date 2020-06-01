@@ -29,6 +29,7 @@ public class PlayerInteract : MonoBehaviour
         boat.SetActive(false);
 
         //find the map
+        FindObjectOfType<AudioManager>().Play("BGM01");
         map = GameObject.FindGameObjectWithTag("Map");
         //set the map to false
         map.SetActive(false);
