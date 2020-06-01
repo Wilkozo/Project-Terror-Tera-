@@ -34,22 +34,10 @@ public class playerHealth : MonoBehaviour
             playerHealthImage.fillAmount -= 0.1f * Time.deltaTime;
             //increase the opacity of the blood overlay
             canGroup.alpha += 0.15f *Time.deltaTime;
-
-            //bloodOverlay.
-            //bloodOverlay.fillAmount += 0.1f * Time.deltaTime;
-
-            //var tempColor = bloodOverlay.color;
-            //tempColor.a += 0.1f;
-            //bloodOverlay.color = tempColor;
         }
         else {
             playerHealthImage.fillAmount += 0.01f * Time.deltaTime;
             canGroup.alpha -= 0.01f * Time.deltaTime;
-            //bloodOverlay.CrossFadeAlpha(0.1f, 2.0f, true);
-            //bloodOverlay.fillAmount -= 0.1f * Time.deltaTime;
-            //var tempColor = bloodOverlay.color;
-            //tempColor.a -= 0.1f;
-            //bloodOverlay.color = tempColor;
         }
 
     }

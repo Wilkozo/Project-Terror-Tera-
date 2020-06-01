@@ -1,0 +1,2682 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &163617507392358345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2412828680271958471}
+  m_Layer: 0
+  m_Name: AllosaurLLeg1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2412828680271958471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163617507392358345}
+  m_LocalRotation: {x: 0.7425914, y: -0.65560037, z: -0.012484768, w: -0.1363465}
+  m_LocalPosition: {x: 0.83359486, y: -0.52212, z: 1.6289649}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 7188652053708771991}
+  m_Father: {fileID: 1693437470470971286}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -13.979246, y: 172.48201, z: -100.47071}
+--- !u!1 &360568526019173440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7724068422721403710}
+  m_Layer: 0
+  m_Name: AllosaurLArm1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7724068422721403710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360568526019173440}
+  m_LocalRotation: {x: 0.9439417, y: 0.04066192, z: 0.2946181, w: -0.14325097}
+  m_LocalPosition: {x: -1.4520386, y: 0, z: 0.0000006782532}
+  m_LocalScale: {x: 1.0000005, y: 0.99999887, z: 1.0000004}
+  m_Children:
+  - {fileID: 175978429245913824}
+  m_Father: {fileID: 8783641173613824856}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -17.026157, y: 144.8857, z: -178.91827}
+--- !u!1 &540588310445312329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4810867798630357570}
+  m_Layer: 0
+  m_Name: AllosaurLLegDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4810867798630357570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540588310445312329}
+  m_LocalRotation: {x: 0.20305063, y: 0.15797453, z: -0.31166026, w: 0.9147034}
+  m_LocalPosition: {x: -1.9233054, y: 0.23200922, z: 0.22059523}
+  m_LocalScale: {x: 1.0000005, y: 0.9999996, z: 1}
+  m_Children:
+  - {fileID: 7786315791455253150}
+  m_Father: {fileID: 5548553654866720727}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 27.978622, y: 10.740288, z: -34.687016}
+--- !u!1 &828268035710374840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6664496411356118059}
+  m_Layer: 0
+  m_Name: AllosaurRArmDigit22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6664496411356118059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828268035710374840}
+  m_LocalRotation: {x: -0.000000050867133, y: 0.00000021766121, z: 0.23567349, w: 0.97183233}
+  m_LocalPosition: {x: -0.4089012, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999964, y: 0.99999774, z: 1.0000062}
+  m_Children:
+  - {fileID: 1946937070957681060}
+  m_Father: {fileID: 5296299491596959572}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0000069864477, y: 0.000029245413, z: 27.262648}
+--- !u!1 &979795468647665408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1946937070957681060}
+  m_Layer: 0
+  m_Name: AllosaurRArmDigit23
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1946937070957681060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979795468647665408}
+  m_LocalRotation: {x: 0.0000000411486, y: 0.00000019234967, z: 0.21726477, w: 0.9761127}
+  m_LocalPosition: {x: -0.33023775, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999951, y: 0.9999989, z: 1.0000062}
+  m_Children: []
+  m_Father: {fileID: 6664496411356118059}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0000031328616, y: 0.000028645522, z: 25.096838}
+--- !u!1 &1265693048034702452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8384792463653853810}
+  m_Layer: 0
+  m_Name: AllosaurSpine5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8384792463653853810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265693048034702452}
+  m_LocalRotation: {x: -0.000000029475324, y: -0.000000013989259, z: -0.06361072,
+    w: 0.9979748}
+  m_LocalPosition: {x: -0.44528848, y: 0.0000006782532, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 3818000784144759787}
+  m_Father: {fileID: 797416506251694964}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0000010742476, y: 0.000006392029, z: -7.2941937}
+--- !u!1 &1367898550277191845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6262219822981692828}
+  m_Layer: 0
+  m_Name: AllosaurRLeg1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6262219822981692828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367898550277191845}
+  m_LocalRotation: {x: -0.63024175, y: 0.7669036, z: -0.014221348, w: -0.12021701}
+  m_LocalPosition: {x: 0.8335952, y: -0.52212065, z: -1.6289649}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Children:
+  - {fileID: 5449406434107280369}
+  m_Father: {fileID: 1693437470470971286}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 10.716333, y: -170.21875, z: -82.25542}
+--- !u!1 &1466543790089246645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1693437470470971286}
+  m_Layer: 0
+  m_Name: AllosaurPelvis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1693437470470971286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466543790089246645}
+  m_LocalRotation: {x: 0.6856657, y: -0.1728076, z: 0.6856658, w: -0.17280778}
+  m_LocalPosition: {x: -0.07946834, y: 8.504197, z: -1.542655}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children:
+  - {fileID: 2412828680271958471}
+  - {fileID: 6262219822981692828}
+  - {fileID: 9200881543089975143}
+  - {fileID: 5084798423108005766}
+  m_Father: {fileID: 9085102535969279461}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.000012114035, y: 89.99998, z: -153.66829}
+--- !u!1 &1616121552433959226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5548553654866720727}
+  m_Layer: 0
+  m_Name: AllosaurLLegPalm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5548553654866720727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616121552433959226}
+  m_LocalRotation: {x: 0.028444363, y: 0.05531004, z: -0.38065094, w: 0.9226249}
+  m_LocalPosition: {x: -3.2791684, y: -0.00000008478165, z: 0}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 1.0000001}
+  m_Children:
+  - {fileID: 4810867798630357570}
+  - {fileID: 9117755979052245720}
+  - {fileID: 6102516085811283667}
+  m_Father: {fileID: 7188652053708771991}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 6.760173, y: 3.5359917, z: -45.446663}
+--- !u!1 &1907980621104962899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8865090818216399391}
+  - component: {fileID: 4978681574951017338}
+  m_Layer: 0
+  m_Name: Rex
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8865090818216399391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907980621104962899}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 0.39370102, y: 0.39370102, z: 0.39370102}
+  m_Children: []
+  m_Father: {fileID: 9085102535969279461}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &4978681574951017338
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907980621104962899}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 1986951870478939273, guid: ff7346b7c474b6a4394d1eec93cf7b42, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 8871552709325883717, guid: ff7346b7c474b6a4394d1eec93cf7b42, type: 3}
+  m_Bones:
+  - {fileID: 923674633355275191}
+  - {fileID: 4800748543935255332}
+  - {fileID: 4586087204178646178}
+  - {fileID: 3062124001305137244}
+  - {fileID: 6293073194764586279}
+  - {fileID: 6819540214357103661}
+  - {fileID: 738120382817228690}
+  - {fileID: 931013617108442297}
+  - {fileID: 5620987757259072518}
+  - {fileID: 3491916862365360649}
+  - {fileID: 7492175026230757626}
+  - {fileID: 2759755221228921873}
+  - {fileID: 8783641173613824856}
+  - {fileID: 2749935374613121020}
+  - {fileID: 7724068422721403710}
+  - {fileID: 2231875974415761627}
+  - {fileID: 3818000784144759787}
+  - {fileID: 8384792463653853810}
+  - {fileID: 9176209071235265562}
+  - {fileID: 175978429245913824}
+  - {fileID: 797416506251694964}
+  - {fileID: 8187928314987047756}
+  - {fileID: 1574055004200177068}
+  - {fileID: 3847303488887291363}
+  - {fileID: 7490965616064533350}
+  - {fileID: 9200881543089975143}
+  - {fileID: 1693437470470971286}
+  - {fileID: 6262219822981692828}
+  - {fileID: 5084798423108005766}
+  - {fileID: 2412828680271958471}
+  - {fileID: 8276480313644090111}
+  - {fileID: 5449406434107280369}
+  - {fileID: 1456065329755020618}
+  - {fileID: 4822032690280247101}
+  - {fileID: 4553260532551537913}
+  - {fileID: 7188652053708771991}
+  - {fileID: 5459030966479206306}
+  - {fileID: 1860754629570849738}
+  - {fileID: 6414607873102255866}
+  - {fileID: 5548553654866720727}
+  - {fileID: 2421725563520697851}
+  - {fileID: 3314117039418757196}
+  - {fileID: 384292325897566252}
+  - {fileID: 2246270850247171327}
+  - {fileID: 2995051122724789334}
+  - {fileID: 1485765090325666033}
+  - {fileID: 7008753614863856207}
+  - {fileID: 7159488416769629206}
+  - {fileID: 7398703425812636621}
+  - {fileID: 1323779040021289916}
+  - {fileID: 3515362044861168533}
+  - {fileID: 1471494456270131565}
+  - {fileID: 1177200362419117068}
+  - {fileID: 8530711942029573156}
+  - {fileID: 8806185856061582080}
+  - {fileID: 4041597112756446860}
+  - {fileID: 3179629211197798537}
+  - {fileID: 6540316661589660849}
+  - {fileID: 5321549156742098910}
+  - {fileID: 5296299491596959572}
+  - {fileID: 6664496411356118059}
+  - {fileID: 268350471467833520}
+  - {fileID: 1946937070957681060}
+  - {fileID: 262114244915209906}
+  - {fileID: 9117755979052245720}
+  - {fileID: 4810867798630357570}
+  - {fileID: 4125905154098430159}
+  - {fileID: 7786315791455253150}
+  - {fileID: 6102516085811283667}
+  - {fileID: 4177634517427460119}
+  - {fileID: 2888805714667882870}
+  - {fileID: 948762174849524940}
+  - {fileID: 5088224525483663062}
+  - {fileID: 6476968759996441656}
+  - {fileID: 5574446869767979073}
+  - {fileID: 3655237251841677438}
+  - {fileID: 2563178290443340412}
+  - {fileID: 2295415966113738686}
+  - {fileID: 1094508237714594902}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1693437470470971286}
+  m_AABB:
+    m_Center: {x: 2.15169, y: -0.27381563, z: 0.8337908}
+    m_Extent: {x: 15.028057, y: 9.006643, z: 5.685558}
+  m_DirtyAABB: 0
+--- !u!1 &2129827495627811856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 268350471467833520}
+  m_Layer: 0
+  m_Name: AllosaurRArmDigit12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &268350471467833520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129827495627811856}
+  m_LocalRotation: {x: -0.016110858, y: -0.039005995, z: 0.21509148, w: 0.9756816}
+  m_LocalPosition: {x: -0.5276142, y: -0.0000006782532, z: 0}
+  m_LocalScale: {x: 0.99999934, y: 1.0000018, z: 0.9999994}
+  m_Children:
+  - {fileID: 262114244915209906}
+  m_Father: {fileID: 4822032690280247101}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.8398908, y: -4.7641444, z: 24.899237}
+--- !u!1 &2498979208128538551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9117755979052245720}
+  m_Layer: 0
+  m_Name: AllosaurLLegDigit21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9117755979052245720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2498979208128538551}
+  m_LocalRotation: {x: -0.04094933, y: -0.010909078, z: -0.5339789, w: 0.84443516}
+  m_LocalPosition: {x: -2.1669967, y: 0.03831452, z: -0.020398803}
+  m_LocalScale: {x: 1.0000007, y: 0.9999995, z: 1}
+  m_Children:
+  - {fileID: 4125905154098430159}
+  m_Father: {fileID: 5548553654866720727}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -4.6440215, y: 1.434458, z: -64.411964}
+--- !u!1 &2675874809082151211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3062124001305137244}
+  m_Layer: 0
+  m_Name: AllosaurNeck6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3062124001305137244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2675874809082151211}
+  m_LocalRotation: {x: 0.0000836975, y: -0.0060626497, z: -0.1665385, w: 0.98601633}
+  m_LocalPosition: {x: -0.7432922, y: 0.0000006782532, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 4586087204178646178}
+  m_Father: {fileID: 6819540214357103661}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.10942354, y: -0.7144433, z: -18.348364}
+--- !u!1 &2736468244123967668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2563178290443340412}
+  m_Layer: 0
+  m_Name: AllosaurLArmDigit12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2563178290443340412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2736468244123967668}
+  m_LocalRotation: {x: 0.01611079, y: 0.039005443, z: 0.21508904, w: 0.9756822}
+  m_LocalPosition: {x: -0.527614, y: 0, z: 0}
+  m_LocalScale: {x: 1.000003, y: 0.99999297, z: 1.0000038}
+  m_Children:
+  - {fileID: 1094508237714594902}
+  m_Father: {fileID: 6476968759996441656}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.8399172, y: 4.7640805, z: 24.898945}
+--- !u!1 &2746334578869470724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1485765090325666033}
+  m_Layer: 0
+  m_Name: AllosaurTail08
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1485765090325666033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2746334578869470724}
+  m_LocalRotation: {x: 0.00013135388, y: -0.0000022378115, z: 0.005876745, w: 0.9999828}
+  m_LocalPosition: {x: -1.1777107, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+  m_Children:
+  - {fileID: 7008753614863856207}
+  m_Father: {fileID: 2995051122724789334}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.015050383, y: -0.0002761397, z: 0.30747253}
+--- !u!1 &2781445044488428365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7159488416769629206}
+  m_Layer: 0
+  m_Name: AllosaurTail10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7159488416769629206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2781445044488428365}
+  m_LocalRotation: {x: 0.00006658645, y: -0.000026941761, z: 0.03665056, w: 0.99932814}
+  m_LocalPosition: {x: -1.1777107, y: 0, z: -0.000000010597706}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7398703425812636621}
+  m_Father: {fileID: 7008753614863856207}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0077228574, y: -0.0028624309, z: 3.8348174}
+--- !u!1 &2818501073602215522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1094508237714594902}
+  m_Layer: 0
+  m_Name: AllosaurLArmDigit13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1094508237714594902
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2818501073602215522}
+  m_LocalRotation: {x: -0.076963685, y: 0.0016330024, z: 0.33820716, w: 0.9379178}
+  m_LocalPosition: {x: -0.26930314, y: 0, z: 0.0000003391266}
+  m_LocalScale: {x: 1.0000032, y: 0.9999926, z: 1.000004}
+  m_Children: []
+  m_Father: {fileID: 2563178290443340412}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -8.364831, y: -2.8386102, z: 39.865566}
+--- !u!1 &2954428760074590263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3179629211197798537}
+  m_Layer: 0
+  m_Name: AllosaurRLegDigit13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3179629211197798537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2954428760074590263}
+  m_LocalRotation: {x: 0.00000013868211, y: -0.000000054563372, z: 0.1303696, w: 0.9914655}
+  m_LocalPosition: {x: -0.5353087, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999983, y: 1.0000005, z: 1.0000013}
+  m_Children: []
+  m_Father: {fileID: 8530711942029573156}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.000022915487, y: -0.000002769077, z: 14.981905}
+--- !u!1 &3047577818828385552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4177634517427460119}
+  m_Layer: 0
+  m_Name: AllosaurLLegDigit32
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4177634517427460119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3047577818828385552}
+  m_LocalRotation: {x: -0.06461371, y: -0.059080195, z: -0.31414044, w: 0.94533086}
+  m_LocalPosition: {x: -0.6050949, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999744, y: 0.99999994, z: 1.0000021}
+  m_Children:
+  - {fileID: 948762174849524940}
+  m_Father: {fileID: 6102516085811283667}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -9.165199, y: -4.13029, z: -36.432858}
+--- !u!1 &3169078910637227421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4800748543935255332}
+  m_Layer: 0
+  m_Name: AllosaurHeadBone0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4800748543935255332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169078910637227421}
+  m_LocalRotation: {x: -0.00216152, y: -0.00059220515, z: -0.41917443, w: 0.907903}
+  m_LocalPosition: {x: -0.5241364, y: 0.6536855, z: -0.0010050016}
+  m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000001}
+  m_Children:
+  - {fileID: 6293073194764586279}
+  m_Father: {fileID: 923674633355275191}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.25360647, y: 0.04041107, z: -49.15756}
+--- !u!1 &3230906920438447518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7398703425812636621}
+  m_Layer: 0
+  m_Name: AllosaurTail11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7398703425812636621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230906920438447518}
+  m_LocalRotation: {x: 0.0010886205, y: -0.004102667, z: -0.0073261936, w: 0.9999642}
+  m_LocalPosition: {x: -1.1777114, y: -0.0000006782532, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 0.9999999, z: 1}
+  m_Children:
+  - {fileID: 1323779040021289916}
+  m_Father: {fileID: 7159488416769629206}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.11829318, y: -0.47181034, z: -1.2059684}
+--- !u!1 &3443244593115282672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1860754629570849738}
+  m_Layer: 0
+  m_Name: AllosaurTail04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1860754629570849738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3443244593115282672}
+  m_LocalRotation: {x: 0.000089370864, y: -0.000053151995, z: -0.021640291, w: 0.9997658}
+  m_LocalPosition: {x: -1.1777108, y: 0, z: -0.000000010597706}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
+  m_Children:
+  - {fileID: 6414607873102255866}
+  m_Father: {fileID: 5459030966479206306}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.010068032, y: -0.0063672126, z: -2.8481083}
+--- !u!1 &3458076837829859401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3515362044861168533}
+  m_Layer: 0
+  m_Name: AllosaurTail13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3515362044861168533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3458076837829859401}
+  m_LocalRotation: {x: 0.00006443916, y: -0.00016696422, z: -0.018825758, w: 0.9998228}
+  m_LocalPosition: {x: -1.1777093, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 0.99999964, z: 0.9999999}
+  m_Children:
+  - {fileID: 1471494456270131565}
+  m_Father: {fileID: 1323779040021289916}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0069043287, y: -0.01931837, z: -2.5233612}
+--- !u!1 &3462819156893097873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7490965616064533350}
+  m_Layer: 0
+  m_Name: AllosaurSpine2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7490965616064533350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3462819156893097873}
+  m_LocalRotation: {x: 0.000000021786848, y: 0.000000044737867, z: -0.039941505, w: 0.999202}
+  m_LocalPosition: {x: -0.44528848, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1574055004200177068}
+  m_Father: {fileID: 9200881543089975143}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0000025053112, y: -0.0000019236293, z: -4.5780873}
+--- !u!1 &3486612353857239907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6476968759996441656}
+  m_Layer: 0
+  m_Name: AllosaurLArmDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6476968759996441656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3486612353857239907}
+  m_LocalRotation: {x: 0.050683584, y: 0.036711644, z: 0.25006494, w: 0.9662044}
+  m_LocalPosition: {x: -0.6339124, y: -0.01841186, z: 0.19232377}
+  m_LocalScale: {x: 1.0000026, y: 0.99999344, z: 1.0000038}
+  m_Children:
+  - {fileID: 2563178290443340412}
+  m_Father: {fileID: 4553260532551537913}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 4.564473, y: 5.543224, z: 29.241934}
+--- !u!1 &3575971348050987981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 175978429245913824}
+  m_Layer: 0
+  m_Name: AllosaurLArm21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &175978429245913824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3575971348050987981}
+  m_LocalRotation: {x: -0.012178062, y: 0.040849157, z: -0.640042, w: 0.7671566}
+  m_LocalPosition: {x: -2.0967443, y: -0.0000003391266, z: 0}
+  m_LocalScale: {x: 1.0000026, y: 0.9999978, z: 1}
+  m_Children:
+  - {fileID: 8187928314987047756}
+  m_Father: {fileID: 7724068422721403710}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 1.9012907, y: 4.447946, z: -76.91381}
+--- !u!1 &3857514501861010979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7188652053708771991}
+  m_Layer: 0
+  m_Name: AllosaurLLeg2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7188652053708771991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3857514501861010979}
+  m_LocalRotation: {x: -0.033800777, y: 0.08152619, z: 0.5486572, w: 0.83137614}
+  m_LocalPosition: {x: -4.167022, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 0.99999994}
+  m_Children:
+  - {fileID: 5548553654866720727}
+  m_Father: {fileID: 2412828680271958471}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -8.753401, y: 5.8588347, z: 70.193375}
+--- !u!1 &3862605125599623400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2759755221228921873}
+  m_Layer: 0
+  m_Name: AllosaurRibcage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2759755221228921873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3862605125599623400}
+  m_LocalRotation: {x: -0.0000000066488024, y: -0.00000004809714, z: 0.00022871788,
+    w: 1}
+  m_LocalPosition: {x: -0.4452888, y: 0, z: 0.000000005298853}
+  m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 8783641173613824856}
+  - {fileID: 3491916862365360649}
+  - {fileID: 7492175026230757626}
+  m_Father: {fileID: 2231875974415761627}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0000014751793, y: 0.000013776263, z: 0.026143251}
+--- !u!1 &3944839635359127860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1456065329755020618}
+  m_Layer: 0
+  m_Name: AllosaurRArmPalm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1456065329755020618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3944839635359127860}
+  m_LocalRotation: {x: 0.55392647, y: -0.13650146, z: -0.04940424, w: 0.8198123}
+  m_LocalPosition: {x: -0.47669262, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000062, y: 0.99999315, z: 1.0000006}
+  m_Children:
+  - {fileID: 4822032690280247101}
+  - {fileID: 5296299491596959572}
+  m_Father: {fileID: 3847303488887291363}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 63.475548, y: -38.5888, z: -31.333225}
+--- !u!1 &3950737643613031306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2295415966113738686}
+  m_Layer: 0
+  m_Name: AllosaurLArmDigit23
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2295415966113738686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3950737643613031306}
+  m_LocalRotation: {x: 0.000000016011851, y: -0.00000014909467, z: 0.21726553, w: 0.97611254}
+  m_LocalPosition: {x: -0.33023807, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999974, y: 1.0000026, z: 1.0000007}
+  m_Children: []
+  m_Father: {fileID: 3655237251841677438}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.000006111955, y: -0.000018765202, z: 25.096945}
+--- !u!1 &4006510382512962711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5321549156742098910}
+  m_Layer: 0
+  m_Name: AllosaurRLegDigit23
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5321549156742098910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4006510382512962711}
+  m_LocalRotation: {x: 0.00670326, y: -0.0021263952, z: 0.038321476, w: 0.9992407}
+  m_LocalPosition: {x: -0.8609984, y: -0.000000021195412, z: -0.0000001695633}
+  m_LocalScale: {x: 0.99999946, y: 1.0000006, z: 0.9999999}
+  m_Children: []
+  m_Father: {fileID: 8806185856061582080}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.7769195, y: -0.21406527, z: 4.391043}
+--- !u!1 &4387726979349212165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6540316661589660849}
+  m_Layer: 0
+  m_Name: AllosaurRLegDigit33
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6540316661589660849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4387726979349212165}
+  m_LocalRotation: {x: 0.068633035, y: 0.038436178, z: 0.048582304, w: 0.9957168}
+  m_LocalPosition: {x: -0.6831149, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000025, y: 0.9999998, z: 0.99999744}
+  m_Children: []
+  m_Father: {fileID: 4041597112756446860}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 7.639722, y: 4.8160505, z: 5.9083834}
+--- !u!1 &4462852534022747751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 262114244915209906}
+  m_Layer: 0
+  m_Name: AllosaurRArmDigit13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &262114244915209906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4462852534022747751}
+  m_LocalRotation: {x: 0.07696507, y: -0.0016332672, z: 0.33820632, w: 0.93791807}
+  m_LocalPosition: {x: -0.26930314, y: 0.0000003391266, z: 0}
+  m_LocalScale: {x: 1.0000005, y: 0.9999999, z: 0.9999996}
+  m_Children: []
+  m_Father: {fileID: 268350471467833520}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 8.3649845, y: 2.8386352, z: 39.865467}
+--- !u!1 &4481795445285645950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4822032690280247101}
+  m_Layer: 0
+  m_Name: AllosaurRArmDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4822032690280247101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4481795445285645950}
+  m_LocalRotation: {x: -0.0506838, y: -0.03671175, z: 0.2500663, w: 0.96620405}
+  m_LocalPosition: {x: -0.6339156, y: -0.01841254, z: -0.19232309}
+  m_LocalScale: {x: 1.0000098, y: 0.99999034, z: 0.9999993}
+  m_Children:
+  - {fileID: 268350471467833520}
+  m_Father: {fileID: 1456065329755020618}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -4.5644917, y: -5.543246, z: 29.242086}
+--- !u!1 &4682827511638876886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5088224525483663062}
+  m_Layer: 0
+  m_Name: AllosaurLLegDigit23
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5088224525483663062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4682827511638876886}
+  m_LocalRotation: {x: -0.006703397, y: 0.0021263037, z: 0.03832152, w: 0.9992407}
+  m_LocalPosition: {x: -0.8609985, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000006, y: 0.9999995, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 4125905154098430159}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.7769269, y: 0.2140528, z: 4.391057}
+--- !u!1 &4999179694946973243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9176209071235265562}
+  m_Layer: 0
+  m_Name: AllosaurRArm21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9176209071235265562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4999179694946973243}
+  m_LocalRotation: {x: -0.2217721, y: 0.041876767, z: -0.3537891, w: 0.9076876}
+  m_LocalPosition: {x: -2.0967443, y: -0.0000003391266, z: 0}
+  m_LocalScale: {x: 1.0000015, y: 0.9999982, z: 0.9999998}
+  m_Children:
+  - {fileID: 3847303488887291363}
+  m_Father: {fileID: 2749935374613121020}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -22.59135, y: 13.71378, z: -46.166897}
+--- !u!1 &5015662809283443704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6102516085811283667}
+  m_Layer: 0
+  m_Name: AllosaurLLegDigit31
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6102516085811283667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015662809283443704}
+  m_LocalRotation: {x: -0.067049526, y: -0.1480477, z: -0.32271197, w: 0.9324394}
+  m_LocalPosition: {x: -1.8558593, y: -0.022495285, z: -0.41493103}
+  m_LocalScale: {x: 1.0000004, y: 0.99999976, z: 0.9999997}
+  m_Children:
+  - {fileID: 4177634517427460119}
+  m_Father: {fileID: 5548553654866720727}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -12.68372, y: -13.865899, z: -36.37138}
+--- !u!1 &5078324396653694184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 738120382817228690}
+  m_Layer: 0
+  m_Name: AllosaurNeck4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &738120382817228690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5078324396653694184}
+  m_LocalRotation: {x: -0.00012811688, y: 0.0008040114, z: 0.0532451, w: 0.9985812}
+  m_LocalPosition: {x: -0.74329084, y: 0.0000003391266, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Children:
+  - {fileID: 6819540214357103661}
+  m_Father: {fileID: 931013617108442297}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.01659239, y: 0.09910289, z: 6.2709475}
+--- !u!1 &5098348937013208275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7008753614863856207}
+  m_Layer: 0
+  m_Name: AllosaurTail09
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7008753614863856207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5098348937013208275}
+  m_LocalRotation: {x: 0.00017698703, y: -0.000046202178, z: -0.013576012, w: 0.99990785}
+  m_LocalPosition: {x: -1.1777107, y: 0, z: -0.000000010597706}
+  m_LocalScale: {x: 0.9999999, y: 1.0000001, z: 0.9999999}
+  m_Children:
+  - {fileID: 7159488416769629206}
+  m_Father: {fileID: 1485765090325666033}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.020172767, y: -0.005695866, z: -1.9216944}
+--- !u!1 &5180166575590829870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 931013617108442297}
+  m_Layer: 0
+  m_Name: AllosaurNeck3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &931013617108442297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5180166575590829870}
+  m_LocalRotation: {x: 0.00003302151, y: 0.0042514913, z: 0.14132635, w: 0.98995394}
+  m_LocalPosition: {x: -0.74329156, y: 0, z: 0.000000021195412}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 738120382817228690}
+  m_Father: {fileID: 5620987757259072518}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.06413214, y: 0.50976914, z: 16.061495}
+--- !u!1 &5206028506379278116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8276480313644090111}
+  m_Layer: 0
+  m_Name: AllosaurTail02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8276480313644090111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5206028506379278116}
+  m_LocalRotation: {x: 0.00019800584, y: -0.00020747886, z: -0.09632634, w: 0.99534976}
+  m_LocalPosition: {x: -1.1777107, y: -0.0000006782532, z: -0.000000010597706}
+  m_LocalScale: {x: 0.9999999, y: 1.0000002, z: 0.9999999}
+  m_Children:
+  - {fileID: 5459030966479206306}
+  m_Father: {fileID: 5084798423108005766}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.02016937, y: -0.025939545, z: -11.321611}
+--- !u!1 &5210556226251128822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9085102535969279461}
+  - component: {fileID: 4282483792903318046}
+  - component: {fileID: 4282483792903318047}
+  m_Layer: 0
+  m_Name: RexIdle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9085102535969279461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210556226251128822}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1693437470470971286}
+  - {fileID: 8865090818216399391}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!95 &4282483792903318046
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210556226251128822}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ac33d755f87d2948845eb114411abd8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4282483792903318047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210556226251128822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f0dabf180635a48a71c44dfde51b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4282483792903318046}
+  agent: {fileID: 0}
+--- !u!1 &5227450798643895994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4125905154098430159}
+  m_Layer: 0
+  m_Name: AllosaurLLegDigit22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4125905154098430159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5227450798643895994}
+  m_LocalRotation: {x: 0.021047095, y: -0.0036637413, z: -0.143386, w: 0.98943627}
+  m_LocalPosition: {x: -0.5353088, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000006, y: 0.9999996, z: 0.99999994}
+  m_Children:
+  - {fileID: 5088224525483663062}
+  m_Father: {fileID: 9117755979052245720}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 2.3267787, y: -0.76186097, z: -16.506927}
+--- !u!1 &5252768243982250562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2246270850247171327}
+  m_Layer: 0
+  m_Name: AllosaurRLegDigit31
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2246270850247171327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5252768243982250562}
+  m_LocalRotation: {x: 0.0670401, y: 0.14807269, z: -0.32270932, w: 0.93243706}
+  m_LocalPosition: {x: -1.8558587, y: -0.022494934, z: 0.41493103}
+  m_LocalScale: {x: 0.9999996, y: 0.9999997, z: 1.0000001}
+  m_Children:
+  - {fileID: 4041597112756446860}
+  m_Father: {fileID: 2421725563520697851}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 12.816684, y: 13.748478, z: -36.952454}
+--- !u!1 &5398037527896514101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 948762174849524940}
+  m_Layer: 0
+  m_Name: AllosaurLLegDigit33
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &948762174849524940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5398037527896514101}
+  m_LocalRotation: {x: -0.068632714, y: -0.038435835, z: 0.04858207, w: 0.99571687}
+  m_LocalPosition: {x: -0.6831145, y: 0.000000021195412, z: 0.0000003391266}
+  m_LocalScale: {x: 1.0000026, y: 1.0000004, z: 0.99999774}
+  m_Children: []
+  m_Father: {fileID: 4177634517427460119}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -7.6396866, y: -4.816006, z: 5.908352}
+--- !u!1 &5413599651615121526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4586087204178646178}
+  m_Layer: 0
+  m_Name: AllosaurNeck7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4586087204178646178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5413599651615121526}
+  m_LocalRotation: {x: -0.00019523689, y: -0.00830499, z: -0.23071654, w: 0.97298557}
+  m_LocalPosition: {x: -0.7432922, y: 0.0000006782532, z: -0.000000010597706}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+  m_Children:
+  - {fileID: 923674633355275191}
+  m_Father: {fileID: 3062124001305137244}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.25144553, y: -0.9670783, z: -25.605549}
+--- !u!1 &5590576407031591157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2749935374613121020}
+  m_Layer: 0
+  m_Name: AllosaurRArm1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2749935374613121020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5590576407031591157}
+  m_LocalRotation: {x: 0.94718, y: 0.049668264, z: -0.27913874, w: 0.14988254}
+  m_LocalPosition: {x: -1.452039, y: 0.0000006782532, z: 0}
+  m_LocalScale: {x: 0.9999994, y: 0.9999998, z: 1.0000005}
+  m_Children:
+  - {fileID: 9176209071235265562}
+  m_Father: {fileID: 7492175026230757626}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 18.16244, y: -147.26765, z: 174.82437}
+--- !u!1 &5684868628291869073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7492175026230757626}
+  m_Layer: 0
+  m_Name: AllosaurRArmCollarbone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7492175026230757626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5684868628291869073}
+  m_LocalRotation: {x: -0.30888882, y: -0.22762626, z: -0.5144659, w: 0.766876}
+  m_LocalPosition: {x: -1.0027316, y: 0.14087047, z: -0.439449}
+  m_LocalScale: {x: 1.0000002, y: 1.0000007, z: 0.9999998}
+  m_Children:
+  - {fileID: 2749935374613121020}
+  m_Father: {fileID: 2759755221228921873}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -45.070057, y: -2.5398781, z: -66.65808}
+--- !u!1 &5812500150087260931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8783641173613824856}
+  m_Layer: 0
+  m_Name: AllosaurLArmCollarbone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8783641173613824856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5812500150087260931}
+  m_LocalRotation: {x: 0.34094736, y: 0.27588418, z: -0.49380386, w: 0.75086653}
+  m_LocalPosition: {x: -1.0027312, y: 0.14087182, z: 0.4394489}
+  m_LocalScale: {x: 0.9999999, y: 1.0000002, z: 0.9999995}
+  m_Children:
+  - {fileID: 7724068422721403710}
+  m_Father: {fileID: 2759755221228921873}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 51.67235, y: 7.18655, z: -63.17825}
+--- !u!1 &5846778324433529091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5620987757259072518}
+  m_Layer: 0
+  m_Name: AllosaurNeck2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5620987757259072518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5846778324433529091}
+  m_LocalRotation: {x: 0.00017816878, y: 0.007875129, z: 0.20152627, w: 0.9794515}
+  m_LocalPosition: {x: -0.7432922, y: 0.0000006782532, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
+  m_Children:
+  - {fileID: 931013617108442297}
+  m_Father: {fileID: 3491916862365360649}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.16060786, y: 0.9304726, z: 22.505653}
+--- !u!1 &5958368518500769812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6293073194764586279}
+  m_Layer: 0
+  m_Name: AllosaurHeadBone0Bone001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6293073194764586279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5958368518500769812}
+  m_LocalRotation: {x: -0.0000000066725323, y: 0.0000000040851162, z: 0.4404783, w: 0.8977633}
+  m_LocalPosition: {x: -1.6983439, y: -0.39674556, z: -0.000000026494265}
+  m_LocalScale: {x: 0.9999995, y: 1.0000006, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 4800748543935255332}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0000013335277, y: -0.000005395515, z: 52.268787}
+--- !u!1 &6056000614936845352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2888805714667882870}
+  m_Layer: 0
+  m_Name: AllosaurLLegDigit13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2888805714667882870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6056000614936845352}
+  m_LocalRotation: {x: -0.00000017926216, y: -0.00000009402194, z: 0.13037023, w: 0.9914654}
+  m_LocalPosition: {x: -0.5353088, y: -0.000000042390823, z: 0}
+  m_LocalScale: {x: 1.000002, y: 0.9999996, z: 0.9999989}
+  m_Children: []
+  m_Father: {fileID: 7786315791455253150}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.000022772872, y: -0.000005439419, z: 14.981984}
+--- !u!1 &6087371816388169956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3847303488887291363}
+  m_Layer: 0
+  m_Name: AllosaurRArm22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3847303488887291363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6087371816388169956}
+  m_LocalRotation: {x: -0.19002293, y: 0, z: -0, w: 0.98177963}
+  m_LocalPosition: {x: -0.47669226, y: 0.0000003391266, z: 0}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 1}
+  m_Children:
+  - {fileID: 1456065329755020618}
+  m_Father: {fileID: 9176209071235265562}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -21.908243, y: -2.8378846e-11, z: 4.861724e-19}
+--- !u!1 &6124611316742007658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8806185856061582080}
+  m_Layer: 0
+  m_Name: AllosaurRLegDigit22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8806185856061582080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6124611316742007658}
+  m_LocalRotation: {x: -0.021047123, y: 0.003663559, z: -0.14338604, w: 0.98943627}
+  m_LocalPosition: {x: -0.5353088, y: 0, z: -0.0000001695633}
+  m_LocalScale: {x: 0.9999996, y: 1.0000006, z: 0.99999994}
+  m_Children:
+  - {fileID: 5321549156742098910}
+  m_Father: {fileID: 1177200362419117068}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -2.32679, y: 0.76184803, z: -16.506907}
+--- !u!1 &6151126782979320894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1323779040021289916}
+  m_Layer: 0
+  m_Name: AllosaurTail12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1323779040021289916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6151126782979320894}
+  m_LocalRotation: {x: -0.000026643984, y: -0.000118347605, z: -0.0015500054, w: 0.9999988}
+  m_LocalPosition: {x: -1.1777107, y: 0, z: -0.0000000026494265}
+  m_LocalScale: {x: 0.9999998, y: 0.9999997, z: 0.9999999}
+  m_Children:
+  - {fileID: 3515362044861168533}
+  m_Father: {fileID: 7398703425812636621}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0031638802, y: -0.013545115, z: -0.5435705}
+--- !u!1 &6303003024887167270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6414607873102255866}
+  m_Layer: 0
+  m_Name: AllosaurTail05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6414607873102255866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6303003024887167270}
+  m_LocalRotation: {x: 0.00008854814, y: -0.000017681852, z: -0.04131575, w: 0.99914616}
+  m_LocalPosition: {x: -1.1777105, y: 0, z: 0.000000010597706}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 3314117039418757196}
+  m_Father: {fileID: 1860754629570849738}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.010040752, y: -0.0025244479, z: -5.102907}
+--- !u!1 &6488905150763531529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2995051122724789334}
+  m_Layer: 0
+  m_Name: AllosaurTail07
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2995051122724789334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6488905150763531529}
+  m_LocalRotation: {x: -0.000018343972, y: 0.00005133703, z: -0.0037623635, w: 0.9999929}
+  m_LocalPosition: {x: -1.1777107, y: 0, z: -0.000000010597706}
+  m_LocalScale: {x: 1.0000002, y: 0.9999999, z: 0.9999999}
+  m_Children:
+  - {fileID: 1485765090325666033}
+  m_Father: {fileID: 3314117039418757196}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.002049389, y: 0.0059005674, z: -0.7970946}
+--- !u!1 &6565889148609911428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9200881543089975143}
+  m_Layer: 0
+  m_Name: AllosaurSpine1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9200881543089975143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6565889148609911428}
+  m_LocalRotation: {x: -0.0000000028474065, y: 0.000000036548496, z: -0.009357132,
+    w: 0.99995625}
+  m_LocalPosition: {x: -0.15830226, y: -0.24308933, z: -0.000000021195412}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7490965616064533350}
+  m_Father: {fileID: 1693437470470971286}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -0.0000017090847, y: 0.000004657127, z: -1.0722117}
+--- !u!1 &6828078746057300226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 797416506251694964}
+  m_Layer: 0
+  m_Name: AllosaurSpine4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &797416506251694964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828078746057300226}
+  m_LocalRotation: {x: 0.000000015876264, y: -0.000000018093374, z: -0.0665967, w: 0.99777997}
+  m_LocalPosition: {x: -0.44528848, y: 0.0000006782532, z: 0.000000005298853}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8384792463653853810}
+  m_Father: {fileID: 1574055004200177068}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.000006077216, y: -0.000007344059, z: -7.6370573}
+--- !u!1 &6901500306661620307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1471494456270131565}
+  m_Layer: 0
+  m_Name: AllosaurTail14
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1471494456270131565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901500306661620307}
+  m_LocalRotation: {x: 0.00041555427, y: 0.000049839466, z: 0.026498104, w: 0.9996488}
+  m_LocalPosition: {x: -1.1777121, y: 0, z: -0.0000000026494265}
+  m_LocalScale: {x: 1.0000002, y: 0.9999999, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 3515362044861168533}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.047495972, y: 0.0066783875, z: 2.670805}
+--- !u!1 &7131830234704616906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5084798423108005766}
+  m_Layer: 0
+  m_Name: AllosaurTail01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5084798423108005766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131830234704616906}
+  m_LocalRotation: {x: -0.0019063139, y: 0.0013061052, z: 0.99839514, w: 0.05658492}
+  m_LocalPosition: {x: 1.0531461, y: -0.16267902, z: -0.011025927}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_Children:
+  - {fileID: 8276480313644090111}
+  m_Father: {fileID: 1693437470470971286}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -0.16179089, y: -0.20963006, z: 173.51265}
+--- !u!1 &7147042755219851420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5459030966479206306}
+  m_Layer: 0
+  m_Name: AllosaurTail03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5459030966479206306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7147042755219851420}
+  m_LocalRotation: {x: 0.000073376286, y: -0.00008847701, z: 0.0007160151, w: 0.99999976}
+  m_LocalPosition: {x: -1.1777105, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999997, y: 0.99999964, z: 0.99999994}
+  m_Children:
+  - {fileID: 1860754629570849738}
+  m_Father: {fileID: 8276480313644090111}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.008350425, y: -0.010195065, z: -0.28391433}
+--- !u!1 &7191268067923936923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6819540214357103661}
+  m_Layer: 0
+  m_Name: AllosaurNeck5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6819540214357103661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7191268067923936923}
+  m_LocalRotation: {x: -0.00030905157, y: -0.0026878368, z: -0.13959877, w: 0.99020445}
+  m_LocalPosition: {x: -0.7432922, y: 0, z: -0.000000042390823}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_Children:
+  - {fileID: 3062124001305137244}
+  m_Father: {fileID: 738120382817228690}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.07881911, y: -0.30948323, z: -15.460804}
+--- !u!1 &7253499378595200621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1177200362419117068}
+  m_Layer: 0
+  m_Name: AllosaurRLegDigit21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1177200362419117068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7253499378595200621}
+  m_LocalRotation: {x: 0.040935095, y: 0.010931429, z: -0.5339759, w: 0.8444374}
+  m_LocalPosition: {x: -2.166996, y: 0.038314756, z: 0.020398803}
+  m_LocalScale: {x: 1.000001, y: 0.99999917, z: 0.99999976}
+  m_Children:
+  - {fileID: 8806185856061582080}
+  m_Father: {fileID: 2421725563520697851}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 4.623369, y: -1.4704146, z: -64.995575}
+--- !u!1 &7291216555622758514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5296299491596959572}
+  m_Layer: 0
+  m_Name: AllosaurRArmDigit21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5296299491596959572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7291216555622758514}
+  m_LocalRotation: {x: 0.055712864, y: 0.37195748, z: 0.2049749, w: 0.90361995}
+  m_LocalPosition: {x: -0.6502893, y: 0.0405982, z: 0.11319028}
+  m_LocalScale: {x: 0.9999997, y: 0.99999744, z: 1.0000023}
+  m_Children:
+  - {fileID: 6664496411356118059}
+  m_Father: {fileID: 1456065329755020618}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -2.969081, y: 44.106182, z: 24.358065}
+--- !u!1 &7315896683624815075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3655237251841677438}
+  m_Layer: 0
+  m_Name: AllosaurLArmDigit22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3655237251841677438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315896683624815075}
+  m_LocalRotation: {x: 0.000000017125068, y: -0.00000013384474, z: 0.23567486, w: 0.971832}
+  m_LocalPosition: {x: -0.40890086, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999934, y: 1.0000007, z: 1.0000008}
+  m_Children:
+  - {fileID: 2295415966113738686}
+  m_Father: {fileID: 5574446869767979073}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.000013132494, y: -0.000021851667, z: 27.262808}
+--- !u!1 &7448142639444508270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5449406434107280369}
+  m_Layer: 0
+  m_Name: AllosaurRLeg2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5449406434107280369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7448142639444508270}
+  m_LocalRotation: {x: 0.034029998, y: -0.07993638, z: 0.5387871, w: 0.8379502}
+  m_LocalPosition: {x: -4.167022, y: 0, z: 0.0000003391266}
+  m_LocalScale: {x: 1.0000004, y: 1, z: 1.0000002}
+  m_Children:
+  - {fileID: 2421725563520697851}
+  m_Father: {fileID: 6262219822981692828}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 8.695265, y: -5.8327293, z: 69.72422}
+--- !u!1 &7482459810145919734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2231875974415761627}
+  m_Layer: 0
+  m_Name: AllosaurSpine7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2231875974415761627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7482459810145919734}
+  m_LocalRotation: {x: 0.000000007025743, y: 0.00000005550056, z: -0.024829004, w: 0.9996917}
+  m_LocalPosition: {x: -0.44528848, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2759755221228921873}
+  m_Father: {fileID: 3818000784144759787}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0000019245049, y: -0.000013738761, z: -2.8455732}
+--- !u!1 &7671551770127607974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3818000784144759787}
+  m_Layer: 0
+  m_Name: AllosaurSpine6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3818000784144759787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7671551770127607974}
+  m_LocalRotation: {x: 0.000000026565484, y: -0.000000008955193, z: -0.04969896, w: 0.9987643}
+  m_LocalPosition: {x: -0.44528812, y: 0.0000006782532, z: 0.000000005298853}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children:
+  - {fileID: 2231875974415761627}
+  m_Father: {fileID: 8384792463653853810}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.000002448653, y: 0.000007164321, z: -5.69747}
+--- !u!1 &7734430342321130538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8530711942029573156}
+  m_Layer: 0
+  m_Name: AllosaurRLegDigit12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8530711942029573156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7734430342321130538}
+  m_LocalRotation: {x: 0.009582737, y: -0.005848706, z: -0.35939673, w: 0.9331174}
+  m_LocalPosition: {x: -0.51286006, y: 0, z: -0.0000001695633}
+  m_LocalScale: {x: 0.99999833, y: 1.0000005, z: 1.0000013}
+  m_Children:
+  - {fileID: 3179629211197798537}
+  m_Father: {fileID: 384292325897566252}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.78380865, y: -1.0201813, z: -42.136055}
+--- !u!1 &7850696318534143554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3314117039418757196}
+  m_Layer: 0
+  m_Name: AllosaurTail06
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3314117039418757196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850696318534143554}
+  m_LocalRotation: {x: 0.000041537023, y: 0.000023599796, z: -0.08884603, w: 0.9960454}
+  m_LocalPosition: {x: -1.177711, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999996, y: 1.0000004, z: 1}
+  m_Children:
+  - {fileID: 2995051122724789334}
+  m_Father: {fileID: 6414607873102255866}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.0050048465, y: 0.0022343833, z: -10.560398}
+--- !u!1 &7868131707102917619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1574055004200177068}
+  m_Layer: 0
+  m_Name: AllosaurSpine3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1574055004200177068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7868131707102917619}
+  m_LocalRotation: {x: -0.000000030708176, y: -0.000000019069356, z: -0.058743194,
+    w: 0.99827313}
+  m_LocalPosition: {x: -0.4452888, y: 0.0000006782532, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_Children:
+  - {fileID: 797416506251694964}
+  m_Father: {fileID: 7490965616064533350}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0000012089033, y: -0.0000024766946, z: -6.7353015}
+--- !u!1 &8005696515167167248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 384292325897566252}
+  m_Layer: 0
+  m_Name: AllosaurRLegDigit11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &384292325897566252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8005696515167167248}
+  m_LocalRotation: {x: -0.20305815, y: -0.15795143, z: -0.3116506, w: 0.9147091}
+  m_LocalPosition: {x: -1.9233047, y: 0.23200926, z: -0.2205949}
+  m_LocalScale: {x: 0.99999964, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8530711942029573156}
+  m_Father: {fileID: 2421725563520697851}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -28.0904, y: -10.424629, z: -35.33436}
+--- !u!1 &8138117319853346598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5574446869767979073}
+  m_Layer: 0
+  m_Name: AllosaurLArmDigit21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5574446869767979073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8138117319853346598}
+  m_LocalRotation: {x: -0.055714186, y: -0.37195566, z: 0.20497394, w: 0.90362084}
+  m_LocalPosition: {x: -0.65028673, y: 0.040598877, z: -0.11319096}
+  m_LocalScale: {x: 1.0000042, y: 0.9999941, z: 1.0000014}
+  m_Children:
+  - {fileID: 3655237251841677438}
+  m_Father: {fileID: 4553260532551537913}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 2.9688802, y: -44.105988, z: 24.358046}
+--- !u!1 &8220024708445112569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7786315791455253150}
+  m_Layer: 0
+  m_Name: AllosaurLLegDigit12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7786315791455253150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8220024708445112569}
+  m_LocalRotation: {x: -0.009582658, y: 0.005848637, z: -0.35939702, w: 0.9331172}
+  m_LocalPosition: {x: -0.5128601, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000021, y: 0.9999993, z: 0.9999989}
+  m_Children:
+  - {fileID: 2888805714667882870}
+  m_Father: {fileID: 4810867798630357570}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.7838067, y: 1.0201741, z: -42.136097}
+--- !u!1 &8389743544909576525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4041597112756446860}
+  m_Layer: 0
+  m_Name: AllosaurRLegDigit32
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4041597112756446860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8389743544909576525}
+  m_LocalRotation: {x: 0.064613655, y: 0.059080176, z: -0.3141403, w: 0.9453309}
+  m_LocalPosition: {x: -0.605095, y: -0.00000008478165, z: -0.0000003391266}
+  m_LocalScale: {x: 1.0000025, y: 0.9999998, z: 0.9999977}
+  m_Children:
+  - {fileID: 6540316661589660849}
+  m_Father: {fileID: 2246270850247171327}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 9.165197, y: 4.130277, z: -36.43284}
+--- !u!1 &8499108242982870572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2421725563520697851}
+  m_Layer: 0
+  m_Name: AllosaurRLegPalm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2421725563520697851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8499108242982870572}
+  m_LocalRotation: {x: -0.044245526, y: -0.04351649, z: -0.51096404, w: 0.857359}
+  m_LocalPosition: {x: -3.2791684, y: 0.0000003391266, z: 0}
+  m_LocalScale: {x: 1.0000004, y: 0.9999998, z: 0.99999994}
+  m_Children:
+  - {fileID: 384292325897566252}
+  - {fileID: 1177200362419117068}
+  - {fileID: 2246270850247171327}
+  m_Father: {fileID: 5449406434107280369}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -6.8555017, y: -1.4704552, z: -63.116627}
+--- !u!1 &8524976023706817810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8187928314987047756}
+  m_Layer: 0
+  m_Name: AllosaurLArm22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8187928314987047756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8524976023706817810}
+  m_LocalRotation: {x: 0.19002289, y: 0.000000018287073, z: -0.000000003539452, w: 0.9817797}
+  m_LocalPosition: {x: -0.47669262, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4553260532551537913}
+  m_Father: {fileID: 175978429245913824}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 21.908237, y: 0.0000029756247, z: -6.372359e-14}
+--- !u!1 &8731612432488289396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3491916862365360649}
+  m_Layer: 0
+  m_Name: AllosaurNeck1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3491916862365360649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8731612432488289396}
+  m_LocalRotation: {x: 0.00015969864, y: 0.0052454793, z: 0.16876805, w: 0.98564184}
+  m_LocalPosition: {x: -0.67138046, y: -0.051367503, z: -0.00000012717247}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_Children:
+  - {fileID: 5620987757259072518}
+  m_Father: {fileID: 2759755221228921873}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -0.08386484, y: 0.6220504, z: 18.874231}
+--- !u!1 &8806999384199576953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 923674633355275191}
+  m_Layer: 0
+  m_Name: AllosaurHead
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &923674633355275191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8806999384199576953}
+  m_LocalRotation: {x: -0.0011677974, y: -0.0045266063, z: 0.012642275, w: 0.99990916}
+  m_LocalPosition: {x: -0.7432922, y: 0, z: 0.000000003311783}
+  m_LocalScale: {x: 0.9999996, y: 0.9999997, z: 0.9999997}
+  m_Children:
+  - {fileID: 4800748543935255332}
+  m_Father: {fileID: 4586087204178646178}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.13600954, y: -0.54908884, z: 2.063283}
+--- !u!1 &9191887255691231899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4553260532551537913}
+  m_Layer: 0
+  m_Name: AllosaurLArmPalm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4553260532551537913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191887255691231899}
+  m_LocalRotation: {x: -0.5539264, y: 0.13650154, z: -0.0494043, w: 0.81981224}
+  m_LocalPosition: {x: -0.4766916, y: -0.0000003391266, z: 0}
+  m_LocalScale: {x: 1.0000006, y: 0.9999944, z: 1.0000048}
+  m_Children:
+  - {fileID: 6476968759996441656}
+  - {fileID: 5574446869767979073}
+  m_Father: {fileID: 8187928314987047756}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -63.47554, y: 38.588795, z: -31.333225}
