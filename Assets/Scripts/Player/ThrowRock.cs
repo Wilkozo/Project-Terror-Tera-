@@ -12,7 +12,7 @@ public class ThrowRock : MonoBehaviour
     void Update()
     {
         //user pushes e
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             //finds all of the rocks
             GameObject[] temp = GameObject.FindGameObjectsWithTag("Rock");

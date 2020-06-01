@@ -12,7 +12,7 @@ public class PlayerInteract : MonoBehaviour
 
     //get a reference to the map
     public GameObject map;
-    public bool mapEnabled = false;
+    public bool mapEnabled = true;
 
     bool mapAquired;
 
@@ -34,7 +34,6 @@ public class PlayerInteract : MonoBehaviour
         //set the map to false
         map.SetActive(false);
 
-        //switchesText.text = "Switches Pushed: 0 : 4";
         //get the camera
         cam = GetComponent<Camera>();
 
@@ -45,34 +44,25 @@ public class PlayerInteract : MonoBehaviour
     {
 
         //enable/disable map
-        if (Input.GetKeyDown(KeyCode.M) && mapAquired)
+        if (Input.GetKeyDown(KeyCode.M))
         {
-            Debug.Log(mapEnabled);
+            Debug.Log("Enable the map?????");
             map.SetActive(!mapEnabled);
             mapEnabled = !mapEnabled;
         }
 
-        ////TEMP STUFF DELETE LATER
-        //if (Input.GetKeyDown(KeyCode.R)) {
-        //    Time.timeScale = 1;
-        //    Application.LoadLevel(Application.loadedLevel);  
-        //}
-
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            Application.Quit();
+            //load into a pause menu
         }
-        //END OF TEMP STUFF
 
         //check to see if the player pushes the left mouse 
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetKeyDown(KeyCode.E)) {
             //call check for interact
             checkForInteract();
         }
     }
 
     //used to check to see if the player can pickup an item or activate something else
-
-    //TODO: make this return the name of the object that was hit to a script if it asks
     public string checkForInteract() {
 
         //sends a raycast from the camera
@@ -80,22 +70,11 @@ public class PlayerInteract : MonoBehaviour
         //the raycast hit
         RaycastHit hit;
 
-
         //checks to see if the raycast hits anything within 50 units
         if (Physics.Raycast(ray, out hit, 50.0f))
         {
             print("I'm looking at " + hit.transform.name);
             //if the object that is hit is an interactive then call the correct interactive
-            if (hit.transform.tag == "Lever") {
-                amountOfLeversPulled++;
-                //destroy the lever that has been pulled
-                Destroy(hit.transform.gameObject);
-
-                //DELTE LATER
-                //switchesText.text = "Switches Pushed: " + amountOfLeversPulled.ToString() + " : 4 ";
-                //just some debug stuff DELETE LATER
-                Debug.Log("Pulled the lever Kronk");
-            }
             if (hit.transform.tag == "Document") {
                 //sends a message to run a function from another script
                 hit.transform.SendMessage("ReadMessage");
@@ -103,8 +82,7 @@ public class PlayerInteract : MonoBehaviour
 
             if (hit.transform.name == "Map") {
                 mapAquired = true;
-                Destroy(GameObject.Find("Map"));
-                
+                Destroy(GameObject.Find("Map"));  
             }
             if (hit.transform.name == "PowerOn")
             {
@@ -119,7 +97,7 @@ public class PlayerInteract : MonoBehaviour
                     Destroy(GameObject.Find("Gate1"));
                 }
             }
-            if (hit.transform.name == "Radio" && playerManager.digCount >= 6 && power.poweredOn) {
+            if (hit.transform.name == "Radio" && power.poweredOn) {
                 FindObjectOfType<AudioManager>().Play("");
                 boat.SetActive(true);
             }
