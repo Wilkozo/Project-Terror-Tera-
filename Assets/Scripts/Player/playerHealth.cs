@@ -18,6 +18,7 @@ public class playerHealth : MonoBehaviour
     private void Start()
     {
         canGroup.alpha = 0;
+       // health = 100;
     }
 
     private void Update()
@@ -26,6 +27,7 @@ public class playerHealth : MonoBehaviour
 
         if (health <= 0) {
             //what to do when a player dies 
+            Application.LoadLevel(Application.loadedLevel);
         }
         if (loseHealth)
         {
@@ -54,6 +56,7 @@ public class playerHealth : MonoBehaviour
 
     public void LoseHealth() {
 
+        Debug.Log("lose health");
         loseHealth = true;
 
     }
