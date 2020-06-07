@@ -17,7 +17,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if (Input.GetKey(KeyCode.Escape))
             {
-                this.GetComponent<FirstPersonController>().enabled = false;
+                //this.GetComponent<FirstPersonController>().enabled = false;
                 Cursor.visible = true;
                 Time.timeScale = 0;
                 pauseCanvas.enabled = true;
@@ -25,16 +25,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
         public void continueButton()
-        {
-            Cursor.visible = false;
-            Time.timeScale = 1.0f;
+        {   Time.timeScale = 1.0f;
             pauseCanvas.enabled = false;
+            Cursor.visible = false;
+
         }
         public void menuButton()
         {
-            Cursor.visible = true;
             Time.timeScale = 1.0f;
             Application.LoadLevel("MainMenu");
+            Cursor.visible = true;
         }
 
 
