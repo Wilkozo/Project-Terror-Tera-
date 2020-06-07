@@ -18,6 +18,7 @@ public class playerHealth : MonoBehaviour
     private void Start()
     {
         canGroup.alpha = 0;
+       // health = 100;
     }
 
     private void Update()
@@ -26,40 +27,30 @@ public class playerHealth : MonoBehaviour
 
         if (health <= 0) {
             //what to do when a player dies 
+            Application.LoadLevel(Application.loadedLevel);
         }
-        if (loseHealth)
-        {
-            playerHealthImage.fillAmount -= 0.1f * Time.deltaTime;
-            //increase the opacity of the blood overlay
-            canGroup.alpha += 0.15f *Time.deltaTime;
-
-            //bloodOverlay.
-            //bloodOverlay.fillAmount += 0.1f * Time.deltaTime;
-
-            //var tempColor = bloodOverlay.color;
-            //tempColor.a += 0.1f;
-            //bloodOverlay.color = tempColor;
-        }
-        else {
+        //if (loseHealth)
+        //{
+        //    playerHealthImage.fillAmount -= 0.1f * Time.deltaTime;
+        //    //increase the opacity of the blood overlay
+        //    canGroup.alpha += 0.15f *Time.deltaTime;
+        //}
+        //else {
             playerHealthImage.fillAmount += 0.01f * Time.deltaTime;
             canGroup.alpha -= 0.01f * Time.deltaTime;
-            //bloodOverlay.CrossFadeAlpha(0.1f, 2.0f, true);
-            //bloodOverlay.fillAmount -= 0.1f * Time.deltaTime;
-            //var tempColor = bloodOverlay.color;
-            //tempColor.a -= 0.1f;
-            //bloodOverlay.color = tempColor;
-        }
+        //}
 
     }
 
-    public void LoseHealth() {
+    //public void LoseHealth() {
 
-        loseHealth = true;
+    //    Debug.Log("lose health");
+    //    loseHealth = true;
 
-    }
+    //}
 
-    public void dontLoseHealth() {
-        loseHealth = false;
-    }
+    //public void dontLoseHealth() {
+    //    loseHealth = false;
+    //}
 
 }

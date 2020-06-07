@@ -124,10 +124,9 @@ public class Detect : MonoBehaviour
 
         if (distance <= 10)
         {
-            healthPlayer.LoseHealth();
-        }
-        else {
-            healthPlayer.dontLoseHealth();
+            healthPlayer.playerHealthImage.fillAmount -= 0.2f * Time.deltaTime;
+            healthPlayer.health -= 0.2f * Time.deltaTime;
+            //healthPlayer.LoseHealth();
         }
 
         if (heardSound || playerHeard)
