@@ -29,28 +29,28 @@ public class playerHealth : MonoBehaviour
             //what to do when a player dies 
             Application.LoadLevel(Application.loadedLevel);
         }
-        if (loseHealth)
-        {
-            playerHealthImage.fillAmount -= 0.1f * Time.deltaTime;
-            //increase the opacity of the blood overlay
-            canGroup.alpha += 0.15f *Time.deltaTime;
-        }
-        else {
+        //if (loseHealth)
+        //{
+        //    playerHealthImage.fillAmount -= 0.1f * Time.deltaTime;
+        //    //increase the opacity of the blood overlay
+        //    canGroup.alpha += 0.15f *Time.deltaTime;
+        //}
+        //else {
             playerHealthImage.fillAmount += 0.01f * Time.deltaTime;
             canGroup.alpha -= 0.01f * Time.deltaTime;
-        }
+        //}
 
     }
 
-    public void LoseHealth() {
+    //public void LoseHealth() {
 
-        Debug.Log("lose health");
-        loseHealth = true;
+    //    Debug.Log("lose health");
+    //    loseHealth = true;
 
-    }
+    //}
 
-    public void dontLoseHealth() {
-        loseHealth = false;
-    }
+    //public void dontLoseHealth() {
+    //    loseHealth = false;
+    //}
 
 }
