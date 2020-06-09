@@ -9,16 +9,16 @@ public class Gun : MonoBehaviour
     public AudioClip clip;
 
     //whether the player has the weapon or not
-    public bool gotShotgun;
-    public bool gotTranqGun;
+    public bool gotShotgun = true;
+    public bool gotTranqGun = true;
 
     public float slugSpeed = 10;
     public float tranqSpeed = 50;
     public Rigidbody slugRound;
 
     //how much munitions the player has
-    public int shotgunAmmo;
-    public int tranqAmmo;
+    public int shotgunAmmo = 5;
+    public int tranqAmmo = 3;
     float delay;
 
     public Image shotgunRoundsImage;
@@ -29,7 +29,7 @@ public class Gun : MonoBehaviour
 
     //shotgun = 1
     //tranqgun = 2
-    public bool currentWeapon;
+    public bool currentWeapon = true;
 
     private void Start()
     {
@@ -90,7 +90,7 @@ public class Gun : MonoBehaviour
             shotgunRoundsImage.enabled = true;
 
             //if the player pushes the left mouse button and has ammo
-            if (Input.GetMouseButtonDown(0) && shotgunAmmo > 0 && delay >= 1)
+            if (Input.GetMouseButtonDown(0) && shotgunAmmo > 0 && delay >= 1 || Input.GetKey(KeyCode.Z) && shotgunAmmo > 0 && delay >= 1)
             {
                 //be lazy and instantiate bullet prefabs
                 for (int i = 0; i < 5; i++)
@@ -112,7 +112,7 @@ public class Gun : MonoBehaviour
             tranqRoundsImage.enabled = true;
             shotgunRoundsImage.enabled = false;
             //if the player pushes the left mouse button and has ammo
-            if (Input.GetMouseButtonDown(0) && tranqAmmo > 0 && delay >= 1)
+            if (Input.GetMouseButtonDown(0) && tranqAmmo > 0 && delay >= 1 || Input.GetKey(KeyCode.Z) && tranqAmmo > 0 && delay >= 1)
             {
                 source.PlayOneShot(clip);
                 //alert the dinosaur

@@ -33,7 +33,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void menuButton()
         {
             Time.timeScale = 1.0f;
-            Application.LoadLevel("MainMenu");
+            Application.Quit();
             Cursor.visible = true;
         }
 
