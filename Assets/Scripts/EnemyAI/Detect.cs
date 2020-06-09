@@ -68,7 +68,7 @@ public class Detect : MonoBehaviour
         {
             if (!roarSource.isPlaying)
             {
-                roarSource.PlayOneShot(hitRoar);
+                this.roarSource.PlayOneShot(hitRoar);
             }
             weaponSlowTimer += Time.deltaTime;
             if (weaponSlowTimer >= maxWeaponSlowTimer)
