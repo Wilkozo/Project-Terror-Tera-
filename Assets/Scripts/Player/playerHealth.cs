@@ -27,7 +27,7 @@ public class playerHealth : MonoBehaviour
 
         if (health <= 0) {
             //what to do when a player dies 
-            Application.LoadLevel(Application.loadedLevel);
+            Application.LoadLevel("GameOver");
         }
         //if (loseHealth)
         //{
