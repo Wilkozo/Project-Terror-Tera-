@@ -14,6 +14,7 @@ public class Detect : MonoBehaviour
     public float distance;
     [SerializeField] playerHealth healthPlayer;
     public float maxDistance;
+    public float damageDistance = 10;
 
     //player and AI components
     public GameObject player;
@@ -122,7 +123,7 @@ public class Detect : MonoBehaviour
             navigator.playerNotSeen = true;
         }
 
-        if (distance <= 10)
+        if (distance <= damageDistance)
         {
             healthPlayer.playerHealthImage.fillAmount -= 0.2f * Time.deltaTime;
             healthPlayer.health -= 0.2f * Time.deltaTime;
