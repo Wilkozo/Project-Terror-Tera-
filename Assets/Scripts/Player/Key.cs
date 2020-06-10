@@ -26,6 +26,7 @@ public class Key : MonoBehaviour
         if (win) {
             fadeToWhite.alpha += 0.5f * Time.deltaTime;
             Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 

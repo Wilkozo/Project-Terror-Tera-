@@ -288,10 +288,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             else
             {
                 if (staminaAmount <= 15){
-                    staminaAmount += 0.1f * Time.deltaTime;
+                    staminaAmount += 0.5f * Time.deltaTime;
                     if (staminaAmount >= enoughStamina)
                     {
-                        staminaBar.fillAmount += 0.01f * Time.deltaTime;
+                        staminaBar.fillAmount += 0.05f * Time.deltaTime;
                     }
                 }
                 m_IsWalking = true;
