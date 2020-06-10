@@ -17,15 +17,25 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if (Input.GetKey(KeyCode.Escape))
             {
-                //this.GetComponent<FirstPersonController>().enabled = false;
-                Cursor.visible = true;
-                Time.timeScale = 0;
-                pauseCanvas.enabled = true;
+                if (Cursor.visible == false)
+                {
+                    //this.GetComponent<FirstPersonController>().enabled = false;
+                    Cursor.visible = true;
+                    Time.timeScale = 0.0f;
+                    pauseCanvas.enabled = true;
+                }
+                else {
+                    Cursor.visible = false;
+                    Time.timeScale = 1.0f;
+                    pauseCanvas.enabled = false;
+                }
             }
         }
 
         public void continueButton()
-        {   Time.timeScale = 1.0f;
+        {
+            //this.GetComponent<FirstPersonController>().enabled = true;
+            Time.timeScale = 1.0f;
             pauseCanvas.enabled = false;
             Cursor.visible = false;
 

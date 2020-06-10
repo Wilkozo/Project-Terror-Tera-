@@ -16,8 +16,6 @@ public class PlayerInteract : MonoBehaviour
 
     bool mapAquired;
 
-    public GameObject boat;
-
     [SerializeField] PlayerManager playerManager;
     [SerializeField] PowerOn power;
 
@@ -26,7 +24,6 @@ public class PlayerInteract : MonoBehaviour
 
     void Start()
     {
-        boat.SetActive(false);
 
         //find the map
         FindObjectOfType<AudioManager>().Play("BGM01");
@@ -99,7 +96,6 @@ public class PlayerInteract : MonoBehaviour
             }
             if (hit.transform.name == "Radio" && power.poweredOn) {
                 FindObjectOfType<AudioManager>().Play("");
-                boat.SetActive(true);
             }
         }
 

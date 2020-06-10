@@ -16,7 +16,7 @@ public class GameOverLos : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(1);
+            Application.LoadLevel("Game");
             //          Application.LoadLevel("Game");
         }
     }

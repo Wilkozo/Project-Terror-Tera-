@@ -5,6 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+    public void Start()
+    {
+        Cursor.visible = true;
+    }
+
+    private void Update()
+    {
+        Cursor.visible = true;
+    }
     public void PlayGame()
     {
         FindObjectOfType<AudioManager>().Play("Button");
