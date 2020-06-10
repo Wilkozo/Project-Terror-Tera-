@@ -16,9 +16,9 @@ public class DamagePlayer : MonoBehaviour
 
     private void Update()
     {
-        float random = Random.Range(0, 100);
+        float random = Random.Range(0, 1000);
 
-        if (random >= 99 && !source.isPlaying)
+        if (random >= 999 && !source.isPlaying)
         {
             source.PlayOneShot(clip);
         }
