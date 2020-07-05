@@ -16,16 +16,6 @@ public class PlayerManager : MonoBehaviour
     }
 
 
-    //TO CHEAT
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.P))
-    //    {
-    //        digCount += 1;
-    //        digZones.text = "Dig Zones: " + digCount.ToString() + " / 7";
-    //    }
-    //}
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "DigZone"){
@@ -37,4 +27,14 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+
+    //TO CHEAT
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.P))
+    //    {
+    //        digCount += 1;
+    //        digZones.text = "Dig Zones: " + digCount.ToString() + " / 7";
+    //    }
+    //}
 }
