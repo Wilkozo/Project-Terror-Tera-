@@ -26,7 +26,7 @@ public class PlayerInteract : MonoBehaviour
     {
 
         //find the map
-        FindObjectOfType<AudioManager>().Play("BGM01");
+        //FindObjectOfType<AudioManager>().Play("BGM01");
         map = GameObject.FindGameObjectWithTag("Map");
         //set the map to false
         map.SetActive(false);
@@ -77,6 +77,23 @@ public class PlayerInteract : MonoBehaviour
                 hit.transform.SendMessage("ReadMessage");
             }
 
+            if (hit.transform.tag == "GreenKeycard") {
+                Keycards.setKeycardLevel(2);
+                Destroy(hit.transform.gameObject);
+            }
+            if (hit.transform.tag == "RedKeycard")
+            {
+                Keycards.setKeycardLevel(4);
+                Destroy(hit.transform.gameObject);
+            }
+            if (hit.transform.tag == "BlueKeycard")
+            {
+                Keycards.setKeycardLevel(6);
+                Destroy(hit.transform.gameObject);
+            }
+            if (hit.transform.name == "Door") {
+                hit.transform.GetComponent<Doors>().OpenDoor();
+            }
             if (hit.transform.name == "Map") {
                 mapAquired = true;
                 Destroy(GameObject.Find("Map"));  
