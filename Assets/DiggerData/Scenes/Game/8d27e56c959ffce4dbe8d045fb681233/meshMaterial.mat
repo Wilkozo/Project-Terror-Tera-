@@ -53,11 +53,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_Splat_2:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 882919255578318785, guid: dac91dd79d44b964b8fedc1516dd49e1,
+          type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_Splat_3:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: -956863661728410797, guid: dac91dd79d44b964b8fedc1516dd49e1,
+          type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_Splat_4:
@@ -71,7 +73,7 @@ Material:
     m_Floats:
     - _Ambient_Occlusion_Power: 1
     - _Cutoff: 0.5
-    - _Geological_Map_Close_Power: 0.35
+    - _Geological_Map_Close_Power: 0.25
     - _Geological_Map_Far_Power: 0.05
     - _Geological_Map_Offset_Close: 0.028
     - _Geological_Map_Offset_Far: 0
@@ -107,23 +109,23 @@ Material:
     - _Snow_Tiling: 6.9
     - _Terrain_Smoothness: 0.65
     - _Terrain_Specular: 0.85
-    - _Texture_10_Albedo_Index: -1
+    - _Texture_10_Albedo_Index: 9
     - _Texture_10_Far_Multiplier: 3
     - _Texture_10_Geological_Power: 1
-    - _Texture_10_Normal_Index: -1
+    - _Texture_10_Normal_Index: 9
     - _Texture_10_Normal_Power: 1
-    - _Texture_10_Perlin_Power: 0
+    - _Texture_10_Perlin_Power: 1
     - _Texture_10_Snow_Reduction: 0
-    - _Texture_10_Tiling: 15
+    - _Texture_10_Tiling: 8
     - _Texture_10_Triplanar: 0
-    - _Texture_11_Albedo_Index: -1
+    - _Texture_11_Albedo_Index: 10
     - _Texture_11_Far_Multiplier: 3
     - _Texture_11_Geological_Power: 1
-    - _Texture_11_Normal_Index: -1
+    - _Texture_11_Normal_Index: 10
     - _Texture_11_Normal_Power: 1
-    - _Texture_11_Perlin_Power: 0
+    - _Texture_11_Perlin_Power: 1
     - _Texture_11_Snow_Reduction: 0
-    - _Texture_11_Tiling: 15
+    - _Texture_11_Tiling: 10
     - _Texture_11_Triplanar: 0
     - _Texture_12_Albedo_Index: -1
     - _Texture_12_Far_Multiplier: 3
@@ -206,56 +208,56 @@ Material:
     - _Texture_4_Snow_Reduction: 0
     - _Texture_4_Tiling: 35
     - _Texture_4_Triplanar: 1
-    - _Texture_5_Albedo_Index: -1
+    - _Texture_5_Albedo_Index: 4
     - _Texture_5_Far_Multiplier: 3
     - _Texture_5_Geological_Power: 1
-    - _Texture_5_Normal_Index: -1
+    - _Texture_5_Normal_Index: 4
     - _Texture_5_Normal_Power: 1
-    - _Texture_5_Perlin_Power: 0
+    - _Texture_5_Perlin_Power: 1
     - _Texture_5_Snow_Reduction: 0
     - _Texture_5_Tiling: 15
     - _Texture_5_Triplanar: 0
-    - _Texture_6_Albedo_Index: -1
+    - _Texture_6_Albedo_Index: 5
     - _Texture_6_Far_Multiplier: 3
     - _Texture_6_Geological_Power: 1
-    - _Texture_6_Normal_Index: -1
+    - _Texture_6_Normal_Index: 5
     - _Texture_6_Normal_Power: 1
-    - _Texture_6_Perlin_Power: 0
+    - _Texture_6_Perlin_Power: 1
     - _Texture_6_Snow_Reduction: 0
     - _Texture_6_Tiling: 15
     - _Texture_6_Triplanar: 0
-    - _Texture_7_Albedo_Index: -1
+    - _Texture_7_Albedo_Index: 6
     - _Texture_7_Far_Multiplier: 3
     - _Texture_7_Geological_Power: 1
-    - _Texture_7_Normal_Index: -1
+    - _Texture_7_Normal_Index: 6
     - _Texture_7_Normal_Power: 1
-    - _Texture_7_Perlin_Power: 0
+    - _Texture_7_Perlin_Power: 1
     - _Texture_7_Snow_Reduction: 0
     - _Texture_7_Tiling: 15
-    - _Texture_7_Triplanar: 0
-    - _Texture_8_Albedo_Index: -1
+    - _Texture_7_Triplanar: 1
+    - _Texture_8_Albedo_Index: 7
     - _Texture_8_Far_Multiplier: 3
     - _Texture_8_Geological_Power: 1
-    - _Texture_8_Normal_Index: -1
+    - _Texture_8_Normal_Index: 7
     - _Texture_8_Normal_Power: 1
-    - _Texture_8_Perlin_Power: 0
+    - _Texture_8_Perlin_Power: 1
     - _Texture_8_Snow_Reduction: 0
     - _Texture_8_Tiling: 15
     - _Texture_8_Triplanar: 0
-    - _Texture_9_Albedo_Index: -1
+    - _Texture_9_Albedo_Index: 8
     - _Texture_9_Far_Multiplier: 3
     - _Texture_9_Geological_Power: 1
-    - _Texture_9_Normal_Index: -1
+    - _Texture_9_Normal_Index: 8
     - _Texture_9_Normal_Power: 1
-    - _Texture_9_Perlin_Power: 0
+    - _Texture_9_Perlin_Power: 1
     - _Texture_9_Snow_Reduction: 0
-    - _Texture_9_Tiling: 15
+    - _Texture_9_Tiling: 10
     - _Texture_9_Triplanar: 0
-    - _Texture_Perlin_Normal_Index: 4
+    - _Texture_Perlin_Normal_Index: 11
     - _Texture_Snow_Index: -1
     - _Texture_Snow_Normal_Index: -1
     - _UV_Mix_Power: 5
-    - _UV_Mix_Start_Distance: 350.00153
+    - _UV_Mix_Start_Distance: 350.0011
     - _Use_AO: 1
     - __dirty: 1
     m_Colors:

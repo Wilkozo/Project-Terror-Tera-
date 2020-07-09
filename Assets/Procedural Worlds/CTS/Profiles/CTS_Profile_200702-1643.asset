@@ -51,7 +51,7 @@ MonoBehaviour:
   m_colorMapFarPower: 0
   m_colorMapOpacity: 1
   m_geoMapCloseOffset: 0.028
-  m_geoMapClosePower: 0.35
+  m_geoMapClosePower: 0.25
   m_geoMapTilingClose: 142
   m_geoMapFarOffset: 0
   m_geoMapFarPower: 0.05
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_normalTextureSize: 4
   m_normalTextureSizePx: 1024
   m_normalCompress: 1
-  m_globalDetailNormalMapIdx: 5
+  m_globalDetailNormalMapIdx: 11
   m_globalDetailNormalMap: {fileID: 2800000, guid: 34f66994040def1499e148b92d4f3b07,
     type: 3}
   m_snowAlbedoTextureIdx: -1
@@ -259,7 +259,7 @@ MonoBehaviour:
     m_emissionTexture: {fileID: 0}
   - m_isOpenInEditor: 0
     m_textureIdx: 4
-    m_name: T_ground_beech_forest_soil_01_BC_SM
+    m_name: T_lava_rock_02_A_SM
     m_detailPower: 1
     m_snowReductionPower: 0
     m_geologicalPower: 1
@@ -268,15 +268,225 @@ MonoBehaviour:
     m_tintBrightness: 1
     m_smoothness: 1
     m_albedoIdx: 4
-    m_albedoTilingClose: 2
+    m_albedoTilingClose: 15
     m_albedoTilingFar: 3
-    m_albedoAverage: {x: 0.036889445, y: 0.029556833, z: 0.02121901, w: 0.05882353}
-    m_albedoTexture: {fileID: 2800000, guid: 2d286ecf643e7314989e0c27af290aad, type: 3}
+    m_albedoAverage: {x: 0.052860655, y: 0.045186203, z: 0.045186203, w: 0.39215687}
+    m_albedoTexture: {fileID: 2800000, guid: 4f8a1590f4d0161438b821ac10f8f372, type: 3}
     m_smoothnessTexture: {fileID: 0}
     m_roughnessTexture: {fileID: 0}
     m_normalIdx: 4
     m_normalStrength: 1
-    m_normalTexture: {fileID: 2800000, guid: 352e3ca834b69d440b37ab66433b63e4, type: 3}
+    m_normalTexture: {fileID: 2800000, guid: 6f0b4d15c0667f14d8b9578d48f61f87, type: 3}
+    m_heightIdx: -1
+    m_heightDepth: 8
+    m_heightContrast: 1
+    m_heightBlendClose: 1
+    m_heightBlendFar: 1
+    m_heightTesselationDepth: 0
+    m_heightMin: 0
+    m_heightMax: 1
+    m_heightTexture: {fileID: 0}
+    m_aoIdx: -1
+    m_aoPower: 1
+    m_aoTexture: {fileID: 0}
+    m_emissionIdx: -1
+    m_emissionStrength: 1
+    m_emissionTexture: {fileID: 0}
+  - m_isOpenInEditor: 0
+    m_textureIdx: 5
+    m_name: T_lava_rock_07_A_SM
+    m_detailPower: 1
+    m_snowReductionPower: 0
+    m_geologicalPower: 1
+    m_triplanar: 0
+    m_tint: {r: 1, g: 1, b: 1, a: 1}
+    m_tintBrightness: 1
+    m_smoothness: 1
+    m_albedoIdx: 5
+    m_albedoTilingClose: 15
+    m_albedoTilingFar: 3
+    m_albedoAverage: {x: 0.034339808, y: 0.033104762, z: 0.03071344, w: 0.38431373}
+    m_albedoTexture: {fileID: 2800000, guid: 7df7a16d8e6218341b7f479e41b2fdb0, type: 3}
+    m_smoothnessTexture: {fileID: 0}
+    m_roughnessTexture: {fileID: 0}
+    m_normalIdx: 5
+    m_normalStrength: 1
+    m_normalTexture: {fileID: 2800000, guid: cb5b886754aff994595343a98ad7aa72, type: 3}
+    m_heightIdx: -1
+    m_heightDepth: 8
+    m_heightContrast: 1
+    m_heightBlendClose: 1
+    m_heightBlendFar: 1
+    m_heightTesselationDepth: 0
+    m_heightMin: 0
+    m_heightMax: 1
+    m_heightTexture: {fileID: 0}
+    m_aoIdx: -1
+    m_aoPower: 1
+    m_aoTexture: {fileID: 0}
+    m_emissionIdx: -1
+    m_emissionStrength: 1
+    m_emissionTexture: {fileID: 0}
+  - m_isOpenInEditor: 1
+    m_textureIdx: 6
+    m_name: T_lava_rock_12_A_SM
+    m_detailPower: 1
+    m_snowReductionPower: 0
+    m_geologicalPower: 1
+    m_triplanar: 1
+    m_tint: {r: 1, g: 1, b: 1, a: 1}
+    m_tintBrightness: 1
+    m_smoothness: 1
+    m_albedoIdx: 6
+    m_albedoTilingClose: 15
+    m_albedoTilingFar: 3
+    m_albedoAverage: {x: 0.0409152, y: 0.036889445, z: 0.034339808, w: 0.33333334}
+    m_albedoTexture: {fileID: 2800000, guid: 905b2de06ab397842809a3976e087b08, type: 3}
+    m_smoothnessTexture: {fileID: 0}
+    m_roughnessTexture: {fileID: 0}
+    m_normalIdx: 6
+    m_normalStrength: 1
+    m_normalTexture: {fileID: 2800000, guid: 0fe6d2a4715e8b14abbc591e3c592d6f, type: 3}
+    m_heightIdx: -1
+    m_heightDepth: 8
+    m_heightContrast: 1
+    m_heightBlendClose: 1
+    m_heightBlendFar: 1
+    m_heightTesselationDepth: 0
+    m_heightMin: 0
+    m_heightMax: 1
+    m_heightTexture: {fileID: 0}
+    m_aoIdx: -1
+    m_aoPower: 1
+    m_aoTexture: {fileID: 0}
+    m_emissionIdx: -1
+    m_emissionStrength: 1
+    m_emissionTexture: {fileID: 0}
+  - m_isOpenInEditor: 0
+    m_textureIdx: 7
+    m_name: T_lava_rock_14_A_SM
+    m_detailPower: 1
+    m_snowReductionPower: 0
+    m_geologicalPower: 1
+    m_triplanar: 0
+    m_tint: {r: 1, g: 1, b: 1, a: 1}
+    m_tintBrightness: 1
+    m_smoothness: 1
+    m_albedoIdx: 7
+    m_albedoTilingClose: 15
+    m_albedoTilingFar: 3
+    m_albedoAverage: {x: 0.05448028, y: 0.052860655, z: 0.049706563, w: 0.3137255}
+    m_albedoTexture: {fileID: 2800000, guid: 1f8fb444e9dbbac4a8e07e4759b03b29, type: 3}
+    m_smoothnessTexture: {fileID: 0}
+    m_roughnessTexture: {fileID: 0}
+    m_normalIdx: 7
+    m_normalStrength: 1
+    m_normalTexture: {fileID: 2800000, guid: 3912ede4011618848b4cdb4d2d1a2890, type: 3}
+    m_heightIdx: -1
+    m_heightDepth: 8
+    m_heightContrast: 1
+    m_heightBlendClose: 1
+    m_heightBlendFar: 1
+    m_heightTesselationDepth: 0
+    m_heightMin: 0
+    m_heightMax: 1
+    m_heightTexture: {fileID: 0}
+    m_aoIdx: -1
+    m_aoPower: 1
+    m_aoTexture: {fileID: 0}
+    m_emissionIdx: -1
+    m_emissionStrength: 1
+    m_emissionTexture: {fileID: 0}
+  - m_isOpenInEditor: 0
+    m_textureIdx: 8
+    m_name: T_lava_sand_04_A_SM
+    m_detailPower: 1
+    m_snowReductionPower: 0
+    m_geologicalPower: 1
+    m_triplanar: 0
+    m_tint: {r: 1, g: 1, b: 1, a: 1}
+    m_tintBrightness: 1
+    m_smoothness: 1
+    m_albedoIdx: 8
+    m_albedoTilingClose: 10
+    m_albedoTilingFar: 3
+    m_albedoAverage: {x: 0.022173883, y: 0.02121901, z: 0.019382361, w: 0.24313726}
+    m_albedoTexture: {fileID: 2800000, guid: 1577eec9bb0c45e48bcba0752fad20c2, type: 3}
+    m_smoothnessTexture: {fileID: 0}
+    m_roughnessTexture: {fileID: 0}
+    m_normalIdx: 8
+    m_normalStrength: 1
+    m_normalTexture: {fileID: 2800000, guid: d1281bd9b10622649b68fbaaaa8aaadb, type: 3}
+    m_heightIdx: -1
+    m_heightDepth: 8
+    m_heightContrast: 1
+    m_heightBlendClose: 1
+    m_heightBlendFar: 1
+    m_heightTesselationDepth: 0
+    m_heightMin: 0
+    m_heightMax: 1
+    m_heightTexture: {fileID: 0}
+    m_aoIdx: -1
+    m_aoPower: 1
+    m_aoTexture: {fileID: 0}
+    m_emissionIdx: -1
+    m_emissionStrength: 1
+    m_emissionTexture: {fileID: 0}
+  - m_isOpenInEditor: 0
+    m_textureIdx: 9
+    m_name: T_lava_sand_05_A_SM
+    m_detailPower: 1
+    m_snowReductionPower: 0
+    m_geologicalPower: 1
+    m_triplanar: 0
+    m_tint: {r: 1, g: 1, b: 1, a: 1}
+    m_tintBrightness: 1
+    m_smoothness: 1
+    m_albedoIdx: 9
+    m_albedoTilingClose: 8
+    m_albedoTilingFar: 3
+    m_albedoAverage: {x: 0.022173883, y: 0.02121901, z: 0.02121901, w: 0.22745098}
+    m_albedoTexture: {fileID: 2800000, guid: 30b059a27cd405141985da2218499a25, type: 3}
+    m_smoothnessTexture: {fileID: 0}
+    m_roughnessTexture: {fileID: 0}
+    m_normalIdx: 9
+    m_normalStrength: 1
+    m_normalTexture: {fileID: 2800000, guid: da9621dfe177b2d49bd6c427c7a82d02, type: 3}
+    m_heightIdx: -1
+    m_heightDepth: 8
+    m_heightContrast: 1
+    m_heightBlendClose: 1
+    m_heightBlendFar: 1
+    m_heightTesselationDepth: 0
+    m_heightMin: 0
+    m_heightMax: 1
+    m_heightTexture: {fileID: 0}
+    m_aoIdx: -1
+    m_aoPower: 1
+    m_aoTexture: {fileID: 0}
+    m_emissionIdx: -1
+    m_emissionStrength: 1
+    m_emissionTexture: {fileID: 0}
+  - m_isOpenInEditor: 0
+    m_textureIdx: 10
+    m_name: T_lava_sand_10_A_SM
+    m_detailPower: 1
+    m_snowReductionPower: 0
+    m_geologicalPower: 1
+    m_triplanar: 0
+    m_tint: {r: 1, g: 1, b: 1, a: 1}
+    m_tintBrightness: 1
+    m_smoothness: 1
+    m_albedoIdx: 10
+    m_albedoTilingClose: 10
+    m_albedoTilingFar: 3
+    m_albedoAverage: {x: 0.0409152, y: 0.034339808, z: 0.025186857, w: 0.29803923}
+    m_albedoTexture: {fileID: 2800000, guid: f24710d9b785e36469f7a32c8aed2679, type: 3}
+    m_smoothnessTexture: {fileID: 0}
+    m_roughnessTexture: {fileID: 0}
+    m_normalIdx: 10
+    m_normalStrength: 1
+    m_normalTexture: {fileID: 2800000, guid: 9ec8cdfdc29e41b4eb1c99acb3b3bfa1, type: 3}
     m_heightIdx: -1
     m_heightDepth: 8
     m_heightContrast: 1
