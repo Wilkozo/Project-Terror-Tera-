@@ -5,12 +5,12 @@ using UnityEngine;
 public class Doors : MonoBehaviour
 {
     
-    public int keycardLevel;
+    public int levelToOpen;
     
     //when the door should be opened destroy it temp
     public void OpenDoor() {
-        Debug.Log(Keycards.getKeycardLevel());
-        if(this.keycardLevel > Keycards.getKeycardLevel()) {
+        int temp = Keycards.getKeycardLevel();
+        if(temp >= levelToOpen) {
             Destroy(this.gameObject);
         }
     }

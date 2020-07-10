@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    //public Text switchesText;
 
     //camera reference
     Camera cam;
@@ -77,23 +76,43 @@ public class PlayerInteract : MonoBehaviour
                 hit.transform.SendMessage("ReadMessage");
             }
 
+            #region "Keycards"
             if (hit.transform.tag == "GreenKeycard") {
-                Keycards.setKeycardLevel(2);
+                Keycards.setKeycardLevel(1);
                 Destroy(hit.transform.gameObject);
             }
             if (hit.transform.tag == "RedKeycard")
             {
-                Keycards.setKeycardLevel(4);
+                Keycards.setKeycardLevel(2);
                 Destroy(hit.transform.gameObject);
             }
             if (hit.transform.tag == "BlueKeycard")
             {
-                Keycards.setKeycardLevel(6);
+                Keycards.setKeycardLevel(3);
                 Destroy(hit.transform.gameObject);
             }
             if (hit.transform.name == "Door") {
                 hit.transform.GetComponent<Doors>().OpenDoor();
             }
+            #endregion
+
+            if (hit.transform.name == "ButtonOne") {
+                hit.transform.GetComponentInParent<PowerOn>().buttonPushOne();
+            }
+            if (hit.transform.name == "ButtonThree")
+            {
+                hit.transform.GetComponentInParent<PowerOn>().buttonPushThree();
+            }
+            if (hit.transform.name == "ButtonTwo")
+            {
+                hit.transform.GetComponentInParent<PowerOn>().buttonPushTwo();
+            }
+            if (hit.transform.name == "ButtonReset")
+            {
+                hit.transform.GetComponentInParent<PowerOn>().resetPuzzle();
+            }
+
+
             if (hit.transform.name == "Map") {
                 mapAquired = true;
                 Destroy(GameObject.Find("Map"));  
@@ -101,18 +120,6 @@ public class PlayerInteract : MonoBehaviour
             if (hit.transform.name == "PowerOn")
             {
                 GameObject.FindGameObjectWithTag("Power").SendMessage("onPowerUp");
-            }
-
-            //if the player hits the gate button
-            if (hit.transform.name == "ButtonToLowerGate") {
-                // if the player has the map then they can open the main gate
-                if (mapAquired)
-                {
-                    Destroy(GameObject.Find("Gate1"));
-                }
-            }
-            if (hit.transform.name == "Radio" && power.poweredOn) {
-                FindObjectOfType<AudioManager>().Play("");
             }
         }
 

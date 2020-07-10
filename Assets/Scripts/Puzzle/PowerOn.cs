@@ -5,27 +5,65 @@ using UnityEngine;
 public class PowerOn : MonoBehaviour
 {
 
-    public GameObject[] lights;
-    public bool poweredOn = false;
+    public bool lightOne = false;
+    public bool lightTwo = false;
+    public bool lightThree = false;
 
-    // Start is called before the first frame update
-    void Start()
+    public void buttonPushOne() {
+        lightOne = !lightOne;
+        lightThree = true;
+        puzzleCompleted();
+    }
+    public void buttonPushTwo()
     {
-        lights = GameObject.FindGameObjectsWithTag("Lights");
-        foreach (GameObject light in lights)
+        lightOne = false;
+        lightTwo = true;
+        lightThree = !lightThree;
+        puzzleCompleted();
+    }
+    public void buttonPushThree()
+    {
+        lightOne = true;
+        lightTwo = !lightTwo;
+        lightThree = false;
+        puzzleCompleted();
+    }
+
+    public void resetPuzzle() {
+        lightOne = false;
+        lightTwo = false;
+        lightThree = false;
+    }
+
+    //checks to see if the puzzle has been completed
+    public void puzzleCompleted() {
+        if (lightOne)
         {
-            light.SetActive(false);
+            this.transform.GetChild(0).GetChild(0).GetComponent<Light>().color = Color.green;
+        }
+        else {
+            this.transform.GetChild(0).GetChild(0).GetComponent<Light>().color = Color.red;
+        }
+        if (lightTwo)
+        {
+            this.transform.GetChild(1).GetChild(0).GetComponent<Light>().color = Color.green;
+        }
+        else
+        {
+            this.transform.GetChild(1).GetChild(0).GetComponent<Light>().color = Color.red;
+        }
+        if (lightThree)
+        {
+            this.transform.GetChild(2).GetChild(0).GetComponent<Light>().color = Color.green;
+        }
+        else
+        {
+            this.transform.GetChild(2).GetChild(0).GetComponent<Light>().color = Color.red;
+        }
+        if (lightOne && lightTwo && lightThree) { 
+            //turn the power on
         }
     }
 
-    public void onPowerUp() {
-        FindObjectOfType<AudioManager>().Stop("BGM01");
-        FindObjectOfType<AudioManager>().Play("Poweron");
 
-        foreach (GameObject tempLight in lights) {
-            Debug.Log("Got here");
-            tempLight.SetActive(true);
-            poweredOn = true;
-        }
-    }
 }
