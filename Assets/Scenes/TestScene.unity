@@ -1059,6 +1059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checklist: {fileID: 0}
+  DinoType: T-Rex
 --- !u!65 &520718051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2841,25 +2842,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08d3ef0de4e4484c8c6a513ae44c078, type: 3}
---- !u!1 &1827116220 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 47cb4cd26607d85499814deafa7816d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 725666548}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1827116222
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827116220}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1876456699
 GameObject:
   m_ObjectHideFlags: 0
