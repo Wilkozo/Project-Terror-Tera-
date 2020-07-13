@@ -16,7 +16,7 @@ public class PlayerInteract : MonoBehaviour
     bool mapAquired;
 
     [SerializeField] PlayerManager playerManager;
-    [SerializeField] PowerOn power;
+    //[SerializeField] PowerOn power;
 
     //the amount of levers that the player has interacted with
     [SerializeField] int amountOfLeversPulled;
@@ -117,10 +117,10 @@ public class PlayerInteract : MonoBehaviour
                 mapAquired = true;
                 Destroy(GameObject.Find("Map"));  
             }
-            if (hit.transform.name == "PowerOn")
-            {
-                GameObject.FindGameObjectWithTag("Power").SendMessage("onPowerUp");
-            }
+            //if (hit.transform.name == "PowerOn")
+            //{
+            //    GameObject.FindGameObjectWithTag("Power").SendMessage("onPowerUp");
+            //}
         }
 
         //if it doesn't then don't worry, the player is looking at nothing

@@ -14,7 +14,7 @@ public class PhotoCameraManager : MonoBehaviour
             //capture a screenshot
             ScreenCapture.CaptureScreenshot(Application.dataPath + "/screenshots/" + numberOfPhotos + ".png");
             numberOfPhotos++;
-            UnityEditor.AssetDatabase.Refresh();
+            //UnityEditor.AssetDatabase.Refresh();
             Collider[] hits = Physics.OverlapSphere(transform.position, 150.0f);
             int i = 0;
 
