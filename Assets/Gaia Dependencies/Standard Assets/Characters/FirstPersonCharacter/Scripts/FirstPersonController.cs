@@ -234,98 +234,106 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void UpdateCameraPosition(float speed)
         {
-            Vector3 newCameraPosition;
-            if (!m_UseHeadBob)
+            if (Time.timeScale != 0)
             {
-                return;
+                Vector3 newCameraPosition;
+                if (!m_UseHeadBob)
+                {
+                    return;
+                }
+                if (m_CharacterController.velocity.magnitude > 0 && m_CharacterController.isGrounded)
+                {
+                    m_Camera.transform.localPosition =
+                        m_HeadBob.DoHeadBob(m_CharacterController.velocity.magnitude +
+                                          (speed * (m_IsWalking ? 1f : m_RunstepLenghten)));
+                    newCameraPosition = m_Camera.transform.localPosition;
+                    newCameraPosition.y = m_Camera.transform.localPosition.y - m_JumpBob.Offset();
+                }
+                else
+                {
+                    newCameraPosition = m_Camera.transform.localPosition;
+                    newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
+                }
+                m_Camera.transform.localPosition = newCameraPosition;
             }
-            if (m_CharacterController.velocity.magnitude > 0 && m_CharacterController.isGrounded)
-            {
-                m_Camera.transform.localPosition =
-                    m_HeadBob.DoHeadBob(m_CharacterController.velocity.magnitude +
-                                      (speed * (m_IsWalking ? 1f : m_RunstepLenghten)));
-                newCameraPosition = m_Camera.transform.localPosition;
-                newCameraPosition.y = m_Camera.transform.localPosition.y - m_JumpBob.Offset();
-            }
-            else
-            {
-                newCameraPosition = m_Camera.transform.localPosition;
-                newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
-            }
-            m_Camera.transform.localPosition = newCameraPosition;
         }
 
 
         private void GetInput(out float speed)
         {
-            // Read input
-            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+                // Read input
+                float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+                float vertical = CrossPlatformInputManager.GetAxis("Vertical");
 
-            bool waswalking = m_IsWalking;
+                bool waswalking = m_IsWalking;
 
 #if !MOBILE_INPUT
-            // On standalone builds, walk/run speed is modified by a key press.
-            // keep track of whether or not the character is walking or running
-            //m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+                // On standalone builds, walk/run speed is modified by a key press.
+                // keep track of whether or not the character is walking or running
+                //m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
 #endif
 
-            // set the desired speed to be walking or running
-            speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
-            m_Input = new Vector2(horizontal, vertical);
+                // set the desired speed to be walking or running
+                speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
+                m_Input = new Vector2(horizontal, vertical);
 
 
-            if (Input.GetKey(KeyCode.LeftShift) && staminaAmount > enoughStamina)
-            {
-                m_IsWalking = false;
-                run = true;
-                staminaAmount -= 1.0f * Time.deltaTime;
-                staminaBar.fillAmount -= 0.1f * Time.deltaTime;
-                if (staminaAmount <= enoughStamina) {
-                    staminaAmount = 0;
-                }
-            }
-            else
-            {
-                if (staminaAmount <= 15){
-                    staminaAmount += 0.5f * Time.deltaTime;
-                    if (staminaAmount >= enoughStamina)
+                if (Input.GetKey(KeyCode.LeftShift) && staminaAmount > enoughStamina)
+                {
+                    m_IsWalking = false;
+                    run = true;
+                    staminaAmount -= 1.0f * Time.deltaTime;
+                    staminaBar.fillAmount -= 0.1f * Time.deltaTime;
+                    if (staminaAmount <= enoughStamina)
                     {
-                        staminaBar.fillAmount += 0.05f * Time.deltaTime;
+                        staminaAmount = 0;
                     }
                 }
-                m_IsWalking = true;
-                run = false;
-            }
+                else
+                {
+                    if (staminaAmount <= 15)
+                    {
+                        staminaAmount += 0.5f * Time.deltaTime;
+                        if (staminaAmount >= enoughStamina)
+                        {
+                            staminaBar.fillAmount += 0.05f * Time.deltaTime;
+                        }
+                    }
+                    m_IsWalking = true;
+                    run = false;
+                }
 
-            if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl))
-            {
-                crouch = true;
-            }
-            else
-            {
-                crouch = false;
-            }
+                if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl))
+                {
+                    crouch = true;
+                }
+                else
+                {
+                    crouch = false;
+                }
 
-            // normalize input if it exceeds 1 in combined length:
-            if (m_Input.sqrMagnitude > 1)
-            {
-                m_Input.Normalize();
-            }
+                // normalize input if it exceeds 1 in combined length:
+                if (m_Input.sqrMagnitude > 1)
+                {
+                    m_Input.Normalize();
+                }
 
-            // handle speed change to give an fov kick
-            // only if the player is going to a run, is running and the fovkick is to be used
-            if (m_IsWalking != waswalking && m_UseFovKick && m_CharacterController.velocity.sqrMagnitude > 0)
-            {
-                StopAllCoroutines();
-                StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
+                // handle speed change to give an fov kick
+                // only if the player is going to a run, is running and the fovkick is to be used
+                if (m_IsWalking != waswalking && m_UseFovKick && m_CharacterController.velocity.sqrMagnitude > 0)
+                {
+                    StopAllCoroutines();
+                    StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
+                }
             }
-        }
 
 
         private void RotateView()
         {
-            m_MouseLook.LookRotation(transform, m_Camera.transform);
+            if (Time.timeScale != 0)
+            {
+                m_MouseLook.LookRotation(transform, m_Camera.transform);
+            }
         }
 
 

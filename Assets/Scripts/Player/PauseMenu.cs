@@ -15,11 +15,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void Update()
         {
-            if (Input.GetKey(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 if (Cursor.visible == false)
                 {
-                    this.GetComponent<FirstPersonController>().enabled = false;
+                    //this.GetComponent<FirstPersonController>().enabled = false;
                     Cursor.visible = true;
                     Time.timeScale = 0.0f;
                     pauseCanvas.enabled = true;
@@ -34,7 +34,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void continueButton()
         {
-            this.GetComponent<FirstPersonController>().enabled = true;
+            //this.GetComponent<FirstPersonController>().enabled = true;
             Time.timeScale = 1.0f;
             pauseCanvas.enabled = false;
             Cursor.visible = false;
