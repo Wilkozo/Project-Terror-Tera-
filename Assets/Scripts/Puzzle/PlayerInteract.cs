@@ -40,13 +40,14 @@ public class PlayerInteract : MonoBehaviour
     {
 
         //enable/disable map
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M) && mapAquired)
         {
             Debug.Log("Enable the map?????");
             map.SetActive(!mapEnabled);
             mapEnabled = !mapEnabled;
         }
 
+        //TODO
         if (Input.GetKeyDown(KeyCode.Escape)) {
             //load into a pause menu
         }
@@ -70,7 +71,7 @@ public class PlayerInteract : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 50.0f))
         {
             print("I'm looking at " + hit.transform.name);
-            //if the object that is hit is an interactive then call the correct interactive
+            //if the player hits a document make it readible
             if (hit.transform.tag == "Document") {
                 //sends a message to run a function from another script
                 hit.transform.SendMessage("ReadMessage");
@@ -96,6 +97,7 @@ public class PlayerInteract : MonoBehaviour
             }
             #endregion
 
+            #region "Button Puzzle"
             if (hit.transform.name == "ButtonOne") {
                 hit.transform.GetComponentInParent<PowerOn>().buttonPushOne();
             }
@@ -111,16 +113,14 @@ public class PlayerInteract : MonoBehaviour
             {
                 hit.transform.GetComponentInParent<PowerOn>().resetPuzzle();
             }
+            #endregion
 
-
+            //if the player hits something with the name map
+            //give the player the map 
             if (hit.transform.name == "Map") {
                 mapAquired = true;
                 Destroy(GameObject.Find("Map"));  
             }
-            //if (hit.transform.name == "PowerOn")
-            //{
-            //    GameObject.FindGameObjectWithTag("Power").SendMessage("onPowerUp");
-            //}
         }
 
         //if it doesn't then don't worry, the player is looking at nothing

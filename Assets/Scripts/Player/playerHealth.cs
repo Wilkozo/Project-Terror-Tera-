@@ -25,32 +25,21 @@ public class playerHealth : MonoBehaviour
     {
         health = playerHealthImage.fillAmount;
 
-        if (health <= 0) {
+        if (health <= 0)
+        {
             //what to do when a player dies 
             Application.LoadLevel("GameOver");
         }
-        //if (loseHealth)
-        //{
-        //    playerHealthImage.fillAmount -= 0.1f * Time.deltaTime;
-        //    //increase the opacity of the blood overlay
-        //    canGroup.alpha += 0.15f *Time.deltaTime;
-        //}
-        //else {
             playerHealthImage.fillAmount += 0.01f * Time.deltaTime;
             canGroup.alpha -= 0.01f * Time.deltaTime;
-        //}
-
     }
 
-    //public void LoseHealth() {
-
-    //    Debug.Log("lose health");
-    //    loseHealth = true;
-
-    //}
-
-    //public void dontLoseHealth() {
-    //    loseHealth = false;
-    //}
-
+    public void OnTriggerEnter(Collider other)
+    {
+        //if the player hits the kill floor
+        if (other.tag == "KillFloor") {
+            //go to the gameover screen
+            Application.LoadLevel("Gameover");
+        }
+    }
 }
