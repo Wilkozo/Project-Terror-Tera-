@@ -60,8 +60,9 @@ public class PowerOn : MonoBehaviour
         {
             this.transform.GetChild(2).GetChild(0).GetComponent<Light>().color = Color.red;
         }
-        if (lightOne && lightTwo && lightThree) { 
-            //turn the power on
+        if (lightOne && lightTwo && lightThree) {
+            //sets the static bool for the power to true
+            Keycards.setPoweredOn();
         }
     }
 
