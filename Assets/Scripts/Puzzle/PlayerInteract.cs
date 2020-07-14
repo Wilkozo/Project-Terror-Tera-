@@ -82,12 +82,12 @@ public class PlayerInteract : MonoBehaviour
                 Keycards.setKeycardLevel(1);
                 Destroy(hit.transform.gameObject);
             }
-            if (hit.transform.tag == "RedKeycard")
+            if (hit.transform.tag == "BlueKeycard")
             {
                 Keycards.setKeycardLevel(2);
                 Destroy(hit.transform.gameObject);
             }
-            if (hit.transform.tag == "BlueKeycard")
+            if (hit.transform.tag == "RedKeycard")
             {
                 Keycards.setKeycardLevel(3);
                 Destroy(hit.transform.gameObject);
