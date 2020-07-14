@@ -17,17 +17,23 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (Cursor.visible == false)
+                if (!pauseCanvas.enabled)
                 {
                     //this.GetComponent<FirstPersonController>().enabled = false;
-                    Cursor.visible = true;
+                    //Cursor.visible = true;
                     Time.timeScale = 0.0f;
                     pauseCanvas.enabled = true;
                 }
                 else {
-                    Cursor.visible = false;
+                    //Cursor.visible = false;
                     Time.timeScale = 1.0f;
                     pauseCanvas.enabled = false;
+                }
+            }
+            if (pauseCanvas.enabled) {
+                if (Input.GetKeyDown(KeyCode.Q)) {
+                    Time.timeScale = 1.0f;
+                    Application.LoadLevel("NewMainMenu");
                 }
             }
         }

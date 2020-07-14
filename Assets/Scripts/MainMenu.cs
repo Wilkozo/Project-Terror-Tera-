@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
     public void Start()
     {
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void Update()
