@@ -47,11 +47,6 @@ public class PlayerInteract : MonoBehaviour
             mapEnabled = !mapEnabled;
         }
 
-        //TODO
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            //load into a pause menu
-        }
-
         //check to see if the player pushes the left mouse 
         if (Input.GetKeyDown(KeyCode.E)) {
             //call check for interact
@@ -75,6 +70,10 @@ public class PlayerInteract : MonoBehaviour
             if (hit.transform.tag == "Document") {
                 //sends a message to run a function from another script
                 hit.transform.SendMessage("ReadMessage");
+            }
+
+            if (hit.transform.name == "radioTower") {
+                hit.transform.GetComponent<RadioTower>().OnRadioInteract();
             }
 
             #region "Keycards"
