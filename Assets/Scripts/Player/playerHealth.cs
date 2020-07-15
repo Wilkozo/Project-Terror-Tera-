@@ -32,7 +32,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 playerHealthImage.fillAmount -= 0.1f * Time.deltaTime;
                 health -= 1.0f * Time.deltaTime;
-                canGroup.alpha += 0.5f * Time.deltaTime;
+                canGroup.alpha += 0.1f * Time.deltaTime;
             }
             else if(health > 0)
             {
