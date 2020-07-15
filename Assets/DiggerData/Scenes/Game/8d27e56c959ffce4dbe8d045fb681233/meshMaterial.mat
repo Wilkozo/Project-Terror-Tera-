@@ -90,9 +90,9 @@ Material:
     - _Global_Color_Map_Scale: 1
     - _Global_Color_Opacity_Power: 0
     - _Global_Normalmap_Power: 0.15
-    - _Perlin_Normal_Power: 1.35
-    - _Perlin_Normal_Power_Close: 0.85
-    - _Perlin_Normal_Tiling_Close: 80
+    - _Perlin_Normal_Power: 1.6
+    - _Perlin_Normal_Power_Close: 0.65
+    - _Perlin_Normal_Tiling_Close: 15
     - _Perlin_Normal_Tiling_Far: 185
     - _Remove_Vert_Height: 15
     - _Snow_Amount: 0
@@ -111,9 +111,9 @@ Material:
     - _Terrain_Specular: 0.85
     - _Texture_10_Albedo_Index: 9
     - _Texture_10_Far_Multiplier: 3
-    - _Texture_10_Geological_Power: 1
+    - _Texture_10_Geological_Power: 0.5
     - _Texture_10_Normal_Index: 9
-    - _Texture_10_Normal_Power: 1
+    - _Texture_10_Normal_Power: 1.65
     - _Texture_10_Perlin_Power: 1
     - _Texture_10_Snow_Reduction: 0
     - _Texture_10_Tiling: 8
@@ -257,13 +257,13 @@ Material:
     - _Texture_Snow_Index: -1
     - _Texture_Snow_Normal_Index: -1
     - _UV_Mix_Power: 5
-    - _UV_Mix_Start_Distance: 350.0011
+    - _UV_Mix_Start_Distance: 350.0013
     - _Use_AO: 1
     - __dirty: 1
     m_Colors:
     - _Global_Color_Map_Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Snow_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_10_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_10_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Texture_11_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Texture_12_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Texture_13_Color: {r: 1, g: 1, b: 1, a: 1}
