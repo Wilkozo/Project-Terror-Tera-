@@ -18,7 +18,6 @@ public class RaptorSFXBridge : MonoBehaviour
             audioSource.PlayOneShot(audioClip);
             //wait for 2 seconds before destroying the trigger box
             StartCoroutine(wait());
-    
         }
     }
 
