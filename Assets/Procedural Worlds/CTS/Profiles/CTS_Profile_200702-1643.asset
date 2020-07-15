@@ -29,9 +29,9 @@ MonoBehaviour:
   m_globalUvMixPower: 5
   m_globalUvMixStartDistance: 350
   m_globalNormalPower: 0.15
-  m_globalDetailNormalClosePower: 0.85
-  m_globalDetailNormalCloseTiling: 80
-  m_globalDetailNormalFarPower: 1.35
+  m_globalDetailNormalClosePower: 0.65
+  m_globalDetailNormalCloseTiling: 15
+  m_globalDetailNormalFarPower: 1.6
   m_globalDetailNormalFarTiling: 185
   m_globalTerrainSmoothness: 0.65
   m_globalTerrainSpecular: 0.85
@@ -327,7 +327,7 @@ MonoBehaviour:
     m_emissionIdx: -1
     m_emissionStrength: 1
     m_emissionTexture: {fileID: 0}
-  - m_isOpenInEditor: 1
+  - m_isOpenInEditor: 0
     m_textureIdx: 6
     m_name: T_lava_rock_12_A_SM
     m_detailPower: 1
@@ -432,16 +432,16 @@ MonoBehaviour:
     m_emissionIdx: -1
     m_emissionStrength: 1
     m_emissionTexture: {fileID: 0}
-  - m_isOpenInEditor: 0
+  - m_isOpenInEditor: 1
     m_textureIdx: 9
     m_name: T_lava_sand_05_A_SM
     m_detailPower: 1
     m_snowReductionPower: 0
-    m_geologicalPower: 1
+    m_geologicalPower: 0.5
     m_triplanar: 0
     m_tint: {r: 1, g: 1, b: 1, a: 1}
     m_tintBrightness: 1
-    m_smoothness: 1
+    m_smoothness: 0
     m_albedoIdx: 9
     m_albedoTilingClose: 8
     m_albedoTilingFar: 3
@@ -450,7 +450,7 @@ MonoBehaviour:
     m_smoothnessTexture: {fileID: 0}
     m_roughnessTexture: {fileID: 0}
     m_normalIdx: 9
-    m_normalStrength: 1
+    m_normalStrength: 1.65
     m_normalTexture: {fileID: 2800000, guid: da9621dfe177b2d49bd6c427c7a82d02, type: 3}
     m_heightIdx: -1
     m_heightDepth: 8
