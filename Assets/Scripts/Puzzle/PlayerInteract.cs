@@ -35,7 +35,6 @@ public class PlayerInteract : MonoBehaviour
 
     }
 
-
     void Update()
     {
 
