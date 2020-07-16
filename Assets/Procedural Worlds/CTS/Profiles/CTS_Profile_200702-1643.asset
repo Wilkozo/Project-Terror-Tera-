@@ -94,7 +94,7 @@ MonoBehaviour:
   m_normalTextureSize: 4
   m_normalTextureSizePx: 1024
   m_normalCompress: 1
-  m_globalDetailNormalMapIdx: 11
+  m_globalDetailNormalMapIdx: 15
   m_globalDetailNormalMap: {fileID: 2800000, guid: 34f66994040def1499e148b92d4f3b07,
     type: 3}
   m_snowAlbedoTextureIdx: -1
@@ -259,7 +259,7 @@ MonoBehaviour:
     m_emissionTexture: {fileID: 0}
   - m_isOpenInEditor: 0
     m_textureIdx: 4
-    m_name: T_lava_rock_02_A_SM
+    m_name: T_ground_beech_forest_sand_02_yellow_BC_SM
     m_detailPower: 1
     m_snowReductionPower: 0
     m_geologicalPower: 1
@@ -268,15 +268,15 @@ MonoBehaviour:
     m_tintBrightness: 1
     m_smoothness: 1
     m_albedoIdx: 4
-    m_albedoTilingClose: 15
+    m_albedoTilingClose: 2
     m_albedoTilingFar: 3
-    m_albedoAverage: {x: 0.052860655, y: 0.045186203, z: 0.045186203, w: 0.39215687}
-    m_albedoTexture: {fileID: 2800000, guid: 4f8a1590f4d0161438b821ac10f8f372, type: 3}
+    m_albedoAverage: {x: 0.13013649, y: 0.10946172, z: 0.084376216, w: 0.21568628}
+    m_albedoTexture: {fileID: 2800000, guid: a82ada07f8646f24183aa46ff07d587b, type: 3}
     m_smoothnessTexture: {fileID: 0}
     m_roughnessTexture: {fileID: 0}
     m_normalIdx: 4
     m_normalStrength: 1
-    m_normalTexture: {fileID: 2800000, guid: 6f0b4d15c0667f14d8b9578d48f61f87, type: 3}
+    m_normalTexture: {fileID: 2800000, guid: 2cf7dfd275d60c644be34e00b366a2a1, type: 3}
     m_heightIdx: -1
     m_heightDepth: 8
     m_heightContrast: 1
@@ -469,7 +469,7 @@ MonoBehaviour:
     m_emissionTexture: {fileID: 0}
   - m_isOpenInEditor: 0
     m_textureIdx: 10
-    m_name: T_lava_sand_10_A_SM
+    m_name: T_ground_beech_forest_soil_01_BC_SM
     m_detailPower: 1
     m_snowReductionPower: 0
     m_geologicalPower: 1
@@ -478,15 +478,155 @@ MonoBehaviour:
     m_tintBrightness: 1
     m_smoothness: 1
     m_albedoIdx: 10
-    m_albedoTilingClose: 10
+    m_albedoTilingClose: 2
     m_albedoTilingFar: 3
-    m_albedoAverage: {x: 0.0409152, y: 0.034339808, z: 0.025186857, w: 0.29803923}
-    m_albedoTexture: {fileID: 2800000, guid: f24710d9b785e36469f7a32c8aed2679, type: 3}
+    m_albedoAverage: {x: 0.036889445, y: 0.029556833, z: 0.02121901, w: 0.05882353}
+    m_albedoTexture: {fileID: 2800000, guid: 2d286ecf643e7314989e0c27af290aad, type: 3}
     m_smoothnessTexture: {fileID: 0}
     m_roughnessTexture: {fileID: 0}
     m_normalIdx: 10
     m_normalStrength: 1
-    m_normalTexture: {fileID: 2800000, guid: 9ec8cdfdc29e41b4eb1c99acb3b3bfa1, type: 3}
+    m_normalTexture: {fileID: 2800000, guid: 352e3ca834b69d440b37ab66433b63e4, type: 3}
+    m_heightIdx: -1
+    m_heightDepth: 8
+    m_heightContrast: 1
+    m_heightBlendClose: 1
+    m_heightBlendFar: 1
+    m_heightTesselationDepth: 0
+    m_heightMin: 0
+    m_heightMax: 1
+    m_heightTexture: {fileID: 0}
+    m_aoIdx: -1
+    m_aoPower: 1
+    m_aoTexture: {fileID: 0}
+    m_emissionIdx: -1
+    m_emissionStrength: 1
+    m_emissionTexture: {fileID: 0}
+  - m_isOpenInEditor: 0
+    m_textureIdx: 11
+    m_name: T_ground_beech_forest_soil_wet_01_BC_SM
+    m_detailPower: 1
+    m_snowReductionPower: 0
+    m_geologicalPower: 1
+    m_triplanar: 0
+    m_tint: {r: 1, g: 1, b: 1, a: 1}
+    m_tintBrightness: 1
+    m_smoothness: 1
+    m_albedoIdx: 11
+    m_albedoTilingClose: 2
+    m_albedoTilingFar: 3
+    m_albedoAverage: {x: 0.025186857, y: 0.018500218, z: 0.012983031, w: 0.61960787}
+    m_albedoTexture: {fileID: 2800000, guid: 373c1e02adc45c649ae5f487c5c645be, type: 3}
+    m_smoothnessTexture: {fileID: 0}
+    m_roughnessTexture: {fileID: 0}
+    m_normalIdx: 11
+    m_normalStrength: 1
+    m_normalTexture: {fileID: 2800000, guid: f37a5c82f0466b546a6321154c6d4ca4, type: 3}
+    m_heightIdx: -1
+    m_heightDepth: 8
+    m_heightContrast: 1
+    m_heightBlendClose: 1
+    m_heightBlendFar: 1
+    m_heightTesselationDepth: 0
+    m_heightMin: 0
+    m_heightMax: 1
+    m_heightTexture: {fileID: 0}
+    m_aoIdx: -1
+    m_aoPower: 1
+    m_aoTexture: {fileID: 0}
+    m_emissionIdx: -1
+    m_emissionStrength: 1
+    m_emissionTexture: {fileID: 0}
+  - m_isOpenInEditor: 0
+    m_textureIdx: 12
+    m_name: T_ground_beech_forest_plants_01_BC_SM
+    m_detailPower: 1
+    m_snowReductionPower: 0
+    m_geologicalPower: 1
+    m_triplanar: 0
+    m_tint: {r: 1, g: 1, b: 1, a: 1}
+    m_tintBrightness: 1
+    m_smoothness: 1
+    m_albedoIdx: 12
+    m_albedoTilingClose: 2
+    m_albedoTilingFar: 3
+    m_albedoAverage: {x: 0.036889445, y: 0.045186203, z: 0.015208514, w: 0.09803922}
+    m_albedoTexture: {fileID: 2800000, guid: 2da5b1647d91761429a14e1b39899ad5, type: 3}
+    m_smoothnessTexture: {fileID: 0}
+    m_roughnessTexture: {fileID: 0}
+    m_normalIdx: 12
+    m_normalStrength: 1
+    m_normalTexture: {fileID: 2800000, guid: 57fb86875251b1c40a0b2a7ff8779dca, type: 3}
+    m_heightIdx: -1
+    m_heightDepth: 8
+    m_heightContrast: 1
+    m_heightBlendClose: 1
+    m_heightBlendFar: 1
+    m_heightTesselationDepth: 0
+    m_heightMin: 0
+    m_heightMax: 1
+    m_heightTexture: {fileID: 0}
+    m_aoIdx: -1
+    m_aoPower: 1
+    m_aoTexture: {fileID: 0}
+    m_emissionIdx: -1
+    m_emissionStrength: 1
+    m_emissionTexture: {fileID: 0}
+  - m_isOpenInEditor: 0
+    m_textureIdx: 13
+    m_name: T_ground_beech_forest_leaves_01_BC_SM
+    m_detailPower: 1
+    m_snowReductionPower: 0
+    m_geologicalPower: 1
+    m_triplanar: 0
+    m_tint: {r: 1, g: 1, b: 1, a: 1}
+    m_tintBrightness: 1
+    m_smoothness: 1
+    m_albedoIdx: 13
+    m_albedoTilingClose: 2
+    m_albedoTilingFar: 3
+    m_albedoAverage: {x: 0.06301003, y: 0.0409152, z: 0.02121901, w: 0.18431373}
+    m_albedoTexture: {fileID: 2800000, guid: 5af05d805d74c974286984104e05ccd9, type: 3}
+    m_smoothnessTexture: {fileID: 0}
+    m_roughnessTexture: {fileID: 0}
+    m_normalIdx: 13
+    m_normalStrength: 1
+    m_normalTexture: {fileID: 2800000, guid: 3905e92499e0b194587776e8f6cd4c75, type: 3}
+    m_heightIdx: -1
+    m_heightDepth: 8
+    m_heightContrast: 1
+    m_heightBlendClose: 1
+    m_heightBlendFar: 1
+    m_heightTesselationDepth: 0
+    m_heightMin: 0
+    m_heightMax: 1
+    m_heightTexture: {fileID: 0}
+    m_aoIdx: -1
+    m_aoPower: 1
+    m_aoTexture: {fileID: 0}
+    m_emissionIdx: -1
+    m_emissionStrength: 1
+    m_emissionTexture: {fileID: 0}
+  - m_isOpenInEditor: 0
+    m_textureIdx: 14
+    m_name: T_ground_beech_forest_roots_01_BC_SM
+    m_detailPower: 1
+    m_snowReductionPower: 0
+    m_geologicalPower: 1
+    m_triplanar: 0
+    m_tint: {r: 1, g: 1, b: 1, a: 1}
+    m_tintBrightness: 1
+    m_smoothness: 1
+    m_albedoIdx: 14
+    m_albedoTilingClose: 3
+    m_albedoTilingFar: 3
+    m_albedoAverage: {x: 0.0409152, y: 0.03189603, z: 0.016807375, w: 0.14509805}
+    m_albedoTexture: {fileID: 2800000, guid: cf1e6a2847c833540a4dc549a84c6c4b, type: 3}
+    m_smoothnessTexture: {fileID: 0}
+    m_roughnessTexture: {fileID: 0}
+    m_normalIdx: 14
+    m_normalStrength: 1
+    m_normalTexture: {fileID: 2800000, guid: 823bdbd38b24b8e41824579480e16fda, type: 3}
     m_heightIdx: -1
     m_heightDepth: 8
     m_heightContrast: 1
