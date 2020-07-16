@@ -72,6 +72,11 @@ public class PlayerInteract : MonoBehaviour
                 hit.transform.SendMessage("ReadMessage");
             }
 
+            if (hit.transform.name == "Shotgun") {
+                this.GetComponentInChildren<Gun>().gotShotgun = true;
+                Destroy(hit.transform.gameObject);
+            }
+
             if (hit.transform.name == "radioTower") {
                 hit.transform.GetComponent<RadioTower>().OnRadioInteract();
             }
