@@ -76,6 +76,10 @@ public class PlayerInteract : MonoBehaviour
                 hit.transform.GetComponent<RadioTower>().OnRadioInteract();
             }
 
+            if (hit.transform.name == "Boat" && Keycards.haveRadioedIn()) {
+                //TODO load into the win screen
+            }
+
             #region "Keycards"
             if (hit.transform.tag == "GreenKeycard") {
                 Keycards.setKeycardLevel(1);

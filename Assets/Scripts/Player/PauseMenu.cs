@@ -19,13 +19,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 if (!pauseCanvas.enabled)
                 {
-                    //this.GetComponent<FirstPersonController>().enabled = false;
-                    //Cursor.visible = true;
                     Time.timeScale = 0.0f;
                     pauseCanvas.enabled = true;
                 }
                 else {
-                    //Cursor.visible = false;
                     Time.timeScale = 1.0f;
                     pauseCanvas.enabled = false;
                 }
@@ -40,7 +37,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void continueButton()
         {
-            //this.GetComponent<FirstPersonController>().enabled = true;
             Time.timeScale = 1.0f;
             pauseCanvas.enabled = false;
             Cursor.visible = false;

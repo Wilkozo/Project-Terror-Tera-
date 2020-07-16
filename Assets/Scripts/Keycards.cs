@@ -9,6 +9,17 @@ public class Keycards : MonoBehaviour
 
     static bool poweredOn;
 
+    static bool radioedIn;
+
+    public static bool haveRadioedIn()
+    {
+        return radioedIn;
+    }
+
+    public static void setRadioedIn() {
+        radioedIn = true;
+    }
+
     public static bool isPoweredOn() {
         return poweredOn;
     }

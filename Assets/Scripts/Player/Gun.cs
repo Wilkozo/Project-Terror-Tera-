@@ -16,6 +16,8 @@ public class Gun : MonoBehaviour
     public float tranqSpeed = 50;
     public Rigidbody slugRound;
 
+    public GameObject shotgunModel;
+
     //how much munitions the player has
     public int shotgunAmmo;
     public int tranqAmmo;
@@ -84,56 +86,59 @@ public class Gun : MonoBehaviour
 
         delay += Time.deltaTime;
         //what to do if the player has the shotgun equipped
-        if (gotShotgun && currentWeapon)
+        if (gotShotgun)
         {
-            tranqRoundsImage.enabled = false;
-            shotgunRoundsImage.enabled = true;
-
-            //if the player pushes the left mouse button and has ammo
-            if (Input.GetMouseButtonDown(0) && shotgunAmmo > 0 && delay >= 1)
+            shotgunModel.GetComponent<MeshRenderer>().enabled = true;
+            if (currentWeapon)
             {
-                //be lazy and instantiate bullet prefabs
-                for (int i = 0; i < 5; i++)
+                tranqRoundsImage.enabled = false;
+                shotgunRoundsImage.enabled = true;
+
+                //if the player pushes the left mouse button and has ammo
+                if (Input.GetMouseButtonDown(0) && shotgunAmmo > 0 && delay >= 1)
+                {
+                    //be lazy and instantiate bullet prefabs
+                    for (int i = 0; i < 5; i++)
+                    {
+                        source.PlayOneShot(clip);
+                        //alert the dinosaur
+                        audioSenderGun(40.0f);
+                        Rigidbody slugRoundClone = (Rigidbody)Instantiate(slugRound, transform.position, transform.rotation);
+                        slugRoundClone.velocity = transform.forward * slugSpeed;
+                        delay = 0;
+                    }
+                    //reduce shotgun ammo by one
+                    shotgunAmmo -= 1;
+                    shotgunRoundsImage.fillAmount -= 0.056666666f;
+                }
+            }
+            else {
+                tranqRoundsImage.enabled = true;
+                shotgunRoundsImage.enabled = false;
+                //if the player pushes the left mouse button and has ammo
+                if (Input.GetMouseButtonDown(0) && tranqAmmo > 0 && delay >= 1)
                 {
                     source.PlayOneShot(clip);
                     //alert the dinosaur
                     audioSenderGun(40.0f);
                     Rigidbody slugRoundClone = (Rigidbody)Instantiate(slugRound, transform.position, transform.rotation);
-                    slugRoundClone.velocity = transform.forward * slugSpeed;
+                    slugRoundClone.velocity = transform.forward * tranqSpeed;
                     delay = 0;
+
+                    //reduce shotgun ammo by one
+                    tranqAmmo -= 1;
+                    tranqRoundsImage.fillAmount -= 0.125f;
                 }
-                //reduce shotgun ammo by one
-                shotgunAmmo -= 1;
-                shotgunRoundsImage.fillAmount -= 0.056666666f;
             }
         }
-        else if (gotTranqGun && !currentWeapon)
+        else
         {
-            tranqRoundsImage.enabled = true;
-            shotgunRoundsImage.enabled = false;
-            //if the player pushes the left mouse button and has ammo
-            if (Input.GetMouseButtonDown(0) && tranqAmmo > 0 && delay >= 1)
-            {
-                source.PlayOneShot(clip);
-                //alert the dinosaur
-                audioSenderGun(40.0f);
-                Rigidbody slugRoundClone = (Rigidbody)Instantiate(slugRound, transform.position, transform.rotation);
-                slugRoundClone.velocity = transform.forward * tranqSpeed;
-                delay = 0;
-
-                //reduce shotgun ammo by one
-                tranqAmmo -= 1;
-                tranqRoundsImage.fillAmount -= 0.125f;
-            }
-            else
-            {
-                //don't display a weapon
-            }
-
-
+            //makes it so the player does not see the gun model
+            shotgunModel.GetComponent<MeshRenderer>().enabled = false;
         }
+    }
 
-        void audioSenderGun(float radius)
+    void audioSenderGun(float radius)
         {
 
             Collider[] hits = Physics.OverlapSphere(transform.position, radius);
@@ -146,4 +151,28 @@ public class Gun : MonoBehaviour
             }
         }
     }
-}
+//else
+//{
+//    Debug.Log("Should not have a model");
+//    //makes it so the player does not see the gun model
+//    shotgunModel.GetComponent<MeshRenderer>().enabled = false;
+//}
+//else if (gotShotgun && !currentWeapon)
+//{
+//    shotgunModel.GetComponent<MeshRenderer>().enabled = true;
+//    tranqRoundsImage.enabled = true;
+//    shotgunRoundsImage.enabled = false;
+//    //if the player pushes the left mouse button and has ammo
+//    if (Input.GetMouseButtonDown(0) && tranqAmmo > 0 && delay >= 1)
+//    {
+//        source.PlayOneShot(clip);
+//        //alert the dinosaur
+//        audioSenderGun(40.0f);
+//        Rigidbody slugRoundClone = (Rigidbody)Instantiate(slugRound, transform.position, transform.rotation);
+//        slugRoundClone.velocity = transform.forward * tranqSpeed;
+//        delay = 0;
+
+//        //reduce shotgun ammo by one
+//        tranqAmmo -= 1;
+//        tranqRoundsImage.fillAmount -= 0.125f;
+//    }
