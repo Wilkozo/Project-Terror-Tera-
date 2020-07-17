@@ -88,7 +88,7 @@ public class PlayerInteract : MonoBehaviour
             }
 
             if (hit.transform.name == "Boat" && Keycards.haveRadioedIn()) {
-                //TODO load into the win screen
+                Application.LoadLevel("NewMainMenu");
             }
 
             #region "Keycards"
