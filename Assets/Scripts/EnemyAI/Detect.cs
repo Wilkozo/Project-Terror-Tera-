@@ -129,6 +129,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (distance <= damageDistance)
             {
                 healthPlayer.playerHealthImage.fillAmount -= 0.2f * Time.deltaTime;
+                //increase the blood overlay effect
+                healthPlayer.canGroup.alpha += 0.1f * Time.deltaTime;
                 healthPlayer.health -= 0.2f * Time.deltaTime;
                 //healthPlayer.LoseHealth();
             }

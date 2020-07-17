@@ -71,6 +71,13 @@ public class PlayerInteract : MonoBehaviour
                 hit.transform.SendMessage("ReadMessage");
             }
 
+            if (hit.transform.name == "ManorDocuments") {
+                //enable the dinosaurs
+                hit.transform.GetComponent<EnableDinosaurs>().OnCollectDocuments();
+                //destroy the hit game object
+                Destroy(hit.transform.gameObject);
+            }
+
             if (hit.transform.name == "Shotgun") {
                 this.GetComponentInChildren<Gun>().gotShotgun = true;
                 Destroy(hit.transform.gameObject);
