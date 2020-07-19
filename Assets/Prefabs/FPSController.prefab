@@ -895,7 +895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 0}
   clip: {fileID: 8300000, guid: 9aa47a60c07174b4cadccd36f97ec5db, type: 3}
-  gotShotgun: 0
+  gotShotgun: 1
   gotTranqGun: 0
   slugSpeed: 30
   tranqSpeed: 50
@@ -903,7 +903,7 @@ MonoBehaviour:
     type: 3}
   shotgunModel: {fileID: 2502203976655927374}
   shotgunAmmo: 18
-  tranqAmmo: 0
+  tranqAmmo: 5
   shotgunRoundsImage: {fileID: 1597777849}
   tranqRoundsImage: {fileID: 1332323743}
   staminaBar: {fileID: 1873227990}
