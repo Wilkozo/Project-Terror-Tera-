@@ -31,6 +31,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //set the canvas to be transparent
             canGroup.alpha = 0;
             gameOverCanGroup.alpha = 0;
+            BlackedOutText.CrossFadeAlpha(0, 0, true);
         }
 
         private void Update()
@@ -65,10 +66,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         //what to do in the case of a game over
         public void gameOver() {
+            BlackedOutText.CrossFadeAlpha(1, 0, true);
             //what to do when a player dies 
             gameOverCanGroup.alpha += 0.75f * Time.deltaTime;
             //set the text to be visible
-            BlackedOutText.CrossFadeAlpha(1, 0, true);
+            
             //disable the player controller
             this.gameObject.GetComponent<FirstPersonController>().enabled = false;
 
@@ -77,7 +79,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 timer = 0.3f;
                 canGroup.alpha -= 0.75f * Time.deltaTime;
                 //make the text not visible
-                BlackedOutText.CrossFadeAlpha(0, 10.0f, true);
+                BlackedOutText.CrossFadeAlpha(0, 2.0f, true);
             }
             if (canGroup.alpha == 0)
             {
