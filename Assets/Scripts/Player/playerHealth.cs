@@ -14,6 +14,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         //player health
         public float health = 100;
 
+        public float timer;
+        public Text message;
+        public Text BlackedOutText;
+
         //more UI elements for the blood overlay
         public CanvasGroup canGroup;
         //UI elements for the game over screen
@@ -63,18 +67,39 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void gameOver() {
             //what to do when a player dies 
             gameOverCanGroup.alpha += 0.75f * Time.deltaTime;
+            //set the text to be visible
+            BlackedOutText.CrossFadeAlpha(1, 0, true);
             //disable the player controller
             this.gameObject.GetComponent<FirstPersonController>().enabled = false;
-            //if the user inputs r restart the current scene 
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Application.LoadLevel(Application.loadedLevel);
+
+            timer += 0.1f * Time.deltaTime;
+            if (timer >= 0.3f) {
+                timer = 0.3f;
+                canGroup.alpha -= 0.75f * Time.deltaTime;
+                //make the text not visible
+                BlackedOutText.CrossFadeAlpha(0, 10.0f, true);
             }
-            //if the user inputs q then return to menu
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (canGroup.alpha == 0)
             {
-                Application.LoadLevel("NewMainMenu");
+                timer = 0;
+                Time.timeScale = 1.0f;
+                playerHealthImage.fillAmount = 1;
+                this.gameObject.GetComponent<FirstPersonController>().enabled = true;
+                message.CrossFadeAlpha(1, 0, true);
+                message.text = "Hey, You're finally Awake";
+                message.CrossFadeAlpha(0, 10.0f, true);
             }
+
+            ////if the user inputs r restart the current scene 
+            //if (Input.GetKeyDown(KeyCode.R))
+            //{
+            //    Application.LoadLevel(Application.loadedLevel);
+            //}
+            ////if the user inputs q then return to menu
+            //if (Input.GetKeyDown(KeyCode.Q))
+            //{
+            //    Application.LoadLevel("NewMainMenu");
+            //}
         }
 
         public void OnTriggerStay(Collider other)
