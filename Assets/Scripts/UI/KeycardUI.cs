@@ -16,7 +16,6 @@ public class KeycardUI : MonoBehaviour
 
     public void OnEnable()
     {
-        Debug.Log("PrintOnEnable: script was enabled");
         //enabled ui elements for the keycards
         if (Keycards.getKeycardLevel() >= 1)
         {

@@ -17,7 +17,4 @@ public class EnableDinosaurs : MonoBehaviour
         //make it so the dinosaurs are enabled in the manor region
         dinosaurManorRegionHolder.SetActive(true);
     }
-
-
-
 }

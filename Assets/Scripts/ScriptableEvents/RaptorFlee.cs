@@ -12,6 +12,8 @@ public class RaptorFlee : MonoBehaviour
 
     private void Start()
     {
+        //some weird bug was disabling the waypoint navigator script
+        //so this was one way of fixing it
         navigator.enabled = true;
     }
 
@@ -27,8 +29,6 @@ public class RaptorFlee : MonoBehaviour
                 //Destroy the raptor
                 Destroy(this.gameObject);
             }
-
         }
     }
-
 }
