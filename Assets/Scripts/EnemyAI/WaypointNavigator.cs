@@ -36,7 +36,7 @@ public class WaypointNavigator : MonoBehaviour
     void Update()
     {
         //if the player has not been seen yet
-        if (playerNotSeen)
+        if (playerNotSeen && isActiveAndEnabled)
         {
             //if the distance to the waypoint is less than 0.5
             if (controller.remainingDistance < 0.5f)
