@@ -9,8 +9,12 @@ public class DocumentPickup : MonoBehaviour
     public Text documentText;
     public Image documentImage;
 
+    //[SerializeField] CollectedNotes notes;
+
     private void Start()
     {
+        //get the script for the notes
+       // notes = GameObject.FindGameObjectWithTag("Note").GetComponent<CollectedNotes>();
         if (documentText.name != "IntroText")
         {
             documentText.enabled = false;
@@ -23,6 +27,8 @@ public class DocumentPickup : MonoBehaviour
         //set the ui stuff to be true
         documentText.enabled = true;
         documentImage.enabled = true;
+        //used to add the document to the list of documents
+        //notes.collectedDocuments.Add(this.gameObject.name);
         GameObject.FindGameObjectWithTag("Player").SendMessage("documentsPickedUp");
         //Time.timeScale = 0;
         Debug.Log("Hit the document");
