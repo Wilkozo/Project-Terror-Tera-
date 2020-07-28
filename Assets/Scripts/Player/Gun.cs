@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Gun : MonoBehaviour
 {
+   
     public AudioSource source;
     public AudioClip clip;
 
@@ -53,21 +54,28 @@ public class Gun : MonoBehaviour
         tranqRoundsImage.enabled = false;
     }
 
+    //what to do when the player picks up ammo
     public bool pickup(string ammoType, int amountToFill)
     {
+        //if the ammotype was for the shotgun
         if (ammoType == "Shotgun")
         {
+            //if the player does not have the max shotgun ammo
             if (shotgunAmmo < 18)
             {
+                //update the UI
                 shotgunAmmo += amountToFill;
                 shotgunRoundsImage.fillAmount += 0.056666f * amountToFill;
                 return true;
             }
         }
+        //if the ammotype was for the tranq gun
         if (ammoType == "Tranq")
         {
+            //if the player does not have the max tranq gun ammo
             if (tranqAmmo < 8)
             {
+                //update the UI
                 tranqAmmo += amountToFill;
                 tranqRoundsImage.fillAmount += 0.125f * amountToFill;
                 return true;
@@ -79,15 +87,17 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Q)) {
+        //to swap the ammo type
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
             currentWeapon = !currentWeapon;
         }
-
+        //gives a delay so the player cannot spam fire the gun
         delay += Time.deltaTime;
         //what to do if the player has the shotgun equipped
         if (gotShotgun)
         {
+            //enable the meshrenderer for the shotgun
             shotgunModel.GetComponent<MeshRenderer>().enabled = true;
             if (currentWeapon)
             {
@@ -112,7 +122,8 @@ public class Gun : MonoBehaviour
                     shotgunRoundsImage.fillAmount -= 0.056666666f;
                 }
             }
-            else {
+            else
+            {
                 tranqRoundsImage.enabled = true;
                 shotgunRoundsImage.enabled = false;
                 //if the player pushes the left mouse button and has ammo
@@ -139,40 +150,15 @@ public class Gun : MonoBehaviour
     }
 
     void audioSenderGun(float radius)
+    {
+
+        Collider[] hits = Physics.OverlapSphere(transform.position, radius);
+        int i = 0;
+
+        while (i < hits.Length)
         {
-
-            Collider[] hits = Physics.OverlapSphere(transform.position, radius);
-            int i = 0;
-
-            while (i < hits.Length)
-            {
-                hits[i].SendMessage("HeardSomethingPlayer", SendMessageOptions.DontRequireReceiver);
-                i++;
-            }
+            hits[i].SendMessage("HeardSomethingPlayer", SendMessageOptions.DontRequireReceiver);
+            i++;
         }
     }
-//else
-//{
-//    Debug.Log("Should not have a model");
-//    //makes it so the player does not see the gun model
-//    shotgunModel.GetComponent<MeshRenderer>().enabled = false;
-//}
-//else if (gotShotgun && !currentWeapon)
-//{
-//    shotgunModel.GetComponent<MeshRenderer>().enabled = true;
-//    tranqRoundsImage.enabled = true;
-//    shotgunRoundsImage.enabled = false;
-//    //if the player pushes the left mouse button and has ammo
-//    if (Input.GetMouseButtonDown(0) && tranqAmmo > 0 && delay >= 1)
-//    {
-//        source.PlayOneShot(clip);
-//        //alert the dinosaur
-//        audioSenderGun(40.0f);
-//        Rigidbody slugRoundClone = (Rigidbody)Instantiate(slugRound, transform.position, transform.rotation);
-//        slugRoundClone.velocity = transform.forward * tranqSpeed;
-//        delay = 0;
-
-//        //reduce shotgun ammo by one
-//        tranqAmmo -= 1;
-//        tranqRoundsImage.fillAmount -= 0.125f;
-//    }
+}

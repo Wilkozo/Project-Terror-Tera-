@@ -46,13 +46,13 @@ public class MainMenu : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        FindObjectOfType<AudioManager>().Play("Button");
+        //FindObjectOfType<AudioManager>().Play("Button");
         SceneManager.LoadScene(0);
     }
 
     public void EndGame()
     {
-        FindObjectOfType<AudioManager>().Play("Button");
+        //FindObjectOfType<AudioManager>().Play("Button");
         Application.Quit();
     }
 }

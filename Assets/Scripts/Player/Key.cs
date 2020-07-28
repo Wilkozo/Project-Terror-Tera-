@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+//this is the old key class that was used in vertical slice
+//it may be changed at a later date to do something else
+//the new key system is in Keycards.cs
 public class Key : MonoBehaviour
 {
 

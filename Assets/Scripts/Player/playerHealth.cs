@@ -26,6 +26,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         //is the player losing health
         public bool loseHealth;
 
+        public Transform checkpoint;
+
         private void Start()
         {
             //set the canvas to be transparent
@@ -61,11 +63,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 //call game over
                 gameOver();
             }
-
         }
 
         //what to do in the case of a game over
         public void gameOver() {
+            //set the pos of the player when they die
+            this.gameObject.transform.position = checkpoint.position;
+
             BlackedOutText.CrossFadeAlpha(1, 0, true);
             //what to do when a player dies 
             gameOverCanGroup.alpha += 0.75f * Time.deltaTime;
@@ -83,34 +87,38 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if (canGroup.alpha == 0)
             {
+
                 timer = 0;
                 Time.timeScale = 1.0f;
                 playerHealthImage.fillAmount = 1;
                 this.gameObject.GetComponent<FirstPersonController>().enabled = true;
+  
                 message.CrossFadeAlpha(1, 0, true);
                 message.text = "Hey, You're finally Awake";
                 message.CrossFadeAlpha(0, 10.0f, true);
+                //set the pos of the player when they die
+                this.gameObject.transform.position = checkpoint.position;
             }
-
-            ////if the user inputs r restart the current scene 
-            //if (Input.GetKeyDown(KeyCode.R))
-            //{
-            //    Application.LoadLevel(Application.loadedLevel);
-            //}
-            ////if the user inputs q then return to menu
-            //if (Input.GetKeyDown(KeyCode.Q))
-            //{
-            //    Application.LoadLevel("NewMainMenu");
-            //}
         }
 
         public void OnTriggerStay(Collider other)
         {
+            if (other.tag == "Checkpoint") {
+                message.CrossFadeAlpha(1, 0, true);
+                message.text = "This seems like a safe place";
+                message.CrossFadeAlpha(0, 10.0f, true);
+                //set the var for checkpoint to the other transform
+                checkpoint = other.gameObject.transform;
+            }
+
             //if the player hits the kill floor
             if (other.tag == "KillFloor")
             {
-                //go to the gameover screen
-                gameOver();
+                //sets the blackout overlay
+                canGroup.alpha = 1.0f;
+                //kills the player
+                playerHealthImage.fillAmount = 0;
+                //health = 0;
             }
         }
     }

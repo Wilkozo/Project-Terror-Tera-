@@ -9,10 +9,22 @@ public class RaptorFlee : MonoBehaviour
     //get the WaypointNavigator script
     [SerializeField] WaypointNavigator navigator;
     public Waypoint newWaypoint;
+    public bool triggered = false;
 
     private void Start()
     {
+        //some weird bug was disabling the waypoint navigator script
+        //so this was one way of fixing it
         navigator.enabled = true;
+    }
+
+    private void Update()
+    {
+        if (navigator.currentWaypoint == null && triggered)
+        {
+            //Destroy the raptor
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,12 +35,9 @@ public class RaptorFlee : MonoBehaviour
             //set it so the raptors will follow through a path
             navigator.currentWaypoint = newWaypoint;
             //if there is no next waypoint
-            if (navigator.currentWaypoint == null) {
-                //Destroy the raptor
-                Destroy(this.gameObject);
-            }
+            triggered = true;
+
 
         }
     }
-
 }
