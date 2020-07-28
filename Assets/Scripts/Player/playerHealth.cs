@@ -104,9 +104,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void OnTriggerStay(Collider other)
         {
             if (other.tag == "Checkpoint") {
-                //message.CrossFadeAlpha(1, 0, true);
-                //message.text = "This seems like a safe place";
-                //message.CrossFadeAlpha(0, 10.0f, true);
+                message.CrossFadeAlpha(1, 0, true);
+                message.text = "This seems like a safe place";
+                message.CrossFadeAlpha(0, 10.0f, true);
                 //set the var for checkpoint to the other transform
                 checkpoint = other.gameObject.transform;
             }
@@ -114,8 +114,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //if the player hits the kill floor
             if (other.tag == "KillFloor")
             {
-                //go to the gameover screen
-                gameOver();
+                //sets the blackout overlay
+                canGroup.alpha = 1.0f;
+                //kills the player
+                playerHealthImage.fillAmount = 0;
+                //health = 0;
             }
         }
     }
