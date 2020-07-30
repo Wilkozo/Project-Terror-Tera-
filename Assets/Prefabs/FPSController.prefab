@@ -355,11 +355,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "I've left a map here, for anyone who is new to the Island.\n\nAlso this
-    should let you open the main gate that is further down the path. At the top of
-    the Island is the power station, probably a good idea to check out there first.
-    \n\nJust remeber to stay to the path, otherwise you might find some things go
-    missing.\n\nPress M to open the map when you have acquired it "
+  m_Text: 'I''ve left a map here, for anyone who is new to the Island.
+
+
+    Just
+    remeber to stay to the path, otherwise you might find some things go missing.
+
+
+    Press
+    M to open the map when you have acquired it '
 --- !u!1 &133962360
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,7 +531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &353816605
 RectTransform:
   m_ObjectHideFlags: 0
@@ -586,8 +590,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hope you are proceeding carefully, wouldn't want you to get hurt. That
-    would be the last thing we want right now.
+  m_Text: IDK ADD TEXT HERE
 --- !u!1 &386135032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,7 +1079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &531411657
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1135,12 +1138,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You will need to radio for help, but they won''t come until you have found
-    all of the dig zones.
-
-
-    Also having the power on might help with calling
-    in some help.'
+  m_Text: IDK ADD TEXT HERE
 --- !u!1 &714226927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,7 +1229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &717175771
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1248,8 +1246,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 15, y: 129}
-  m_SizeDelta: {x: -1175.76, y: -678.11}
+  m_AnchoredPosition: {x: 15, y: -32.6}
+  m_SizeDelta: {x: -1175.8, y: -354.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &717175773
 CanvasRenderer:
@@ -1290,15 +1288,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' Make sure you have the map, There are some important markings on it.
-
-
-    It
-    should help you to avoid danger as well as find the sites that you need to be
-    working at.
-
-
-    Your mysterious benefactor. '
+  m_Text: IDK ADD TEXT HERE
 --- !u!1 &748464742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,7 +1925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1104018681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1994,8 +1984,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I'm wondering what made you come here, it is not exactly safe. In fact
-    why did you come here? It isn't because of the task you were given was it?
+  m_Text: IDK ADD TEXT HERE
 --- !u!1 &1127190730
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,10 +2063,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Welcome to the Island.\n\nYour objective is simple, we need you to get
-    documents that have been scattered around the island.\n\nNot only do we need
-    those documents, but we will also need the locations of the egg sites.\n\nThere
-    should be a map nearby.\n\nGood luck and remember, you shouldn't be here. \n\nPress
-    Q to close documents...."
+    documents that have been scattered around the island.\n\nPress E to Interact
+    with items\n\nThere should be a map nearby, check out one of the buildings around
+    the area. \n\nGood luck and remember, you shouldn't be here.\n\nPress Tab to
+    close documents...."
 --- !u!114 &1127190734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3108,7 +3097,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6cd86de66ce5ae24e8289dac4e243662, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c494f84ae57ce0d48bae6804f0b7b044, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4265,7 +4254,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4143180536224383563}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
   m_Name: 
