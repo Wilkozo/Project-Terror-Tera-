@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4813952852335556}
   - component: {fileID: 205409806603031138}
+  - component: {fileID: 4569851746784263373}
   m_Layer: 0
   m_Name: prefab_B_small_lava_rock_08
   m_TagString: Untagged
@@ -48,19 +49,32 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.25
+  - screenRelativeHeight: 0.64746594
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23355751663886342}
-  - screenRelativeHeight: 0.125
+  - screenRelativeHeight: 0.354632
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23699828347138544}
-  - screenRelativeHeight: 0.01
+  - screenRelativeHeight: 0.10041576
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23678613996426990}
   m_Enabled: 1
+--- !u!135 &4569851746784263373
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397522744605510}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1628308638058764
 GameObject:
   m_ObjectHideFlags: 0
