@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4686291693311570}
   - component: {fileID: 205668234450899724}
+  - component: {fileID: 8789106130508962284}
   m_Layer: 0
   m_Name: prefab_B_big_lava_rock_01
   m_TagString: Untagged
@@ -50,27 +51,40 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.53700846
+  - screenRelativeHeight: 0.847043
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23731333301894922}
-  - screenRelativeHeight: 0.28310916
+  - screenRelativeHeight: 0.64746594
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23470446851194166}
-  - screenRelativeHeight: 0.14498165
+  - screenRelativeHeight: 0.4470578
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23374161725431920}
-  - screenRelativeHeight: 0.05801233
+  - screenRelativeHeight: 0.29893953
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23607937916559200}
-  - screenRelativeHeight: 0.020382166
+  - screenRelativeHeight: 0.10301606
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23420230672285590}
   m_Enabled: 1
+--- !u!135 &8789106130508962284
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006373583827900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.95
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &1126758591239270
 GameObject:
   m_ObjectHideFlags: 0
