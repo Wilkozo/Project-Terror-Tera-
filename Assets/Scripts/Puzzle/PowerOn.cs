@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PowerOn : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PowerOn : MonoBehaviour
     public bool lightOne = false;
     public bool lightTwo = false;
     public bool lightThree = false;
+
+    public Text message; 
 
     public void buttonPushOne() {
         lightOne = !lightOne;
@@ -61,6 +64,9 @@ public class PowerOn : MonoBehaviour
             this.transform.GetChild(2).GetChild(0).GetComponent<Light>().color = Color.red;
         }
         if (lightOne && lightTwo && lightThree) {
+            message.CrossFadeAlpha(1, 0, true);
+            message.text = "Seems like the power has been turned on now";
+            message.CrossFadeAlpha(0, 10.0f, true);
             //sets the static bool for the power to true
             Keycards.setPoweredOn();
         }
