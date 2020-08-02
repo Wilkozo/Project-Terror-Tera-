@@ -68,6 +68,10 @@ public class PlayerInteract : MonoBehaviour
                 //sends a message to run a function from another script
                 hit.transform.SendMessage("ReadMessage");
             }
+            //the player hits the audio log
+            if (hit.transform.tag == "AudioLog") {
+                hit.transform.GetComponent<AudioLog>().Collected();
+            }
 
             if (hit.transform.name == "ManorDocuments") {
                 //enable the dinosaurs
