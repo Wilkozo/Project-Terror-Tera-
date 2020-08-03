@@ -13,6 +13,11 @@ public class PlayerInteract : MonoBehaviour
     public GameObject map;
     public bool mapEnabled = true;
 
+    public Sprite mapSec2;
+    public Sprite mapSec3;
+    public Sprite mapSec4;
+    public Sprite mapSec5;
+
     bool mapAquired;
 
     [SerializeField] PlayerManager playerManager;
@@ -136,6 +141,25 @@ public class PlayerInteract : MonoBehaviour
             if (hit.transform.name == "Map") {
                 mapAquired = true;
                 Destroy(GameObject.Find("Map"));  
+            }
+            if (hit.transform.name == "Sec2Map") {
+                map.GetComponent<Image>().sprite = mapSec2;
+                Destroy(hit.transform.gameObject);
+            }
+            if (hit.transform.name == "Sec3Map")
+            {
+                map.GetComponent<Image>().sprite = mapSec3;
+                Destroy(hit.transform.gameObject);
+            }
+            if (hit.transform.name == "Sec4Map")
+            {
+                map.GetComponent<Image>().sprite = mapSec4;
+                Destroy(hit.transform.gameObject);
+            }
+            if (hit.transform.name == "Sec5Map")
+            {
+                map.GetComponent<Image>().sprite = mapSec5;
+                Destroy(hit.transform.gameObject);
             }
         }
 

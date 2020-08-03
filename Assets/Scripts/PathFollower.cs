@@ -35,6 +35,8 @@ public class PathFollower : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+
+        //this.transform.LookAt(pathParent);
         float Radians = 0.001f;
         float Magnitude = 0.001f;
 
@@ -48,15 +50,16 @@ public class PathFollower : MonoBehaviour
 
         if (IsTrain == true)
         {
-            Vector3 direction = transform.position - targetPoint.position;
-            Quaternion rotation = Quaternion.LookRotation(direction); // check LOOK ROATION IS ZERO AT TIMES CAUSING A BUG
-            rotating = true;
-            if (rotating == true)
-            {
-                RotationTime += Time.deltaTime * 7;//2.7f;
-                //                                                       targetPoint.rotation 0.1f * Time.deltaTime
-                transform.rotation = Quaternion.Lerp(transform.rotation, rotation, RotationTime); // check
-            }
+            //Vector3 direction = transform.position - targetPoint.position;
+            this.transform.LookAt(targetPoint);
+            //Quaternion rotation = Quaternion.LookRotation(direction); // check LOOK ROATION IS ZERO AT TIMES CAUSING A BUG
+            //rotating = true;
+            //if (rotating == true)
+            //{
+            //    RotationTime += Time.deltaTime * 7;//2.7f;
+            ////    //                                                       targetPoint.rotation 0.1f * Time.deltaTime
+            //    transform.rotation = Quaternion.Lerp(transform.rotation, rotation, RotationTime); // check
+            //}
             if (RotationTime > 1)
             {
                 rotating = false;
