@@ -92,21 +92,24 @@ public class PlayerInteract : MonoBehaviour
 
             if (hit.transform.name == "Boat" && Keycards.haveRadioedIn()) {
                 Application.LoadLevel("NewMainMenu");
-            }
+            }            
 
             #region "Keycards"
             if (hit.transform.tag == "GreenKeycard") {
                 Keycards.setKeycardLevel(1);
+                // Green Key card - Sound
                 Destroy(hit.transform.gameObject);
             }
             if (hit.transform.tag == "BlueKeycard")
             {
                 Keycards.setKeycardLevel(2);
+                // Blue Key card - Sound
                 Destroy(hit.transform.gameObject);
             }
             if (hit.transform.tag == "RedKeycard")
             {
                 Keycards.setKeycardLevel(3);
+                // Red Key card - Sound
                 Destroy(hit.transform.gameObject);
             }
             if (hit.transform.name == "Door") {
@@ -136,25 +139,34 @@ public class PlayerInteract : MonoBehaviour
             //give the player the map 
             if (hit.transform.name == "Map") {
                 mapAquired = true;
+                // SFX MAP COLLECTED 01
                 Destroy(GameObject.Find("Map"));  
             }
             if (hit.transform.name == "Sec2Map") {
                 map.GetComponent<Image>().sprite = mapSec2;
+                // SFX MAP COLLECTED 02
+
                 Destroy(hit.transform.gameObject);
             }
             if (hit.transform.name == "Sec3Map")
             {
                 map.GetComponent<Image>().sprite = mapSec3;
+                // SFX MAP COLLECTED 03
+
                 Destroy(hit.transform.gameObject);
             }
             if (hit.transform.name == "Sec4Map")
             {
                 map.GetComponent<Image>().sprite = mapSec4;
+                // SFX MAP COLLECTED 04
+
                 Destroy(hit.transform.gameObject);
             }
             if (hit.transform.name == "Sec5Map")
             {
                 map.GetComponent<Image>().sprite = mapSec5;
+                // SFX MAP COLLECTED 05
+
                 Destroy(hit.transform.gameObject);
             }
         }

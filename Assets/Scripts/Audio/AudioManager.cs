@@ -10,8 +10,6 @@ public class AudioManager : MonoBehaviour
 {
 
     private bool WorldMusicActive = false;
-    int MindState = 75; // 
-    int StreetBusy = 0; // 
     public Sound[] Sounds;
     public static AudioManager instance;
     private AudioSource CurrentTrack;
@@ -19,18 +17,18 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        // Get the sound
         source = GetComponent<AudioSource>();
         // Play Music
-            float RandNum = UnityEngine.Random.Range(0, 100);
-            if (RandNum <= 74)
-            {
-                Play("Wind");
+        float RandNum = UnityEngine.Random.Range(0, 100);
+        if (RandNum <= 74)
+        {
 
-            }
-            else if (RandNum > 75)
-            {
-                Play("BusyAmbience");
-            }
+        }
+        else if (RandNum > 75)
+        {
+
+        }
         
     }
 
@@ -48,7 +46,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-
+        // Initialise the sounds...
         foreach (Sound i in Sounds)
         {
             i.source = gameObject.AddComponent<AudioSource>();
@@ -68,24 +66,13 @@ public class AudioManager : MonoBehaviour
     public void Play(string name)
     {
         Sound i = Array.Find(Sounds, Sound => Sound.name == name);
-        if (i == null)
-        {
+        if (i == null) // failsafe for if the sound isn't working 
+        {              //(sends meessage to see if it is null)
             Debug.LogWarning("Sound / SFX" + name + " Missing!");
             return;
         }
-        //i.source.volume = 0;
+        
         i.source.Play();
-        //for (int j = 0; j < 100; j++)
-        //{
-         //   i.source.volume += (float)0.01;
-
-        //}
-
-
-        //if (i.source.volume != 1)
-        //{
-            
-        //}
     }
 
     public void Stop(string name)
@@ -103,8 +90,6 @@ public class AudioManager : MonoBehaviour
                 }
             }
         }
-
-        // rest of your code here
     }
 
 }

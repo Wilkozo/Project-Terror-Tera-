@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PathFollower : MonoBehaviour
 {
-    public bool IsTrain;
+    public bool LooksAtTarget;
     public float Speed = 30.0f;
     public Transform pathParent;
     Transform targetPoint;
@@ -48,7 +48,7 @@ public class PathFollower : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, Speed * Time.deltaTime);//Time.deltaTime);
 
-        if (IsTrain == true)
+        if (LooksAtTarget == true)
         {
             //Vector3 direction = transform.position - targetPoint.position;
             this.transform.LookAt(targetPoint);
