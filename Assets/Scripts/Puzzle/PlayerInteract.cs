@@ -72,8 +72,7 @@ public class PlayerInteract : MonoBehaviour
             if (hit.transform.tag == "Document") {
                 //sends a message to run a function from another script
                 hit.transform.SendMessage("ReadMessage");
-                
-            }
+            } 
             //the player hits the audio log
             if (hit.transform.tag == "AudioLog") {
                 hit.transform.GetComponent<AudioLog>().Collected();

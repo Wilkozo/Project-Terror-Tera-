@@ -11,6 +11,7 @@ public class Doors : MonoBehaviour
     public void OpenDoor() {
         int temp = Keycards.getKeycardLevel();
         if(temp >= levelToOpen) {
+            //SFX HERE
             Destroy(this.gameObject);
         }
     }

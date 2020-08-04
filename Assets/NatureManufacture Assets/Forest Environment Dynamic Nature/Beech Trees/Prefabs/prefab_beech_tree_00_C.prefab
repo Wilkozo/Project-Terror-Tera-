@@ -54,6 +54,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -127,15 +128,15 @@ LODGroup:
   m_AnimateCrossFading: 1
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.5095157
+  - screenRelativeHeight: 0.80899996
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 4115532916035876593}
-  - screenRelativeHeight: 0.22829676
+  - screenRelativeHeight: 0.4948507
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 5878129440878671310}
-  - screenRelativeHeight: 0.06127896
+  - screenRelativeHeight: 0.15900001
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 6225787843758818493}
@@ -194,6 +195,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -273,6 +275,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
