@@ -17,6 +17,7 @@ public class RadioTower : MonoBehaviour
 
     //call this from the player interact script
     public void OnRadioInteract() {
+
         if (Keycards.isPoweredOn())
         {
             //make it so the player can return to the boat

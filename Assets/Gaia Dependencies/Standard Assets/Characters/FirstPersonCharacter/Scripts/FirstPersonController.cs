@@ -220,7 +220,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         void audioSender(float radius)
         {
-
             Collider[] hits = Physics.OverlapSphere(transform.position, radius);
             int i = 0;
 

@@ -180,7 +180,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         //what to do when the player has been seen by the enemy
         void SeenPlayer()
         {
-
             //makes it so it has seen the player
             navigator.playerNotSeen = false;
 

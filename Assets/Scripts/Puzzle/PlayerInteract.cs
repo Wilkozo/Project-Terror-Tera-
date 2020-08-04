@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-
     //camera reference
     Camera cam;
 
@@ -20,8 +19,6 @@ public class PlayerInteract : MonoBehaviour
 
     bool mapAquired;
 
-    [SerializeField] PlayerManager playerManager;
-
     //the amount of levers that the player has interacted with
     [SerializeField] int amountOfLeversPulled;
 
@@ -29,7 +26,6 @@ public class PlayerInteract : MonoBehaviour
     {
 
         //find the map
-        //FindObjectOfType<AudioManager>().Play("BGM01");
         map = GameObject.FindGameObjectWithTag("Map");
         //set the map to false
         map.SetActive(false);
