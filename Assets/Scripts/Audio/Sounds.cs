@@ -2,6 +2,8 @@
 using UnityEngine;
 
 [System.Serializable]
+// Sounds Array + Variables Declared for audio
+// Manager
 public class Sound
 {
     public string name;

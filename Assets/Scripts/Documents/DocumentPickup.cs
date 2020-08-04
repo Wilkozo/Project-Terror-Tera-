@@ -31,6 +31,7 @@ public class DocumentPickup : MonoBehaviour
         //notes.collectedDocuments.Add(this.gameObject.name);
         GameObject.FindGameObjectWithTag("Player").SendMessage("documentsPickedUp");
         //Time.timeScale = 0;
+        // Call SFX HERE!
         Debug.Log("Hit the document");
 
     }

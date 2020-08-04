@@ -33,7 +33,7 @@ public class Audio_Plugin : MonoBehaviour
     private int Minutes;
     private int Seconds;
 
-    //
+    // Volumes - Variables for cross fading tracks
     float VolumeA;
     float VolumeB;
     float Timer = 6.0f;
@@ -102,6 +102,7 @@ public class Audio_Plugin : MonoBehaviour
 
         VolumeA = Mathf.Lerp(1.0f, 0.0f, T);
         VolumeB= Mathf.Lerp(0.0f, 1.0f, T);
+        // Old method (didn't work)
         /*
         if (a < b)
         {

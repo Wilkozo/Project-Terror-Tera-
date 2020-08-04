@@ -24,24 +24,19 @@ public class AudioWindow : EditorWindow
     private void OnEnable()
     {
         m_Logo = (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/AudioPlugin/Example.jpg", typeof(Texture2D));
+        TimeString = FindObjectOfType<Audio_Plugin>().DisplayTrackTime();
+        TrackVolume = FindObjectOfType<Audio_Plugin>().DisplayTrackVolume();
     }
 
     // Show Window Function...
     public static void ShowWindow()
     {
-        EditorWindow.GetWindow<AudioWindow>("Audio-Plugin");
+        // Disabled during working (gets annoying when it keeps popping up at runtime)
+        // Initially just used to show the window as it wouldn't show in the tools dropdown menu
+        //EditorWindow.GetWindow<AudioWindow>("Audio-Plugin");
     }
 
-    // For updating Titles and times...
-    private void Update()
-    {
-       TitleString =  FindObjectOfType<Audio_Plugin>().DisplayTrackTitle();
-       TimeString = FindObjectOfType<Audio_Plugin>().DisplayTrackTime();
-        TrackVolume = FindObjectOfType<Audio_Plugin>().DisplayTrackVolume();
-    }
-
-
-    //
+    //setting up the display of the window.
     private void OnGUI()
     {
         GUILayout.Label(m_Logo);
