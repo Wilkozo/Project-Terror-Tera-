@@ -42,7 +42,7 @@ public class DocumentPickup : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab) && documentText.enabled) {
             documentText.enabled = false;
             documentImage.enabled = false;
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }
