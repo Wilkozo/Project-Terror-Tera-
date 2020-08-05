@@ -8,6 +8,8 @@ public class RadioTower : MonoBehaviour
 {
     //the message to the player that will be displayed
     public Text messageToPlayer;
+    [SerializeField] GameObject boat;
+
 
     public void Start()
     {
@@ -26,6 +28,8 @@ public class RadioTower : MonoBehaviour
             messageToPlayer.CrossFadeAlpha(0, 10.0f, true);
             //make it so the player has radioed in so they can leave via the boat
             Keycards.setRadioedIn();
+            boat.SetActive(true);
+
         }
         else {
             //send out the message that the player cannot radio in yet

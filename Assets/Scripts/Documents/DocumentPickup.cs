@@ -29,7 +29,7 @@ public class DocumentPickup : MonoBehaviour
         documentImage.enabled = true;
         //used to add the document to the list of documents
         //notes.collectedDocuments.Add(this.gameObject.name);
-        //GameObject.FindGameObjectWithTag("Player").SendMessage("documentsPickedUp");
+        GameObject.FindGameObjectWithTag("Player").SendMessage("documentsPickedUp");
         //Time.timeScale = 0;
         // Call SFX HERE!
         Debug.Log("Hit the document");
