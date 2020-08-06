@@ -74,7 +74,7 @@ public class PlayerInteract : MonoBehaviour
                 hit.transform.GetComponent<AudioLog>().Collected();
             }
 
-            if (hit.transform.name == "ManorDocuments") {
+            if (hit.transform.name == "BlueKeycard") {
                 //enable the dinosaurs
                 hit.transform.GetComponent<EnableDinosaurs>().OnCollectDocuments();
                 //destroy the hit game object
