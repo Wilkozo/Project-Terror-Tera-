@@ -112,7 +112,7 @@ public class PlayerInteract : MonoBehaviour
                 // Red Key card - Sound
                 Destroy(hit.transform.gameObject);
             }
-            if (hit.transform.name == "Door") {
+            if (hit.transform.tag == "Door") {
                 hit.transform.GetComponent<Doors>().OpenDoor();
             }
             #endregion
