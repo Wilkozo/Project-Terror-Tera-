@@ -15,7 +15,7 @@ public class TriggerPSXEffects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.P)) {
+        if (Input.GetKeyDown(KeyCode.P)) {
             psxEffects.enabled = !psxEffects.enabled;
         }    
     }
