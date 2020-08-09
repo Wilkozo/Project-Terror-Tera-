@@ -586,15 +586,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'I''ve left a map here, for anyone who is new to the Island.
+  m_Text: 'There should be a map around here somewhere, I can''t remember where I
+    left it.
 
 
-    Just
-    remeber to stay to the path, otherwise you might find some things go missing.
+    If someone were to find it, I would greatly appreciate them returning
+    it to me.
 
 
-    Press
-    M to open the map when you have acquired it '
+    My office is on the third floor of this building.
+
+
+    (M to
+    enable map when found)'
 --- !u!1 &133962360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,7 +2139,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: IDK ADD TEXT HERE
+  m_Text: 'I know we are meant to be on patrol, yet I can''t help the feeling that
+    something is watching me.
+
+
+    Man this place just makes me feel so uneasy,
+    I should have never taken this job.
+
+
+    The keycard should be around somewhere,
+    I''ll need it to unlock the main gate, so I can report back to the boss'
 --- !u!1 &748464742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3448,11 +3461,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Welcome to the Island.\n\nYour objective is simple, we need you to get
-    documents that have been scattered around the island.\n\nPress E to Interact
-    with items\n\nThere should be a map nearby, check out one of the buildings around
-    the area. \n\nGood luck and remember, you shouldn't be here.\n\nPress Tab to
-    close documents...."
+  m_Text: 'Welcome to the Island
+
+
+    Your objective is simple, find the various
+    documents scattered around the island and try not to raise any suspicion that
+    someone is on the island.
+
+
+    Press E to Interact with things in the world
+
+
+    TAB
+    to close documents
+
+
+    Good luck out there...'
 --- !u!114 &1127190734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6337,7 +6361,6 @@ GameObject:
   - component: {fileID: 713416707}
   - component: {fileID: 777886148}
   - component: {fileID: 1400510656}
-  - component: {fileID: 1151567625}
   - component: {fileID: 8389131227237903934}
   - component: {fileID: 1400510660}
   - component: {fileID: 1400510661}
@@ -6716,18 +6739,6 @@ MonoBehaviour:
   underwaterParticlesStored: {fileID: 0}
   transitionPostFX: {fileID: 0}
   underwaterPostFX: {fileID: 0}
---- !u!114 &1151567625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4143180536224383561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5dd914cf0588af429d7466e1e85e45b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8389131227237903934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6943,6 +6954,8 @@ GameObject:
   - component: {fileID: 1315992403767461593}
   - component: {fileID: 1347851206}
   - component: {fileID: 1347851207}
+  - component: {fileID: 1114331050}
+  - component: {fileID: 1114331063}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -7297,6 +7310,60 @@ MonoBehaviour:
     pit: 1
     loop: 0
     source: {fileID: 0}
+--- !u!114 &1114331050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143180536224383563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b416fbce5a38cc47a3a1e709f95f5e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cfuStatus: PSXEffects v1.14.1 - up to date.
+  sections: 01010100
+  customRes: {x: 480, y: 270}
+  resolutionFactor: 4
+  limitFramerate: 60
+  skipFrames: 0
+  affineMapping: 1
+  polygonalDrawDistance: 0
+  vertexInaccuracy: 274
+  polygonInaccuracy: 2
+  colorDepth: 5
+  scanlines: 1
+  scanlineIntensity: 5
+  ditherTexture: {fileID: 2800000, guid: 8dd5bb07501448a4e9631457f7f63a13, type: 3}
+  dithering: 1
+  ditherThreshold: 1
+  ditherIntensity: 26
+  maxDarkness: 20
+  subtractFade: 0
+  favorRed: 1
+  worldSpaceSnapping: 0
+  postProcessing: 1
+  verticalScanlines: 1
+  shadowIntensity: 0.5
+  downscale: 0
+  snapCamera: 0
+  camInaccuracy: 0.05
+  camSnapping: 0
+  shadowType: 0
+--- !u!114 &1114331063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143180536224383563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161bda5a04103a14aa26030316282d16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  psxEffects: {fileID: 0}
 --- !u!1 &4143180536586867222
 GameObject:
   m_ObjectHideFlags: 0
@@ -7505,6 +7572,7 @@ GameObject:
   - component: {fileID: 9213395176434208089}
   - component: {fileID: 3407258133576261719}
   - component: {fileID: 358948813}
+  - component: {fileID: 2123553027}
   m_Layer: 0
   m_Name: GunCamera
   m_TagString: Untagged
@@ -7585,6 +7653,47 @@ MonoBehaviour:
   frustumSettings:
     baseSettings: {fileID: 0}
     qualitySettings: {fileID: 0}
+--- !u!114 &2123553027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8097110784409742028}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b416fbce5a38cc47a3a1e709f95f5e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cfuStatus: PSXEffects v1.14.1 - up to date.
+  sections: 01010100
+  customRes: {x: 274, y: 154}
+  resolutionFactor: 7
+  limitFramerate: 60
+  skipFrames: 0
+  affineMapping: 1
+  polygonalDrawDistance: 0
+  vertexInaccuracy: 30
+  polygonInaccuracy: 2
+  colorDepth: 5
+  scanlines: 0
+  scanlineIntensity: 5
+  ditherTexture: {fileID: 2800000, guid: 8dd5bb07501448a4e9631457f7f63a13, type: 3}
+  dithering: 1
+  ditherThreshold: 1
+  ditherIntensity: 35
+  maxDarkness: 20
+  subtractFade: 0
+  favorRed: 1
+  worldSpaceSnapping: 0
+  postProcessing: 1
+  verticalScanlines: 1
+  shadowIntensity: 0.5
+  downscale: 0
+  snapCamera: 0
+  camInaccuracy: 0.05
+  camSnapping: 0
+  shadowType: 0
 --- !u!1001 &835955319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7699,9 +7808,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d3ad6aef9205aa4986484d46f6c7b82, type: 3}
---- !u!4 &5006512735589630317 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 2d3ad6aef9205aa4986484d46f6c7b82,
+--- !u!1 &2502203976655927374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2502203975881118265, guid: 2d3ad6aef9205aa4986484d46f6c7b82,
     type: 3}
   m_PrefabInstance: {fileID: 835955319}
   m_PrefabAsset: {fileID: 0}
@@ -7711,9 +7820,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 835955319}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2502203976655927374 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2502203975881118265, guid: 2d3ad6aef9205aa4986484d46f6c7b82,
+--- !u!4 &5006512735589630317 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 2d3ad6aef9205aa4986484d46f6c7b82,
     type: 3}
   m_PrefabInstance: {fileID: 835955319}
   m_PrefabAsset: {fileID: 0}
