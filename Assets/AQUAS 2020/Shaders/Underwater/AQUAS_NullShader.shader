@@ -36,7 +36,7 @@ Shader "Hidden/AQUAS/Null"
 #endif
 			#pragma vertex vert
 			#pragma fragment frag
-			#pragma multi_compile_instancing
+			#pragma multi_compile_local_instancing
 			#include "UnityCG.cginc"
 			
 
