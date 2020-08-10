@@ -16,7 +16,7 @@ Shader "Enviro/Standard/EnviroFogRenderingDisabled"
 	#pragma vertex vert
 	#pragma fragment frag
 	#pragma target 3.0
-	#pragma multi_compile ENVIROVOLUMELIGHT
+	#pragma multi_compile_local ENVIROVOLUMELIGHT
 	#pragma exclude_renderers gles
 
 	#include "UnityCG.cginc" 

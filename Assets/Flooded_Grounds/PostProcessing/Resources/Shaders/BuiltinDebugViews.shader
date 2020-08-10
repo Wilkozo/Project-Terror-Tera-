@@ -213,7 +213,7 @@ Shader "Hidden/Post FX/Builtin Debug Views"
 
                 #pragma vertex VertDefault
                 #pragma fragment FragNormals
-                #pragma multi_compile __ SOURCE_GBUFFER
+                #pragma multi_compile_local __ SOURCE_GBUFFER
 
             ENDCG
         }
@@ -236,7 +236,7 @@ Shader "Hidden/Post FX/Builtin Debug Views"
 
                 #pragma vertex VertDefault
                 #pragma fragment FragMovecsImaging
-                #pragma multi_compile __ UNITY_COLORSPACE_GAMMA
+                #pragma multi_compile_local __ UNITY_COLORSPACE_GAMMA
 
             ENDCG
         }

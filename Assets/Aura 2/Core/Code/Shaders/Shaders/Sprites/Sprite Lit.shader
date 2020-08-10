@@ -18,8 +18,8 @@ Shader "Aura 2/Sprites/Sprite"
 		Cull Off
 		CGPROGRAM
 		#pragma target 3.0
-		#pragma shader_feature _TWOSIDEDILLUMINATION_ON
-		#pragma shader_feature _FLIPFACE_ON
+		#pragma shader_feature_local _TWOSIDEDILLUMINATION_ON
+		#pragma shader_feature_local _FLIPFACE_ON
 		#pragma surface surf Standard keepalpha addshadow fullforwardshadows 
 		struct Input
 		{

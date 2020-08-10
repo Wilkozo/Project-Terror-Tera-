@@ -21,11 +21,11 @@ Shader "Hidden/TerrainEngine/BillboardTree"
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			#pragma multi_compile_fog
-			#pragma multi_compile _ AURA
-			#pragma multi_compile _ AURA_USE_DITHERING
-			#pragma multi_compile _ AURA_USE_CUBIC_FILTERING
-			#pragma multi_compile _ AURA_DISPLAY_VOLUMETRIC_LIGHTING_ONLY
+			#pragma multi_compile_local_fog
+			#pragma multi_compile_local _ AURA
+			#pragma multi_compile_local _ AURA_USE_DITHERING
+			#pragma multi_compile_local _ AURA_USE_CUBIC_FILTERING
+			#pragma multi_compile_local _ AURA_DISPLAY_VOLUMETRIC_LIGHTING_ONLY
 
 			#include "UnityCG.cginc"
 			#include "TerrainEngine.cginc"

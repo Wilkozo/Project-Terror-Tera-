@@ -23,10 +23,10 @@ Category {
 #else
 			#pragma target 3.0
 #endif
-			#pragma multi_compile_particles
-			#pragma multi_compile_fog
-			#pragma multi_compile __ ENVIRO_SIMPLE_FOG
-			#pragma multi_compile __ ENVIROVOLUMELIGHT
+			#pragma multi_compile_local_particles
+			#pragma multi_compile_local_fog
+			#pragma multi_compile_local __ ENVIRO_SIMPLE_FOG
+			#pragma multi_compile_local __ ENVIROVOLUMELIGHT
 			#include "UnityCG.cginc"
 
 	#if ENVIRO_SIMPLE_FOG		 

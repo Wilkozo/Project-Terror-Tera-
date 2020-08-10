@@ -62,13 +62,13 @@ Shader "Digger/Standard/Mesh-Pass1" {
         CGPROGRAM
         #pragma surface surf Standard decal:add vertex:SplatmapVert finalcolor:SplatmapFinalColor finalgbuffer:SplatmapFinalGBuffer fullforwardshadows nometa
         #pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
-        #pragma multi_compile_fog
+        #pragma multi_compile_local_fog
         #pragma target 3.0
         // needs more than 8 texcoords
         #pragma exclude_renderers gles
         #include "UnityPBSLighting.cginc"
 
-        #pragma multi_compile __ _NORMALMAP
+        #pragma multi_compile_local __ _NORMALMAP
 
         #define TERRAIN_SPLAT_ADDPASS
         #define TERRAIN_SURFACE_OUTPUT SurfaceOutputStandard

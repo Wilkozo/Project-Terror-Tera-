@@ -21,8 +21,8 @@ CGPROGRAM
 #pragma target 3.0
 #pragma vertex vert_deferred
 #pragma fragment frag
-#pragma multi_compile_lightpass
-#pragma multi_compile ___ UNITY_HDR_ON
+#pragma multi_compile_local_lightpass
+#pragma multi_compile_local ___ UNITY_HDR_ON
 
 #pragma exclude_renderers nomrt
 

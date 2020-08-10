@@ -16,12 +16,12 @@ Shader "Enviro/Standard/EnviroFogRendering"
 	#pragma vertex vert
 	#pragma fragment frag
 	#pragma target 3.0
-	#pragma multi_compile __ ENVIROVOLUMELIGHT
-	#pragma multi_compile __ ENVIRO_DEPTHBLENDING
+	#pragma multi_compile_local __ ENVIROVOLUMELIGHT
+	#pragma multi_compile_local __ ENVIRO_DEPTHBLENDING
 	#pragma exclude_renderers gles 
 
 	//  Start: LuxWater
-#pragma multi_compile __ LUXWATER_DEFERREDFOG
+#pragma multi_compile_local __ LUXWATER_DEFERREDFOG
 
 #if defined(LUXWATER_DEFERREDFOG)
 		sampler2D _UnderWaterMask;

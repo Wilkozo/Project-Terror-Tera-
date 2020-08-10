@@ -45,12 +45,12 @@
 		CGPROGRAM
 		#pragma surface surf Lambert vertex:CTI_TreeVertLeaf nolightmap alphatest:_Cutoff addshadow dithercrossfade
 		#pragma target 3.0
-		// #pragma multi_compile  LOD_FADE_CROSSFADE LOD_FADE_PERCENTAGE
+		// #pragma multi_compile_local  LOD_FADE_CROSSFADE LOD_FADE_PERCENTAGE
 	//	2018.2 and above:
-		#pragma multi_compile_vertex LOD_FADE_PERCENTAGE
+		#pragma multi_compile_local_vertex LOD_FADE_PERCENTAGE
 
-		#pragma shader_feature _METALLICGLOSSMAP
-		#pragma shader_feature _EMISSION
+		#pragma shader_feature_local _METALLICGLOSSMAP
+		#pragma shader_feature_local _EMISSION
 
 		#define USE_VFACE
 		#define DEBUG
@@ -59,11 +59,11 @@
 		
 		// We use Speed Tree keywords here to safe overall number of used ones
 		// disable main bending
-		#pragma shader_feature ENABLE_WIND
+		#pragma shader_feature_local ENABLE_WIND
 		// disable branch bending
-		#pragma shader_feature EFFECT_BUMP
+		#pragma shader_feature_local EFFECT_BUMP
 		// disable leaf tumbling
-		#pragma shader_feature EFFECT_HUE_VARIATION
+		#pragma shader_feature_local EFFECT_HUE_VARIATION
 
 		// #include "UnityBuiltin3xTreeLibrary.cginc" // We can not do this as we want instancing
 		#include "Includes/CTI_Builtin4xTreeLibraryTumbling.cginc"

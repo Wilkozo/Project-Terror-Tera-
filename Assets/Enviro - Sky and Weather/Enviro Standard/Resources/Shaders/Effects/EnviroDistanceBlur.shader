@@ -36,7 +36,7 @@ Shader "Hidden/EnviroDistanceBlur"
 	{
 		ZTest Always Cull Off ZWrite Off
 		CGPROGRAM
-		#pragma multi_compile _ UNITY_COLORSPACE_GAMMA
+		#pragma multi_compile_local _ UNITY_COLORSPACE_GAMMA
 		#include "../Core/EnviroBlurCore.cginc"
 		#pragma vertex vert
 		#pragma fragment frag_prefilter
@@ -49,7 +49,7 @@ Shader "Hidden/EnviroDistanceBlur"
 		ZTest Always Cull Off ZWrite Off
 		CGPROGRAM
 		#define ANTI_FLICKER 1
-		#pragma multi_compile _ UNITY_COLORSPACE_GAMMA
+		#pragma multi_compile_local _ UNITY_COLORSPACE_GAMMA
 		#include "../Core/EnviroBlurCore.cginc"
 		#pragma vertex vert
 		#pragma fragment frag_prefilter
@@ -118,7 +118,7 @@ Shader "Hidden/EnviroDistanceBlur"
 	{
 		ZTest Always Cull Off ZWrite Off
 		CGPROGRAM
-		#pragma multi_compile _ UNITY_COLORSPACE_GAMMA
+		#pragma multi_compile_local _ UNITY_COLORSPACE_GAMMA
 		#include "../Core/EnviroBlurCore.cginc"
 		#pragma vertex vert_multitex
 		#pragma fragment frag_upsample_final
@@ -131,7 +131,7 @@ Shader "Hidden/EnviroDistanceBlur"
 		ZTest Always Cull Off ZWrite Off
 		CGPROGRAM
 		#define HIGH_QUALITY 1
-		#pragma multi_compile _ UNITY_COLORSPACE_GAMMA
+		#pragma multi_compile_local _ UNITY_COLORSPACE_GAMMA
 		#include "../Core/EnviroBlurCore.cginc"
 		#pragma vertex vert_multitex
 		#pragma fragment frag_upsample_final

@@ -34,8 +34,8 @@ Shader "Procedural Worlds/Simple Water"
 		#include "UnityShaderVariables.cginc"
 		#include "UnityCG.cginc"
 		#pragma target 3.0
-		#pragma shader_feature _SPECULARHIGHLIGHTS_OFF
-		#pragma shader_feature _GLOSSYREFLECTIONS_OFF
+		#pragma shader_feature_local _SPECULARHIGHLIGHTS_OFF
+		#pragma shader_feature_local _GLOSSYREFLECTIONS_OFF
 		#pragma surface surf StandardSpecular alpha:fade keepalpha 
 		struct Input
 		{

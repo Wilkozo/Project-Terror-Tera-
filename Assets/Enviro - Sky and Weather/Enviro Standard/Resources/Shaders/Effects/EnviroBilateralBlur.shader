@@ -44,7 +44,7 @@ Shader "Hidden/EnviroBilateralBlur"
 
 		CGINCLUDE
 
-		#pragma shader_feature UNITY2017_2_SP
+		#pragma shader_feature_local UNITY2017_2_SP
         //--------------------------------------------------------------------------------------------
         // Downsample, bilateral blur and upsample config
         //--------------------------------------------------------------------------------------------        

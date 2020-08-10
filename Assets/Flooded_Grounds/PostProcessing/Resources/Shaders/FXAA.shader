@@ -10,8 +10,8 @@ Shader "Hidden/Post FX/FXAA"
         #include "UnityCG.cginc"
         #include "Common.cginc"
         #include "UberSecondPass.cginc"
-        #pragma multi_compile __ GRAIN
-        #pragma multi_compile __ DITHERING
+        #pragma multi_compile_local __ GRAIN
+        #pragma multi_compile_local __ DITHERING
 
         #if defined(SHADER_API_PS3)
             #define FXAA_PS3 1

@@ -17,10 +17,10 @@
 		#pragma fragment frag 
 		#pragma target 3.0  
 		#pragma exclude_renderers gles 
-		#pragma multi_compile __ UNITY_COLORSPACE_GAMMA
-		#pragma multi_compile __ ENVIRO_DEPTHBLENDING
-		#pragma multi_compile __ ENVIRO_CURLNOISE
-		#pragma multi_compile __ ENVIRO_HALTONOFFSET
+		#pragma multi_compile_local __ UNITY_COLORSPACE_GAMMA
+		#pragma multi_compile_local __ ENVIRO_DEPTHBLENDING
+		#pragma multi_compile_local __ ENVIRO_CURLNOISE
+		#pragma multi_compile_local __ ENVIRO_HALTONOFFSET
 
 		#include "UnityCG.cginc" 
 		#include "../../../Core/Resources/Shaders/Core/EnviroFogCore.cginc"

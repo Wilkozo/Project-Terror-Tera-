@@ -47,12 +47,12 @@ Shader "Aura 2/Particles/Additive"
 					#pragma vertex vert
 					#pragma fragment frag
 					#pragma target 4.0
-					#pragma shader_feature _USAGESTAGE_VERTEX _USAGESTAGE_PIXEL
-					#pragma shader_feature _USAGETYPE_LIGHT _USAGETYPE_FOG _USAGETYPE_BOTH
-					#pragma multi_compile _ AURA
-					#pragma multi_compile _ AURA_USE_DITHERING
-					#pragma multi_compile _ AURA_USE_CUBIC_FILTERING
-					#pragma multi_compile _ AURA_DISPLAY_VOLUMETRIC_LIGHTING_ONLY
+					#pragma shader_feature_local _USAGESTAGE_VERTEX _USAGESTAGE_PIXEL
+					#pragma shader_feature_local _USAGETYPE_LIGHT _USAGETYPE_FOG _USAGETYPE_BOTH
+					#pragma multi_compile_local _ AURA
+					#pragma multi_compile_local _ AURA_USE_DITHERING
+					#pragma multi_compile_local _ AURA_USE_CUBIC_FILTERING
+					#pragma multi_compile_local _ AURA_DISPLAY_VOLUMETRIC_LIGHTING_ONLY
 
 					#define PREMULTIPLY_ALPHA(color) color.xyz *= color.w;
 

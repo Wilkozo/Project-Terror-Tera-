@@ -33,9 +33,9 @@ Shader "TFP/TFP_Water" {
             #include "UnityPBSLighting.cginc"
             #include "UnityStandardBRDF.cginc"
             #pragma fragmentoption ARB_precision_hint_fastest
-            #pragma multi_compile_shadowcaster
-            #pragma multi_compile ___ UNITY_HDR_ON
-            #pragma multi_compile_fog
+            #pragma multi_compile_local_shadowcaster
+            #pragma multi_compile_local ___ UNITY_HDR_ON
+            #pragma multi_compile_local_fog
             #pragma only_renderers d3d9 d3d11 glcore gles n3ds wiiu 
             #pragma target 3.0
             uniform float4 _FogColor;
@@ -185,8 +185,8 @@ Shader "TFP/TFP_Water" {
             #include "AutoLight.cginc"
             #include "UnityPBSLighting.cginc"
             #include "UnityStandardBRDF.cginc"
-            #pragma multi_compile_fwdbase_fullshadows
-            #pragma multi_compile_fog
+            #pragma multi_compile_local_fwdbase_fullshadows
+            #pragma multi_compile_local_fog
             #pragma only_renderers d3d9 d3d11 glcore gles n3ds wiiu 
             #pragma target 3.0
             uniform float4 _FogColor;
@@ -378,8 +378,8 @@ Shader "TFP/TFP_Water" {
             #include "AutoLight.cginc"
             #include "UnityPBSLighting.cginc"
             #include "UnityStandardBRDF.cginc"
-            #pragma multi_compile_fwdadd_fullshadows
-            #pragma multi_compile_fog
+            #pragma multi_compile_local_fwdadd_fullshadows
+            #pragma multi_compile_local_fog
             #pragma only_renderers d3d9 d3d11 glcore gles n3ds wiiu 
             #pragma target 3.0
             uniform float4 _FogColor;
@@ -524,8 +524,8 @@ Shader "TFP/TFP_Water" {
             #include "UnityPBSLighting.cginc"
             #include "UnityStandardBRDF.cginc"
             #pragma fragmentoption ARB_precision_hint_fastest
-            #pragma multi_compile_shadowcaster
-            #pragma multi_compile_fog
+            #pragma multi_compile_local_shadowcaster
+            #pragma multi_compile_local_fog
             #pragma only_renderers d3d9 d3d11 glcore gles n3ds wiiu 
             #pragma target 3.0
             struct VertexInput {

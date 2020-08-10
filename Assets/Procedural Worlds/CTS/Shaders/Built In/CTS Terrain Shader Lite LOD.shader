@@ -127,7 +127,7 @@ Shader "CTS/CTS Terrain Shader Lite LOD"
 		#pragma target 3.5
 		#pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd  
 		#include "TerrainSplatmapCommonCTS.cginc"
-		#pragma multi_compile_instancing
+		#pragma multi_compile_local_instancing
 		#pragma surface surf StandardSpecular keepalpha addshadow fullforwardshadows vertex:SplatmapVert
 
 		uniform UNITY_DECLARE_TEX2DARRAY( _Texture_Array_Normal );

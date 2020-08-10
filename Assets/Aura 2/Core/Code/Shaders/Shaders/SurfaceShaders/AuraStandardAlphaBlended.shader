@@ -32,9 +32,9 @@ Shader "Aura 2/Surface/Standard Alpha Blend"
 
 		#pragma surface surf Standard fullforwardshadows alpha finalcolor:Aura2_Fog
 		#pragma target 4.5
-		#pragma multi_compile _ AURA
-		#pragma multi_compile _ AURA_USE_CUBIC_FILTERING
-		#pragma multi_compile _ AURA_DISPLAY_VOLUMETRIC_LIGHTING_ONLY
+		#pragma multi_compile_local _ AURA
+		#pragma multi_compile_local _ AURA_USE_CUBIC_FILTERING
+		#pragma multi_compile_local _ AURA_DISPLAY_VOLUMETRIC_LIGHTING_ONLY
 
 		sampler2D _MainTex;
 		sampler2D _CameraDepthTexture;

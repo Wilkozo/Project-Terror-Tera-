@@ -67,7 +67,7 @@ SubShader {
 		#pragma vertex vert_surf
 		#pragma fragment frag_surf
 		#pragma target 3.0
-		#pragma multi_compile_shadowcaster
+		#pragma multi_compile_local_shadowcaster
 		#include "HLSLSupport.cginc"
 		#include "UnityCG.cginc"
 		#include "Lighting.cginc"

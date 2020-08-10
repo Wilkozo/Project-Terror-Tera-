@@ -34,14 +34,14 @@ Shader "NatureManufacture Shaders/Trees/Tree Bark Specular"
 		CGPROGRAM
 		#include "UnityStandardUtils.cginc"
 		#pragma target 3.0
-		#pragma multi_compile_instancing
-		#pragma shader_feature _TOUCHREACTACTIVE_ON
-		#pragma shader_feature _DETALUSEUV3_ON
+		#pragma multi_compile_local_instancing
+		#pragma shader_feature_local _TOUCHREACTACTIVE_ON
+		#pragma shader_feature_local _DETALUSEUV3_ON
 		#include "NMWindNoShiver.cginc"
 		#include "NM_indirect.cginc"
 		#pragma vertex vert
 		#pragma instancing_options procedural:setup
-		#pragma multi_compile GPU_FRUSTUM_ON __
+		#pragma multi_compile_local GPU_FRUSTUM_ON __
 		#pragma surface surf StandardSpecular keepalpha addshadow fullforwardshadows dithercrossfade 
 		struct Input
 		{

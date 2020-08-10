@@ -147,8 +147,8 @@ Shader "Hidden/Post FX/Bloom"
         Pass
         {
             CGPROGRAM
-                #pragma multi_compile __ ANTI_FLICKER
-                #pragma multi_compile __ UNITY_COLORSPACE_GAMMA
+                #pragma multi_compile_local __ ANTI_FLICKER
+                #pragma multi_compile_local __ UNITY_COLORSPACE_GAMMA
                 #pragma vertex VertDefault
                 #pragma fragment FragPrefilter
             ENDCG
@@ -157,7 +157,7 @@ Shader "Hidden/Post FX/Bloom"
         Pass
         {
             CGPROGRAM
-                #pragma multi_compile __ ANTI_FLICKER
+                #pragma multi_compile_local __ ANTI_FLICKER
                 #pragma vertex VertDefault
                 #pragma fragment FragDownsample1
             ENDCG

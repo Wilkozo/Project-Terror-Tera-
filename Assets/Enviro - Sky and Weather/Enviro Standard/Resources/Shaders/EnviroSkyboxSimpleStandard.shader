@@ -230,7 +230,7 @@ Shader "Enviro/Standard/SkyboxSimple"
 			CGPROGRAM
 		#pragma vertex vert
 		#pragma fragment frag
-		#pragma multi_compile __ ENVIRO_AURORA
+		#pragma multi_compile_local __ ENVIRO_AURORA
 		#include "UnityCG.cginc"
 
 

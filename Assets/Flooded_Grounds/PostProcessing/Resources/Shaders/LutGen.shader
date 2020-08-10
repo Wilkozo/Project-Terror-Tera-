@@ -3,7 +3,7 @@ Shader "Hidden/Post FX/Lut Generator"
     CGINCLUDE
 
         #pragma target 3.0
-        #pragma multi_compile __ TONEMAPPING_NEUTRAL TONEMAPPING_FILMIC
+        #pragma multi_compile_local __ TONEMAPPING_NEUTRAL TONEMAPPING_FILMIC
 
         #include "UnityCG.cginc"
         #include "ACES.cginc"

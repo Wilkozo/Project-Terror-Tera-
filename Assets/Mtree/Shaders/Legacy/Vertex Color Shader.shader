@@ -19,8 +19,8 @@ Shader "Hidden/Mtree/VertexColorShader"
 		CGPROGRAM
 		#include "UnityShaderVariables.cginc"
 		#pragma target 3.0
-		#pragma shader_feature _SPECULARHIGHLIGHTS_OFF
-		#pragma shader_feature _GLOSSYREFLECTIONS_OFF
+		#pragma shader_feature_local _SPECULARHIGHLIGHTS_OFF
+		#pragma shader_feature_local _GLOSSYREFLECTIONS_OFF
 		#pragma surface surf Standard keepalpha addshadow fullforwardshadows vertex:vertexDataFunc 
 		struct Input
 		{

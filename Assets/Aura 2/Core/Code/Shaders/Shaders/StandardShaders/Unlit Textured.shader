@@ -37,10 +37,10 @@ Shader "Aura 2/Standard/Unlit Textured"
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			#pragma multi_compile_instancing
+			#pragma multi_compile_local_instancing
 			#include "UnityCG.cginc"
-			#pragma shader_feature _USEFOG_ON
-			#pragma shader_feature _USEILLUMINATION_ON
+			#pragma shader_feature_local _USEFOG_ON
+			#pragma shader_feature_local _USEILLUMINATION_ON
 			#include "Assets/Aura 2/System/Code/Shaders/Includes/AuraUsage.cginc"
 
 

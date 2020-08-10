@@ -72,15 +72,15 @@ SubShader {
 // nolightmap
 		#pragma target 3.0
 		
-		// #pragma multi_compile  LOD_FADE_CROSSFADE LOD_FADE_PERCENTAGE
+		// #pragma multi_compile_local  LOD_FADE_CROSSFADE LOD_FADE_PERCENTAGE
 	//	2018.2 and above:
-		#pragma multi_compile_vertex LOD_FADE_PERCENTAGE
+		#pragma multi_compile_local_vertex LOD_FADE_PERCENTAGE
 
-		#pragma shader_feature _METALLICGLOSSMAP
-		#pragma shader_feature _EMISSION
-		#pragma shader_feature _NORMALMAP
-		#pragma shader_feature _PARALLAXMAP
-		#pragma multi_compile_instancing
+		#pragma shader_feature_local _METALLICGLOSSMAP
+		#pragma shader_feature_local _EMISSION
+		#pragma shader_feature_local _NORMALMAP
+		#pragma shader_feature_local _PARALLAXMAP
+		#pragma multi_compile_local_instancing
 
 	//	#if UNITY_VERSION >= 550
 			#pragma instancing_options assumeuniformscaling lodfade procedural:setup 	 
@@ -242,18 +242,18 @@ SubShader {
 		#pragma fragment frag_surf
 		#pragma target 3.0
 		
-		// #pragma multi_compile  LOD_FADE_PERCENTAGE LOD_FADE_CROSSFADE
+		// #pragma multi_compile_local  LOD_FADE_PERCENTAGE LOD_FADE_CROSSFADE
 	//	2018.2 and above:
-		#pragma multi_compile_vertex LOD_FADE_PERCENTAGE
-		#pragma multi_compile_fragment __ LOD_FADE_CROSSFADE
+		#pragma multi_compile_local_vertex LOD_FADE_PERCENTAGE
+		#pragma multi_compile_local_fragment __ LOD_FADE_CROSSFADE
 		
-		#pragma multi_compile_instancing
+		#pragma multi_compile_local_instancing
 		//#if UNITY_VERSION >= 550
 			#pragma instancing_options assumeuniformscaling lodfade procedural:setup
 		//#endif
-		#pragma shader_feature _METALLICGLOSSMAP
-		#pragma shader_feature _EMISSION
-		#pragma multi_compile_shadowcaster
+		#pragma shader_feature_local _METALLICGLOSSMAP
+		#pragma shader_feature_local _EMISSION
+		#pragma multi_compile_local_shadowcaster
 		
 		#include "HLSLSupport.cginc"
 		#include "UnityCG.cginc"

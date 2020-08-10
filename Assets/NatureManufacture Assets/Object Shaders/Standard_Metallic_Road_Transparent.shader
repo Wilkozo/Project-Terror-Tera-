@@ -47,10 +47,10 @@ Shader "NatureManufacture Shaders/Road/Standard_Metallic_Road_Transparent"
 		CGPROGRAM
 		#include "UnityStandardUtils.cginc"
 		#pragma target 3.0
-		#pragma shader_feature _SPECULARHIGHLIGHTS_OFF
-		#pragma shader_feature _GLOSSYREFLECTIONS_OFF
-		#pragma shader_feature _INVERTVCOLORMASKSECONDROAD_ON
-		#pragma multi_compile __ _USESECONDROADALPHA_ON
+		#pragma shader_feature_local _SPECULARHIGHLIGHTS_OFF
+		#pragma shader_feature_local _GLOSSYREFLECTIONS_OFF
+		#pragma shader_feature_local _INVERTVCOLORMASKSECONDROAD_ON
+		#pragma multi_compile_local __ _USESECONDROADALPHA_ON
 		#pragma surface surf Standard keepalpha decal:blend
 		struct Input
 		{

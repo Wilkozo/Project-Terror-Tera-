@@ -86,13 +86,13 @@ Shader "Digger/Standard/TextureArray/Mesh-Pass0" {
         #pragma surface surf Standard vertex:SplatmapVert finalcolor:SplatmapFinalColor finalgbuffer:SplatmapFinalGBuffer addshadow fullforwardshadows
         #pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
         #pragma require 2darray
-        #pragma multi_compile_fog // needed because finalcolor oppresses fog code generation.
+        #pragma multi_compile_local_fog // needed because finalcolor oppresses fog code generation.
         #pragma target 3.0
         // needs more than 8 texcoords
         #pragma exclude_renderers gles
         #include "UnityPBSLighting.cginc"
 
-        #pragma multi_compile __ _NORMALMAP
+        #pragma multi_compile_local __ _NORMALMAP
 
         #define TERRAIN_SURFACE_OUTPUT SurfaceOutputStandard
         #include "MeshTriplanarStandardTxtArray.cginc"

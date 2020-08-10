@@ -99,11 +99,11 @@ Shader "Enviro/Standard/VolumeLight"
 
 			#define UNITY_HDR_ON
 
-			#pragma shader_feature HEIGHT_FOG
-			#pragma shader_feature NOISE
-			#pragma shader_feature SHADOWS_CUBE
-			#pragma shader_feature POINT_COOKIE
-			#pragma shader_feature POINT
+			#pragma shader_feature_local HEIGHT_FOG
+			#pragma shader_feature_local NOISE
+			#pragma shader_feature_local SHADOWS_CUBE
+			#pragma shader_feature_local POINT_COOKIE
+			#pragma shader_feature_local POINT
 
 			#ifdef SHADOWS_DEPTH
 			#define SHADOWS_NATIVE
@@ -151,10 +151,10 @@ Shader "Enviro/Standard/VolumeLight"
 
 			#define UNITY_HDR_ON
 
-			#pragma shader_feature HEIGHT_FOG
-			#pragma shader_feature NOISE
-			#pragma shader_feature SHADOWS_DEPTH
-			#pragma shader_feature SPOT
+			#pragma shader_feature_local HEIGHT_FOG
+			#pragma shader_feature_local NOISE
+			#pragma shader_feature_local SHADOWS_DEPTH
+			#pragma shader_feature_local SPOT
 
 			#ifdef SHADOWS_DEPTH
 			#define SHADOWS_NATIVE
@@ -202,11 +202,11 @@ Shader "Enviro/Standard/VolumeLight"
 
 			#define UNITY_HDR_ON
 
-			#pragma shader_feature HEIGHT_FOG
-			#pragma shader_feature SHADOWS_CUBE
-			#pragma shader_feature NOISE
-			#pragma shader_feature POINT_COOKIE
-			#pragma shader_feature POINT
+			#pragma shader_feature_local HEIGHT_FOG
+			#pragma shader_feature_local SHADOWS_CUBE
+			#pragma shader_feature_local NOISE
+			#pragma shader_feature_local POINT_COOKIE
+			#pragma shader_feature_local POINT
 
 			fixed4 fragPointOutside(v2f i) : SV_Target
 			{
@@ -262,10 +262,10 @@ Shader "Enviro/Standard/VolumeLight"
 
 			#define UNITY_HDR_ON
 
-			#pragma shader_feature HEIGHT_FOG
-			#pragma shader_feature SHADOWS_DEPTH
-			#pragma shader_feature NOISE
-			#pragma shader_feature SPOT
+			#pragma shader_feature_local HEIGHT_FOG
+			#pragma shader_feature_local SHADOWS_DEPTH
+			#pragma shader_feature_local NOISE
+			#pragma shader_feature_local SPOT
 
 			#ifdef SHADOWS_DEPTH
 			#define SHADOWS_NATIVE
@@ -330,11 +330,11 @@ Shader "Enviro/Standard/VolumeLight"
 
 				#define UNITY_HDR_ON
 
-				#pragma shader_feature HEIGHT_FOG
-				#pragma shader_feature NOISE
-				#pragma shader_feature SHADOWS_DEPTH
-				#pragma shader_feature DIRECTIONAL_COOKIE
-				#pragma shader_feature DIRECTIONAL
+				#pragma shader_feature_local HEIGHT_FOG
+				#pragma shader_feature_local NOISE
+				#pragma shader_feature_local SHADOWS_DEPTH
+				#pragma shader_feature_local DIRECTIONAL_COOKIE
+				#pragma shader_feature_local DIRECTIONAL
 
 				#ifdef SHADOWS_DEPTH
 				#define SHADOWS_NATIVE

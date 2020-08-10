@@ -44,7 +44,7 @@ Shader "Hidden/Post FX/Depth Of Field"
                 #pragma target 5.0
                 #pragma vertex VertDOF
                 #pragma fragment FragPrefilter
-                #pragma multi_compile __ UNITY_COLORSPACE_GAMMA
+                #pragma multi_compile_local __ UNITY_COLORSPACE_GAMMA
                 #include "DepthOfField.cginc"
             ENDCG
         }
@@ -143,7 +143,7 @@ Shader "Hidden/Post FX/Depth Of Field"
                 #pragma target 3.0
                 #pragma vertex VertDOF
                 #pragma fragment FragPrefilter
-                #pragma multi_compile __ UNITY_COLORSPACE_GAMMA
+                #pragma multi_compile_local __ UNITY_COLORSPACE_GAMMA
                 #include "DepthOfField.cginc"
             ENDCG
         }

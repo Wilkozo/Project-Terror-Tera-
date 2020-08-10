@@ -34,8 +34,8 @@ Shader "TFP/TFP_Rain" {
             #include "UnityCG.cginc"
             #include "UnityPBSLighting.cginc"
             #include "UnityStandardBRDF.cginc"
-            #pragma multi_compile_fwdbase
-            #pragma multi_compile_fog
+            #pragma multi_compile_local_fwdbase
+            #pragma multi_compile_local_fog
             #pragma only_renderers d3d9 d3d11 glcore gles gles3 metal d3d11_9x xboxone ps4 psp2 n3ds wiiu 
             #pragma target 3.0
             uniform sampler2D Refraction;
@@ -204,8 +204,8 @@ Shader "TFP/TFP_Rain" {
             #include "AutoLight.cginc"
             #include "UnityPBSLighting.cginc"
             #include "UnityStandardBRDF.cginc"
-            #pragma multi_compile_fwdadd
-            #pragma multi_compile_fog
+            #pragma multi_compile_local_fwdadd
+            #pragma multi_compile_local_fog
             #pragma only_renderers d3d9 d3d11 glcore gles gles3 metal d3d11_9x xboxone ps4 psp2 n3ds wiiu 
             #pragma target 3.0
             uniform sampler2D Refraction;
@@ -329,8 +329,8 @@ Shader "TFP/TFP_Rain" {
             #include "UnityPBSLighting.cginc"
             #include "UnityStandardBRDF.cginc"
             #pragma fragmentoption ARB_precision_hint_fastest
-            #pragma multi_compile_shadowcaster
-            #pragma multi_compile_fog
+            #pragma multi_compile_local_shadowcaster
+            #pragma multi_compile_local_fog
             #pragma only_renderers d3d9 d3d11 glcore gles gles3 metal d3d11_9x xboxone ps4 psp2 n3ds wiiu 
             #pragma target 3.0
             struct VertexInput {

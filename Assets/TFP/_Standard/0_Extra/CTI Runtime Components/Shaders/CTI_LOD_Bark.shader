@@ -56,16 +56,16 @@ SubShader {
 		#pragma surface surf StandardSpecular vertex:CTI_TreeVertBark nodynlightmap keepalpha dithercrossfade
 // nolightmap
 		#pragma target 3.0
-		// #pragma multi_compile  LOD_FADE_PERCENTAGE LOD_FADE_CROSSFADE
+		// #pragma multi_compile_local  LOD_FADE_PERCENTAGE LOD_FADE_CROSSFADE
 	//	2018.2 and above:
-		#pragma multi_compile_vertex LOD_FADE_PERCENTAGE
+		#pragma multi_compile_local_vertex LOD_FADE_PERCENTAGE
 
-		#pragma multi_compile __ _METALLICGLOSSMAP
-		#pragma multi_compile_instancing
+		#pragma multi_compile_local __ _METALLICGLOSSMAP
+		#pragma multi_compile_local_instancing
 
 	//	Detail modes: simply on / fade base textures / skip base textures
-		#pragma shader_feature __ GEOM_TYPE_BRANCH GEOM_TYPE_BRANCH_DETAIL GEOM_TYPE_FROND
-		#pragma shader_feature _SWAP_UVS
+		#pragma shader_feature_local __ GEOM_TYPE_BRANCH GEOM_TYPE_BRANCH_DETAIL GEOM_TYPE_FROND
+		#pragma shader_feature_local _SWAP_UVS
 
 		//#if UNITY_VERSION >= 550
 			#pragma instancing_options assumeuniformscaling lodfade procedural:setup 	
@@ -247,15 +247,15 @@ SubShader {
 		#pragma vertex vert_surf
 		#pragma fragment frag_surf
 		#pragma target 3.0
-		#pragma multi_compile_shadowcaster
+		#pragma multi_compile_local_shadowcaster
 		
-		// #pragma multi_compile  LOD_FADE_PERCENTAGE LOD_FADE_CROSSFADE
+		// #pragma multi_compile_local  LOD_FADE_PERCENTAGE LOD_FADE_CROSSFADE
 	//	2018.2 and above:
-		#pragma multi_compile_vertex LOD_FADE_PERCENTAGE
-		#pragma multi_compile_fragment __ LOD_FADE_CROSSFADE
+		#pragma multi_compile_local_vertex LOD_FADE_PERCENTAGE
+		#pragma multi_compile_local_fragment __ LOD_FADE_CROSSFADE
 
-		#pragma multi_compile __ _METALLICGLOSSMAP
-		#pragma multi_compile_instancing
+		#pragma multi_compile_local __ _METALLICGLOSSMAP
+		#pragma multi_compile_local_instancing
 		//#if UNITY_VERSION >= 550
 			#pragma instancing_options assumeuniformscaling lodfade procedural:setup 	
 		//#endif

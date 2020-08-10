@@ -25,7 +25,7 @@ Shader "Enviro/Lite/SkyboxSimple"
             #pragma fragment frag
             #include "UnityCG.cginc"
 			#pragma target 2.0 
-			//#pragma multi_compile_fog
+			//#pragma multi_compile_local_fog
 
 			uniform half4 _SkyColor;
 			uniform half4 _HorizonColor;

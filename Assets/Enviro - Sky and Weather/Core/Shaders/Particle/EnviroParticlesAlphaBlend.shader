@@ -18,8 +18,8 @@ Category {
 			#pragma vertex vert
 			#pragma fragment frag
 			#pragma target 2.0
-			#pragma multi_compile_particles
-			#pragma multi_compile_fog
+			#pragma multi_compile_local_particles
+			#pragma multi_compile_local_fog
 			#pragma exclude_renderers gles 
 
 			#include "UnityCG.cginc"

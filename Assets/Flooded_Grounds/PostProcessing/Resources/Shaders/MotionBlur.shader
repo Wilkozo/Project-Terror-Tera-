@@ -87,7 +87,7 @@ Shader "Hidden/Post FX/Motion Blur"
         {
             CGPROGRAM
 
-                #pragma multi_compile __ UNITY_COLORSPACE_GAMMA
+                #pragma multi_compile_local __ UNITY_COLORSPACE_GAMMA
                 #include "MotionBlur.cginc"
                 #pragma vertex VertFrameCompress
                 #pragma fragment FragFrameCompress
@@ -100,7 +100,7 @@ Shader "Hidden/Post FX/Motion Blur"
         {
             CGPROGRAM
 
-                #pragma multi_compile __ UNITY_COLORSPACE_GAMMA
+                #pragma multi_compile_local __ UNITY_COLORSPACE_GAMMA
                 #include "MotionBlur.cginc"
                 #pragma vertex VertMultitex
                 #pragma fragment FragFrameBlending

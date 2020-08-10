@@ -84,7 +84,7 @@ Shader "NatureManufacture Shaders/Water/Water Swamp Offset Vertex Color Flow"
 		#include "UnityStandardUtils.cginc"
 		#include "UnityCG.cginc"
 		#pragma target 3.0
-		#pragma multi_compile_instancing
+		#pragma multi_compile_local_instancing
 		#pragma surface surf StandardSpecular keepalpha noshadow vertex:vertexDataFunc 
 		struct Input
 		{

@@ -29,8 +29,8 @@ Shader "Shader Forge/TFP_Particle_Displace" {
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
-            #pragma multi_compile_fwdbase
-            #pragma multi_compile_fog
+            #pragma multi_compile_local_fwdbase
+            #pragma multi_compile_local_fog
             #pragma only_renderers d3d9 d3d11 glcore gles n3ds wiiu 
             #pragma target 3.0
             uniform sampler2D _GrabTexture;
@@ -90,8 +90,8 @@ Shader "Shader Forge/TFP_Particle_Displace" {
             #include "UnityCG.cginc"
             #include "Lighting.cginc"
             #pragma fragmentoption ARB_precision_hint_fastest
-            #pragma multi_compile_shadowcaster
-            #pragma multi_compile_fog
+            #pragma multi_compile_local_shadowcaster
+            #pragma multi_compile_local_fog
             #pragma only_renderers d3d9 d3d11 glcore gles n3ds wiiu 
             #pragma target 3.0
             struct VertexInput {

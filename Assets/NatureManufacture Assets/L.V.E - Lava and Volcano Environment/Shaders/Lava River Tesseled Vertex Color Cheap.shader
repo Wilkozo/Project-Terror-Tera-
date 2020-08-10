@@ -74,7 +74,7 @@ Shader "NatureManufacture Shaders/Lava/Lava River Tesseled Vertex Color Cheap"
 		#include "Lighting.cginc"
 		#pragma target 4.6
 		#include "NM_indirect.cginc"
-		#pragma multi_compile GPU_FRUSTUM_ON __
+		#pragma multi_compile_local GPU_FRUSTUM_ON __
 		#pragma instancing_options procedural:setup
 		#ifdef UNITY_PASS_SHADOWCASTER
 			#undef INTERNAL_DATA
@@ -334,8 +334,8 @@ Shader "NatureManufacture Shaders/Lava/Lava River Tesseled Vertex Color Cheap"
 			#pragma vertex vert
 			#pragma fragment frag
 			#pragma target 4.6
-			#pragma multi_compile_shadowcaster
-			#pragma multi_compile UNITY_PASS_SHADOWCASTER
+			#pragma multi_compile_local_shadowcaster
+			#pragma multi_compile_local UNITY_PASS_SHADOWCASTER
 			#pragma skip_variants FOG_LINEAR FOG_EXP FOG_EXP2
 			#include "HLSLSupport.cginc"
 			#if ( SHADER_API_D3D11 || SHADER_API_GLCORE || SHADER_API_GLES || SHADER_API_GLES3 || SHADER_API_METAL || SHADER_API_VULKAN )

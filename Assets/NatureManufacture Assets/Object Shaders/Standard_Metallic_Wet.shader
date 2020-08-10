@@ -29,9 +29,9 @@ Shader "NatureManufacture Shaders/Water/Standard Metallic Wet"
 		CGPROGRAM
 		#include "UnityStandardUtils.cginc"
 		#pragma target 3.0
-		#pragma multi_compile_instancing
+		#pragma multi_compile_local_instancing
 		#include "NM_indirect.cginc"
-		#pragma multi_compile GPU_FRUSTUM_ON __
+		#pragma multi_compile_local GPU_FRUSTUM_ON __
 		#pragma instancing_options procedural:setup
 		#pragma surface surf Standard keepalpha addshadow fullforwardshadows dithercrossfade 
 		struct Input

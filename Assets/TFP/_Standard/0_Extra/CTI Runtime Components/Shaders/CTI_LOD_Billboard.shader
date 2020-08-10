@@ -49,8 +49,8 @@ Shader "CTI/LOD Billboard" {
 		#pragma surface surf StandardTranslucent vertex:BillboardVertInit nolightmap nodynlightmap keepalpha addshadow noinstancing dithercrossfade
 		// addshadow
 		#pragma target 3.0
-		#pragma multi_compile __ LOD_FADE_CROSSFADE
-		#pragma shader_feature _EMISSION
+		#pragma multi_compile_local __ LOD_FADE_CROSSFADE
+		#pragma shader_feature_local _EMISSION
 
 		#define IS_LODTREE
 #define IS_SURFACESHADER
@@ -151,8 +151,8 @@ half _Snow;
 			#pragma vertex vert_surf
 			#pragma fragment frag_surf
 			#pragma target 3.0
-			#pragma multi_compile_shadowcaster
-			#pragma multi_compile __ LOD_FADE_CROSSFADE
+			#pragma multi_compile_local_shadowcaster
+			#pragma multi_compile_local __ LOD_FADE_CROSSFADE
 			#include "HLSLSupport.cginc"
 			#include "UnityCG.cginc"
 			#include "Lighting.cginc"

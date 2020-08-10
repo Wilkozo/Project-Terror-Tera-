@@ -63,24 +63,24 @@ Shader "Digger/URP/Terrain/Lit"
 
             // -------------------------------------
             // Universal Pipeline keywords
-            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS
-            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
-            #pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
-            #pragma multi_compile _ _ADDITIONAL_LIGHT_SHADOWS
-            #pragma multi_compile _ _SHADOWS_SOFT
-            #pragma multi_compile _ _MIXED_LIGHTING_SUBTRACTIVE
+            #pragma multi_compile_local _ _MAIN_LIGHT_SHADOWS
+            #pragma multi_compile_local _ _MAIN_LIGHT_SHADOWS_CASCADE
+            #pragma multi_compile_local _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
+            #pragma multi_compile_local _ _ADDITIONAL_LIGHT_SHADOWS
+            #pragma multi_compile_local _ _SHADOWS_SOFT
+            #pragma multi_compile_local _ _MIXED_LIGHTING_SUBTRACTIVE
 
             // -------------------------------------
             // Unity defined keywords
-            #pragma multi_compile _ DIRLIGHTMAP_COMBINED
-            #pragma multi_compile _ LIGHTMAP_ON
-            #pragma multi_compile_fog
-            #pragma multi_compile_instancing
+            #pragma multi_compile_local _ DIRLIGHTMAP_COMBINED
+            #pragma multi_compile_local _ LIGHTMAP_ON
+            #pragma multi_compile_local_fog
+            #pragma multi_compile_local_instancing
             #pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap
 
-            #pragma shader_feature _NORMALMAP
+            #pragma shader_feature_local _NORMALMAP
             // Sample normal in pixel shader when doing instancing
-            #pragma shader_feature _TERRAIN_INSTANCED_PERPIXEL_NORMAL
+            #pragma shader_feature_local _TERRAIN_INSTANCED_PERPIXEL_NORMAL
 
             #include "DiggerURPTerrainLitInput.hlsl"
             #include "DiggerURPTerrainLitPasses.hlsl"
@@ -103,7 +103,7 @@ Shader "Digger/URP/Terrain/Lit"
             #pragma vertex ShadowPassVertex
             #pragma fragment ShadowPassFragment
 
-            #pragma multi_compile_instancing
+            #pragma multi_compile_local_instancing
             #pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap
 
             #include "DiggerURPTerrainLitInput.hlsl"
@@ -128,7 +128,7 @@ Shader "Digger/URP/Terrain/Lit"
             #pragma vertex DepthOnlyVertex
             #pragma fragment DepthOnlyFragment
 
-            #pragma multi_compile_instancing
+            #pragma multi_compile_local_instancing
             #pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap
 
             #include "DiggerURPTerrainLitInput.hlsl"

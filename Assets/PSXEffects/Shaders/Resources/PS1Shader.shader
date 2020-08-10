@@ -56,12 +56,12 @@ Shader "PSXEffects/PS1Shader"
 
 				#pragma vertex vert
 				#pragma fragment frag
-				#pragma multi_compile_fwdbase nolightmap nodirlightmap nodynlightmap
-				#pragma multi_compile_fog
-				#pragma multi_compile _ LIGHTMAP_ON
-				#pragma multi_compile _ VERTEXLIGHT_ON
-				#pragma shader_feature TRANSPARENT
-				#pragma shader_feature BFC
+				#pragma multi_compile_local_fwdbase nolightmap nodirlightmap nodynlightmap
+				#pragma multi_compile_local_fog
+				#pragma multi_compile_local _ LIGHTMAP_ON
+				#pragma multi_compile_local _ VERTEXLIGHT_ON
+				#pragma shader_feature_local TRANSPARENT
+				#pragma shader_feature_local BFC
 
 				struct appdata {
 					float4 vertex : POSITION;
@@ -356,7 +356,7 @@ Shader "PSXEffects/PS1Shader"
 				CGPROGRAM
 				#pragma vertex vert
 				#pragma fragment frag
-				#pragma multi_compile_shadowcaster
+				#pragma multi_compile_local_shadowcaster
 				#include "UnityCG.cginc"
 				#include "PSXEffects.cginc"
 
@@ -442,8 +442,8 @@ Shader "PSXEffects/PS1Shader"
 
 				#pragma vertex vert
 				#pragma fragment frag
-				#pragma multi_compile_fwdadd_fullshadows
-				#pragma multi_compile_fog
+				#pragma multi_compile_local_fwdadd_fullshadows
+				#pragma multi_compile_local_fog
 
 				#include "UnityCG.cginc"
 				#include "UnityStandardUtils.cginc"

@@ -17,7 +17,7 @@ Shader "Enviro/Lite/EnviroFogRendering"
 	#pragma target 3.0
 
 		//  Start: LuxWater
-#pragma multi_compile __ LUXWATER_DEFERREDFOG
+#pragma multi_compile_local __ LUXWATER_DEFERREDFOG
 
 #if defined(LUXWATER_DEFERREDFOG)
 		sampler2D _UnderWaterMask;

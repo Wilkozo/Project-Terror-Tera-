@@ -75,9 +75,9 @@ Shader "NatureManufacture Shaders/Water/Water River Mobile Flow"
 		#include "UnityShaderVariables.cginc"
 		#include "UnityCG.cginc"
 		#pragma target 3.0
-		#pragma multi_compile_instancing
-		#pragma shader_feature _SPECULARHIGHLIGHTS_OFF
-		#pragma shader_feature _GLOSSYREFLECTIONS_OFF
+		#pragma multi_compile_local_instancing
+		#pragma shader_feature_local _SPECULARHIGHLIGHTS_OFF
+		#pragma shader_feature_local _GLOSSYREFLECTIONS_OFF
 		#pragma surface surf StandardSpecular keepalpha noshadow 
 		struct Input
 		{

@@ -61,27 +61,27 @@ Shader "Digger/HDRP/Terrain/Lit"
     #pragma only_renderers d3d11 ps4 xboxone vulkan metal switch
 
     // Terrain builtin keywords
-    #pragma shader_feature_local _TERRAIN_8_LAYERS
-    #pragma shader_feature_local _NORMALMAP
-    #pragma shader_feature_local _MASKMAP
+    #pragma shader_feature_local_local _TERRAIN_8_LAYERS
+    #pragma shader_feature_local_local _NORMALMAP
+    #pragma shader_feature_local_local _MASKMAP
 
-    #pragma shader_feature_local _TERRAIN_BLEND_HEIGHT
+    #pragma shader_feature_local_local _TERRAIN_BLEND_HEIGHT
     // Sample normal in pixel shader when doing instancing
-    #pragma shader_feature_local _TERRAIN_INSTANCED_PERPIXEL_NORMAL
+    #pragma shader_feature_local_local _TERRAIN_INSTANCED_PERPIXEL_NORMAL
 
-    //#pragma shader_feature _ _LAYER_MAPPING_PLANAR0 _LAYER_MAPPING_TRIPLANAR0
-    //#pragma shader_feature _ _LAYER_MAPPING_PLANAR1 _LAYER_MAPPING_TRIPLANAR1
-    //#pragma shader_feature _ _LAYER_MAPPING_PLANAR2 _LAYER_MAPPING_TRIPLANAR2
-    //#pragma shader_feature _ _LAYER_MAPPING_PLANAR3 _LAYER_MAPPING_TRIPLANAR3
+    //#pragma shader_feature_local _ _LAYER_MAPPING_PLANAR0 _LAYER_MAPPING_TRIPLANAR0
+    //#pragma shader_feature_local _ _LAYER_MAPPING_PLANAR1 _LAYER_MAPPING_TRIPLANAR1
+    //#pragma shader_feature_local _ _LAYER_MAPPING_PLANAR2 _LAYER_MAPPING_TRIPLANAR2
+    //#pragma shader_feature_local _ _LAYER_MAPPING_PLANAR3 _LAYER_MAPPING_TRIPLANAR3
 
-    #pragma shader_feature_local _DISABLE_DECALS
-    #pragma shader_feature_local _ADD_PRECOMPUTED_VELOCITY
+    #pragma shader_feature_local_local _DISABLE_DECALS
+    #pragma shader_feature_local_local _ADD_PRECOMPUTED_VELOCITY
 
     //enable GPU instancing support
-    #pragma multi_compile_instancing
+    #pragma multi_compile_local_instancing
     #pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap
 
-	#pragma multi_compile _ _ALPHATEST_ON
+	#pragma multi_compile_local _ _ALPHATEST_ON
 
     // All our shaders use same name for entry point
     #pragma vertex Vert
@@ -126,14 +126,14 @@ Shader "Digger/HDRP/Terrain/Lit"
 
             HLSLPROGRAM
 
-            #pragma multi_compile _ DEBUG_DISPLAY
-            #pragma multi_compile _ LIGHTMAP_ON
-            #pragma multi_compile _ DIRLIGHTMAP_COMBINED
-            #pragma multi_compile _ DYNAMICLIGHTMAP_ON
-            #pragma multi_compile _ SHADOWS_SHADOWMASK
+            #pragma multi_compile_local _ DEBUG_DISPLAY
+            #pragma multi_compile_local _ LIGHTMAP_ON
+            #pragma multi_compile_local _ DIRLIGHTMAP_COMBINED
+            #pragma multi_compile_local _ DYNAMICLIGHTMAP_ON
+            #pragma multi_compile_local _ SHADOWS_SHADOWMASK
             // Setup DECALS_OFF so the shader stripper can remove variants
-            #pragma multi_compile DECALS_OFF DECALS_3RT DECALS_4RT
-            #pragma multi_compile _ LIGHT_LAYERS
+            #pragma multi_compile_local DECALS_OFF DECALS_3RT DECALS_4RT
+            #pragma multi_compile_local _ LIGHT_LAYERS
 
             #define SHADERPASS SHADERPASS_GBUFFER
             #include "DiggerTerrainLitTemplate.hlsl"
@@ -208,8 +208,8 @@ Shader "Digger/HDRP/Terrain/Lit"
 
             // In deferred, depth only pass don't output anything.
             // In forward it output the normal buffer
-            #pragma multi_compile _ WRITE_NORMAL_BUFFER
-            #pragma multi_compile _ WRITE_MSAA_DEPTH
+            #pragma multi_compile_local _ WRITE_NORMAL_BUFFER
+            #pragma multi_compile_local _ WRITE_MSAA_DEPTH
 
             #define SHADERPASS SHADERPASS_DEPTH_ONLY
             #include "DiggerTerrainLitTemplate.hlsl"
@@ -245,18 +245,18 @@ Shader "Digger/HDRP/Terrain/Lit"
 
             HLSLPROGRAM
 
-            #pragma multi_compile _ DEBUG_DISPLAY
-            #pragma multi_compile _ LIGHTMAP_ON
-            #pragma multi_compile _ DIRLIGHTMAP_COMBINED
-            #pragma multi_compile _ DYNAMICLIGHTMAP_ON
-            #pragma multi_compile _ SHADOWS_SHADOWMASK
+            #pragma multi_compile_local _ DEBUG_DISPLAY
+            #pragma multi_compile_local _ LIGHTMAP_ON
+            #pragma multi_compile_local _ DIRLIGHTMAP_COMBINED
+            #pragma multi_compile_local _ DYNAMICLIGHTMAP_ON
+            #pragma multi_compile_local _ SHADOWS_SHADOWMASK
             // Setup DECALS_OFF so the shader stripper can remove variants
-            #pragma multi_compile DECALS_OFF DECALS_3RT DECALS_4RT
+            #pragma multi_compile_local DECALS_OFF DECALS_3RT DECALS_4RT
 
             // Supported shadow modes per light type
-            #pragma multi_compile SHADOW_LOW SHADOW_MEDIUM SHADOW_HIGH
+            #pragma multi_compile_local SHADOW_LOW SHADOW_MEDIUM SHADOW_HIGH
 
-            #pragma multi_compile USE_FPTL_LIGHTLIST USE_CLUSTERED_LIGHTLIST
+            #pragma multi_compile_local USE_FPTL_LIGHTLIST USE_CLUSTERED_LIGHTLIST
 
             #define SHADERPASS SHADERPASS_FORWARD
             #include "DiggerTerrainLitTemplate.hlsl"

@@ -336,11 +336,11 @@ Shader "CTS/CTS Terrain Shader Advanced"
 		#include "UnityPBSLighting.cginc"
 		#include "Lighting.cginc"
 		#pragma target 3.5
-		#pragma multi_compile __ _USE_AO_ON
-		#pragma multi_compile __ _USE_AO_TEXTURE_ON
+		#pragma multi_compile_local __ _USE_AO_ON
+		#pragma multi_compile_local __ _USE_AO_TEXTURE_ON
 		#pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
 		#include "TerrainSplatmapCommonCTS.cginc"
-		#pragma multi_compile_instancing
+		#pragma multi_compile_local_instancing
 		#ifdef UNITY_PASS_SHADOWCASTER
 			#undef INTERNAL_DATA
 			#undef WorldReflectionVector
@@ -2605,8 +2605,8 @@ Shader "CTS/CTS Terrain Shader Advanced"
 			#pragma vertex vert
 			#pragma fragment frag
 			#pragma target 3.5
-			#pragma multi_compile_shadowcaster
-			#pragma multi_compile UNITY_PASS_SHADOWCASTER
+			#pragma multi_compile_local_shadowcaster
+			#pragma multi_compile_local UNITY_PASS_SHADOWCASTER
 			#pragma skip_variants FOG_LINEAR FOG_EXP FOG_EXP2
 			#include "HLSLSupport.cginc"
 			#if ( SHADER_API_D3D11 || SHADER_API_GLCORE || SHADER_API_GLES || SHADER_API_GLES3 || SHADER_API_METAL || SHADER_API_VULKAN )

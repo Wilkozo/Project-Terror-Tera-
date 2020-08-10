@@ -36,10 +36,10 @@ Shader "ASESampleShaders/Aura 2"
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			#pragma multi_compile_instancing
+			#pragma multi_compile_local_instancing
 			#include "UnityCG.cginc"
-			#pragma shader_feature _APPLYFOG_ON
-			#pragma shader_feature _APPLYILLUMINATION_ON
+			#pragma shader_feature_local _APPLYFOG_ON
+			#pragma shader_feature_local _APPLYILLUMINATION_ON
 			#include "Assets/Aura 2/System/Code/Shaders/Includes/AuraUsage.cginc"
 
 

@@ -32,7 +32,7 @@ Shader "Enviro/Standard/SkyboxFlatClouds"
 	#pragma target 3.0
 	#pragma vertex vert
 	#pragma fragment frag
-	#pragma multi_compile __ UNITY_COLORSPACE_GAMMA
+	#pragma multi_compile_local __ UNITY_COLORSPACE_GAMMA
 	#include "UnityCG.cginc"
 
 	uniform float3 _Br;
@@ -240,7 +240,7 @@ Shader "Enviro/Standard/SkyboxFlatClouds"
 			CGPROGRAM
 		#pragma vertex vert
 		#pragma fragment frag
-		#pragma multi_compile __ ENVIRO_AURORA
+		#pragma multi_compile_local __ ENVIRO_AURORA
 		#include "UnityCG.cginc"
 
 

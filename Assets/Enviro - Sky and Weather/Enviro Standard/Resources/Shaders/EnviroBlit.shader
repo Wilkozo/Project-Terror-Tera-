@@ -19,8 +19,8 @@
 #pragma fragment frag
 #include "UnityCG.cginc"
 #pragma exclude_renderers gles 
-#pragma multi_compile __ ENVIRO_DEPTHBLENDING
-#pragma multi_compile __ ENVIRO_SINGLEPASSINSTANCED
+#pragma multi_compile_local __ ENVIRO_DEPTHBLENDING
+#pragma multi_compile_local __ ENVIRO_SINGLEPASSINSTANCED
 
 		//uniform sampler2D _MainTex;
 		UNITY_DECLARE_SCREENSPACE_TEXTURE(_MainTex);

@@ -55,13 +55,13 @@ SubShader {
         #pragma surface surf StandardSpecular fullforwardshadows vertex:CTIDisplace addshadow nodynlightmap tessellate:CTIDistanceBasedTess dithercrossfade
 // nolightmap
         #pragma target 4.6
-        #pragma multi_compile  LOD_FADE_PERCENTAGE LOD_FADE_CROSSFADE
-        #pragma multi_compile __ _METALLICGLOSSMAP
-//      #pragma multi_compile_instancing
+        #pragma multi_compile_local  LOD_FADE_PERCENTAGE LOD_FADE_CROSSFADE
+        #pragma multi_compile_local __ _METALLICGLOSSMAP
+//      #pragma multi_compile_local_instancing
         
     //  Detail modes: simply on / fade base textures / skip base textures
-        #pragma shader_feature __ GEOM_TYPE_BRANCH GEOM_TYPE_BRANCH_DETAIL GEOM_TYPE_FROND
-        #pragma shader_feature _SWAP_UVS
+        #pragma shader_feature_local __ GEOM_TYPE_BRANCH GEOM_TYPE_BRANCH_DETAIL GEOM_TYPE_FROND
+        #pragma shader_feature_local _SWAP_UVS
 
         //#if UNITY_VERSION >= 550
             #pragma instancing_options assumeuniformscaling lodfade

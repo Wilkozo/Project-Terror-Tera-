@@ -50,8 +50,8 @@ Shader "CTI/Tree Creator Leaves Optimized Tumbling" {
 		CGPROGRAM
 			#pragma surface surf TreeLeaf alphatest:_Cutoff vertex:CTI_TreeVertLeaf nolightmap noforwardadd keepalpha
 			#pragma target 3.0
-			#pragma shader_feature _DETAIL_MULX2
-			#pragma shader_feature _NORMALMAP
+			#pragma shader_feature_local _DETAIL_MULX2
+			#pragma shader_feature_local _NORMALMAP
 			// #include "UnityBuiltin3xTreeLibrary.cginc" // We can not do this as we want instancing
 			#define LEAFTUMBLING
 			#include "Includes/CTI_Builtin4xTreeLibraryTumbling.cginc"
@@ -89,8 +89,8 @@ Shader "CTI/Tree Creator Leaves Optimized Tumbling" {
 				#pragma vertex vert_surf
 				#pragma fragment frag_surf
 				#pragma target 3.0
-				#pragma shader_feature _DETAIL_MULX2
-				#pragma multi_compile_shadowcaster
+				#pragma shader_feature_local _DETAIL_MULX2
+				#pragma multi_compile_local_shadowcaster
 				#include "HLSLSupport.cginc"
 				#include "UnityCG.cginc"
 				#include "Lighting.cginc"
