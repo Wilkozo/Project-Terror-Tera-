@@ -7234,7 +7234,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 54e6338290ecaf840b5c24b117c141a2, type: 3}
   - {fileID: 8300000, guid: 795b82d7bc4eac7418b72ed13d7b2309, type: 3}
   TrackTitle: 
-  TrackTime: 
+  TrackTime: '0: 00 / 0:00'
   TrackVolume: 0
   Editwindow: {fileID: 0}
 --- !u!114 &1347851207
@@ -7317,15 +7317,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4143180536224383563}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b416fbce5a38cc47a3a1e709f95f5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.14.1 - up to date.
   sections: 01010100
-  customRes: {x: 480, y: 270}
-  resolutionFactor: 4
+  customRes: {x: 320, y: 180}
+  resolutionFactor: 6
   limitFramerate: 60
   skipFrames: 0
   affineMapping: 1
@@ -7335,13 +7335,13 @@ MonoBehaviour:
   colorDepth: 5
   scanlines: 1
   scanlineIntensity: 5
-  ditherTexture: {fileID: 2800000, guid: 8dd5bb07501448a4e9631457f7f63a13, type: 3}
+  ditherTexture: {fileID: 2800000, guid: 79b0fc6d8c2fcd54b84b49a2a2ebe7d8, type: 3}
   dithering: 1
   ditherThreshold: 1
   ditherIntensity: 26
   maxDarkness: 20
   subtractFade: 0
-  favorRed: 1
+  favorRed: 0.5
   worldSpaceSnapping: 0
   postProcessing: 1
   verticalScanlines: 1
@@ -7572,7 +7572,6 @@ GameObject:
   - component: {fileID: 9213395176434208089}
   - component: {fileID: 3407258133576261719}
   - component: {fileID: 358948813}
-  - component: {fileID: 2123553027}
   m_Layer: 0
   m_Name: GunCamera
   m_TagString: Untagged
@@ -7653,47 +7652,6 @@ MonoBehaviour:
   frustumSettings:
     baseSettings: {fileID: 0}
     qualitySettings: {fileID: 0}
---- !u!114 &2123553027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8097110784409742028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b416fbce5a38cc47a3a1e709f95f5e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cfuStatus: PSXEffects v1.14.1 - up to date.
-  sections: 01010100
-  customRes: {x: 274, y: 154}
-  resolutionFactor: 7
-  limitFramerate: 60
-  skipFrames: 0
-  affineMapping: 1
-  polygonalDrawDistance: 0
-  vertexInaccuracy: 30
-  polygonInaccuracy: 2
-  colorDepth: 5
-  scanlines: 0
-  scanlineIntensity: 5
-  ditherTexture: {fileID: 2800000, guid: 8dd5bb07501448a4e9631457f7f63a13, type: 3}
-  dithering: 1
-  ditherThreshold: 1
-  ditherIntensity: 35
-  maxDarkness: 20
-  subtractFade: 0
-  favorRed: 1
-  worldSpaceSnapping: 0
-  postProcessing: 1
-  verticalScanlines: 1
-  shadowIntensity: 0.5
-  downscale: 0
-  snapCamera: 0
-  camInaccuracy: 0.05
-  camSnapping: 0
-  shadowType: 0
 --- !u!1001 &835955319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7789,7 +7747,7 @@ PrefabInstance:
     - target: {fileID: 4224801822505238522, guid: 2d3ad6aef9205aa4986484d46f6c7b82,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4224801822505238522, guid: 2d3ad6aef9205aa4986484d46f6c7b82,
         type: 3}
