@@ -6366,6 +6366,7 @@ GameObject:
   - component: {fileID: 1400510661}
   - component: {fileID: 1400510657}
   - component: {fileID: 269682275090536788}
+  - component: {fileID: 644770279}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: Player
@@ -6933,6 +6934,38 @@ MonoBehaviour:
   underwaterParticlesStored: {fileID: 0}
   transitionPostFX: {fileID: 0}
   underwaterPostFX: {fileID: 0}
+--- !u!114 &644770279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143180536224383561}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 1
+  useScattering: 0
+  overrideScattering: 0
+  overridingScattering: 0.5
+  scatteringBias: 0
+  useColorTemperatureTint: 0
+  overrideColor: 0
+  overridingColor: {r: 1, g: 1, b: 1, a: 1}
+  useShadow: 1
+  useCookie: 1
+  enableOutOfPhaseColor: 0
+  outOfPhaseColorStrength: 0.1
+  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
+  customDistanceFalloffThreshold: 0.5
+  customDistanceFalloffPower: 2
+  customCookieDistanceFalloffStartThreshold: 0.1
+  customCookieDistanceFalloffEndThreshold: 0.25
+  customCookieDistanceFalloffPower: 2
+  customAngularFalloffThreshold: 0.8
+  customAngularFalloffPower: 2
 --- !u!1 &4143180536224383563
 GameObject:
   m_ObjectHideFlags: 0
@@ -7212,7 +7245,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4143180536224383563}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c79ca230b752ed4689dbf9e2583b1b7, type: 3}
   m_Name: 
@@ -7324,7 +7357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.14.1 - up to date.
   sections: 01010100
-  customRes: {x: 320, y: 180}
+  customRes: {x: 320, y: 4}
   resolutionFactor: 6
   limitFramerate: 60
   skipFrames: 0
@@ -7341,7 +7374,7 @@ MonoBehaviour:
   ditherIntensity: 26
   maxDarkness: 20
   subtractFade: 0
-  favorRed: 0.5
+  favorRed: 1
   worldSpaceSnapping: 0
   postProcessing: 1
   verticalScanlines: 1
@@ -7572,6 +7605,8 @@ GameObject:
   - component: {fileID: 9213395176434208089}
   - component: {fileID: 3407258133576261719}
   - component: {fileID: 358948813}
+  - component: {fileID: 500379558}
+  - component: {fileID: 500379559}
   m_Layer: 0
   m_Name: GunCamera
   m_TagString: Untagged
@@ -7652,6 +7687,60 @@ MonoBehaviour:
   frustumSettings:
     baseSettings: {fileID: 0}
     qualitySettings: {fileID: 0}
+--- !u!114 &500379558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8097110784409742028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161bda5a04103a14aa26030316282d16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  psxEffects: {fileID: 0}
+--- !u!114 &500379559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8097110784409742028}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b416fbce5a38cc47a3a1e709f95f5e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cfuStatus: PSXEffects v1.14.1 - up to date.
+  sections: 01010100
+  customRes: {x: 960, y: 12}
+  resolutionFactor: 2
+  limitFramerate: 60
+  skipFrames: 0
+  affineMapping: 1
+  polygonalDrawDistance: 0
+  vertexInaccuracy: 30
+  polygonInaccuracy: 2
+  colorDepth: 5
+  scanlines: 0
+  scanlineIntensity: 5
+  ditherTexture: {fileID: 2800000, guid: 79b0fc6d8c2fcd54b84b49a2a2ebe7d8, type: 3}
+  dithering: 1
+  ditherThreshold: 1
+  ditherIntensity: 35
+  maxDarkness: 20
+  subtractFade: 0
+  favorRed: 0
+  worldSpaceSnapping: 0
+  postProcessing: 1
+  verticalScanlines: 1
+  shadowIntensity: 0.5
+  downscale: 0
+  snapCamera: 0
+  camInaccuracy: 0.05
+  camSnapping: 0
+  shadowType: 0
 --- !u!1001 &835955319
 PrefabInstance:
   m_ObjectHideFlags: 0
