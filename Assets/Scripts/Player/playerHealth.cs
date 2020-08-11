@@ -105,7 +105,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             if (other.tag == "Checkpoint") {
                 message.CrossFadeAlpha(1, 0, true);
-                message.text = "This seems like a safe place";
+                message.text = "CheckPoint Reached";
                 message.CrossFadeAlpha(0, 10.0f, true);
                 //set the var for checkpoint to the other transform
                 checkpoint = other.gameObject.transform;
