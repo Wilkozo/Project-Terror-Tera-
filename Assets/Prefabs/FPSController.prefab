@@ -586,19 +586,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'There should be a map around here somewhere, I can''t remember where I
-    left it.
-
-
-    If someone were to find it, I would greatly appreciate them returning
-    it to me.
-
-
-    My office is on the third floor of this building.
-
-
-    (M to
-    enable map when found)'
+  m_Text: "I\u2019ve left a map in my office for those of you who have lost yours.
+    Next time take better care of it, I don\u2019t want to have to keep on requesting
+    more. For those of you who have forgotten where my office is it is on the third
+    floor. \n\nPress m for map when Acquired. "
 --- !u!1 &133962360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,7 +1201,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: IDK ADD TEXT HERE
+  m_Text: "I need to remember where I left my keycard, I think it was in a house
+    near the gate, I really need to find it before anyone notices that I have lost
+    it. \r\n"
 --- !u!1 &386135032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,7 +1828,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: IDK ADD TEXT HERE
+  m_Text: "Why do we only get our supplies from the boat, why can\u2019t they come
+    through faster, we\u2019ve been on rations for a couple of weeks now, I don\u2019t
+    know how much more I can take. \r\n"
 --- !u!1 &615776442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1912,7 +1907,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: IDK ADD TEXT HERE
+  m_Text: 'Oh man, the director wants to see me, that could mean any number of things,
+    hopefully it is to get me out of this cold maritime position.
+
+'
 --- !u!1 &628285493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,16 +2137,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'I know we are meant to be on patrol, yet I can''t help the feeling that
-    something is watching me.
-
-
-    Man this place just makes me feel so uneasy,
-    I should have never taken this job.
-
-
-    The keycard should be around somewhere,
-    I''ll need it to unlock the main gate, so I can report back to the boss'
+  m_Text: "Man I hate being on patrol around here, it\u2019s always so windy, sometimes
+    I wish I could just head back to the main base, at least it is warm there.\r\n"
 --- !u!1 &748464742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3229,7 +3219,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: IDK ADD TEXT HERE
+  m_Text: 'I wonder if they were planning on making this into an attraction at some
+    point, to me it would seem like a really bad idea. Too many issues with keeping
+    people safe, but who knows it will probably happen
+
+'
 --- !u!1 &1111654202
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,7 +4388,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: IDK ADD TEXT HERE
+  m_Text: 'There seems to be a lot of smaller rocks around here, I wonder if I could
+    skip them out into the water, it sure would break up the monotony of keeping
+    watch around here
+
+'
 --- !u!1 &1506871676
 GameObject:
   m_ObjectHideFlags: 0
@@ -4471,7 +4469,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: IDK ADD TEXT HERE
+  m_Text: "Hmm, it seems like my map has been partially torn up, hopefully I\u2019ll
+    be able to find the remaining pieces soon, it would be helpful to be able to
+    see where I am meant to be heading to.\r\n"
 --- !u!1 &1579690744
 GameObject:
   m_ObjectHideFlags: 0
@@ -6112,7 +6112,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: IDK ADD TEXT HERE
+  m_Text: "You know what I really want right now? A nice omelet, the mother of all
+    omelets would be so great right now. Yet they never give us any eggs in our rations.
+    \r\n"
 --- !u!1 &2134843469
 GameObject:
   m_ObjectHideFlags: 0
@@ -6535,7 +6537,7 @@ MonoBehaviour:
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
   crouch: 0
   run: 0
-  staminaAmount: 500000
+  staminaAmount: 150
   staminaBar: {fileID: 1873227990}
   enoughStamina: 2
 --- !u!54 &4143180536218935593
@@ -7230,7 +7232,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4143180536224383563}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
   m_Name: 
@@ -7357,7 +7359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.14.1 - up to date.
   sections: 01010100
-  customRes: {x: 320, y: 4}
+  customRes: {x: 320, y: 180}
   resolutionFactor: 6
   limitFramerate: 60
   skipFrames: 0
@@ -7714,7 +7716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.14.1 - up to date.
   sections: 01010100
-  customRes: {x: 960, y: 12}
+  customRes: {x: 960, y: 540}
   resolutionFactor: 2
   limitFramerate: 60
   skipFrames: 0
