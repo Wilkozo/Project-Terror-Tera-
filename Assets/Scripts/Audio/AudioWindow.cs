@@ -29,7 +29,7 @@ public class AudioWindow : EditorWindow
     // Show Window Function...
     public static void ShowWindow()
     {
-        EditorWindow.GetWindow<AudioWindow>("Audio-Plugin");
+        //EditorWindow.GetWindow<AudioWindow>("Audio-Plugin");
     }
 
     // For updating Titles and times...

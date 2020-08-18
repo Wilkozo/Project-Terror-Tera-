@@ -10,8 +10,8 @@ public class AudioManager : MonoBehaviour
 {
 
     private bool WorldMusicActive = false;
-    int MindState = 75; // 
-    int StreetBusy = 0; // 
+    //int MindState = 75; // 
+    //int StreetBusy = 0; // 
     public Sound[] Sounds;
     public static AudioManager instance;
 
