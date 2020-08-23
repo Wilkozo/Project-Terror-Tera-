@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private Text loadingText;
 
+    public string[] qualityLevelNames = { "Very Low", "Low", "Medium", "High", "Very High", "Ultra" };
+
     public void Start()
     {
         Cursor.visible = true;
@@ -41,6 +43,20 @@ public class MainMenu : MonoBehaviour
             loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
 
             yield return null;
+        }
+    }
+
+
+    public int qualitylevelTemp;
+    public Text qualityText;
+
+    public void qualityLevels() {
+        QualitySettings.SetQualityLevel(qualitylevelTemp ,true);
+        Debug.Log(qualityLevelNames);
+        qualityText.text = "Quality: " + qualityLevelNames[qualitylevelTemp].ToString();
+        qualitylevelTemp++;
+        if (qualitylevelTemp > 5) {
+            qualitylevelTemp = 0;
         }
     }
 

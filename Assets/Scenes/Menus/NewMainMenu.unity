@@ -147,6 +147,83 @@ MonoBehaviour:
   tintStrength: 1
   useExtinction: 0
   extinction: 0.745
+--- !u!1 &142465100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 142465101}
+  - component: {fileID: 142465103}
+  - component: {fileID: 142465102}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &142465101
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142465100}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1954263537}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &142465102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142465100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0.041643143, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5bec5f1040d90094e80ac98647a1be8a, type: 3}
+    m_FontSize: 70
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 70
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: Quality
+--- !u!222 &142465103
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142465100}
+  m_CullTransparentMesh: 0
 --- !u!1 &191493739 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1886827344575731148, guid: 3b76a9c479366f04a82430e4ff467e7a,
@@ -173,6 +250,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: 0
   loadingText: {fileID: 754944439}
+  qualityLevelNames:
+  - Very Low
+  - Low
+  - Medium
+  - High
+  - Very High
+  - Ultra
+  qualitylevelTemp: 0
+  qualityText: {fileID: 142465102}
 --- !u!114 &501608809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,9 +499,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b416fbce5a38cc47a3a1e709f95f5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cfuStatus: PSXEffects v1.14.1 - up to date.
+  cfuStatus: PSXEffects v1.14.1
   sections: 01010100
-  customRes: {x: 357, y: 85}
+  customRes: {x: 480, y: 270}
   resolutionFactor: 4
   limitFramerate: 60
   skipFrames: 0
@@ -442,6 +528,287 @@ MonoBehaviour:
   camInaccuracy: 0.05
   camSnapping: 0
   shadowType: 0
+--- !u!21 &1034584590
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CTS/CTS Terrain Shader Basic CutOut:CTS_Profile_200702-1643
+  m_Shader: {fileID: 4800000, guid: c626ac934c5cae64f91b8bfe98076fec, type: 3}
+  m_ShaderKeywords: _USE_AO_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Global_Color_Map:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Global_Normal_Map:
+        m_Texture: {fileID: 2800000, guid: d7000181a5e53ef4faa17f80c74ee83d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TerrainHolesTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture_Array_Albedo:
+        m_Texture: {fileID: 18700000, guid: 990f51d4853f631438bb72ca1d401d4f, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture_Array_Normal:
+        m_Texture: {fileID: 18700000, guid: 0edb7515f069ca946938c038bf1d7280, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture_Geological_Map:
+        m_Texture: {fileID: 2800000, guid: db6c596bb1041614aa74c9c7d27d4367, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture_Glitter:
+        m_Texture: {fileID: 2800000, guid: 0dd347c4b5067a2428dea9a70c418d05, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture_Splat_1:
+        m_Texture: {fileID: -6565463542509465121, guid: dac91dd79d44b964b8fedc1516dd49e1,
+          type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture_Splat_2:
+        m_Texture: {fileID: 882919255578318785, guid: dac91dd79d44b964b8fedc1516dd49e1,
+          type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture_Splat_3:
+        m_Texture: {fileID: -956863661728410797, guid: dac91dd79d44b964b8fedc1516dd49e1,
+          type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture_Splat_4:
+        m_Texture: {fileID: -8238235893213694393, guid: dac91dd79d44b964b8fedc1516dd49e1,
+          type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Ambient_Occlusion_Power: 1
+    - _Cutoff: 0.5
+    - _Geological_Map_Close_Power: 0.25
+    - _Geological_Map_Far_Power: 0.05
+    - _Geological_Map_Offset_Close: 0.028
+    - _Geological_Map_Offset_Far: 0
+    - _Geological_Tiling_Close: 142
+    - _Geological_Tiling_Far: 100
+    - _Gliter_Color_Power: 0.2
+    - _Glitter_Noise_Threshold: 0.991
+    - _Glitter_Refreshing_Speed: 4
+    - _Glitter_Smoothness: 0.9
+    - _Glitter_Specular: 0.2
+    - _Glitter_Tiling: 2.5
+    - _Global_Color_Map_Close_Power: 0
+    - _Global_Color_Map_Far_Power: 0
+    - _Global_Color_Map_Scale: 1
+    - _Global_Color_Opacity_Power: 0
+    - _Global_Normalmap_Power: 0.15
+    - _Perlin_Normal_Power: 0.43
+    - _Perlin_Normal_Power_Close: 0.65
+    - _Perlin_Normal_Tiling_Close: 15
+    - _Perlin_Normal_Tiling_Far: 10
+    - _Remove_Vert_Height: 45
+    - _Snow_Amount: 0
+    - _Snow_Blend_Normal: 0.9
+    - _Snow_Maximum_Angle: 22.9
+    - _Snow_Maximum_Angle_Hardness: 1
+    - _Snow_Min_Height: 145
+    - _Snow_Min_Height_Blending: 27
+    - _Snow_Noise_Power: 0.8
+    - _Snow_Noise_Tiling: 0.02
+    - _Snow_Normal_Scale: 1
+    - _Snow_Perlin_Power: 1
+    - _Snow_Specular: 1
+    - _Snow_Tiling: 6.9
+    - _Terrain_Smoothness: 0.65
+    - _Terrain_Specular: 0.85
+    - _Texture_10_Albedo_Index: 9
+    - _Texture_10_Far_Multiplier: 3
+    - _Texture_10_Geological_Power: 0.5
+    - _Texture_10_Normal_Index: 9
+    - _Texture_10_Normal_Power: 1.65
+    - _Texture_10_Perlin_Power: 1
+    - _Texture_10_Snow_Reduction: 0
+    - _Texture_10_Tiling: 8
+    - _Texture_10_Triplanar: 0
+    - _Texture_11_Albedo_Index: 10
+    - _Texture_11_Far_Multiplier: 3
+    - _Texture_11_Geological_Power: 1
+    - _Texture_11_Normal_Index: 10
+    - _Texture_11_Normal_Power: 1
+    - _Texture_11_Perlin_Power: 1
+    - _Texture_11_Snow_Reduction: 0
+    - _Texture_11_Tiling: 2
+    - _Texture_11_Triplanar: 0
+    - _Texture_12_Albedo_Index: 11
+    - _Texture_12_Far_Multiplier: 3
+    - _Texture_12_Geological_Power: 1
+    - _Texture_12_Normal_Index: 11
+    - _Texture_12_Normal_Power: 1
+    - _Texture_12_Perlin_Power: 1
+    - _Texture_12_Snow_Reduction: 0
+    - _Texture_12_Tiling: 2
+    - _Texture_12_Triplanar: 0
+    - _Texture_13_Albedo_Index: 12
+    - _Texture_13_Far_Multiplier: 3
+    - _Texture_13_Geological_Power: 1
+    - _Texture_13_Normal_Index: 12
+    - _Texture_13_Normal_Power: 1
+    - _Texture_13_Perlin_Power: 1
+    - _Texture_13_Snow_Reduction: 0
+    - _Texture_13_Tiling: 2
+    - _Texture_13_Triplanar: 0
+    - _Texture_14_Albedo_Index: 13
+    - _Texture_14_Far_Multiplier: 3
+    - _Texture_14_Geological_Power: 1
+    - _Texture_14_Normal_Index: 13
+    - _Texture_14_Normal_Power: 1
+    - _Texture_14_Perlin_Power: 1
+    - _Texture_14_Snow_Reduction: 0
+    - _Texture_14_Tiling: 2
+    - _Texture_14_Triplanar: 0
+    - _Texture_15_Albedo_Index: 14
+    - _Texture_15_Far_Multiplier: 3
+    - _Texture_15_Geological_Power: 1
+    - _Texture_15_Normal_Index: 14
+    - _Texture_15_Normal_Power: 1
+    - _Texture_15_Perlin_Power: 1
+    - _Texture_15_Snow_Reduction: 0
+    - _Texture_15_Tiling: 3
+    - _Texture_15_Triplanar: 0
+    - _Texture_16_Albedo_Index: -1
+    - _Texture_16_Far_Multiplier: 3
+    - _Texture_16_Geological_Power: 1
+    - _Texture_16_Normal_Index: -1
+    - _Texture_16_Normal_Power: 1
+    - _Texture_16_Perlin_Power: 0
+    - _Texture_16_Snow_Reduction: 0
+    - _Texture_16_Tiling: 15
+    - _Texture_16_Triplanar: 0
+    - _Texture_1_Albedo_Index: 0
+    - _Texture_1_Far_Multiplier: 3
+    - _Texture_1_Geological_Power: 1
+    - _Texture_1_Normal_Index: 0
+    - _Texture_1_Normal_Power: 1
+    - _Texture_1_Perlin_Power: 1
+    - _Texture_1_Snow_Reduction: 0
+    - _Texture_1_Tiling: 5
+    - _Texture_1_Triplanar: 0
+    - _Texture_2_Albedo_Index: 1
+    - _Texture_2_Far_Multiplier: 3
+    - _Texture_2_Geological_Power: 1
+    - _Texture_2_Normal_Index: 1
+    - _Texture_2_Normal_Power: 1
+    - _Texture_2_Perlin_Power: 1
+    - _Texture_2_Snow_Reduction: 0
+    - _Texture_2_Tiling: 7
+    - _Texture_2_Triplanar: 1
+    - _Texture_3_Albedo_Index: 2
+    - _Texture_3_Far_Multiplier: 3
+    - _Texture_3_Geological_Power: 1
+    - _Texture_3_Normal_Index: 2
+    - _Texture_3_Normal_Power: 1
+    - _Texture_3_Perlin_Power: 1
+    - _Texture_3_Snow_Reduction: 0
+    - _Texture_3_Tiling: 5
+    - _Texture_3_Triplanar: 0
+    - _Texture_4_Albedo_Index: 3
+    - _Texture_4_Far_Multiplier: 3
+    - _Texture_4_Geological_Power: 1
+    - _Texture_4_Normal_Index: 3
+    - _Texture_4_Normal_Power: 1
+    - _Texture_4_Perlin_Power: 1
+    - _Texture_4_Snow_Reduction: 0
+    - _Texture_4_Tiling: 35
+    - _Texture_4_Triplanar: 1
+    - _Texture_5_Albedo_Index: 4
+    - _Texture_5_Far_Multiplier: 3
+    - _Texture_5_Geological_Power: 1
+    - _Texture_5_Normal_Index: 4
+    - _Texture_5_Normal_Power: 1
+    - _Texture_5_Perlin_Power: 1
+    - _Texture_5_Snow_Reduction: 0
+    - _Texture_5_Tiling: 2
+    - _Texture_5_Triplanar: 0
+    - _Texture_6_Albedo_Index: 5
+    - _Texture_6_Far_Multiplier: 3
+    - _Texture_6_Geological_Power: 1
+    - _Texture_6_Normal_Index: 5
+    - _Texture_6_Normal_Power: 1
+    - _Texture_6_Perlin_Power: 1
+    - _Texture_6_Snow_Reduction: 0
+    - _Texture_6_Tiling: 15
+    - _Texture_6_Triplanar: 0
+    - _Texture_7_Albedo_Index: 6
+    - _Texture_7_Far_Multiplier: 3
+    - _Texture_7_Geological_Power: 1
+    - _Texture_7_Normal_Index: 6
+    - _Texture_7_Normal_Power: 1
+    - _Texture_7_Perlin_Power: 1
+    - _Texture_7_Snow_Reduction: 0
+    - _Texture_7_Tiling: 15
+    - _Texture_7_Triplanar: 1
+    - _Texture_8_Albedo_Index: 7
+    - _Texture_8_Far_Multiplier: 3
+    - _Texture_8_Geological_Power: 1
+    - _Texture_8_Normal_Index: 7
+    - _Texture_8_Normal_Power: 1
+    - _Texture_8_Perlin_Power: 1
+    - _Texture_8_Snow_Reduction: 0
+    - _Texture_8_Tiling: 15
+    - _Texture_8_Triplanar: 0
+    - _Texture_9_Albedo_Index: 8
+    - _Texture_9_Far_Multiplier: 3
+    - _Texture_9_Geological_Power: 1
+    - _Texture_9_Normal_Index: 8
+    - _Texture_9_Normal_Power: 1
+    - _Texture_9_Perlin_Power: 1
+    - _Texture_9_Snow_Reduction: 0
+    - _Texture_9_Tiling: 10
+    - _Texture_9_Triplanar: 0
+    - _Texture_Perlin_Normal_Index: 15
+    - _Texture_Snow_Index: -1
+    - _Texture_Snow_Normal_Index: -1
+    - _UV_Mix_Power: 5
+    - _UV_Mix_Start_Distance: 350.0015
+    - _Use_AO: 1
+    - __dirty: 1
+    m_Colors:
+    - _Global_Color_Map_Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Snow_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_10_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Texture_11_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_12_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_13_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_14_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_15_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_16_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_1_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_2_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_3_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_4_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_5_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_6_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_7_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_8_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_9_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_Snow_Average: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &1422718132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -950,287 +1317,135 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!21 &1815944540
-Material:
-  serializedVersion: 6
+--- !u!1 &1954263536
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CTS/CTS Terrain Shader Basic CutOut:CTS_Profile_200702-1643
-  m_Shader: {fileID: 4800000, guid: c626ac934c5cae64f91b8bfe98076fec, type: 3}
-  m_ShaderKeywords: _USE_AO_ON
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Global_Color_Map:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Global_Normal_Map:
-        m_Texture: {fileID: 2800000, guid: d7000181a5e53ef4faa17f80c74ee83d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TerrainHolesTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture_Array_Albedo:
-        m_Texture: {fileID: 18700000, guid: 990f51d4853f631438bb72ca1d401d4f, type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture_Array_Normal:
-        m_Texture: {fileID: 18700000, guid: 0edb7515f069ca946938c038bf1d7280, type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture_Geological_Map:
-        m_Texture: {fileID: 2800000, guid: db6c596bb1041614aa74c9c7d27d4367, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture_Glitter:
-        m_Texture: {fileID: 2800000, guid: 0dd347c4b5067a2428dea9a70c418d05, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture_Splat_1:
-        m_Texture: {fileID: -6565463542509465121, guid: dac91dd79d44b964b8fedc1516dd49e1,
-          type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture_Splat_2:
-        m_Texture: {fileID: 882919255578318785, guid: dac91dd79d44b964b8fedc1516dd49e1,
-          type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture_Splat_3:
-        m_Texture: {fileID: -956863661728410797, guid: dac91dd79d44b964b8fedc1516dd49e1,
-          type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture_Splat_4:
-        m_Texture: {fileID: -8238235893213694393, guid: dac91dd79d44b964b8fedc1516dd49e1,
-          type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Ambient_Occlusion_Power: 1
-    - _Cutoff: 0.5
-    - _Geological_Map_Close_Power: 0.25
-    - _Geological_Map_Far_Power: 0.05
-    - _Geological_Map_Offset_Close: 0.028
-    - _Geological_Map_Offset_Far: 0
-    - _Geological_Tiling_Close: 142
-    - _Geological_Tiling_Far: 100
-    - _Gliter_Color_Power: 0.2
-    - _Glitter_Noise_Threshold: 0.991
-    - _Glitter_Refreshing_Speed: 4
-    - _Glitter_Smoothness: 0.9
-    - _Glitter_Specular: 0.2
-    - _Glitter_Tiling: 2.5
-    - _Global_Color_Map_Close_Power: 0
-    - _Global_Color_Map_Far_Power: 0
-    - _Global_Color_Map_Scale: 1
-    - _Global_Color_Opacity_Power: 0
-    - _Global_Normalmap_Power: 0.15
-    - _Perlin_Normal_Power: 0.43
-    - _Perlin_Normal_Power_Close: 0.65
-    - _Perlin_Normal_Tiling_Close: 15
-    - _Perlin_Normal_Tiling_Far: 10
-    - _Remove_Vert_Height: 45
-    - _Snow_Amount: 0
-    - _Snow_Blend_Normal: 0.9
-    - _Snow_Maximum_Angle: 22.9
-    - _Snow_Maximum_Angle_Hardness: 1
-    - _Snow_Min_Height: 145
-    - _Snow_Min_Height_Blending: 27
-    - _Snow_Noise_Power: 0.8
-    - _Snow_Noise_Tiling: 0.02
-    - _Snow_Normal_Scale: 1
-    - _Snow_Perlin_Power: 1
-    - _Snow_Specular: 1
-    - _Snow_Tiling: 6.9
-    - _Terrain_Smoothness: 0.65
-    - _Terrain_Specular: 0.85
-    - _Texture_10_Albedo_Index: 9
-    - _Texture_10_Far_Multiplier: 3
-    - _Texture_10_Geological_Power: 0.5
-    - _Texture_10_Normal_Index: 9
-    - _Texture_10_Normal_Power: 1.65
-    - _Texture_10_Perlin_Power: 1
-    - _Texture_10_Snow_Reduction: 0
-    - _Texture_10_Tiling: 8
-    - _Texture_10_Triplanar: 0
-    - _Texture_11_Albedo_Index: 10
-    - _Texture_11_Far_Multiplier: 3
-    - _Texture_11_Geological_Power: 1
-    - _Texture_11_Normal_Index: 10
-    - _Texture_11_Normal_Power: 1
-    - _Texture_11_Perlin_Power: 1
-    - _Texture_11_Snow_Reduction: 0
-    - _Texture_11_Tiling: 2
-    - _Texture_11_Triplanar: 0
-    - _Texture_12_Albedo_Index: 11
-    - _Texture_12_Far_Multiplier: 3
-    - _Texture_12_Geological_Power: 1
-    - _Texture_12_Normal_Index: 11
-    - _Texture_12_Normal_Power: 1
-    - _Texture_12_Perlin_Power: 1
-    - _Texture_12_Snow_Reduction: 0
-    - _Texture_12_Tiling: 2
-    - _Texture_12_Triplanar: 0
-    - _Texture_13_Albedo_Index: 12
-    - _Texture_13_Far_Multiplier: 3
-    - _Texture_13_Geological_Power: 1
-    - _Texture_13_Normal_Index: 12
-    - _Texture_13_Normal_Power: 1
-    - _Texture_13_Perlin_Power: 1
-    - _Texture_13_Snow_Reduction: 0
-    - _Texture_13_Tiling: 2
-    - _Texture_13_Triplanar: 0
-    - _Texture_14_Albedo_Index: 13
-    - _Texture_14_Far_Multiplier: 3
-    - _Texture_14_Geological_Power: 1
-    - _Texture_14_Normal_Index: 13
-    - _Texture_14_Normal_Power: 1
-    - _Texture_14_Perlin_Power: 1
-    - _Texture_14_Snow_Reduction: 0
-    - _Texture_14_Tiling: 2
-    - _Texture_14_Triplanar: 0
-    - _Texture_15_Albedo_Index: 14
-    - _Texture_15_Far_Multiplier: 3
-    - _Texture_15_Geological_Power: 1
-    - _Texture_15_Normal_Index: 14
-    - _Texture_15_Normal_Power: 1
-    - _Texture_15_Perlin_Power: 1
-    - _Texture_15_Snow_Reduction: 0
-    - _Texture_15_Tiling: 3
-    - _Texture_15_Triplanar: 0
-    - _Texture_16_Albedo_Index: -1
-    - _Texture_16_Far_Multiplier: 3
-    - _Texture_16_Geological_Power: 1
-    - _Texture_16_Normal_Index: -1
-    - _Texture_16_Normal_Power: 1
-    - _Texture_16_Perlin_Power: 0
-    - _Texture_16_Snow_Reduction: 0
-    - _Texture_16_Tiling: 15
-    - _Texture_16_Triplanar: 0
-    - _Texture_1_Albedo_Index: 0
-    - _Texture_1_Far_Multiplier: 3
-    - _Texture_1_Geological_Power: 1
-    - _Texture_1_Normal_Index: 0
-    - _Texture_1_Normal_Power: 1
-    - _Texture_1_Perlin_Power: 1
-    - _Texture_1_Snow_Reduction: 0
-    - _Texture_1_Tiling: 5
-    - _Texture_1_Triplanar: 0
-    - _Texture_2_Albedo_Index: 1
-    - _Texture_2_Far_Multiplier: 3
-    - _Texture_2_Geological_Power: 1
-    - _Texture_2_Normal_Index: 1
-    - _Texture_2_Normal_Power: 1
-    - _Texture_2_Perlin_Power: 1
-    - _Texture_2_Snow_Reduction: 0
-    - _Texture_2_Tiling: 7
-    - _Texture_2_Triplanar: 1
-    - _Texture_3_Albedo_Index: 2
-    - _Texture_3_Far_Multiplier: 3
-    - _Texture_3_Geological_Power: 1
-    - _Texture_3_Normal_Index: 2
-    - _Texture_3_Normal_Power: 1
-    - _Texture_3_Perlin_Power: 1
-    - _Texture_3_Snow_Reduction: 0
-    - _Texture_3_Tiling: 5
-    - _Texture_3_Triplanar: 0
-    - _Texture_4_Albedo_Index: 3
-    - _Texture_4_Far_Multiplier: 3
-    - _Texture_4_Geological_Power: 1
-    - _Texture_4_Normal_Index: 3
-    - _Texture_4_Normal_Power: 1
-    - _Texture_4_Perlin_Power: 1
-    - _Texture_4_Snow_Reduction: 0
-    - _Texture_4_Tiling: 35
-    - _Texture_4_Triplanar: 1
-    - _Texture_5_Albedo_Index: 4
-    - _Texture_5_Far_Multiplier: 3
-    - _Texture_5_Geological_Power: 1
-    - _Texture_5_Normal_Index: 4
-    - _Texture_5_Normal_Power: 1
-    - _Texture_5_Perlin_Power: 1
-    - _Texture_5_Snow_Reduction: 0
-    - _Texture_5_Tiling: 2
-    - _Texture_5_Triplanar: 0
-    - _Texture_6_Albedo_Index: 5
-    - _Texture_6_Far_Multiplier: 3
-    - _Texture_6_Geological_Power: 1
-    - _Texture_6_Normal_Index: 5
-    - _Texture_6_Normal_Power: 1
-    - _Texture_6_Perlin_Power: 1
-    - _Texture_6_Snow_Reduction: 0
-    - _Texture_6_Tiling: 15
-    - _Texture_6_Triplanar: 0
-    - _Texture_7_Albedo_Index: 6
-    - _Texture_7_Far_Multiplier: 3
-    - _Texture_7_Geological_Power: 1
-    - _Texture_7_Normal_Index: 6
-    - _Texture_7_Normal_Power: 1
-    - _Texture_7_Perlin_Power: 1
-    - _Texture_7_Snow_Reduction: 0
-    - _Texture_7_Tiling: 15
-    - _Texture_7_Triplanar: 1
-    - _Texture_8_Albedo_Index: 7
-    - _Texture_8_Far_Multiplier: 3
-    - _Texture_8_Geological_Power: 1
-    - _Texture_8_Normal_Index: 7
-    - _Texture_8_Normal_Power: 1
-    - _Texture_8_Perlin_Power: 1
-    - _Texture_8_Snow_Reduction: 0
-    - _Texture_8_Tiling: 15
-    - _Texture_8_Triplanar: 0
-    - _Texture_9_Albedo_Index: 8
-    - _Texture_9_Far_Multiplier: 3
-    - _Texture_9_Geological_Power: 1
-    - _Texture_9_Normal_Index: 8
-    - _Texture_9_Normal_Power: 1
-    - _Texture_9_Perlin_Power: 1
-    - _Texture_9_Snow_Reduction: 0
-    - _Texture_9_Tiling: 10
-    - _Texture_9_Triplanar: 0
-    - _Texture_Perlin_Normal_Index: 15
-    - _Texture_Snow_Index: -1
-    - _Texture_Snow_Normal_Index: -1
-    - _UV_Mix_Power: 5
-    - _UV_Mix_Start_Distance: 350.00204
-    - _Use_AO: 1
-    - __dirty: 1
-    m_Colors:
-    - _Global_Color_Map_Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _Snow_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_10_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Texture_11_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_12_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_13_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_14_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_15_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_16_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_1_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_2_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_3_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_4_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_5_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_6_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_7_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_8_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_9_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Texture_Snow_Average: {r: 0, g: 0, b: 0, a: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1954263537}
+  - component: {fileID: 1954263540}
+  - component: {fileID: 1954263539}
+  - component: {fileID: 1954263538}
+  m_Layer: 5
+  m_Name: Quality
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1954263537
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954263536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 142465101}
+  m_Father: {fileID: 191493743}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 1387, y: -479}
+  m_SizeDelta: {x: 342.5, y: 84}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &1954263538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954263536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.53333336}
+    m_PressedColor: {r: 0.3301887, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.5566038, g: 0.54347634, b: 0.54347634, a: 0}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1954263539}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 191493744}
+        m_MethodName: qualityLevels
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1954263539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954263536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1954263540
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954263536}
+  m_CullTransparentMesh: 0
 --- !u!1 &1969742155
 GameObject:
   m_ObjectHideFlags: 0
