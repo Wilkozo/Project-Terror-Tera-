@@ -23,7 +23,7 @@ public class AudioWindow : EditorWindow
     // Creates the Editor Window...
     private void OnEnable()
     {
-        m_Logo = (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/AudioPlugin/Example.jpg", typeof(Texture2D));
+        m_Logo = (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/AudioPlugin/Example.jpg", typeof(Texture2D));
         TimeString = FindObjectOfType<Audio_Plugin>().DisplayTrackTime();
         TrackVolume = FindObjectOfType<Audio_Plugin>().DisplayTrackVolume();
     }
@@ -31,8 +31,6 @@ public class AudioWindow : EditorWindow
     // Show Window Function...
     public static void ShowWindow()
     {
-        // Disabled during working (gets annoying when it keeps popping up at runtime)
-        // Initially just used to show the window as it wouldn't show in the tools dropdown menu
         //EditorWindow.GetWindow<AudioWindow>("Audio-Plugin");
     }
 
