@@ -10,26 +10,29 @@ public class AudioManager : MonoBehaviour
 {
 
     private bool WorldMusicActive = false;
-    //int MindState = 75; // 
-    //int StreetBusy = 0; // 
     public Sound[] Sounds;
     public static AudioManager instance;
+    private AudioSource CurrentTrack;
+    private AudioSource source;
 
     private void Start()
     {
-            float RandNum = UnityEngine.Random.Range(0, 100);
-            if (RandNum <= 74)
-            {
-                Play("Wind");
+        // Get the sound
+        source = GetComponent<AudioSource>();
+        // Play Music
+        float RandNum = UnityEngine.Random.Range(0, 100);
+        if (RandNum <= 74)
+        {
 
-            }
-            else if (RandNum > 75)
-            {
-                Play("BusyAmbience");
-            }
+        }
+        else if (RandNum > 75)
+        {
+
+        }
         
     }
-    // Use this for initialization
+
+    // Used for initialization
     void Awake()
     {
         
@@ -43,7 +46,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-
+        // Initialise the sounds...
         foreach (Sound i in Sounds)
         {
             i.source = gameObject.AddComponent<AudioSource>();
@@ -63,11 +66,12 @@ public class AudioManager : MonoBehaviour
     public void Play(string name)
     {
         Sound i = Array.Find(Sounds, Sound => Sound.name == name);
-        if (i == null)
-        {
+        if (i == null) // failsafe for if the sound isn't working 
+        {              //(sends meessage to see if it is null)
             Debug.LogWarning("Sound / SFX" + name + " Missing!");
             return;
         }
+        
         i.source.Play();
     }
 
@@ -77,10 +81,15 @@ public class AudioManager : MonoBehaviour
         Debug.Log("Tracking lost, stopping audio");
         if (i.source.isPlaying)
         {
-            i.source.Stop();
+            for (int j = 0; j < 1000; j++)
+            {
+                i.source.volume -= (float)0.1;
+                if (i.source.volume == 0)
+                {
+                    i.source.Stop();
+                }
+            }
         }
-
-        // rest of your code here
     }
 
 }

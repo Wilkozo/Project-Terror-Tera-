@@ -33,7 +33,7 @@ public class Audio_Plugin : MonoBehaviour
     private int Minutes;
     private int Seconds;
 
-    //
+    // Volumes - Variables for cross fading tracks
     float VolumeA;
     float VolumeB;
     float Timer = 6.0f;
@@ -47,7 +47,7 @@ public class Audio_Plugin : MonoBehaviour
 
     private void Update()
     {
-       /* if (FadingOut == true)
+        if (FadingOut == true)
         {
             Source.volume = VolumeA;
             Fade();
@@ -61,7 +61,6 @@ public class Audio_Plugin : MonoBehaviour
         {
             Timer = 0.0f;
         }
-        */
     }
 
     // Volume Variable
@@ -87,7 +86,7 @@ public class Audio_Plugin : MonoBehaviour
     // Start is called before the first frame update.
     void Start()
     {
-        _WaitPeriod = UnityEngine.Random.Range(5, 15);
+        _WaitPeriod = UnityEngine.Random.Range(0, 5);
         // Binds the Source to the component.
         Source = GetComponent<AudioSource>();
         // This plays the music.
@@ -95,14 +94,15 @@ public class Audio_Plugin : MonoBehaviour
     }
 
 
-    ///*float*/ void Fade(/*float a, float b, float amount*/)
-    /*{
+    /*float*/ void Fade(/*float a, float b, float amount*/)
+    {
         Timer += Time.deltaTime;
 
         T = Timer / FadeTime;
 
         VolumeA = Mathf.Lerp(1.0f, 0.0f, T);
         VolumeB= Mathf.Lerp(0.0f, 1.0f, T);
+        // Old method (didn't work)
         /*
         if (a < b)
         {
@@ -118,7 +118,7 @@ public class Audio_Plugin : MonoBehaviour
         }
         return a;
         */
-    //}
+    }
 
     // Wait's for the track to end before starting the next track.
     IEnumerator WaitForTrackEnd()
@@ -128,7 +128,7 @@ public class Audio_Plugin : MonoBehaviour
             // Gets the current time of the song.
             CurrentTime = (int)Source.time;
             // Fade In Audio.
-            /*if (Source.time < TrackLength)
+            if (Source.time < TrackLength)
             {
                 while (Source.volume == 0)
                 {
@@ -138,11 +138,8 @@ public class Audio_Plugin : MonoBehaviour
                     //Source.volume = Fade(0.0f, 1.0f, 6.0f);
                 }
             }
-            */
-
             // Fade Out Audio. on 6 seconds
-
-            /*if (Source.time > TrackLength - 6)
+            if (Source.time > TrackLength - 6)
             {
                 while (Source.volume != 0)
                 {
@@ -152,7 +149,6 @@ public class Audio_Plugin : MonoBehaviour
                     //Source.volume = Fade(1.0f, 0.0f, 6.0f);
                 }
             }
-            */
             // Shows the Current time.
             DisplayTrackTime();
             yield return 0;
@@ -162,12 +158,11 @@ public class Audio_Plugin : MonoBehaviour
 
     IEnumerator TrackIntermission()
     {
-        _WaitPeriod = UnityEngine.Random.Range(5, 15);
-        Debug.Log("Waiting for: " + _WaitPeriod + "Seconds");
+        //Debug.Log("Waiting for: " + _WaitPeriod + "Seconds");
         yield return new WaitForSecondsRealtime(_WaitPeriod);
         //Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         NextTrack();
-
+        _WaitPeriod = UnityEngine.Random.Range(0, 5);
 
     }
 
@@ -180,8 +175,8 @@ public class Audio_Plugin : MonoBehaviour
             while (Source.volume < 1)
             {
                 Update();
-                //FadingOut = false;
-                //FadingIn = true;
+                FadingOut = false;
+                FadingIn = true;
                 //Source.volume = Fade(0, 1, 5);
             }
             return; }
@@ -199,8 +194,8 @@ public class Audio_Plugin : MonoBehaviour
         while (Source.volume != 0)
         {
             Update();
-            //FadingIn = false;
-            //FadingOut = true;
+            FadingIn = false;
+            FadingOut = true;
             //Source.volume = Fade(1, 0, 5);
         }
         Source.Stop();
