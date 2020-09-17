@@ -208,7 +208,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             while (i < hits.Length)
             {
-                hits[i].SendMessage("HeardSomethingPlayer");
+                hits[i].SendMessage("HeardSomethingPlayer", SendMessageOptions.DontRequireReceiver);
                 i++;
             }
 
