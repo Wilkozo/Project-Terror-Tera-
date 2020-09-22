@@ -11,6 +11,7 @@ public class Danger_Manager : MonoBehaviour
         g_Object.GetComponent<AudioSource>().PlayOneShot(a_Clip);
     }
 
+
     // Start is called before the first frame update
     void Start()
     {

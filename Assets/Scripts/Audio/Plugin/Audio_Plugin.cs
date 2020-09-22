@@ -13,6 +13,7 @@ using System;
 [RequireComponent(typeof(AudioSource))]
 public class Audio_Plugin : MonoBehaviour
 {
+    [SerializeField]public bool pInDanger = false;
 
     // Required Variables...
     public AudioClip[] SoundTracks; // Sounds
@@ -53,7 +54,11 @@ public class Audio_Plugin : MonoBehaviour
 
     void Update()
     {
-        
+        if (pInDanger == true)
+        {
+            MuteSong();
+        }
+
 
         
     }
