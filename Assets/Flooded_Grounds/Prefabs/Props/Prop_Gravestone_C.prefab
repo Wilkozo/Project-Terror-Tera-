@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3329938}
   - component: {fileID: 2342236}
   - component: {fileID: 6585036}
-  m_Layer: 8
+  - component: {fileID: 2133194650}
+  m_Layer: 0
   m_Name: Prop_Gravestone_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,3 +94,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2633486, y: 2.100029, z: 0.37173557}
   m_Center: {x: 0, y: 1.0484588, z: -0.007817768}
+--- !u!205 &2133194650
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136794}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.4473863
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.14605753
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.025322432
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
