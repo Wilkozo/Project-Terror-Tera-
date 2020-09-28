@@ -20,6 +20,16 @@ public class Audio_Plugin : MonoBehaviour
     private int CurrentSong;
     private AudioSource Source;
 
+    public GameObject Player;
+    public GameObject Raptor;
+
+    public float SafeDistance = 100;
+    public float CautionDistance = 50;
+
+    private bool SafeZone = true;
+    private bool CautionZone = false;
+    private bool ChaseZone = false;
+
     // Variables For Displaying Track Data...
 
     // Text Variables.
@@ -46,16 +56,7 @@ public class Audio_Plugin : MonoBehaviour
     {
         if (pInDanger == true)
         {
-            // Happens Constantly
-            //MuteSong();
-            Source.volume = 0;
-            StartCoroutine(TrackIntermission());
-        }
-        if (pInDanger == false)
-        {
-
-            Source.volume = 1;
-            
+            MuteSong();
         }
 
 
@@ -336,12 +337,8 @@ public class Audio_Plugin : MonoBehaviour
     // Shows the Track Volume
     public float DisplayTrackVolume()
     {
-        if (Source != null)
-        {
-            TrackVolume = Source.volume;
-            return TrackVolume;
-        }
-        return 0;
+        TrackVolume = Source.volume;
+        return TrackVolume;
     }
 }
 

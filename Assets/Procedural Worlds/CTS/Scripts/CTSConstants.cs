@@ -215,12 +215,12 @@ namespace CTS
                                                           TextureFormat.RGBA32,
                                                           //RGBAHalf = RGBA 16 bit
                                                           TextureFormat.RGBAHalf,
-                                                          TextureFormat.ASTC_RGB_4x4,
-                                                          TextureFormat.ASTC_RGB_6x6,
-                                                          TextureFormat.ASTC_RGB_8x8,
-                                                          TextureFormat.ASTC_RGBA_4x4,
-                                                          TextureFormat.ASTC_RGBA_6x6,
-                                                          TextureFormat.ASTC_RGBA_8x8,
+                                                          TextureFormat.ASTC_4x4,
+                                                          TextureFormat.ASTC_6x6,
+                                                          TextureFormat.ASTC_8x8,
+                                                          TextureFormat.ASTC_4x4,
+                                                          TextureFormat.ASTC_6x6,
+                                                          TextureFormat.ASTC_8x8,
                                                           } },
 
             {BuildTarget.WebGL, new List<TextureFormat>{  TextureFormat.RGB24,
