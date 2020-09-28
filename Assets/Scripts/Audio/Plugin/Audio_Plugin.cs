@@ -160,7 +160,7 @@ public class Audio_Plugin : MonoBehaviour
 
     IEnumerator TrackIntermission()
     {
-        _WaitPeriod = UnityEngine.Random.Range(5, 15);
+        _WaitPeriod = UnityEngine.Random.Range(60, 90);
         Debug.Log("Waiting for: " + _WaitPeriod + "Seconds");
         yield return new WaitForSecondsRealtime(_WaitPeriod);
         //Debug.Log("Finished Coroutine at timestamp : " + Time.time);

@@ -2,26 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+
+    [SerializeField]
+    private int scene;
+    [SerializeField]
+    private Text loadingText;
+
+    public void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    private void Update()
+    {
+        Cursor.visible = true;
+    }
     public void PlayGame()
     {
-        FindObjectOfType<AudioManager>().Play("Button");
+        // Use a coroutine to load the Scene in the background
+        StartCoroutine(LoadYourAsyncScene());
 
-        // Gets The Next Scene for the Play Mode
-        SceneManager.LoadScene(1);
+
+    }
+
+    IEnumerator LoadYourAsyncScene()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            // ...then pulse the transparency of the loading text to let the player know that the computer is still working.
+            loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
+
+            yield return null;
+        }
     }
 
     public void ReturnToMainMenu()
     {
-        FindObjectOfType<AudioManager>().Play("Button");
+        //FindObjectOfType<AudioManager>().Play("Button");
         SceneManager.LoadScene(0);
     }
 
     public void EndGame()
     {
-        FindObjectOfType<AudioManager>().Play("Button");
+        //FindObjectOfType<AudioManager>().Play("Button");
         Application.Quit();
     }
 }

@@ -22,7 +22,7 @@ public class EnemyAnimationControllerRaptor : MonoBehaviour
         {
             animator.SetBool("IsMoving", true);
         }
-        else {
+        else{
             animator.SetBool("IsMoving", false);
         }
     }
