@@ -130,7 +130,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 healthPlayer.playerHealthImage.fillAmount -= 0.2f * Time.deltaTime;
                 //increase the blood overlay effect
-                healthPlayer.canGroup.alpha += 0.1f * Time.deltaTime;
+                healthPlayer.canGroup.alpha += 0.2f * Time.deltaTime;
                 healthPlayer.health -= 0.2f * Time.deltaTime;
                 //healthPlayer.LoseHealth();
             }

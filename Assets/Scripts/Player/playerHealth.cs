@@ -115,9 +115,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (other.tag == "KillFloor")
             {
                 //sets the blackout overlay
-                canGroup.alpha = 1.0f;
+                canGroup.alpha += 1 * Time.deltaTime;
                 //kills the player
-                playerHealthImage.fillAmount = 0;
+                playerHealthImage.fillAmount -= 1 * Time.deltaTime;
                 //health = 0;
             }
         }
