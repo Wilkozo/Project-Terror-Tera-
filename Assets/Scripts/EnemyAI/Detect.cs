@@ -57,8 +57,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //find the navmesh agent component
             agent = this.GetComponent<NavMeshAgent>();
             //find the player
-            player = GameObject.FindGameObjectWithTag("Player");
-            healthPlayer = player.GetComponent<playerHealth>();
+           // player = GameObject.FindGameObjectWithTag("Player");
+           // healthPlayer = player.GetComponent<playerHealth>();
         }
 
 
