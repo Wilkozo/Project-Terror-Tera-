@@ -73,6 +73,14 @@ public class PlayerInteract : MonoBehaviour
             if (hit.transform.tag == "AudioLog") {
                 hit.transform.GetComponent<AudioLog>().Collected();
             }
+            if (hit.transform.name == "ShotgunAmmo") {
+                this.GetComponentInChildren<Gun>().pickup("Shotgun", 1);
+                Destroy(hit.transform.gameObject);
+            }
+            if (hit.transform.name == "TranqAmmo") {
+                this.GetComponentInChildren<Gun>().pickup("Tranq", 1);
+                Destroy(hit.transform.gameObject);
+            }
 
             if (hit.transform.name == "BlueKeycard") {
                 //enable the dinosaurs

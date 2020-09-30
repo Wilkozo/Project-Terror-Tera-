@@ -108,7 +108,7 @@ public class Gun : MonoBehaviour
                 if (Input.GetMouseButtonDown(0) && shotgunAmmo > 0 && delay >= 1)
                 {
                     //be lazy and instantiate bullet prefabs
-                    for (int i = 0; i < 5; i++)
+                    for (int i = 0; i < 10; i++)
                     {
                         source.PlayOneShot(clip);
                         //alert the dinosaur

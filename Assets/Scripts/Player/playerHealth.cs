@@ -8,6 +8,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
     public class playerHealth : MonoBehaviour
     {
 
+        public FirstPersonController fpsController;
+
         //UI elements
         public Image playerHealthImage;
         public Image bloodOverlay;
@@ -34,6 +36,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             canGroup.alpha = 0;
             gameOverCanGroup.alpha = 0;
             BlackedOutText.CrossFadeAlpha(0, 0, true);
+            fpsController = this.GetComponent<FirstPersonController>();
         }
 
         private void Update()
@@ -118,6 +121,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 canGroup.alpha += 1 * Time.deltaTime;
                 //kills the player
                 playerHealthImage.fillAmount -= 1 * Time.deltaTime;
+                fpsController.staminaAmount = 40.0f;
                 //health = 0;
             }
         }
