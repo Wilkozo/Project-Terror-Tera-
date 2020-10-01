@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        loadingText.enabled = false;
     }
 
     private void Update()
@@ -24,6 +25,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
+        loadingText.enabled = true;
         // Use a coroutine to load the Scene in the background
         StartCoroutine(LoadYourAsyncScene());
 

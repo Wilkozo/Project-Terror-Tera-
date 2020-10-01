@@ -26,7 +26,7 @@ public class Endings : MonoBehaviour
         if (triggered) {
             canvasGroup.alpha += 0.5f * Time.deltaTime;
             message.CrossFadeAlpha(1, 5.0f, true);
-            message.text = "INTERCEPTED";
+            message.text = "INTERCEPTED" + "\n" + "GAME OVER";
             message.CrossFadeAlpha(0, 10.0f, true);
             timer += 1 * Time.deltaTime;
         }
