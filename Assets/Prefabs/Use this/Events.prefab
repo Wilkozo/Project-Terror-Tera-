@@ -30865,7 +30865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1825105222
 Transform:
   m_ObjectHideFlags: 0
@@ -39117,14 +39117,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199903622676505146}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -61.17401, y: 1.1399994, z: 98.01999}
-  m_LocalScale: {x: 1, y: 1.41, z: 1}
+  m_LocalRotation: {x: 0.62223756, y: 0.33588755, z: -0.33588752, w: 0.62223756}
+  m_LocalPosition: {x: -83.04697, y: 6.6399994, z: 97.93152}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 828596868682050852}
   m_Father: {fileID: 3011076930293383259}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -56.721}
 --- !u!33 &4659293548824984406
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -39199,8 +39199,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.101135254}
-  m_Center: {x: 0, y: 0, z: -0.050567627}
+  m_Size: {x: 1.4273641, y: 2.0144796, z: 0.81066895}
+  m_Center: {x: 0.027171316, y: 0.016630888, z: 0.06599793}
 --- !u!114 &6132184725694913641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39241,8 +39241,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203560144188564777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.15, z: 1}
+  m_LocalPosition: {x: 0.2500012, y: -0.70921975, z: 0.000000112558396}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 384946819840607230}
   m_RootOrder: 0
@@ -42622,14 +42622,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723709765746466109}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -28.96, y: 2.289, z: 179.44}
-  m_LocalScale: {x: 1, y: 1.41, z: 1}
+  m_LocalRotation: {x: 0.6532817, y: -0.27059758, z: 0.27059755, w: 0.65328175}
+  m_LocalPosition: {x: -32.141975, y: 2.789, z: 180.85422}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 2535951672882086959}
   m_Father: {fileID: 3011076930293383259}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
 --- !u!33 &5526154053607923211
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -42704,8 +42704,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.101135254}
-  m_Center: {x: 0, y: 0, z: -0.050567627}
+  m_Size: {x: 1.3402402, y: 1.9700074, z: 0.73031586}
+  m_Center: {x: 0.000038266222, y: 0.001686275, z: 0.07156463}
 --- !u!114 &1589486342960917617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43786,8 +43786,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892648073617044700}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -64.640015, y: 2.5, z: 41.817993}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -107.140015, y: 15.500084, z: 706.81805}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 1611466994596048005}
   m_Father: {fileID: 3011076930293383259}
@@ -45506,7 +45506,7 @@ Transform:
   m_GameObject: {fileID: 1157302028891435297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 3576456743454468468}
   m_RootOrder: 0
@@ -45697,7 +45697,7 @@ Transform:
   m_GameObject: {fileID: 1188163329436533263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 3469107916583828666}
   m_RootOrder: 0
@@ -51120,14 +51120,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040050187146277272}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 178.6, y: -13.12, z: -72.4}
-  m_LocalScale: {x: 1, y: 1.41, z: 1}
+  m_LocalRotation: {x: -0.70710677, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 832.6, y: 8.379996, z: 70.85}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 8140709654511855681}
   m_Father: {fileID: 3011076930293383259}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &5211267835790168735
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -51202,8 +51202,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.101135254}
-  m_Center: {x: 0, y: 0, z: -0.050567627}
+  m_Size: {x: 1.3044434, y: 1.9421387, z: 0.8972473}
+  m_Center: {x: 0.005126953, y: -0.0071318746, z: 0.022783816}
 --- !u!114 &1283164155768127180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51622,14 +51622,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069973893430535696}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 211.3, y: -0.28, z: 169.7}
-  m_LocalScale: {x: 1, y: 1.41, z: 1}
+  m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -38.199997, y: 12.88, z: 57.449997}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 6168836144579673450}
   m_Father: {fileID: 3011076930293383259}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &1734893228224021446
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -51704,8 +51704,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.101135254}
-  m_Center: {x: 0, y: 0, z: -0.050567627}
+  m_Size: {x: 1.430542, y: 1.949585, z: 0.7689514}
+  m_Center: {x: 0.022094727, y: 0.000009775162, z: 0.038850516}
 --- !u!114 &1587830202796014679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64175,14 +64175,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3988251579983033819}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 473.15, y: -1.83, z: 0.44}
-  m_LocalScale: {x: 1, y: 1.41, z: 1}
+  m_LocalRotation: {x: -0.52525246, y: -0.47340247, z: -0.47340205, w: 0.5252529}
+  m_LocalPosition: {x: -5.100006, y: 4.67, z: 115.69}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 5977178062470355901}
   m_Father: {fileID: 3011076930293383259}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -84.056}
 --- !u!33 &3895430928531889021
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -64257,8 +64257,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.101135254}
-  m_Center: {x: 0, y: 0, z: -0.050567627}
+  m_Size: {x: 1.3458618, y: 1.9796988, z: 0.638191}
+  m_Center: {x: 0.0020161867, y: 0.020324647, z: 0.026794434}
 --- !u!114 &8750072343197330174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69781,14 +69781,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4819446891754429250}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -129.54, y: 1.45, z: 61}
-  m_LocalScale: {x: 1, y: 1.41, z: 1}
+  m_LocalRotation: {x: 0.6723524, y: -0.21895735, z: 0.2189574, w: 0.6723524}
+  m_LocalPosition: {x: -139.36505, y: 1.2, z: 64.52178}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 5440630580316176446}
   m_Father: {fileID: 3011076930293383259}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 36.077}
 --- !u!33 &4071454371633988212
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -69863,8 +69863,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.101135254}
-  m_Center: {x: 0, y: 0, z: -0.050567627}
+  m_Size: {x: 1.3821763, y: 1.9773319, z: 0.8402707}
+  m_Center: {x: 0.005814373, y: -0.019075396, z: -0.08282451}
 --- !u!114 &4874968507071904152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73705,8 +73705,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.433197, y: 2.1468964, z: 3.9341097}
-  m_Center: {x: 0.26127625, y: 0.5734482, z: -1.4670548}
+  m_Size: {x: 1.1972656, y: 2.1468964, z: 2.4537592}
+  m_Center: {x: -0.043548584, y: 0.5734482, z: -0.7268796}
 --- !u!114 &2035374888407205592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85272,7 +85272,7 @@ Transform:
   m_GameObject: {fileID: 7227771948889182683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 6930003085109971135}
   m_RootOrder: 0
@@ -85543,14 +85543,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7250060910847904787}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -61.17401, y: 2.5, z: 42.548004}
-  m_LocalScale: {x: 1, y: 1.41, z: 1}
+  m_LocalRotation: {x: -0.7071069, y: 0.00000038483736, z: -0.0000004283742, w: -0.70710677}
+  m_LocalPosition: {x: -63.92401, y: 14, z: 46.298004}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 4371437942522983790}
   m_Father: {fileID: 3011076930293383259}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 360}
 --- !u!33 &6451714612810235703
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -85625,8 +85625,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.101135254}
-  m_Center: {x: 0, y: 0, z: -0.050567627}
+  m_Size: {x: 2.8588867, y: 4.233763, z: 0.7881085}
+  m_Center: {x: 0.20330596, y: -0.7942116, z: 0.0384181}
 --- !u!114 &7608310061464288635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86936,7 +86936,7 @@ Transform:
   m_GameObject: {fileID: 7419152539258150758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 4993814647490137749}
   m_RootOrder: 0
@@ -88738,14 +88738,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7608472751445920764}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1000061, y: 4.699997, z: 90.100006}
-  m_LocalScale: {x: 1, y: 1.41, z: 1}
+  m_LocalRotation: {x: 0.5286564, y: -0.46959797, z: 0.469598, w: 0.5286566}
+  m_LocalPosition: {x: -11.872498, y: 10.199997, z: 131.96967}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4503282308003506407}
   m_Father: {fileID: 3011076930293383259}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 83.228}
 --- !u!33 &4337220167152970002
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -88820,8 +88820,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.101135254}
-  m_Center: {x: 0, y: 0, z: -0.050567627}
+  m_Size: {x: 1.3662214, y: 1.9647061, z: 0.67510986}
+  m_Center: {x: -0.011066675, y: 0.005056441, z: -0.000080913305}
 --- !u!114 &204740872579385956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95799,7 +95799,7 @@ Transform:
   m_GameObject: {fileID: 8723860331061155761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 34071996500746467}
   m_RootOrder: 0
@@ -96369,7 +96369,7 @@ Transform:
   m_GameObject: {fileID: 8815413254274692637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 7914740897215286145}
   m_RootOrder: 0
@@ -96592,7 +96592,7 @@ Transform:
   m_GameObject: {fileID: 8859631480745179035}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 1959101947489019722}
   m_RootOrder: 0
@@ -98820,7 +98820,7 @@ Transform:
   m_GameObject: {fileID: 9141713736511499698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 5176706602589522225}
   m_RootOrder: 0
@@ -98965,14 +98965,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9175224627558863190}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 83.2, y: 1.34, z: 148}
-  m_LocalScale: {x: 1, y: 1.41, z: 1}
+  m_LocalRotation: {x: 0.6350111, y: -0.3110642, z: 0.311064, w: 0.6350112}
+  m_LocalPosition: {x: -85.03294, y: 6.09, z: 106.415924}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 2486840305075563682}
   m_Father: {fileID: 3011076930293383259}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 52.196}
 --- !u!33 &5492760237464476133
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -99047,8 +99047,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.101135254}
-  m_Center: {x: 0, y: 0, z: -0.050567627}
+  m_Size: {x: 1.4100498, y: 1.9568143, z: 0.67074585}
+  m_Center: {x: -0.016511202, y: 0.022259118, z: -0.03133443}
 --- !u!114 &634015483904813989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99526,17 +99526,17 @@ PrefabInstance:
     - target: {fileID: 1097581135406233453, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 822.8
+      value: -172.73
       objectReference: {fileID: 0}
     - target: {fileID: 1097581135406233453, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.4
+      value: -17.71
       objectReference: {fileID: 0}
     - target: {fileID: 1097581135406233453, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -54.4
+      value: -34.85
       objectReference: {fileID: 0}
     - target: {fileID: 1097581135406233453, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
@@ -99586,7 +99586,12 @@ PrefabInstance:
     - target: {fileID: 1097581135416073901, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
       propertyPath: staminaAmount
-      value: 30
+      value: 1e+21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097581135416073901, guid: a33fe4f067ecc8745aaf5de84e62ac68,
+        type: 3}
+      propertyPath: run
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1097581135419072141, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
@@ -99778,10 +99783,27 @@ PrefabInstance:
       propertyPath: checkpoint
       value: 
       objectReference: {fileID: 4394303876345167314}
+    - target: {fileID: 3910510432829428440, guid: a33fe4f067ecc8745aaf5de84e62ac68,
+        type: 3}
+      propertyPath: m_Text
+      value: "This island isn\u2019t safe anymore. I'd heard from Diana that Mrs.
+        Clark went missing on her stroll out in the forest yesterday. The troops
+        have started searching the island but asking for more information about it
+        has gotten me nowhere.\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 3910510432851069233, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910510432863578552, guid: a33fe4f067ecc8745aaf5de84e62ac68,
+        type: 3}
+      propertyPath: m_Text
+      value: "Those illusive men in black came knocking, merly hours before my scheduled
+        execution. They do have a way with their timing, they offered me a deal,
+        come work for us and you can have a chance at a new life isolated from the
+        Justice system here in America. Needless to say I wouldn\u2019t be writing
+        this now if I hadn\u2019t accepted their deal. "
       objectReference: {fileID: 0}
     - target: {fileID: 3910510432979109539, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
@@ -99801,12 +99823,12 @@ PrefabInstance:
     - target: {fileID: 3910510432995260280, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3910510432995260280, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000015259
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3910510432995260280, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
@@ -99817,6 +99839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 275.35925
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910510432995260280, guid: a33fe4f067ecc8745aaf5de84e62ac68,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3910510432995260281, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
@@ -99842,7 +99869,7 @@ PrefabInstance:
     - target: {fileID: 3910510432995260281, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 239
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3910510432995260281, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
@@ -99854,10 +99881,33 @@ PrefabInstance:
       propertyPath: m_Text
       value: YOU DIED
       objectReference: {fileID: 0}
+    - target: {fileID: 3910510432995260281, guid: a33fe4f067ecc8745aaf5de84e62ac68,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910510433015061454, guid: a33fe4f067ecc8745aaf5de84e62ac68,
+        type: 3}
+      propertyPath: m_Text
+      value: "Mrs Clark\u2019s funeral was held today, Despite having no body the
+        troops insisted we have an official burial of Lord only knows what, the mood
+        in the town has changed lately. It was always a quiet town which was quite
+        isolated however something has changed ever since those security precautions
+        came into place here.\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 3910510433058522601, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
       propertyPath: currentWeapon
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910510433125546266, guid: a33fe4f067ecc8745aaf5de84e62ac68,
+        type: 3}
+      propertyPath: m_Text
+      value: "Lt Barnes\n\nThe productivity of the workers over at the logging camp
+        has been waning ever since Wallace volunteered to participate in the humanitarian
+        trails Mr  Webster had organised. I\u2019m in a bit of a catch twenty two
+        here as the other workers are starting to grow complacent with their workload
+        and suspicious of why they\u2019re here. \n\n\nMike Walker\n"
       objectReference: {fileID: 0}
     - target: {fileID: 3910510433160469244, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
@@ -99869,10 +99919,29 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3910510433440413630, guid: a33fe4f067ecc8745aaf5de84e62ac68,
+        type: 3}
+      propertyPath: m_Text
+      value: "The Island is massive, there is so much more to it than what my map
+        specifies although most of it appears to just be dense forest I can\u2019t
+        help but speculate as to why the troops & the director are out in the wilderness
+        so often.\n\nPress m for map when Acquired. "
+      objectReference: {fileID: 0}
     - target: {fileID: 3910510433533867716, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910510433560767874, guid: a33fe4f067ecc8745aaf5de84e62ac68,
+        type: 3}
+      propertyPath: m_Text
+      value: "Just yesterday the troops stationed here reported that my beloved Sophie
+        would have died in the volatile environment, when I asked for any form of
+        proof to back up their claims it felt like I was talking to a group of mindless
+        drones, who wouldn\u2019t even entertain the possibility that she could still
+        be out there.\r\n\r\nRegrettably I lashed out at the officer and was subdued
+        by his subordinates, I\u2019ve been ordered to leave the island tomorrow.
+        \r\n\r\nGood riddance I want to forget about that place all together now.\r\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 3910510434020309479, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
@@ -99904,6 +99973,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3910510434120097914, guid: a33fe4f067ecc8745aaf5de84e62ac68,
+        type: 3}
+      propertyPath: m_Text
+      value: "There is no chance we\u2019ll find Mrs Clark at this rate, everyone\u2019s
+        getting anxious over this and I haven\u2019t seen Mr Clark leave the house
+        all week. The troops stationed here have been gone for hours now, although
+        I suspect they\u2019ll be back soon with the way these thunderstorms have
+        been lately.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910510434121663217, guid: a33fe4f067ecc8745aaf5de84e62ac68,
+        type: 3}
+      propertyPath: m_Text
+      value: "This island is quite something the operation Mr Webster has in the
+        south eastern side of the island has quite the setup going, a classic lumber
+        mill with workers who work purely by hand. There is a rather strange and
+        peculiar gondola building which seems out of place for such a remote part
+        of the island, however I\u2019ve been told it is a precaution put in place
+        to allow for consistent monitoring of the islands volcano."
+      objectReference: {fileID: 0}
     - target: {fileID: 3910510434130027095, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
       propertyPath: m_IsActive
@@ -99918,6 +100006,19 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910510434522961406, guid: a33fe4f067ecc8745aaf5de84e62ac68,
+        type: 3}
+      propertyPath: m_Text
+      value: "Patricia\n\n\nThese working conditions for a lot of is poor to say
+        the least, a majority have starved and a lot have agreed to the trails only
+        to not return. I hope they\u2019re doing well now but I can\u2019t help but
+        question how Mr. Webster is recruiting all his workers. \n\nI have put my
+        letter in to resign in a couple of weeks, the Director was disappointed to
+        hear I\u2019m resigning. However they\u2019ve organized a replacement for
+        me in good time. Telling the public of this would be a bad idea as I\u2019ve
+        got no idea how far this organization reaches. It\u2019d be better if we
+        just disappear. \n\n\nMike\r\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 3910510434574930592, guid: a33fe4f067ecc8745aaf5de84e62ac68,
         type: 3}
