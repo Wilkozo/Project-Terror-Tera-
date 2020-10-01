@@ -63,6 +63,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 //set the health to 0
                 health = 0;
+                fpsController.staminaAmount = 40.0f;
                 //call game over
                 gameOver();
             }
