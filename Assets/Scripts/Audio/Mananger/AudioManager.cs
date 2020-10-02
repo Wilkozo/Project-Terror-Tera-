@@ -17,17 +17,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-            float RandNum = UnityEngine.Random.Range(0, 100);
-            if (RandNum <= 74)
-            {
-                Play("Wind");
-
-            }
-            else if (RandNum > 75)
-            {
-                Play("BusyAmbience");
-            }
-        
+       
     }
     // Use this for initialization
     void Awake()
