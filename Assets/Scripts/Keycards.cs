@@ -11,6 +11,18 @@ public class Keycards : MonoBehaviour
     static bool poweredOn;
     //a static bool for if the player has radioed in
     static bool radioedIn;
+    //checks to see if the player has gathered the necklace for Jameson
+    static bool gotNecklace;
+
+    
+    //returns true if the player has the necklace
+    public static bool hasNecklace() {
+        return gotNecklace;
+    }
+    //sets it so the player has collected the necklace
+    public static void collectedNecklace() {
+        gotNecklace = true;
+    }
 
     //checks to see if the player has radioed in
     public static bool haveRadioedIn()

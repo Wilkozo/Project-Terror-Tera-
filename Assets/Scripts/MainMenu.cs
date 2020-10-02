@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private Text loadingText;
 
+    public CanvasGroup canGroup;
+
     public void Start()
     {
         Cursor.visible = true;
@@ -21,6 +23,10 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
+        if (canGroup.alpha > 0)
+        {
+            canGroup.alpha -= 1.0f * Time.deltaTime;
+        }
         Cursor.visible = true;
     }
     public void PlayGame()

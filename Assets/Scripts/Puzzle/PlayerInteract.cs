@@ -17,10 +17,9 @@ public class PlayerInteract : MonoBehaviour
     public Sprite mapSec4;
     public Sprite mapSec5;
 
-    bool mapAquired;
+    [SerializeField] Endings gameEndings;
 
-    //the amount of levers that the player has interacted with
-    [SerializeField] int amountOfLeversPulled;
+    bool mapAquired;
 
     void Start()
     {
@@ -37,6 +36,16 @@ public class PlayerInteract : MonoBehaviour
 
     void Update()
     {
+
+        if (Input.GetKey(KeyCode.P)) {
+            Keycards.setPoweredOn();
+        }
+        if (Input.GetKey(KeyCode.R)) {
+            Keycards.setRadioedIn();
+        }
+        if (Input.GetKey(KeyCode.N)) {
+            Keycards.collectedNecklace();
+        }
 
         //enable/disable map
         if (Input.GetKeyDown(KeyCode.M) && mapAquired)
@@ -98,8 +107,17 @@ public class PlayerInteract : MonoBehaviour
                 hit.transform.GetComponent<RadioTower>().OnRadioInteract();
             }
 
+            //if the player interacts with the boat when the power is on
             if (hit.transform.name == "Boat" && Keycards.haveRadioedIn()) {
-                Application.LoadLevel("NewMainMenu");
+                //what to do when the player has the necklace
+                if (Keycards.hasNecklace())
+                {
+                    gameEndings.goodEndingBoat();
+                }
+                //what to do when the player does not have the necklace
+                else {
+                    gameEndings.badEndingBoat();
+                }
             }            
 
             #region "Keycards"
