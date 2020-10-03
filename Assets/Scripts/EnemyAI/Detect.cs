@@ -9,6 +9,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
     public class Detect : MonoBehaviour
     {
 
+        bool triggered;
+
         [Header("Player Detection")]
         [SerializeField] WaypointNavigator navigator;
         public Transform target;
@@ -16,6 +18,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] playerHealth healthPlayer;
         public float maxDistance;
         public float damageDistance = 10;
+        public float timeToStopChasing = 0;
+        public float cooldown;
 
         //player and AI components
         public GameObject player;
@@ -96,6 +100,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //draw a line
             Debug.DrawLine(transform.position, target.position, blocked ? Color.red : Color.green);
 
+            if (cooldown > 0)
+            {
+                cooldown -= 1 * Time.deltaTime;
+                playerHeard = false;
+                navigator.playerNotSeen = true;
+            }
             //if the way is blocked
             if (blocked)
             {
@@ -108,7 +118,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 //get distance between player and enemy
 
                 //if the distance is less than the max
-                if (distance <= maxDistance)
+                if (distance <= maxDistance && cooldown <= 0.01f)
                 {
                     //get it so the ai has seen the player
                     SeenPlayer();
@@ -188,6 +198,28 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             //move towards the player
             agent.destination = player.transform.position;
+
+
+            if (timeToStopChasing >= 0 && triggered == false)
+            {
+                Random.seed = System.DateTime.Now.Millisecond;
+                timeToStopChasing = Random.Range(5, 30);
+                triggered = true;
+            }
+
+            timeToStopChasing -= 1 * Time.deltaTime;
+         
+            //only chases the player for for a random time between 5 and 30 seconds
+            if (timeToStopChasing <= 0.001) {
+
+                cooldown = 7.5f;
+                //make the ai go back to its waypoints
+                navigator.playerNotSeen = true;
+                navigator.waypointToGoTo();
+                //resets the timer
+                timeToStopChasing = 0;
+                triggered = false;
+            }
         }
 
         public void HeardSomethingPlayer()
