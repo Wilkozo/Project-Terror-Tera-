@@ -14,10 +14,13 @@ public class DocumentPickup : MonoBehaviour
     private void Start()
     {
         //get the script for the notes
-       // notes = GameObject.FindGameObjectWithTag("Note").GetComponent<CollectedNotes>();
+        // notes = GameObject.FindGameObjectWithTag("Note").GetComponent<CollectedNotes>();
         if (documentText.name != "IntroText")
         {
             documentText.enabled = false;
+        }
+        if (documentText.name == "IntroText") {
+            documentImage.enabled = true;
         }
     }
 

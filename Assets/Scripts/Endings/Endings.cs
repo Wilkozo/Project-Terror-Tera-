@@ -10,6 +10,9 @@ public class Endings : MonoBehaviour
     public CanvasGroup canvasGroup;
     public Text message;
     public CanvasGroup bloodOverlay;
+    bool fadeBack;
+    public GameObject fpsCamera;
+    public GameObject cutscene1Cam;
     public CanvasGroup fadeToBlack;
     public bool triggeredIntercepted;
     public bool triggeredBadEnding;
@@ -27,12 +30,30 @@ public class Endings : MonoBehaviour
     }
     private void Update()
     {
-        if (triggeredIntercepted) {
-            canvasGroup.alpha += 0.5f * Time.deltaTime;
-            message.CrossFadeAlpha(1, 5.0f, true);
-            message.text = "INTERCEPTED" + "\n" + "GAME OVER";
-            message.CrossFadeAlpha(0, 10.0f, true);
-            timer += 1 * Time.deltaTime;
+        //intercepted ending
+        if (triggeredIntercepted)
+        {
+            timer -= 1 * Time.deltaTime;
+            if (timer <= 0)
+            {
+                fadeToBlack.alpha += 0.75f * Time.deltaTime;
+                if (fadeToBlack.alpha >= 0.9f)
+                {
+                    fadeBack = true;
+                }
+
+            }
+            if (fadeBack)
+            {
+                timer = 2;
+                fadeToBlack.alpha -= 0.25f * Time.deltaTime;
+                fpsCamera.SetActive(true);
+                cutscene1Cam.SetActive(false);
+                if (fadeToBlack.alpha <= 0.1f)
+                {
+                    Destroy(this.gameObject);
+                }
+            }
         }
         if (triggeredBadEnding) {
             bloodOverlay.alpha += 0.5f * Time.deltaTime;

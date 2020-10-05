@@ -7,7 +7,7 @@ public class Intro : MonoBehaviour
 {
     //used to fade to black
     public CanvasGroup fadeToBlack;
-    bool fadeBack;
+    public bool fadeBack;
     //timer to swap camera
     public float timer = 20.0f;
     //get the main player camera
@@ -19,7 +19,7 @@ public class Intro : MonoBehaviour
         timer -= 1 * Time.deltaTime;
         if (timer <= 0) {
             fadeToBlack.alpha += 0.75f *Time.deltaTime;
-            if (fadeToBlack.alpha == 1) {
+            if (fadeToBlack.alpha >= 0.9f) {
                 fadeBack = true;
             }
            
@@ -29,7 +29,7 @@ public class Intro : MonoBehaviour
             fadeToBlack.alpha -= 0.25f * Time.deltaTime;
              fpsCamera.SetActive(true);
              cutscene1Cam.SetActive(false);
-            if (fadeToBlack.alpha == 0)
+            if (fadeToBlack.alpha <= 0.1f)
             {
                 Destroy(this.gameObject);
             }
