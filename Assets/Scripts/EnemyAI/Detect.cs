@@ -72,6 +72,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //what happens if the ai is hit with the shotgun
             if (hitWithShotgun)
             {
+                animator.SetBool("Hit", true);
+                animator.SetBool("IsMoving", false);
                 if (!roarSource.isPlaying)
                 {
                     roarSource.PlayOneShot(hitRoar);
