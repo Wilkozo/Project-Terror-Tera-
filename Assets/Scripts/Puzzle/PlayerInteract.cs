@@ -89,6 +89,11 @@ public class PlayerInteract : MonoBehaviour
                 
             }
 
+            if (hit.transform.name == "Necklace") {
+                Keycards.collectedNecklace();
+                Destroy(hit.transform.gameObject);
+            }
+
             if (hit.transform.name == "BlueKeycard") {
                 //enable the dinosaurs
                 hit.transform.GetComponent<EnableDinosaurs>().OnCollectDocuments();

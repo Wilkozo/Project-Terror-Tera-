@@ -94,7 +94,7 @@ public class Danger_Audio : MonoBehaviour
 
                 // Fade to SAFE / STANDARD MUSIC
                 Danger_Manager.ClipSettings(1, mixA, "Caution", 0.5f, true);
-                Danger_Manager.ChangeTrackCaller(0, 0.5f, Stealth[0]);
+                //Danger_Manager.ChangeTrackCaller(0, 0.5f, Stealth[0]);
 
                 //Danger_Manager.PlayMusic(gameObject, Stealth[0]);
                 //

@@ -40,7 +40,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [Header("Audio Clips")]
         public AudioSource roarSource;
         public AudioClip hitRoar;
+        public AudioClip CautionAudio;
+        public AudioClip ChaseAudio;
         public float range;
+        float tempTime;
 
 
         [Header("Has the AI been hit with a weapon")]
@@ -74,6 +77,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 animator.SetBool("Hit", true);
                 animator.SetBool("IsMoving", false);
+                roarSource.clip = hitRoar;
+                roarSource.loop = false;
                 if (!roarSource.isPlaying)
                 {
                     roarSource.PlayOneShot(hitRoar);
@@ -122,10 +127,33 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 //if the distance is less than the max
                 if (distance <= maxDistance && cooldown <= 0.01f)
                 {
+                    tempTime += Time.deltaTime;
+                    roarSource.clip = ChaseAudio;
+                    roarSource.loop = true;
+                    if (tempTime >= roarSource.clip.length)
+                    {
+                        roarSource.Play();
+                        tempTime = 0;
+                    }
                     //get it so the ai has seen the player
                     SeenPlayer();
                 }
             }
+
+            if (distance <= 80 && distance >= maxDistance) {
+                tempTime += Time.deltaTime;
+                roarSource.clip = CautionAudio;
+                roarSource.loop = true;
+                if (tempTime >= roarSource.clip.length)
+                {
+                    roarSource.Play();
+                    tempTime = 0;
+                }
+            }
+            if (distance >= 80) {
+                roarSource.Stop();
+            }
+
             //otherwise if the ai has not heard a sound
             else if (!heardSound || !playerHeard)
             {
