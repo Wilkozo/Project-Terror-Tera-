@@ -64,6 +64,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 //set the health to 0
                 health = 0;
                 fpsController.staminaAmount = 40.0f;
+                fpsController.staminaBar.fillAmount = 1;
                 //call game over
                 gameOver();
             }
@@ -123,6 +124,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 //kills the player
                 playerHealthImage.fillAmount -= 1 * Time.deltaTime;
                 fpsController.staminaAmount = 40.0f;
+                fpsController.staminaBar.fillAmount = 1;
                 //health = 0;
             }
         }

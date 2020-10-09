@@ -282,7 +282,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     m_IsWalking = false;
                     run = true;
                     staminaAmount -= 1.0f * Time.deltaTime;
-                    staminaBar.fillAmount -= 0.1f * Time.deltaTime;
+                    staminaBar.fillAmount -= 0.025f * Time.deltaTime;
                     if (staminaAmount <= enoughStamina)
                     {
                         staminaAmount = 0;
@@ -295,7 +295,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                         staminaAmount += 0.75f * Time.deltaTime;
                         if (staminaAmount >= enoughStamina)
                         {
-                            staminaBar.fillAmount += 0.075f * Time.deltaTime;
+                            staminaBar.fillAmount += 0.02f * Time.deltaTime;
                         }
                     }
                     m_IsWalking = true;
