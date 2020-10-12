@@ -233,7 +233,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (timeToStopChasing >= 0 && triggered == false)
             {
                 Random.seed = System.DateTime.Now.Millisecond;
-                timeToStopChasing = Random.Range(5, 30);
+                timeToStopChasing = Random.Range(40, 120);
                 triggered = true;
             }
 
