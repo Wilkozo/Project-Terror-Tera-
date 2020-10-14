@@ -36,7 +36,9 @@ public class PlayerInteract : MonoBehaviour
 
     void Update()
     {
-
+        //checks to see if this is in editor
+        //cheats to make it faster for testing
+        #if (UNITY_EDITOR) 
         if (Input.GetKey(KeyCode.P)) {
             Keycards.setPoweredOn();
         }
@@ -46,6 +48,7 @@ public class PlayerInteract : MonoBehaviour
         if (Input.GetKey(KeyCode.N)) {
             Keycards.collectedNecklace();
         }
+    #endif
 
         //enable/disable map
         if (Input.GetKeyDown(KeyCode.M) && mapAquired)
