@@ -17,10 +17,13 @@ public class SkullThrow : MonoBehaviour
     //how much munitions the player has
     public int skullCount;
     float delay;
+    float timer;
 
     private void Start()
     {
-        skullModel.SetActive(false);
+        skullModel.SetActive(true);
+        skullCount = 1;
+        hasSkull = true;
     }
 
     //what to do when the player picks up ammo
@@ -40,24 +43,26 @@ public class SkullThrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //gives a delay so the player cannot spam fire the gun
-        delay += Time.deltaTime;
         //what to do if the player has the shotgun equipped
         if (hasSkull)
         {
                 //if the player pushes the left mouse button and has ammo
-                if (Input.GetMouseButtonDown(0) && skullCount > 0 && delay >= 1)
-            {
-                hasSkull = false;
-                //alert the dinosaur
-                audioSenderGun(40.0f);
+                if (Input.GetMouseButtonDown(0) && skullCount > 0 && timer == 0)
+                {
+                    hasSkull = false;
+                    //alert the dinosaur
+                    audioSenderGun(40.0f);
                     Rigidbody slugRoundClone = (Rigidbody)Instantiate(skull, transform.position, transform.rotation);
                     slugRoundClone.velocity = transform.forward * skullSpeed;
-                    delay = 0;
-                    //reduce skull count by one
-                    skullCount -= 1;
-         
                 }
+            }
+            if (!hasSkull) {
+                timer += 1 * Time.deltaTime;
+            }
+            if (timer >= 5) {
+                hasSkull = true;
+                skullModel.SetActive(true);
+                timer = 0;
             }
         }
 

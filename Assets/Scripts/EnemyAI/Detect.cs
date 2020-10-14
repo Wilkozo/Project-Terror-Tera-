@@ -44,6 +44,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public AudioClip ChaseAudio;
         public float range;
         float tempTime;
+        public float distanceForCaution = 80;
 
 
         [Header("Has the AI been hit with a weapon")]
@@ -54,6 +55,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public Animator animator;
 
         bool blocked = false;
+
 
 
         //what to do when the scene loads
@@ -125,14 +127,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 //get distance between player and enemy
 
                 //if the distance is less than the max
-                if (distance <= maxDistance && cooldown <= 0.01f)
+                if (distance < maxDistance && cooldown <= 0.01f)
                 {
                     tempTime += Time.deltaTime;
                     roarSource.clip = ChaseAudio;
                     roarSource.loop = true;
                     if (tempTime >= roarSource.clip.length)
                     {
-                        roarSource.Play();
+                        this.roarSource.Play();
                         tempTime = 0;
                     }
                     //get it so the ai has seen the player
@@ -140,17 +142,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
             }
 
-            if (distance <= 80 && distance >= maxDistance) {
+            if (distance <= distanceForCaution && distance >= maxDistance) {
                 tempTime += Time.deltaTime;
                 roarSource.clip = CautionAudio;
                 roarSource.loop = true;
                 if (tempTime >= roarSource.clip.length)
                 {
-                    roarSource.Play();
+                    this.roarSource.Play();
                     tempTime = 0;
                 }
             }
-            if (distance >= 80) {
+            if (distance >= distanceForCaution) {
                 roarSource.Stop();
             }
 

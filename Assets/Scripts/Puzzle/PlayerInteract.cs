@@ -21,9 +21,13 @@ public class PlayerInteract : MonoBehaviour
 
     bool mapAquired;
 
+    int layerGround;
+    public GameObject crosshair;
+    public Text objectiveText;
+
     void Start()
     {
-
+        layerGround = LayerMask.NameToLayer("Interact");
         //find the map
         map = GameObject.FindGameObjectWithTag("Map");
         //set the map to false
@@ -36,10 +40,27 @@ public class PlayerInteract : MonoBehaviour
 
     void Update()
     {
-        //checks to see if this is in editor
-        //cheats to make it faster for testing
-        #if (UNITY_EDITOR) 
-        if (Input.GetKey(KeyCode.P)) {
+        //sends a raycast from the camera
+        Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+        //the raycast hit
+        RaycastHit hit;
+
+        //checks to see if the raycast hits anything within 50 units
+        if (Physics.Raycast(ray, out hit, 50.0f))
+        {
+            if (hit.transform.gameObject.layer == layerGround)
+            {
+                crosshair.SetActive(true);
+            }
+            else
+            {
+                crosshair.SetActive(false);
+            }
+        }
+            //checks to see if this is in editor
+            //cheats to make it faster for testing
+#if (UNITY_EDITOR)
+            if (Input.GetKey(KeyCode.P)) {
             Keycards.setPoweredOn();
         }
         if (Input.GetKey(KeyCode.R)) {
@@ -75,6 +96,7 @@ public class PlayerInteract : MonoBehaviour
         //checks to see if the raycast hits anything within 50 units
         if (Physics.Raycast(ray, out hit, 50.0f))
         {
+
             print("I'm looking at " + hit.transform.name);
             //if the player hits a document make it readible
             if (hit.transform.tag == "Document") {
@@ -95,6 +117,17 @@ public class PlayerInteract : MonoBehaviour
             if (hit.transform.name == "Necklace") {
                 Keycards.collectedNecklace();
                 Destroy(hit.transform.gameObject);
+                if (Keycards.isPoweredOn())
+                {
+                    objectiveText.text = "Turn the power on";
+                }
+                else if (Keycards.haveRadioedIn())
+                {
+                    objectiveText.text = "Radio the boat";
+                }
+                else {
+                    objectiveText.text = "Return to the boat";
+                }
             }
 
             if (hit.transform.name == "BlueKeycard") {
@@ -104,13 +137,9 @@ public class PlayerInteract : MonoBehaviour
                 Destroy(hit.transform.gameObject);
             }
 
-            if (hit.transform.name == "Shotgun") {
-                this.GetComponentInChildren<Gun>().gotShotgun = true;
-                Destroy(hit.transform.gameObject);
-            }
-
             if (hit.transform.name == "radioTower") {
                 hit.transform.GetComponent<RadioTower>().OnRadioInteract();
+                objectiveText.text = "Return to the boat";
             }
 
             //if the player interacts with the boat when the power is on
@@ -131,12 +160,14 @@ public class PlayerInteract : MonoBehaviour
                 Keycards.setKeycardLevel(1);
                 // Green Key card - Sound
                 Destroy(hit.transform.gameObject);
+                objectiveText.text = "Find the mansion";
             }
             if (hit.transform.tag == "BlueKeycard")
             {
                 Keycards.setKeycardLevel(2);
                 // Blue Key card - Sound
                 Destroy(hit.transform.gameObject);
+                objectiveText.text = "Find the power Station";
             }
             if (hit.transform.tag == "RedKeycard")
             {
@@ -172,7 +203,8 @@ public class PlayerInteract : MonoBehaviour
             if (hit.transform.name == "Map") {
                 mapAquired = true;
                 // SFX MAP COLLECTED 01
-                Destroy(GameObject.Find("Map"));  
+                Destroy(GameObject.Find("Map"));
+                objectiveText.text = "Find the keycard";
             }
             if (hit.transform.name == "Sec2Map") {
                 map.GetComponent<Image>().sprite = mapSec2;

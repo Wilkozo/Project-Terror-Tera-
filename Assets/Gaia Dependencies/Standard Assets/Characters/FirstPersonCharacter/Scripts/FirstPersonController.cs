@@ -51,6 +51,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public Image staminaBar;
         public float enoughStamina = 5;
 
+        public AudioSource raptorSource;
+        public AudioClip chaseAudio;
+        public AudioClip cautionAudio;
+
         // Use this for initialization
         private void Start()
         {
@@ -115,7 +119,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             audioSender(20.0f);
 
         }
-
 
         private void FixedUpdate()
         {
