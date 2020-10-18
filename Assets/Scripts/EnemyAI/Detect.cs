@@ -127,7 +127,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 //get distance between player and enemy
 
                 //if the distance is less than the max
-                if (distance < maxDistance && cooldown <= 0.01f)
+                if (distance < maxDistance && cooldown <= 0.01f && !blocked)
                 {
                     tempTime += Time.deltaTime;
                     roarSource.clip = ChaseAudio;
@@ -151,6 +151,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     this.roarSource.Play();
                     tempTime = 0;
                 }
+            }
+            float velocity = agent.velocity.magnitude / agent.speed;
+            if (velocity == 0 && !roarSource.isPlaying) {
+                roarSource.clip = hitRoar;
+                this.roarSource.Play();
+                roarSource.loop = false;
             }
             if (distance >= distanceForCaution) {
                 roarSource.Stop();

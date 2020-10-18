@@ -160,7 +160,7 @@ public class PlayerInteract : MonoBehaviour
                 Keycards.setKeycardLevel(1);
                 // Green Key card - Sound
                 Destroy(hit.transform.gameObject);
-                objectiveText.text = "Find the mansion";
+                objectiveText.text = "Explore The Island";
             }
             if (hit.transform.tag == "BlueKeycard")
             {

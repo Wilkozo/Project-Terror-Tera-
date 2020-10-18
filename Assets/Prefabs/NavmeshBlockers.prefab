@@ -141,6 +141,53 @@ MonoBehaviour:
   m_Center: {x: -153.11641, y: 1, z: -17.890839}
   m_Area: 1
   m_AffectedAgents: ffffffff
+--- !u!1 &1475287467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1475287468}
+  - component: {fileID: 1475287469}
+  m_Layer: 0
+  m_Name: NavBlocker (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1475287468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475287467}
+  m_LocalRotation: {x: -0, y: 0.32832626, z: -0, w: 0.9445644}
+  m_LocalPosition: {x: 326.7, y: -3.6849709, z: -192.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5769723599385775034}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 38.334, z: 0}
+--- !u!114 &1475287469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475287467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Size: {x: 24.74, y: 183.9, z: 538.44604}
+  m_Center: {x: 0, y: 1, z: 141.38583}
+  m_Area: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &5769723599385775036
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,6 +220,7 @@ Transform:
   - {fileID: 955304599}
   - {fileID: 1130455959}
   - {fileID: 395460651}
+  - {fileID: 1475287468}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -204,7 +252,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.6666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: f9de61e5edf2fd94489fe03e3433e9a5, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: e514c6b246284e841bb490c59b960889, type: 2}
 --- !u!1 &5769723599879871489
 GameObject:
   m_ObjectHideFlags: 0
