@@ -117,11 +117,11 @@ public class PlayerInteract : MonoBehaviour
             if (hit.transform.name == "Necklace") {
                 Keycards.collectedNecklace();
                 Destroy(hit.transform.gameObject);
-                if (Keycards.isPoweredOn())
+                if (!Keycards.isPoweredOn())
                 {
                     objectiveText.text = "Turn the power on";
                 }
-                else if (Keycards.haveRadioedIn())
+                else if (!Keycards.haveRadioedIn())
                 {
                     objectiveText.text = "Radio the boat";
                 }

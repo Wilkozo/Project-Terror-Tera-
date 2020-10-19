@@ -73,7 +73,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void Update()
         {
-
+            float velocity = agent.velocity.magnitude / agent.speed;
             //what happens if the ai is hit with the shotgun
             if (hitWithShotgun)
             {
@@ -121,13 +121,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 //draw a ray
                 Debug.DrawRay(hit.position, Vector3.up, Color.red);
             }
+       
             //if it isn't blocked
             else if (!blocked)
             {
+               
                 //get distance between player and enemy
 
                 //if the distance is less than the max
-                if (distance < maxDistance && cooldown <= 0.01f && !blocked)
+                if (distance < maxDistance && cooldown <= 0.01f && !blocked && velocity != 0)
                 {
                     tempTime += Time.deltaTime;
                     roarSource.clip = ChaseAudio;
@@ -142,7 +144,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
             }
 
-            if (distance <= distanceForCaution && distance >= maxDistance) {
+            if (distance <= distanceForCaution && distance >= maxDistance && velocity != 0) {
                 tempTime += Time.deltaTime;
                 roarSource.clip = CautionAudio;
                 roarSource.loop = true;
@@ -152,7 +154,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     tempTime = 0;
                 }
             }
-            float velocity = agent.velocity.magnitude / agent.speed;
+          
             if (velocity == 0 && !roarSource.isPlaying) {
                 roarSource.clip = hitRoar;
                 this.roarSource.Play();
