@@ -40,6 +40,9 @@ public class PlayerInteract : MonoBehaviour
 
     void Update()
     {
+        Cursor.visible = false;
+
+
         //sends a raycast from the camera
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         //the raycast hit

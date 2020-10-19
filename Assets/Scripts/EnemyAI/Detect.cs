@@ -144,7 +144,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
             }
 
-            if (distance <= distanceForCaution && distance >= maxDistance && velocity != 0) {
+            if (distance <= distanceForCaution && distance >= maxDistance && velocity != 0)
+            {
                 tempTime += Time.deltaTime;
                 roarSource.clip = CautionAudio;
                 roarSource.loop = true;
@@ -154,8 +155,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     tempTime = 0;
                 }
             }
-          
-            if (velocity == 0 && !roarSource.isPlaying) {
+            Random.seed = System.DateTime.Now.Millisecond;
+            float timeToRoar = Random.Range(0, 1);
+            if (timeToRoar >= 0.75 && tempTime >= roarSource.clip.length) {
+                Debug.Log("SHould be roaring");
+                roarSource.Stop();
                 roarSource.clip = hitRoar;
                 this.roarSource.Play();
                 roarSource.loop = false;

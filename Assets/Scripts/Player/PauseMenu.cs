@@ -21,6 +21,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //if the player hits the escape key
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                Cursor.visible = false;
+
                 //if the pause menu is not enabled
                 if (!pauseCanvas.enabled)
                 {
@@ -48,23 +50,5 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
             }
         }
-
-
-        //??REMOVE??\\
-        public void continueButton()
-        {
-            Time.timeScale = 1.0f;
-            pauseCanvas.enabled = false;
-            Cursor.visible = false;
-
-        }
-        public void menuButton()
-        {
-            Time.timeScale = 1.0f;
-            Application.Quit();
-            Cursor.visible = true;
-        }
-
-
     }
 }
