@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     private Text loadingText;
 
     public CanvasGroup canGroup;
+    public GameObject creditsView;
 
     public void Start()
     {
@@ -62,5 +63,9 @@ public class MainMenu : MonoBehaviour
     {
         //FindObjectOfType<AudioManager>().Play("Button");
         Application.Quit();
+    }
+    public void credits()
+    {
+        creditsView.SetActive(true);
     }
 }
