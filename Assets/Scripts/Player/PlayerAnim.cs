@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAnim : MonoBehaviour
 {
-    Animator animator;
+    public Animator animator;
 
     [SerializeField] SkullThrow throwSkull;
 
