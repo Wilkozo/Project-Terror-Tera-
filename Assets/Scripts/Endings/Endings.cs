@@ -109,7 +109,7 @@ public class Endings : MonoBehaviour
         }
 
         if (timer >= 15.0f) {
-            Application.LoadLevel("NewMainMenu");
+            Application.LoadLevel(4);
         }
     }
 

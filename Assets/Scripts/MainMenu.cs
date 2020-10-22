@@ -66,6 +66,6 @@ public class MainMenu : MonoBehaviour
     }
     public void credits()
     {
-        creditsView.SetActive(true);
+        Application.LoadLevel(4);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class TakeOff : MonoBehaviour
 {
 
-
+    public CanvasGroup fadeToBlack;
     float timer;
     Animator animController;
     // Start is called before the first frame update
@@ -20,8 +20,13 @@ public class TakeOff : MonoBehaviour
     private void Update()
     {
         timer += 1 * Time.deltaTime;
-        if (timer >= 25.0f) {
-            Application.LoadLevel(0);
+        if (timer >= 25.0f)
+        {
+            fadeToBlack.alpha += 0.5f * Time.deltaTime;
+            if (fadeToBlack.alpha >= 1)
+            {
+                Application.LoadLevel(4);
+            }
         }
     }
 

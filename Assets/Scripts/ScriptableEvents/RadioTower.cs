@@ -10,6 +10,9 @@ public class RadioTower : MonoBehaviour
     public Text messageToPlayer;
     [SerializeField] GameObject boat;
 
+    public AudioSource radioSource;
+    public AudioClip radioClip;
+
 
     public void Start()
     {
@@ -22,6 +25,7 @@ public class RadioTower : MonoBehaviour
 
         if (Keycards.isPoweredOn())
         {
+            radioSource.PlayOneShot(radioClip);
             //make it so the player can return to the boat
             messageToPlayer.CrossFadeAlpha(1, 0, true);
             messageToPlayer.text = "The boat has been called, you can return to it or explore the island more";
