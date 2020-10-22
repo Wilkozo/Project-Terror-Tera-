@@ -25,10 +25,16 @@ public class Endings : MonoBehaviour
     public bool triggeredBadEnding;
     public bool triggeredGoodEnding;
 
+    public GameObject door;
+
+
+    public AudioSource endingSource;
+
     public float timer;
 
     private void Start()
     {
+        door.SetActive(false);
         JamesonBad.SetActive(false);
         JamesonGood.SetActive(false);
     }
@@ -46,8 +52,12 @@ public class Endings : MonoBehaviour
         //intercepted ending
         if (triggeredIntercepted)
         {
+            door.SetActive(true);
+            if (!endingSource.isPlaying) {
+                endingSource.Play();
+            }
             timer -= 1 * Time.deltaTime;
-            if (timer <= 0)
+            if (timer <= -35.0f)
             {
                 fadeToBlack.alpha += 0.75f * Time.deltaTime;
                 if (fadeToBlack.alpha >= 0.9f)

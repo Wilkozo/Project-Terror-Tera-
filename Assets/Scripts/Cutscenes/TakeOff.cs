@@ -20,7 +20,7 @@ public class TakeOff : MonoBehaviour
     private void Update()
     {
         timer += 1 * Time.deltaTime;
-        if (timer >= 120.0f) {
+        if (timer >= 25.0f) {
             Application.LoadLevel(0);
         }
     }
